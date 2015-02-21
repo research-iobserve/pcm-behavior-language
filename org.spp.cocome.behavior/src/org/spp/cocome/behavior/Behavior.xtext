@@ -1,0 +1,164 @@
+grammar org.spp.cocome.behavior.Behavior with org.eclipse.xtext.common.Terminals
+
+generate behavior "http://www.spp.org/cocome/behavior/Behavior"
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+import "http://www.spp.org/cocome/types/Types" as types
+import "http://behavior.cocome.spp.org/behavior/mapping" as mapping
+
+BehaviorModel:
+        'package' name=QualifiedName
+        (imports+=Import|repositories+=RepositoryReference)*
+        componentImpl=ComponentImpl
+;
+
+RepositoryReference: 'repository' reference=STRING ;
+
+Import: 'import' importedNamespace = QualifiedNameWithWildcard ;
+
+/*
+ * Component structure
+ */
+ComponentImpl: 
+	'realize' refComponent=[mapping::Component|QualifiedName] '{'
+    	localDeclarations+=(VariableDecl|ConstantDecl)*
+        interfaces+=InterfaceRealization*
+    '}'
+;
+ 
+VariableDecl: modifier=('var'|'val') type=DeclarationTypeReference name=ID ;
+
+ConstantDecl: 'const' name=ID '=' value=Expression ;
+
+InterfaceRealization: 'iface' refInterface=[mapping::Interface|QualifiedName] methods+=MethodImpl* ;
+
+MethodImpl: 'operation' refMethod=[mapping::MethodDecl|QualifiedName] body=BlockStatement ;
+
+Statement: IfStatement | Assignment | LoopStatement ;
+
+IfStatement: 'if' '(' expr=Expression ')' ifStatement=BlockStatement 
+        ('else' elseStatement=BlockStatement )?         
+;
+
+BlockStatement: {BlockStatement}  '{' statements+=Statement* '}' ;
+
+Assignment: variable=VariableCall '=' expression=Expression ;
+
+LoopStatement: 'for' '(' variable=VariableDecl ':' expression=Expression ')' statement=BlockStatement ;
+
+VariableCall: variable=[VariableDecl] ('[' (index=Expression)? ']')? ('.' subProperty=PropertyCall)? ;
+
+PropertyCall: property=[types::Property] ('[' (index=Expression)? ']')? ('.' subProperty=PropertyCall)? ;
+
+/*
+ * Expression grammar
+ */
+Expression: 
+	AndExpression (=>({BinaryOperation.left=current} feature='||') right=AndExpression)*
+;
+
+AndExpression returns Expression:
+	RelationalExpression (=>({BinaryOperation.left=current} feature='&&') right=RelationalExpression)*
+;
+
+RelationalExpression returns Expression:
+	OtherExpression (=>({BinaryOperation.left=current} feature=('=='|'!='|'>'|'<'|'>='|'<=')) right=OtherExpression)*
+;
+
+OtherExpression returns Expression:
+	AdditiveExpression (=>({InstanceOfExpression.expression=current} 'instanceof') type=TypeReference)?
+;
+
+AdditiveExpression returns Expression:
+	MultiplicativeExpression (=>({XBinaryOperation.left=current} feature=('+'|'-')) right=MultiplicativeExpression)*
+;
+
+MultiplicativeExpression returns Expression:
+	 UnaryOperation (=>({XBinaryOperation.left=current} feature=('*'|'/'|'%'|'**')) right=UnaryOperation)*
+;
+
+UnaryOperation returns Expression: {UnaryExpression}
+	feature='!' operand=UnaryOperation |
+	CastedExpression
+;
+
+CastedExpression returns Expression:
+	PostfixOperation (=>({CastedExpression.target=current} 'as') type=TypeReference)*
+;
+
+PostfixOperation returns Expression:
+	PrimaryExpression =>({PostfixOperation.operand=current} feature=('++'|'--'))?
+;
+
+PrimaryExpression returns Expression:
+	InstantiationExpression |
+	VariableCall |
+	Literal
+;
+
+InstantiationExpression returns Expression:
+	'new' type=TypeReference '(' parameters+=Expression ')'
+;
+
+/*
+ * Typing stuff could be borrowed from types. 
+ */
+TypeReference:
+	reference=[types::NamedType|ID]
+;
+
+/* single dimensional collection type, no size results in an unbound collection */
+CollectionType:
+	reference=TypeReference '[' (size=INT)? ']'
+;
+
+MapType:
+	reference=TypeReference '<' (keyType=TypeReference '>') 
+;
+
+DeclarationTypeReference:
+	TypeReference | CollectionType | MapType
+;
+
+
+/*
+ * Literals
+ */
+Literal:
+        BooleanLiteral | NumberLiteral | CharLiteral | StringLiteral
+;
+
+StringLiteral:
+        value=STRING
+;
+
+CharLiteral:
+        value=CHARACTER
+;
+
+NumberLiteral:
+        value=NUMBER
+;
+
+BooleanLiteral:
+        value=BOOLEAN
+;
+
+
+/*
+ * special rules
+ */
+QualifiedName: ID('.'ID)*;
+
+QualifiedNameWithWildcard:
+        QualifiedName ('.' '*')?
+;
+
+BOOLEAN returns ecore::EBoolean:
+        'true'|'false'
+;
+
+NUMBER: ('+'|'-')?INT|(INT'.'INT);
+
+terminal CHARACTER: "'" ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") ) "'";
+	
