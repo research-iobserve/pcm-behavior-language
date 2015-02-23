@@ -7,6 +7,9 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess
 
+import static extension org.spp.cocome.behavior.generator.BehaviorTypeGenerator.*
+import org.spp.cocome.behavior.behavior.Literal
+
 /**
  * Generates code from your model files on save.
  * 
