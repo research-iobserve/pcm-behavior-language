@@ -9,6 +9,7 @@ import org.spp.cocome.behavior.behavior.BooleanLiteral
 import org.spp.cocome.behavior.behavior.TypeReference
 import org.spp.cocome.types.types.PrimitiveType
 import org.spp.cocome.behavior.behavior.CollectionType
+import org.spp.cocome.behavior.behavior.MapType
 
 class BehaviorTypeGenerator {
 	def static createLiteral(Literal literal) {
@@ -36,5 +37,9 @@ class BehaviorTypeGenerator {
 			«reference.reference.createJavaType»[«reference.size»]'''
 		else '''
 			List<«reference.reference.createJavaType»>'''
+	}
+	
+	dispatch def static CharSequence createJavaType(MapType reference){
+		//TODO
 	}
 }
