@@ -10,13 +10,14 @@ import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.ListExtensions;
 import org.spp.cocome.behavior.behavior.BooleanLiteral;
 import org.spp.cocome.behavior.behavior.CharLiteral;
+import org.spp.cocome.behavior.behavior.DataQuery;
+import org.spp.cocome.behavior.behavior.DeclarationTypeReference;
 import org.spp.cocome.behavior.behavior.Expression;
 import org.spp.cocome.behavior.behavior.InstantiationExpression;
 import org.spp.cocome.behavior.behavior.Literal;
 import org.spp.cocome.behavior.behavior.NumberLiteral;
 import org.spp.cocome.behavior.behavior.PropertyCall;
 import org.spp.cocome.behavior.behavior.StringLiteral;
-import org.spp.cocome.behavior.behavior.TypeReference;
 import org.spp.cocome.behavior.behavior.VariableCall;
 import org.spp.cocome.behavior.behavior.VariableDecl;
 import org.spp.cocome.behavior.generator.BehaviorTypeGenerator;
@@ -27,10 +28,29 @@ import org.spp.cocome.types.types.Property;
  */
 @SuppressWarnings("all")
 public class BehaviorExpressionGenerator {
+  protected static CharSequence _createExpression(final DataQuery expression) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("em.createQuery(\"");
+    String _query = expression.getQuery();
+    _builder.append(_query, "");
+    _builder.append("\", ");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    DeclarationTypeReference _type = expression.getType();
+    CharSequence _createJavaTypeReference = BehaviorTypeGenerator.createJavaTypeReference(_type);
+    _builder.append(_createJavaTypeReference, "\t");
+    _builder.append(").");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("getResultList()");
+    _builder.newLine();
+    return _builder;
+  }
+  
   protected static CharSequence _createExpression(final InstantiationExpression expression) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("new ");
-    TypeReference _type = expression.getType();
+    DeclarationTypeReference _type = expression.getType();
     CharSequence _createJavaTypeReference = BehaviorTypeGenerator.createJavaTypeReference(_type);
     _builder.append(_createJavaTypeReference, "");
     _builder.append("(");
@@ -279,7 +299,7 @@ public class BehaviorExpressionGenerator {
         Expression _expression = expression.getExpression();
         _builder_4.append(_expression, "");
         _builder_4.append(" instanceof ");
-        TypeReference _type = expression.getType();
+        DeclarationTypeReference _type = expression.getType();
         CharSequence _createJavaTypeReference = BehaviorTypeGenerator.createJavaTypeReference(_type);
         _builder_4.append(_createJavaTypeReference, "");
         _switchResult = _builder_4;
@@ -290,7 +310,7 @@ public class BehaviorExpressionGenerator {
         _matched=true;
         StringConcatenation _builder_5 = new StringConcatenation();
         _builder_5.append("((");
-        TypeReference _type_1 = expression.getType();
+        DeclarationTypeReference _type_1 = expression.getType();
         CharSequence _createJavaTypeReference_1 = BehaviorTypeGenerator.createJavaTypeReference(_type_1);
         _builder_5.append(_createJavaTypeReference_1, "");
         _builder_5.append(")");
@@ -312,6 +332,8 @@ public class BehaviorExpressionGenerator {
       return _createExpression((NumberLiteral)expression);
     } else if (expression instanceof StringLiteral) {
       return _createExpression((StringLiteral)expression);
+    } else if (expression instanceof DataQuery) {
+      return _createExpression((DataQuery)expression);
     } else if (expression instanceof InstantiationExpression) {
       return _createExpression((InstantiationExpression)expression);
     } else if (expression instanceof Literal) {

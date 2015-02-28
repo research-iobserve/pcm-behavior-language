@@ -79,20 +79,21 @@ public class BehaviorFactoryImpl extends EFactoryImpl implements BehaviorFactory
       case BehaviorPackage.BLOCK_STATEMENT: return createBlockStatement();
       case BehaviorPackage.ASSIGNMENT: return createAssignment();
       case BehaviorPackage.LOOP_STATEMENT: return createLoopStatement();
+      case BehaviorPackage.DATA_ACCESS_STATEMENT: return createDataAccessStatement();
       case BehaviorPackage.VARIABLE_CALL: return createVariableCall();
       case BehaviorPackage.PROPERTY_CALL: return createPropertyCall();
       case BehaviorPackage.EXPRESSION: return createExpression();
+      case BehaviorPackage.DATA_QUERY: return createDataQuery();
       case BehaviorPackage.INSTANTIATION_EXPRESSION: return createInstantiationExpression();
+      case BehaviorPackage.DECLARATION_TYPE_REFERENCE: return createDeclarationTypeReference();
       case BehaviorPackage.TYPE_REFERENCE: return createTypeReference();
       case BehaviorPackage.COLLECTION_TYPE: return createCollectionType();
       case BehaviorPackage.MAP_TYPE: return createMapType();
-      case BehaviorPackage.DECLARATION_TYPE_REFERENCE: return createDeclarationTypeReference();
       case BehaviorPackage.LITERAL: return createLiteral();
       case BehaviorPackage.STRING_LITERAL: return createStringLiteral();
       case BehaviorPackage.CHAR_LITERAL: return createCharLiteral();
       case BehaviorPackage.NUMBER_LITERAL: return createNumberLiteral();
       case BehaviorPackage.BOOLEAN_LITERAL: return createBooleanLiteral();
-      case BehaviorPackage.BINARY_OPERATION: return createBinaryOperation();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -110,6 +111,8 @@ public class BehaviorFactoryImpl extends EFactoryImpl implements BehaviorFactory
     {
       case BehaviorPackage.COMPONENT_KIND:
         return createComponentKindFromString(eDataType, initialValue);
+      case BehaviorPackage.DATA_ACCESS_OPERATION:
+        return createDataAccessOperationFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -127,6 +130,8 @@ public class BehaviorFactoryImpl extends EFactoryImpl implements BehaviorFactory
     {
       case BehaviorPackage.COMPONENT_KIND:
         return convertComponentKindToString(eDataType, instanceValue);
+      case BehaviorPackage.DATA_ACCESS_OPERATION:
+        return convertDataAccessOperationToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -291,6 +296,17 @@ public class BehaviorFactoryImpl extends EFactoryImpl implements BehaviorFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public DataAccessStatement createDataAccessStatement()
+  {
+    DataAccessStatementImpl dataAccessStatement = new DataAccessStatementImpl();
+    return dataAccessStatement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public VariableCall createVariableCall()
   {
     VariableCallImpl variableCall = new VariableCallImpl();
@@ -324,10 +340,32 @@ public class BehaviorFactoryImpl extends EFactoryImpl implements BehaviorFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public DataQuery createDataQuery()
+  {
+    DataQueryImpl dataQuery = new DataQueryImpl();
+    return dataQuery;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public InstantiationExpression createInstantiationExpression()
   {
     InstantiationExpressionImpl instantiationExpression = new InstantiationExpressionImpl();
     return instantiationExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DeclarationTypeReference createDeclarationTypeReference()
+  {
+    DeclarationTypeReferenceImpl declarationTypeReference = new DeclarationTypeReferenceImpl();
+    return declarationTypeReference;
   }
 
   /**
@@ -361,17 +399,6 @@ public class BehaviorFactoryImpl extends EFactoryImpl implements BehaviorFactory
   {
     MapTypeImpl mapType = new MapTypeImpl();
     return mapType;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public DeclarationTypeReference createDeclarationTypeReference()
-  {
-    DeclarationTypeReferenceImpl declarationTypeReference = new DeclarationTypeReferenceImpl();
-    return declarationTypeReference;
   }
 
   /**
@@ -434,17 +461,6 @@ public class BehaviorFactoryImpl extends EFactoryImpl implements BehaviorFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public BinaryOperation createBinaryOperation()
-  {
-    BinaryOperationImpl binaryOperation = new BinaryOperationImpl();
-    return binaryOperation;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public ComponentKind createComponentKindFromString(EDataType eDataType, String initialValue)
   {
     ComponentKind result = ComponentKind.get(initialValue);
@@ -458,6 +474,28 @@ public class BehaviorFactoryImpl extends EFactoryImpl implements BehaviorFactory
    * @generated
    */
   public String convertComponentKindToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DataAccessOperation createDataAccessOperationFromString(EDataType eDataType, String initialValue)
+  {
+    DataAccessOperation result = DataAccessOperation.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertDataAccessOperationToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

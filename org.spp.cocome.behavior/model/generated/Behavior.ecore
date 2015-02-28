@@ -86,6 +86,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="statement" eType="#//BlockStatement"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataAccessStatement" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" eType="#//DataAccessOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" eType="#//VariableDecl"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DataAccessOperation">
+    <eLiterals name="STORE" literal="store"/>
+    <eLiterals name="UPDATE" value="1" literal="update"/>
+    <eLiterals name="DELETE" value="2" literal="delete"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VariableCall" eSuperTypes="#//Expression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="variable" eType="#//VariableDecl"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="index" eType="#//Expression"
@@ -108,17 +117,21 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//Expression"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//TypeReference"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//DeclarationTypeReference"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="operand" eType="#//Expression"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Expression"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataQuery" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="query" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InstantiationExpression" eSuperTypes="#//Expression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
         eType="#//Expression" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DeclarationTypeReference"/>
   <eClassifiers xsi:type="ecore:EClass" name="TypeReference" eSuperTypes="#//DeclarationTypeReference">
     <eStructuralFeatures xsi:type="ecore:EReference" name="reference" eType="ecore:EClass platform:/resource/org.spp.cocome.types/src-gen/org/spp/cocome/types/Types.ecore#//NamedType"/>
   </eClassifiers>
@@ -133,7 +146,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="keyType" eType="#//TypeReference"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DeclarationTypeReference"/>
   <eClassifiers xsi:type="ecore:EClass" name="Literal" eSuperTypes="#//Expression"/>
   <eClassifiers xsi:type="ecore:EClass" name="StringLiteral" eSuperTypes="#//Literal">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -147,5 +159,4 @@
   <eClassifiers xsi:type="ecore:EClass" name="BooleanLiteral" eSuperTypes="#//Literal">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BinaryOperation" eSuperTypes="#//Expression"/>
 </ecore:EPackage>

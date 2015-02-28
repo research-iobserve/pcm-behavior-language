@@ -34,6 +34,18 @@ public class BehaviorStructureGenerator {
    */
   public static CharSequence createComponent(final ComponentImpl com) {
     StringConcatenation _builder = new StringConcatenation();
+    _builder.append("::IMPORTS::");
+    _builder.newLine();
+    CharSequence _xifexpression = null;
+    boolean _containsJPA = BehaviorStructureGenerator.containsJPA(com);
+    if (_containsJPA) {
+      _xifexpression = BehaviorStructureGenerator.createJPAImports();
+    }
+    _builder.append(_xifexpression, "");
+    _builder.append("\t");
+    _builder.newLineIfNotEmpty();
+    _builder.append("::IMPORTS END::");
+    _builder.newLine();
     _builder.append("::ANNOTATIONS::");
     _builder.newLine();
     {
@@ -62,6 +74,13 @@ public class BehaviorStructureGenerator {
     String _join = IterableExtensions.join(_map);
     _builder.append(_join, "");
     _builder.newLineIfNotEmpty();
+    CharSequence _xifexpression_1 = null;
+    boolean _containsJPA_1 = BehaviorStructureGenerator.containsJPA(com);
+    if (_containsJPA_1) {
+      _xifexpression_1 = BehaviorStructureGenerator.createJPASupport();
+    }
+    _builder.append(_xifexpression_1, "");
+    _builder.newLineIfNotEmpty();
     _builder.append("::VARIABLES END::");
     _builder.newLine();
     {
@@ -80,23 +99,23 @@ public class BehaviorStructureGenerator {
       }
     }
     _builder.newLineIfNotEmpty();
-    CharSequence _xifexpression = null;
+    CharSequence _xifexpression_2 = null;
     LifeCycleMethod _postConstruct_1 = com.getPostConstruct();
     boolean _notEquals_3 = (!Objects.equal(_postConstruct_1, null));
     if (_notEquals_3) {
       LifeCycleMethod _postConstruct_2 = com.getPostConstruct();
-      _xifexpression = BehaviorStructureGenerator.createLifeCycleMethod(_postConstruct_2, "PostConstruct", "initialize");
+      _xifexpression_2 = BehaviorStructureGenerator.createLifeCycleMethod(_postConstruct_2, "PostConstruct", "initialize");
     }
-    _builder.append(_xifexpression, "");
+    _builder.append(_xifexpression_2, "");
     _builder.newLineIfNotEmpty();
-    CharSequence _xifexpression_1 = null;
+    CharSequence _xifexpression_3 = null;
     LifeCycleMethod _preDestroy_1 = com.getPreDestroy();
     boolean _notEquals_4 = (!Objects.equal(_preDestroy_1, null));
     if (_notEquals_4) {
       LifeCycleMethod _preDestroy_2 = com.getPreDestroy();
-      _xifexpression_1 = BehaviorStructureGenerator.createLifeCycleMethod(_preDestroy_2, "PreDestroy", "shutdown");
+      _xifexpression_3 = BehaviorStructureGenerator.createLifeCycleMethod(_preDestroy_2, "PreDestroy", "shutdown");
     }
-    _builder.append(_xifexpression_1, "");
+    _builder.append(_xifexpression_3, "");
     _builder.newLineIfNotEmpty();
     {
       boolean _or_1 = false;
@@ -127,6 +146,26 @@ public class BehaviorStructureGenerator {
     return _builder;
   }
   
+  public static CharSequence createJPAImports() {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("import javax.persistence.EntityManager;");
+    _builder.newLine();
+    return _builder;
+  }
+  
+  public static boolean containsJPA(final ComponentImpl component) {
+    return true;
+  }
+  
+  public static CharSequence createJPASupport() {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("// Injected database connection:");
+    _builder.newLine();
+    _builder.append("@PersistenceContext private EntityManager em;");
+    _builder.newLine();
+    return _builder;
+  }
+  
   /**
    * life cycle methods
    */
@@ -135,17 +174,15 @@ public class BehaviorStructureGenerator {
     _builder.append("@");
     _builder.append(annotation, "");
     _builder.newLineIfNotEmpty();
-    _builder.append("  \t\t");
     _builder.append("public void ");
-    _builder.append(name, "  \t\t");
+    _builder.append(name, "");
     _builder.append("() {");
     _builder.newLineIfNotEmpty();
-    _builder.append("    \t\t");
+    _builder.append("\t");
     BlockStatement _body = method.getBody();
     CharSequence _handleBlockstatement = BehaviorStatementGenerator.handleBlockstatement(_body);
-    _builder.append(_handleBlockstatement, "    \t\t");
+    _builder.append(_handleBlockstatement, "\t");
     _builder.newLineIfNotEmpty();
-    _builder.append("  \t\t");
     _builder.append("}");
     _builder.newLine();
     return _builder;

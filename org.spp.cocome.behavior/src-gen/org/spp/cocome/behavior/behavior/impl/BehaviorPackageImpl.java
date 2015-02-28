@@ -14,7 +14,6 @@ import org.spp.cocome.behavior.behavior.Assignment;
 import org.spp.cocome.behavior.behavior.BehaviorFactory;
 import org.spp.cocome.behavior.behavior.BehaviorModel;
 import org.spp.cocome.behavior.behavior.BehaviorPackage;
-import org.spp.cocome.behavior.behavior.BinaryOperation;
 import org.spp.cocome.behavior.behavior.BlockStatement;
 import org.spp.cocome.behavior.behavior.BooleanLiteral;
 import org.spp.cocome.behavior.behavior.CharLiteral;
@@ -22,6 +21,9 @@ import org.spp.cocome.behavior.behavior.CollectionType;
 import org.spp.cocome.behavior.behavior.ComponentImpl;
 import org.spp.cocome.behavior.behavior.ComponentKind;
 import org.spp.cocome.behavior.behavior.ConstantDecl;
+import org.spp.cocome.behavior.behavior.DataAccessOperation;
+import org.spp.cocome.behavior.behavior.DataAccessStatement;
+import org.spp.cocome.behavior.behavior.DataQuery;
 import org.spp.cocome.behavior.behavior.DeclarationTypeReference;
 import org.spp.cocome.behavior.behavior.Expression;
 import org.spp.cocome.behavior.behavior.IfStatement;
@@ -157,6 +159,13 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass dataAccessStatementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass variableCallEClass = null;
 
   /**
@@ -178,7 +187,21 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass dataQueryEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass instantiationExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass declarationTypeReferenceEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -200,13 +223,6 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
    * @generated
    */
   private EClass mapTypeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass declarationTypeReferenceEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -248,14 +264,14 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass binaryOperationEClass = null;
+  private EEnum componentKindEEnum = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EEnum componentKindEEnum = null;
+  private EEnum dataAccessOperationEEnum = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -779,6 +795,36 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getDataAccessStatement()
+  {
+    return dataAccessStatementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDataAccessStatement_Operation()
+  {
+    return (EAttribute)dataAccessStatementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDataAccessStatement_Variable()
+  {
+    return (EReference)dataAccessStatementEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getVariableCall()
   {
     return variableCallEClass;
@@ -939,6 +985,26 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getDataQuery()
+  {
+    return dataQueryEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDataQuery_Query()
+  {
+    return (EAttribute)dataQueryEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getInstantiationExpression()
   {
     return instantiationExpressionEClass;
@@ -952,6 +1018,16 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
   public EReference getInstantiationExpression_Parameters()
   {
     return (EReference)instantiationExpressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDeclarationTypeReference()
+  {
+    return declarationTypeReferenceEClass;
   }
 
   /**
@@ -1032,16 +1108,6 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
   public EReference getMapType_KeyType()
   {
     return (EReference)mapTypeEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getDeclarationTypeReference()
-  {
-    return declarationTypeReferenceEClass;
   }
 
   /**
@@ -1139,9 +1205,9 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getBinaryOperation()
+  public EEnum getComponentKind()
   {
-    return binaryOperationEClass;
+    return componentKindEEnum;
   }
 
   /**
@@ -1149,9 +1215,9 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EEnum getComponentKind()
+  public EEnum getDataAccessOperation()
   {
-    return componentKindEEnum;
+    return dataAccessOperationEEnum;
   }
 
   /**
@@ -1243,6 +1309,10 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     createEReference(loopStatementEClass, LOOP_STATEMENT__EXPRESSION);
     createEReference(loopStatementEClass, LOOP_STATEMENT__STATEMENT);
 
+    dataAccessStatementEClass = createEClass(DATA_ACCESS_STATEMENT);
+    createEAttribute(dataAccessStatementEClass, DATA_ACCESS_STATEMENT__OPERATION);
+    createEReference(dataAccessStatementEClass, DATA_ACCESS_STATEMENT__VARIABLE);
+
     variableCallEClass = createEClass(VARIABLE_CALL);
     createEReference(variableCallEClass, VARIABLE_CALL__VARIABLE);
     createEReference(variableCallEClass, VARIABLE_CALL__INDEX);
@@ -1262,8 +1332,13 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     createEReference(expressionEClass, EXPRESSION__OPERAND);
     createEReference(expressionEClass, EXPRESSION__TARGET);
 
+    dataQueryEClass = createEClass(DATA_QUERY);
+    createEAttribute(dataQueryEClass, DATA_QUERY__QUERY);
+
     instantiationExpressionEClass = createEClass(INSTANTIATION_EXPRESSION);
     createEReference(instantiationExpressionEClass, INSTANTIATION_EXPRESSION__PARAMETERS);
+
+    declarationTypeReferenceEClass = createEClass(DECLARATION_TYPE_REFERENCE);
 
     typeReferenceEClass = createEClass(TYPE_REFERENCE);
     createEReference(typeReferenceEClass, TYPE_REFERENCE__REFERENCE);
@@ -1275,8 +1350,6 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     mapTypeEClass = createEClass(MAP_TYPE);
     createEReference(mapTypeEClass, MAP_TYPE__REFERENCE);
     createEReference(mapTypeEClass, MAP_TYPE__KEY_TYPE);
-
-    declarationTypeReferenceEClass = createEClass(DECLARATION_TYPE_REFERENCE);
 
     literalEClass = createEClass(LITERAL);
 
@@ -1292,10 +1365,9 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     booleanLiteralEClass = createEClass(BOOLEAN_LITERAL);
     createEAttribute(booleanLiteralEClass, BOOLEAN_LITERAL__VALUE);
 
-    binaryOperationEClass = createEClass(BINARY_OPERATION);
-
     // Create enums
     componentKindEEnum = createEEnum(COMPONENT_KIND);
+    dataAccessOperationEEnum = createEEnum(DATA_ACCESS_OPERATION);
   }
 
   /**
@@ -1334,7 +1406,9 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     ifStatementEClass.getESuperTypes().add(this.getStatement());
     assignmentEClass.getESuperTypes().add(this.getStatement());
     loopStatementEClass.getESuperTypes().add(this.getStatement());
+    dataAccessStatementEClass.getESuperTypes().add(this.getStatement());
     variableCallEClass.getESuperTypes().add(this.getExpression());
+    dataQueryEClass.getESuperTypes().add(this.getExpression());
     instantiationExpressionEClass.getESuperTypes().add(this.getExpression());
     typeReferenceEClass.getESuperTypes().add(this.getDeclarationTypeReference());
     collectionTypeEClass.getESuperTypes().add(this.getDeclarationTypeReference());
@@ -1344,7 +1418,6 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     charLiteralEClass.getESuperTypes().add(this.getLiteral());
     numberLiteralEClass.getESuperTypes().add(this.getLiteral());
     booleanLiteralEClass.getESuperTypes().add(this.getLiteral());
-    binaryOperationEClass.getESuperTypes().add(this.getExpression());
 
     // Initialize classes and features; add operations and parameters
     initEClass(behaviorModelEClass, BehaviorModel.class, "BehaviorModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1406,6 +1479,10 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     initEReference(getLoopStatement_Expression(), this.getExpression(), null, "expression", null, 0, 1, LoopStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getLoopStatement_Statement(), this.getBlockStatement(), null, "statement", null, 0, 1, LoopStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(dataAccessStatementEClass, DataAccessStatement.class, "DataAccessStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getDataAccessStatement_Operation(), this.getDataAccessOperation(), "operation", null, 0, 1, DataAccessStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDataAccessStatement_Variable(), this.getVariableDecl(), null, "variable", null, 0, 1, DataAccessStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(variableCallEClass, VariableCall.class, "VariableCall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getVariableCall_Variable(), this.getVariableDecl(), null, "variable", null, 0, 1, VariableCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getVariableCall_Index(), this.getExpression(), null, "index", null, 0, 1, VariableCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1421,12 +1498,17 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     initEAttribute(getExpression_Feature(), ecorePackage.getEString(), "feature", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getExpression_Right(), this.getExpression(), null, "right", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getExpression_Expression(), this.getExpression(), null, "expression", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExpression_Type(), this.getTypeReference(), null, "type", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExpression_Type(), this.getDeclarationTypeReference(), null, "type", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getExpression_Operand(), this.getExpression(), null, "operand", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getExpression_Target(), this.getExpression(), null, "target", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(dataQueryEClass, DataQuery.class, "DataQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getDataQuery_Query(), ecorePackage.getEString(), "query", null, 0, 1, DataQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(instantiationExpressionEClass, InstantiationExpression.class, "InstantiationExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getInstantiationExpression_Parameters(), this.getExpression(), null, "parameters", null, 0, -1, InstantiationExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(declarationTypeReferenceEClass, DeclarationTypeReference.class, "DeclarationTypeReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(typeReferenceEClass, TypeReference.class, "TypeReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getTypeReference_Reference(), theTypesPackage.getNamedType(), null, "reference", null, 0, 1, TypeReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1438,8 +1520,6 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     initEClass(mapTypeEClass, MapType.class, "MapType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getMapType_Reference(), this.getTypeReference(), null, "reference", null, 0, 1, MapType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMapType_KeyType(), this.getTypeReference(), null, "keyType", null, 0, 1, MapType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(declarationTypeReferenceEClass, DeclarationTypeReference.class, "DeclarationTypeReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(literalEClass, Literal.class, "Literal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1455,13 +1535,16 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     initEClass(booleanLiteralEClass, BooleanLiteral.class, "BooleanLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getBooleanLiteral_Value(), ecorePackage.getEBoolean(), "value", null, 0, 1, BooleanLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(binaryOperationEClass, BinaryOperation.class, "BinaryOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
     // Initialize enums and add enum literals
     initEEnum(componentKindEEnum, ComponentKind.class, "ComponentKind");
     addEEnumLiteral(componentKindEEnum, ComponentKind.STATELESS);
     addEEnumLiteral(componentKindEEnum, ComponentKind.STATEFUL);
     addEEnumLiteral(componentKindEEnum, ComponentKind.SINGLETON);
+
+    initEEnum(dataAccessOperationEEnum, DataAccessOperation.class, "DataAccessOperation");
+    addEEnumLiteral(dataAccessOperationEEnum, DataAccessOperation.STORE);
+    addEEnumLiteral(dataAccessOperationEEnum, DataAccessOperation.UPDATE);
+    addEEnumLiteral(dataAccessOperationEEnum, DataAccessOperation.DELETE);
 
     // Create resource
     createResource(eNS_URI);

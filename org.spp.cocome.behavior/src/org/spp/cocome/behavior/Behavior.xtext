@@ -46,7 +46,7 @@ InterfaceRealization: 'iface' refInterface=[mapping::Interface|QualifiedName] me
 
 MethodImpl: 'operation' refMethod=[mapping::MethodDecl|QualifiedName] body=BlockStatement ;
 
-Statement: IfStatement | Assignment | LoopStatement ;
+Statement: IfStatement | Assignment | LoopStatement | DataAccessStatement;
 
 IfStatement: 'if' '(' expr=Expression ')' ifStatement=BlockStatement 
         ('else' elseStatement=BlockStatement )?         
@@ -58,6 +58,14 @@ Assignment: variable=VariableCall '=' expression=Expression ;
 
 LoopStatement: 'for' '(' variable=VariableDecl ':' expression=Expression ')' statement=BlockStatement ;
 
+DataAccessStatement: operation=DataAccessOperation variable=[VariableDecl];
+
+enum DataAccessOperation:
+	STORE = 'store' |
+	UPDATE = 'update' |
+	DELETE = 'delete'
+;
+
 VariableCall: variable=[VariableDecl] ('[' (index=Expression)? ']')? ('.' subProperty=PropertyCall)? ;
 
 PropertyCall: property=[types::Property] ('[' (index=Expression)? ']')? ('.' subProperty=PropertyCall)? ;
@@ -66,7 +74,7 @@ PropertyCall: property=[types::Property] ('[' (index=Expression)? ']')? ('.' sub
  * Expression grammar
  */
 Expression: 
-	AndExpression (=>({BinaryOperation.left=current} feature='||') right=AndExpression)*
+	AndExpression (=>({Expression.left=current} feature='||') right=AndExpression)*
 ;
 
 AndExpression returns Expression:
@@ -105,11 +113,18 @@ PostfixOperation returns Expression:
 PrimaryExpression returns Expression:
 	InstantiationExpression |
 	VariableCall |
+	DataQuery |
 	Literal
 ;
 
+DataQuery: 'query' type=DeclarationTypeReference query=STRING ;
+
 InstantiationExpression:
 	'new' type=TypeReference '(' parameters+=Expression ')'
+;
+
+DeclarationTypeReference:
+	TypeReference | CollectionType | MapType
 ;
 
 /*
@@ -126,10 +141,6 @@ CollectionType:
 
 MapType:
 	reference=TypeReference '<' (keyType=TypeReference '>') 
-;
-
-DeclarationTypeReference:
-	TypeReference | CollectionType | MapType
 ;
 
 

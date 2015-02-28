@@ -19,11 +19,15 @@ class BehaviorStructureGenerator {
 	 * Hauptprozedur
 	 */
 	def static CharSequence createComponent(ComponentImpl com) '''
+		::IMPORTS::
+		«if (com.containsJPA) createJPAImports»	
+		::IMPORTS END::
 		::ANNOTATIONS::
 		«IF com.kind != null»@«com.kind.literal.toFirstUpper»«ENDIF»
 		::ANNOTATIONS END::
 		::VARIABLES::
 		«com.localDeclarations.map[decl | decl.createDeclaration].join()»
+		«if (com.containsJPA) createJPASupport»
 		::VARIABLES END::
 		«IF com.postConstruct != null || com.preDestroy != null»::LIFECYCLE::«ENDIF»
 		«if (com.postConstruct != null) com.postConstruct.createLifeCycleMethod('PostConstruct', 'initialize')»
@@ -32,14 +36,27 @@ class BehaviorStructureGenerator {
 		«com.interfaces.map[iface | iface.createInterface].join()»
 	'''
 	
+	def static createJPAImports() '''
+		import javax.persistence.EntityManager;
+	'''
+	
+	def static boolean containsJPA (ComponentImpl component) {
+		return true // TODO really search for JPA access routines
+	}
+	
+	def static createJPASupport() '''
+		// Injected database connection:
+		@PersistenceContext private EntityManager em;
+	'''
+	
 	/**
 	 * life cycle methods
 	 */
 	def static createLifeCycleMethod(LifeCycleMethod method, String annotation, String name) '''
 		@«annotation»
-  		public void «name»() {
-    		«method.body.handleBlockstatement»
-  		}
+		public void «name»() {
+			«method.body.handleBlockstatement»
+		}
 	'''
 	
 	/**

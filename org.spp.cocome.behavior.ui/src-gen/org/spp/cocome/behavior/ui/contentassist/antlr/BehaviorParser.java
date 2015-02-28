@@ -53,6 +53,7 @@ public class BehaviorParser extends AbstractContentAssistParser {
 					put(grammarAccess.getNUMBERAccess().getAlternatives(), "rule__NUMBER__Alternatives");
 					put(grammarAccess.getNUMBERAccess().getAlternatives_0_0(), "rule__NUMBER__Alternatives_0_0");
 					put(grammarAccess.getComponentKindAccess().getAlternatives(), "rule__ComponentKind__Alternatives");
+					put(grammarAccess.getDataAccessOperationAccess().getAlternatives(), "rule__DataAccessOperation__Alternatives");
 					put(grammarAccess.getBehaviorModelAccess().getGroup(), "rule__BehaviorModel__Group__0");
 					put(grammarAccess.getRepositoryReferenceAccess().getGroup(), "rule__RepositoryReference__Group__0");
 					put(grammarAccess.getImportAccess().getGroup(), "rule__Import__Group__0");
@@ -69,6 +70,7 @@ public class BehaviorParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBlockStatementAccess().getGroup(), "rule__BlockStatement__Group__0");
 					put(grammarAccess.getAssignmentAccess().getGroup(), "rule__Assignment__Group__0");
 					put(grammarAccess.getLoopStatementAccess().getGroup(), "rule__LoopStatement__Group__0");
+					put(grammarAccess.getDataAccessStatementAccess().getGroup(), "rule__DataAccessStatement__Group__0");
 					put(grammarAccess.getVariableCallAccess().getGroup(), "rule__VariableCall__Group__0");
 					put(grammarAccess.getVariableCallAccess().getGroup_1(), "rule__VariableCall__Group_1__0");
 					put(grammarAccess.getVariableCallAccess().getGroup_2(), "rule__VariableCall__Group_2__0");
@@ -107,6 +109,7 @@ public class BehaviorParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPostfixOperationAccess().getGroup(), "rule__PostfixOperation__Group__0");
 					put(grammarAccess.getPostfixOperationAccess().getGroup_1(), "rule__PostfixOperation__Group_1__0");
 					put(grammarAccess.getPostfixOperationAccess().getGroup_1_0(), "rule__PostfixOperation__Group_1_0__0");
+					put(grammarAccess.getDataQueryAccess().getGroup(), "rule__DataQuery__Group__0");
 					put(grammarAccess.getInstantiationExpressionAccess().getGroup(), "rule__InstantiationExpression__Group__0");
 					put(grammarAccess.getCollectionTypeAccess().getGroup(), "rule__CollectionType__Group__0");
 					put(grammarAccess.getMapTypeAccess().getGroup(), "rule__MapType__Group__0");
@@ -148,6 +151,8 @@ public class BehaviorParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLoopStatementAccess().getVariableAssignment_2(), "rule__LoopStatement__VariableAssignment_2");
 					put(grammarAccess.getLoopStatementAccess().getExpressionAssignment_4(), "rule__LoopStatement__ExpressionAssignment_4");
 					put(grammarAccess.getLoopStatementAccess().getStatementAssignment_6(), "rule__LoopStatement__StatementAssignment_6");
+					put(grammarAccess.getDataAccessStatementAccess().getOperationAssignment_0(), "rule__DataAccessStatement__OperationAssignment_0");
+					put(grammarAccess.getDataAccessStatementAccess().getVariableAssignment_1(), "rule__DataAccessStatement__VariableAssignment_1");
 					put(grammarAccess.getVariableCallAccess().getVariableAssignment_0(), "rule__VariableCall__VariableAssignment_0");
 					put(grammarAccess.getVariableCallAccess().getIndexAssignment_1_1(), "rule__VariableCall__IndexAssignment_1_1");
 					put(grammarAccess.getVariableCallAccess().getSubPropertyAssignment_2_1(), "rule__VariableCall__SubPropertyAssignment_2_1");
@@ -171,6 +176,8 @@ public class BehaviorParser extends AbstractContentAssistParser {
 					put(grammarAccess.getCastedExpressionAccess().getFeatureAssignment_1_0_0_1(), "rule__CastedExpression__FeatureAssignment_1_0_0_1");
 					put(grammarAccess.getCastedExpressionAccess().getTypeAssignment_1_1(), "rule__CastedExpression__TypeAssignment_1_1");
 					put(grammarAccess.getPostfixOperationAccess().getFeatureAssignment_1_0_1(), "rule__PostfixOperation__FeatureAssignment_1_0_1");
+					put(grammarAccess.getDataQueryAccess().getTypeAssignment_1(), "rule__DataQuery__TypeAssignment_1");
+					put(grammarAccess.getDataQueryAccess().getQueryAssignment_2(), "rule__DataQuery__QueryAssignment_2");
 					put(grammarAccess.getInstantiationExpressionAccess().getTypeAssignment_1(), "rule__InstantiationExpression__TypeAssignment_1");
 					put(grammarAccess.getInstantiationExpressionAccess().getParametersAssignment_3(), "rule__InstantiationExpression__ParametersAssignment_3");
 					put(grammarAccess.getTypeReferenceAccess().getReferenceAssignment(), "rule__TypeReference__ReferenceAssignment");

@@ -9,6 +9,8 @@ import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.ListExtensions;
 import org.spp.cocome.behavior.behavior.Assignment;
 import org.spp.cocome.behavior.behavior.BlockStatement;
+import org.spp.cocome.behavior.behavior.DataAccessOperation;
+import org.spp.cocome.behavior.behavior.DataAccessStatement;
 import org.spp.cocome.behavior.behavior.DeclarationTypeReference;
 import org.spp.cocome.behavior.behavior.Expression;
 import org.spp.cocome.behavior.behavior.IfStatement;
@@ -58,6 +60,12 @@ public class BehaviorStatementGenerator {
         }
       }
       if (!_matched) {
+        if (statement instanceof DataAccessStatement) {
+          _matched=true;
+          _switchResult = BehaviorStatementGenerator.createDataAccessStatement(((DataAccessStatement)statement));
+        }
+      }
+      if (!_matched) {
         throw new Exception("This should not happen (handleStatement)");
       }
       return _switchResult;
@@ -89,6 +97,40 @@ public class BehaviorStatementGenerator {
     _builder.append("}");
     _builder.newLine();
     return _builder;
+  }
+  
+  public static CharSequence createDataAccessStatement(final DataAccessStatement statement) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("em.");
+    DataAccessOperation _operation = statement.getOperation();
+    String _createDBAOperation = BehaviorStatementGenerator.createDBAOperation(_operation);
+    _builder.append(_createDBAOperation, "");
+    _builder.append("(");
+    VariableDecl _variable = statement.getVariable();
+    _builder.append(_variable, "");
+    _builder.append(");");
+    _builder.newLineIfNotEmpty();
+    return _builder;
+  }
+  
+  public static String createDBAOperation(final DataAccessOperation operation) {
+    String _switchResult = null;
+    if (operation != null) {
+      switch (operation) {
+        case STORE:
+          _switchResult = "persist";
+          break;
+        case UPDATE:
+          _switchResult = "merge";
+          break;
+        case DELETE:
+          _switchResult = "remove";
+          break;
+        default:
+          break;
+      }
+    }
+    return _switchResult;
   }
   
   public static CharSequence createAssignment(final Assignment statement) {

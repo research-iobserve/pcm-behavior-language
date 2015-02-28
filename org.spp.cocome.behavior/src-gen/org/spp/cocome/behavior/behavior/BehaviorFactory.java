@@ -149,6 +149,15 @@ public interface BehaviorFactory extends EFactory
   LoopStatement createLoopStatement();
 
   /**
+   * Returns a new object of class '<em>Data Access Statement</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Data Access Statement</em>'.
+   * @generated
+   */
+  DataAccessStatement createDataAccessStatement();
+
+  /**
    * Returns a new object of class '<em>Variable Call</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -176,6 +185,15 @@ public interface BehaviorFactory extends EFactory
   Expression createExpression();
 
   /**
+   * Returns a new object of class '<em>Data Query</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Data Query</em>'.
+   * @generated
+   */
+  DataQuery createDataQuery();
+
+  /**
    * Returns a new object of class '<em>Instantiation Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -183,6 +201,15 @@ public interface BehaviorFactory extends EFactory
    * @generated
    */
   InstantiationExpression createInstantiationExpression();
+
+  /**
+   * Returns a new object of class '<em>Declaration Type Reference</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Declaration Type Reference</em>'.
+   * @generated
+   */
+  DeclarationTypeReference createDeclarationTypeReference();
 
   /**
    * Returns a new object of class '<em>Type Reference</em>'.
@@ -210,15 +237,6 @@ public interface BehaviorFactory extends EFactory
    * @generated
    */
   MapType createMapType();
-
-  /**
-   * Returns a new object of class '<em>Declaration Type Reference</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Declaration Type Reference</em>'.
-   * @generated
-   */
-  DeclarationTypeReference createDeclarationTypeReference();
 
   /**
    * Returns a new object of class '<em>Literal</em>'.
@@ -264,15 +282,6 @@ public interface BehaviorFactory extends EFactory
    * @generated
    */
   BooleanLiteral createBooleanLiteral();
-
-  /**
-   * Returns a new object of class '<em>Binary Operation</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Binary Operation</em>'.
-   * @generated
-   */
-  BinaryOperation createBinaryOperation();
 
   /**
    * Returns the package supported by this factory.

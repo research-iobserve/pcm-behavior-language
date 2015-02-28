@@ -145,6 +145,11 @@ public class BehaviorAdapterFactory extends AdapterFactoryImpl
         return createLoopStatementAdapter();
       }
       @Override
+      public Adapter caseDataAccessStatement(DataAccessStatement object)
+      {
+        return createDataAccessStatementAdapter();
+      }
+      @Override
       public Adapter caseVariableCall(VariableCall object)
       {
         return createVariableCallAdapter();
@@ -160,9 +165,19 @@ public class BehaviorAdapterFactory extends AdapterFactoryImpl
         return createExpressionAdapter();
       }
       @Override
+      public Adapter caseDataQuery(DataQuery object)
+      {
+        return createDataQueryAdapter();
+      }
+      @Override
       public Adapter caseInstantiationExpression(InstantiationExpression object)
       {
         return createInstantiationExpressionAdapter();
+      }
+      @Override
+      public Adapter caseDeclarationTypeReference(DeclarationTypeReference object)
+      {
+        return createDeclarationTypeReferenceAdapter();
       }
       @Override
       public Adapter caseTypeReference(TypeReference object)
@@ -178,11 +193,6 @@ public class BehaviorAdapterFactory extends AdapterFactoryImpl
       public Adapter caseMapType(MapType object)
       {
         return createMapTypeAdapter();
-      }
-      @Override
-      public Adapter caseDeclarationTypeReference(DeclarationTypeReference object)
-      {
-        return createDeclarationTypeReferenceAdapter();
       }
       @Override
       public Adapter caseLiteral(Literal object)
@@ -208,11 +218,6 @@ public class BehaviorAdapterFactory extends AdapterFactoryImpl
       public Adapter caseBooleanLiteral(BooleanLiteral object)
       {
         return createBooleanLiteralAdapter();
-      }
-      @Override
-      public Adapter caseBinaryOperation(BinaryOperation object)
-      {
-        return createBinaryOperationAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -447,6 +452,21 @@ public class BehaviorAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.spp.cocome.behavior.behavior.DataAccessStatement <em>Data Access Statement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.spp.cocome.behavior.behavior.DataAccessStatement
+   * @generated
+   */
+  public Adapter createDataAccessStatementAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.spp.cocome.behavior.behavior.VariableCall <em>Variable Call</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -492,6 +512,21 @@ public class BehaviorAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.spp.cocome.behavior.behavior.DataQuery <em>Data Query</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.spp.cocome.behavior.behavior.DataQuery
+   * @generated
+   */
+  public Adapter createDataQueryAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.spp.cocome.behavior.behavior.InstantiationExpression <em>Instantiation Expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -502,6 +537,21 @@ public class BehaviorAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createInstantiationExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.spp.cocome.behavior.behavior.DeclarationTypeReference <em>Declaration Type Reference</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.spp.cocome.behavior.behavior.DeclarationTypeReference
+   * @generated
+   */
+  public Adapter createDeclarationTypeReferenceAdapter()
   {
     return null;
   }
@@ -547,21 +597,6 @@ public class BehaviorAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createMapTypeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.spp.cocome.behavior.behavior.DeclarationTypeReference <em>Declaration Type Reference</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.spp.cocome.behavior.behavior.DeclarationTypeReference
-   * @generated
-   */
-  public Adapter createDeclarationTypeReferenceAdapter()
   {
     return null;
   }
@@ -637,21 +672,6 @@ public class BehaviorAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createBooleanLiteralAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.spp.cocome.behavior.behavior.BinaryOperation <em>Binary Operation</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.spp.cocome.behavior.behavior.BinaryOperation
-   * @generated
-   */
-  public Adapter createBinaryOperationAdapter()
   {
     return null;
   }

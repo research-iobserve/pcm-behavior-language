@@ -141,12 +141,12 @@ public interface Expression extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Type</em>' containment reference.
-   * @see #setType(TypeReference)
+   * @see #setType(DeclarationTypeReference)
    * @see org.spp.cocome.behavior.behavior.BehaviorPackage#getExpression_Type()
    * @model containment="true"
    * @generated
    */
-  TypeReference getType();
+  DeclarationTypeReference getType();
 
   /**
    * Sets the value of the '{@link org.spp.cocome.behavior.behavior.Expression#getType <em>Type</em>}' containment reference.
@@ -156,7 +156,7 @@ public interface Expression extends EObject
    * @see #getType()
    * @generated
    */
-  void setType(TypeReference value);
+  void setType(DeclarationTypeReference value);
 
   /**
    * Returns the value of the '<em><b>Operand</b></em>' containment reference.

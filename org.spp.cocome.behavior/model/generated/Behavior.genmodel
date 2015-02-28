@@ -12,6 +12,11 @@
       <genEnumLiterals ecoreEnumLiteral="Behavior.ecore#//ComponentKind/STATEFUL"/>
       <genEnumLiterals ecoreEnumLiteral="Behavior.ecore#//ComponentKind/SINGLETON"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Behavior.ecore#//DataAccessOperation">
+      <genEnumLiterals ecoreEnumLiteral="Behavior.ecore#//DataAccessOperation/STORE"/>
+      <genEnumLiterals ecoreEnumLiteral="Behavior.ecore#//DataAccessOperation/UPDATE"/>
+      <genEnumLiterals ecoreEnumLiteral="Behavior.ecore#//DataAccessOperation/DELETE"/>
+    </genEnums>
     <genClasses ecoreClass="Behavior.ecore#//BehaviorModel">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Behavior.ecore#//BehaviorModel/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//BehaviorModel/imports"/>
@@ -70,6 +75,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//LoopStatement/expression"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//LoopStatement/statement"/>
     </genClasses>
+    <genClasses ecoreClass="Behavior.ecore#//DataAccessStatement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Behavior.ecore#//DataAccessStatement/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Behavior.ecore#//DataAccessStatement/variable"/>
+    </genClasses>
     <genClasses ecoreClass="Behavior.ecore#//VariableCall">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Behavior.ecore#//VariableCall/variable"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//VariableCall/index"/>
@@ -89,9 +98,13 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//Expression/operand"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//Expression/target"/>
     </genClasses>
+    <genClasses ecoreClass="Behavior.ecore#//DataQuery">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Behavior.ecore#//DataQuery/query"/>
+    </genClasses>
     <genClasses ecoreClass="Behavior.ecore#//InstantiationExpression">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//InstantiationExpression/parameters"/>
     </genClasses>
+    <genClasses ecoreClass="Behavior.ecore#//DeclarationTypeReference"/>
     <genClasses ecoreClass="Behavior.ecore#//TypeReference">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Behavior.ecore#//TypeReference/reference"/>
     </genClasses>
@@ -103,7 +116,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//MapType/reference"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//MapType/keyType"/>
     </genClasses>
-    <genClasses ecoreClass="Behavior.ecore#//DeclarationTypeReference"/>
     <genClasses ecoreClass="Behavior.ecore#//Literal"/>
     <genClasses ecoreClass="Behavior.ecore#//StringLiteral">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Behavior.ecore#//StringLiteral/value"/>
@@ -117,6 +129,5 @@
     <genClasses ecoreClass="Behavior.ecore#//BooleanLiteral">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Behavior.ecore#//BooleanLiteral/value"/>
     </genClasses>
-    <genClasses ecoreClass="Behavior.ecore#//BinaryOperation"/>
   </genPackages>
 </genmodel:GenModel>

@@ -173,6 +173,14 @@ public class BehaviorSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case BehaviorPackage.DATA_ACCESS_STATEMENT:
+      {
+        DataAccessStatement dataAccessStatement = (DataAccessStatement)theEObject;
+        T result = caseDataAccessStatement(dataAccessStatement);
+        if (result == null) result = caseStatement(dataAccessStatement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case BehaviorPackage.VARIABLE_CALL:
       {
         VariableCall variableCall = (VariableCall)theEObject;
@@ -195,11 +203,26 @@ public class BehaviorSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case BehaviorPackage.DATA_QUERY:
+      {
+        DataQuery dataQuery = (DataQuery)theEObject;
+        T result = caseDataQuery(dataQuery);
+        if (result == null) result = caseExpression(dataQuery);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case BehaviorPackage.INSTANTIATION_EXPRESSION:
       {
         InstantiationExpression instantiationExpression = (InstantiationExpression)theEObject;
         T result = caseInstantiationExpression(instantiationExpression);
         if (result == null) result = caseExpression(instantiationExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BehaviorPackage.DECLARATION_TYPE_REFERENCE:
+      {
+        DeclarationTypeReference declarationTypeReference = (DeclarationTypeReference)theEObject;
+        T result = caseDeclarationTypeReference(declarationTypeReference);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -224,13 +247,6 @@ public class BehaviorSwitch<T> extends Switch<T>
         MapType mapType = (MapType)theEObject;
         T result = caseMapType(mapType);
         if (result == null) result = caseDeclarationTypeReference(mapType);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case BehaviorPackage.DECLARATION_TYPE_REFERENCE:
-      {
-        DeclarationTypeReference declarationTypeReference = (DeclarationTypeReference)theEObject;
-        T result = caseDeclarationTypeReference(declarationTypeReference);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -275,14 +291,6 @@ public class BehaviorSwitch<T> extends Switch<T>
         T result = caseBooleanLiteral(booleanLiteral);
         if (result == null) result = caseLiteral(booleanLiteral);
         if (result == null) result = caseExpression(booleanLiteral);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case BehaviorPackage.BINARY_OPERATION:
-      {
-        BinaryOperation binaryOperation = (BinaryOperation)theEObject;
-        T result = caseBinaryOperation(binaryOperation);
-        if (result == null) result = caseExpression(binaryOperation);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -515,6 +523,22 @@ public class BehaviorSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Data Access Statement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Data Access Statement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDataAccessStatement(DataAccessStatement object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Variable Call</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -563,6 +587,22 @@ public class BehaviorSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Data Query</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Data Query</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDataQuery(DataQuery object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Instantiation Expression</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -574,6 +614,22 @@ public class BehaviorSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseInstantiationExpression(InstantiationExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Declaration Type Reference</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Declaration Type Reference</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDeclarationTypeReference(DeclarationTypeReference object)
   {
     return null;
   }
@@ -622,22 +678,6 @@ public class BehaviorSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseMapType(MapType object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Declaration Type Reference</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Declaration Type Reference</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseDeclarationTypeReference(DeclarationTypeReference object)
   {
     return null;
   }
@@ -718,22 +758,6 @@ public class BehaviorSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseBooleanLiteral(BooleanLiteral object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Binary Operation</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Binary Operation</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseBinaryOperation(BinaryOperation object)
   {
     return null;
   }

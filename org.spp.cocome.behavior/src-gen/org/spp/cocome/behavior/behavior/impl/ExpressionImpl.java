@@ -12,8 +12,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.spp.cocome.behavior.behavior.BehaviorPackage;
+import org.spp.cocome.behavior.behavior.DeclarationTypeReference;
 import org.spp.cocome.behavior.behavior.Expression;
-import org.spp.cocome.behavior.behavior.TypeReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -94,7 +94,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * @generated
    * @ordered
    */
-  protected TypeReference type;
+  protected DeclarationTypeReference type;
 
   /**
    * The cached value of the '{@link #getOperand() <em>Operand</em>}' containment reference.
@@ -309,7 +309,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * <!-- end-user-doc -->
    * @generated
    */
-  public TypeReference getType()
+  public DeclarationTypeReference getType()
   {
     return type;
   }
@@ -319,9 +319,9 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetType(TypeReference newType, NotificationChain msgs)
+  public NotificationChain basicSetType(DeclarationTypeReference newType, NotificationChain msgs)
   {
-    TypeReference oldType = type;
+    DeclarationTypeReference oldType = type;
     type = newType;
     if (eNotificationRequired())
     {
@@ -336,7 +336,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setType(TypeReference newType)
+  public void setType(DeclarationTypeReference newType)
   {
     if (newType != type)
     {
@@ -525,7 +525,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
         setExpression((Expression)newValue);
         return;
       case BehaviorPackage.EXPRESSION__TYPE:
-        setType((TypeReference)newValue);
+        setType((DeclarationTypeReference)newValue);
         return;
       case BehaviorPackage.EXPRESSION__OPERAND:
         setOperand((Expression)newValue);
@@ -560,7 +560,7 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
         setExpression((Expression)null);
         return;
       case BehaviorPackage.EXPRESSION__TYPE:
-        setType((TypeReference)null);
+        setType((DeclarationTypeReference)null);
         return;
       case BehaviorPackage.EXPRESSION__OPERAND:
         setOperand((Expression)null);

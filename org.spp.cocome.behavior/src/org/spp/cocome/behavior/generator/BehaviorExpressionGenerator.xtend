@@ -11,12 +11,19 @@ import org.spp.cocome.behavior.behavior.StringLiteral
 import org.spp.cocome.behavior.behavior.CharLiteral
 import org.spp.cocome.behavior.behavior.NumberLiteral
 import org.spp.cocome.behavior.behavior.BooleanLiteral
+import org.spp.cocome.behavior.behavior.DataQuery
 
 /**
  * Generates output for expressions. 
  */
 class BehaviorExpressionGenerator {
 	
+	
+	def dispatch static CharSequence createExpression(DataQuery expression) '''
+		em.createQuery("«expression.query»", 
+			«expression.type.createJavaTypeReference»).
+			getResultList()
+	'''
 	
 	def dispatch static CharSequence createExpression(InstantiationExpression expression) '''
 		new «expression.type.createJavaTypeReference»(«expression.parameters.

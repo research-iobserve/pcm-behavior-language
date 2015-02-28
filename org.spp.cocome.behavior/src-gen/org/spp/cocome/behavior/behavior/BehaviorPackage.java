@@ -603,6 +603,43 @@ public interface BehaviorPackage extends EPackage
   int LOOP_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 3;
 
   /**
+   * The meta object id for the '{@link org.spp.cocome.behavior.behavior.impl.DataAccessStatementImpl <em>Data Access Statement</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.spp.cocome.behavior.behavior.impl.DataAccessStatementImpl
+   * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getDataAccessStatement()
+   * @generated
+   */
+  int DATA_ACCESS_STATEMENT = 14;
+
+  /**
+   * The feature id for the '<em><b>Operation</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATA_ACCESS_STATEMENT__OPERATION = STATEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Variable</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATA_ACCESS_STATEMENT__VARIABLE = STATEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Data Access Statement</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATA_ACCESS_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
+
+  /**
    * The meta object id for the '{@link org.spp.cocome.behavior.behavior.impl.ExpressionImpl <em>Expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -610,7 +647,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 16;
+  int EXPRESSION = 17;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -692,7 +729,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getVariableCall()
    * @generated
    */
-  int VARIABLE_CALL = 14;
+  int VARIABLE_CALL = 15;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -801,7 +838,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getPropertyCall()
    * @generated
    */
-  int PROPERTY_CALL = 15;
+  int PROPERTY_CALL = 16;
 
   /**
    * The feature id for the '<em><b>Property</b></em>' reference.
@@ -840,6 +877,97 @@ public interface BehaviorPackage extends EPackage
   int PROPERTY_CALL_FEATURE_COUNT = 3;
 
   /**
+   * The meta object id for the '{@link org.spp.cocome.behavior.behavior.impl.DataQueryImpl <em>Data Query</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.spp.cocome.behavior.behavior.impl.DataQueryImpl
+   * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getDataQuery()
+   * @generated
+   */
+  int DATA_QUERY = 18;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATA_QUERY__LEFT = EXPRESSION__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATA_QUERY__FEATURE = EXPRESSION__FEATURE;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATA_QUERY__RIGHT = EXPRESSION__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATA_QUERY__EXPRESSION = EXPRESSION__EXPRESSION;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATA_QUERY__TYPE = EXPRESSION__TYPE;
+
+  /**
+   * The feature id for the '<em><b>Operand</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATA_QUERY__OPERAND = EXPRESSION__OPERAND;
+
+  /**
+   * The feature id for the '<em><b>Target</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATA_QUERY__TARGET = EXPRESSION__TARGET;
+
+  /**
+   * The feature id for the '<em><b>Query</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATA_QUERY__QUERY = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Data Query</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATA_QUERY_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link org.spp.cocome.behavior.behavior.impl.InstantiationExpressionImpl <em>Instantiation Expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -847,7 +975,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getInstantiationExpression()
    * @generated
    */
-  int INSTANTIATION_EXPRESSION = 17;
+  int INSTANTIATION_EXPRESSION = 19;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -938,7 +1066,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getDeclarationTypeReference()
    * @generated
    */
-  int DECLARATION_TYPE_REFERENCE = 21;
+  int DECLARATION_TYPE_REFERENCE = 20;
 
   /**
    * The number of structural features of the '<em>Declaration Type Reference</em>' class.
@@ -957,7 +1085,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getTypeReference()
    * @generated
    */
-  int TYPE_REFERENCE = 18;
+  int TYPE_REFERENCE = 21;
 
   /**
    * The feature id for the '<em><b>Reference</b></em>' reference.
@@ -985,7 +1113,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getCollectionType()
    * @generated
    */
-  int COLLECTION_TYPE = 19;
+  int COLLECTION_TYPE = 22;
 
   /**
    * The feature id for the '<em><b>Reference</b></em>' containment reference.
@@ -1022,7 +1150,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getMapType()
    * @generated
    */
-  int MAP_TYPE = 20;
+  int MAP_TYPE = 23;
 
   /**
    * The feature id for the '<em><b>Reference</b></em>' containment reference.
@@ -1059,7 +1187,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getLiteral()
    * @generated
    */
-  int LITERAL = 22;
+  int LITERAL = 24;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1141,7 +1269,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getStringLiteral()
    * @generated
    */
-  int STRING_LITERAL = 23;
+  int STRING_LITERAL = 25;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1232,7 +1360,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getCharLiteral()
    * @generated
    */
-  int CHAR_LITERAL = 24;
+  int CHAR_LITERAL = 26;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1323,7 +1451,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getNumberLiteral()
    * @generated
    */
-  int NUMBER_LITERAL = 25;
+  int NUMBER_LITERAL = 27;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1414,7 +1542,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getBooleanLiteral()
    * @generated
    */
-  int BOOLEAN_LITERAL = 26;
+  int BOOLEAN_LITERAL = 28;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1498,88 +1626,6 @@ public interface BehaviorPackage extends EPackage
   int BOOLEAN_LITERAL_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link org.spp.cocome.behavior.behavior.impl.BinaryOperationImpl <em>Binary Operation</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.spp.cocome.behavior.behavior.impl.BinaryOperationImpl
-   * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getBinaryOperation()
-   * @generated
-   */
-  int BINARY_OPERATION = 27;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_OPERATION__LEFT = EXPRESSION__LEFT;
-
-  /**
-   * The feature id for the '<em><b>Feature</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_OPERATION__FEATURE = EXPRESSION__FEATURE;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_OPERATION__RIGHT = EXPRESSION__RIGHT;
-
-  /**
-   * The feature id for the '<em><b>Expression</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_OPERATION__EXPRESSION = EXPRESSION__EXPRESSION;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_OPERATION__TYPE = EXPRESSION__TYPE;
-
-  /**
-   * The feature id for the '<em><b>Operand</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_OPERATION__OPERAND = EXPRESSION__OPERAND;
-
-  /**
-   * The feature id for the '<em><b>Target</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_OPERATION__TARGET = EXPRESSION__TARGET;
-
-  /**
-   * The number of structural features of the '<em>Binary Operation</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_OPERATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
-
-  /**
    * The meta object id for the '{@link org.spp.cocome.behavior.behavior.ComponentKind <em>Component Kind</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1587,7 +1633,17 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getComponentKind()
    * @generated
    */
-  int COMPONENT_KIND = 28;
+  int COMPONENT_KIND = 29;
+
+  /**
+   * The meta object id for the '{@link org.spp.cocome.behavior.behavior.DataAccessOperation <em>Data Access Operation</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.spp.cocome.behavior.behavior.DataAccessOperation
+   * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getDataAccessOperation()
+   * @generated
+   */
+  int DATA_ACCESS_OPERATION = 30;
 
 
   /**
@@ -2072,6 +2128,38 @@ public interface BehaviorPackage extends EPackage
   EReference getLoopStatement_Statement();
 
   /**
+   * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.DataAccessStatement <em>Data Access Statement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Data Access Statement</em>'.
+   * @see org.spp.cocome.behavior.behavior.DataAccessStatement
+   * @generated
+   */
+  EClass getDataAccessStatement();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.spp.cocome.behavior.behavior.DataAccessStatement#getOperation <em>Operation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Operation</em>'.
+   * @see org.spp.cocome.behavior.behavior.DataAccessStatement#getOperation()
+   * @see #getDataAccessStatement()
+   * @generated
+   */
+  EAttribute getDataAccessStatement_Operation();
+
+  /**
+   * Returns the meta object for the reference '{@link org.spp.cocome.behavior.behavior.DataAccessStatement#getVariable <em>Variable</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Variable</em>'.
+   * @see org.spp.cocome.behavior.behavior.DataAccessStatement#getVariable()
+   * @see #getDataAccessStatement()
+   * @generated
+   */
+  EReference getDataAccessStatement_Variable();
+
+  /**
    * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.VariableCall <em>Variable Call</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2245,6 +2333,27 @@ public interface BehaviorPackage extends EPackage
   EReference getExpression_Target();
 
   /**
+   * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.DataQuery <em>Data Query</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Data Query</em>'.
+   * @see org.spp.cocome.behavior.behavior.DataQuery
+   * @generated
+   */
+  EClass getDataQuery();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.spp.cocome.behavior.behavior.DataQuery#getQuery <em>Query</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Query</em>'.
+   * @see org.spp.cocome.behavior.behavior.DataQuery#getQuery()
+   * @see #getDataQuery()
+   * @generated
+   */
+  EAttribute getDataQuery_Query();
+
+  /**
    * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.InstantiationExpression <em>Instantiation Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2264,6 +2373,16 @@ public interface BehaviorPackage extends EPackage
    * @generated
    */
   EReference getInstantiationExpression_Parameters();
+
+  /**
+   * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.DeclarationTypeReference <em>Declaration Type Reference</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Declaration Type Reference</em>'.
+   * @see org.spp.cocome.behavior.behavior.DeclarationTypeReference
+   * @generated
+   */
+  EClass getDeclarationTypeReference();
 
   /**
    * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.TypeReference <em>Type Reference</em>}'.
@@ -2349,16 +2468,6 @@ public interface BehaviorPackage extends EPackage
    * @generated
    */
   EReference getMapType_KeyType();
-
-  /**
-   * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.DeclarationTypeReference <em>Declaration Type Reference</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Declaration Type Reference</em>'.
-   * @see org.spp.cocome.behavior.behavior.DeclarationTypeReference
-   * @generated
-   */
-  EClass getDeclarationTypeReference();
 
   /**
    * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.Literal <em>Literal</em>}'.
@@ -2455,16 +2564,6 @@ public interface BehaviorPackage extends EPackage
   EAttribute getBooleanLiteral_Value();
 
   /**
-   * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.BinaryOperation <em>Binary Operation</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Binary Operation</em>'.
-   * @see org.spp.cocome.behavior.behavior.BinaryOperation
-   * @generated
-   */
-  EClass getBinaryOperation();
-
-  /**
    * Returns the meta object for enum '{@link org.spp.cocome.behavior.behavior.ComponentKind <em>Component Kind</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2473,6 +2572,16 @@ public interface BehaviorPackage extends EPackage
    * @generated
    */
   EEnum getComponentKind();
+
+  /**
+   * Returns the meta object for enum '{@link org.spp.cocome.behavior.behavior.DataAccessOperation <em>Data Access Operation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Data Access Operation</em>'.
+   * @see org.spp.cocome.behavior.behavior.DataAccessOperation
+   * @generated
+   */
+  EEnum getDataAccessOperation();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -2886,6 +2995,32 @@ public interface BehaviorPackage extends EPackage
     EReference LOOP_STATEMENT__STATEMENT = eINSTANCE.getLoopStatement_Statement();
 
     /**
+     * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.DataAccessStatementImpl <em>Data Access Statement</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.spp.cocome.behavior.behavior.impl.DataAccessStatementImpl
+     * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getDataAccessStatement()
+     * @generated
+     */
+    EClass DATA_ACCESS_STATEMENT = eINSTANCE.getDataAccessStatement();
+
+    /**
+     * The meta object literal for the '<em><b>Operation</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DATA_ACCESS_STATEMENT__OPERATION = eINSTANCE.getDataAccessStatement_Operation();
+
+    /**
+     * The meta object literal for the '<em><b>Variable</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DATA_ACCESS_STATEMENT__VARIABLE = eINSTANCE.getDataAccessStatement_Variable();
+
+    /**
      * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.VariableCallImpl <em>Variable Call</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3020,6 +3155,24 @@ public interface BehaviorPackage extends EPackage
     EReference EXPRESSION__TARGET = eINSTANCE.getExpression_Target();
 
     /**
+     * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.DataQueryImpl <em>Data Query</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.spp.cocome.behavior.behavior.impl.DataQueryImpl
+     * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getDataQuery()
+     * @generated
+     */
+    EClass DATA_QUERY = eINSTANCE.getDataQuery();
+
+    /**
+     * The meta object literal for the '<em><b>Query</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DATA_QUERY__QUERY = eINSTANCE.getDataQuery_Query();
+
+    /**
      * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.InstantiationExpressionImpl <em>Instantiation Expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3036,6 +3189,16 @@ public interface BehaviorPackage extends EPackage
      * @generated
      */
     EReference INSTANTIATION_EXPRESSION__PARAMETERS = eINSTANCE.getInstantiationExpression_Parameters();
+
+    /**
+     * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.DeclarationTypeReferenceImpl <em>Declaration Type Reference</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.spp.cocome.behavior.behavior.impl.DeclarationTypeReferenceImpl
+     * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getDeclarationTypeReference()
+     * @generated
+     */
+    EClass DECLARATION_TYPE_REFERENCE = eINSTANCE.getDeclarationTypeReference();
 
     /**
      * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.TypeReferenceImpl <em>Type Reference</em>}' class.
@@ -3106,16 +3269,6 @@ public interface BehaviorPackage extends EPackage
      * @generated
      */
     EReference MAP_TYPE__KEY_TYPE = eINSTANCE.getMapType_KeyType();
-
-    /**
-     * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.DeclarationTypeReferenceImpl <em>Declaration Type Reference</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.spp.cocome.behavior.behavior.impl.DeclarationTypeReferenceImpl
-     * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getDeclarationTypeReference()
-     * @generated
-     */
-    EClass DECLARATION_TYPE_REFERENCE = eINSTANCE.getDeclarationTypeReference();
 
     /**
      * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.LiteralImpl <em>Literal</em>}' class.
@@ -3200,16 +3353,6 @@ public interface BehaviorPackage extends EPackage
     EAttribute BOOLEAN_LITERAL__VALUE = eINSTANCE.getBooleanLiteral_Value();
 
     /**
-     * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.BinaryOperationImpl <em>Binary Operation</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.spp.cocome.behavior.behavior.impl.BinaryOperationImpl
-     * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getBinaryOperation()
-     * @generated
-     */
-    EClass BINARY_OPERATION = eINSTANCE.getBinaryOperation();
-
-    /**
      * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.ComponentKind <em>Component Kind</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3218,6 +3361,16 @@ public interface BehaviorPackage extends EPackage
      * @generated
      */
     EEnum COMPONENT_KIND = eINSTANCE.getComponentKind();
+
+    /**
+     * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.DataAccessOperation <em>Data Access Operation</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.spp.cocome.behavior.behavior.DataAccessOperation
+     * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getDataAccessOperation()
+     * @generated
+     */
+    EEnum DATA_ACCESS_OPERATION = eINSTANCE.getDataAccessOperation();
 
   }
 
