@@ -19,6 +19,8 @@ import org.spp.cocome.behavior.mapping.Component;
  *   <li>{@link org.spp.cocome.behavior.behavior.ComponentImpl#getKind <em>Kind</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.ComponentImpl#getRefComponent <em>Ref Component</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.ComponentImpl#getLocalDeclarations <em>Local Declarations</em>}</li>
+ *   <li>{@link org.spp.cocome.behavior.behavior.ComponentImpl#getPostConstruct <em>Post Construct</em>}</li>
+ *   <li>{@link org.spp.cocome.behavior.behavior.ComponentImpl#getPreDestroy <em>Pre Destroy</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.ComponentImpl#getInterfaces <em>Interfaces</em>}</li>
  * </ul>
  * </p>
@@ -99,6 +101,58 @@ public interface ComponentImpl extends EObject
    * @generated
    */
   EList<EObject> getLocalDeclarations();
+
+  /**
+   * Returns the value of the '<em><b>Post Construct</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Post Construct</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Post Construct</em>' containment reference.
+   * @see #setPostConstruct(LifeCycleMethod)
+   * @see org.spp.cocome.behavior.behavior.BehaviorPackage#getComponentImpl_PostConstruct()
+   * @model containment="true"
+   * @generated
+   */
+  LifeCycleMethod getPostConstruct();
+
+  /**
+   * Sets the value of the '{@link org.spp.cocome.behavior.behavior.ComponentImpl#getPostConstruct <em>Post Construct</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Post Construct</em>' containment reference.
+   * @see #getPostConstruct()
+   * @generated
+   */
+  void setPostConstruct(LifeCycleMethod value);
+
+  /**
+   * Returns the value of the '<em><b>Pre Destroy</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Pre Destroy</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Pre Destroy</em>' containment reference.
+   * @see #setPreDestroy(LifeCycleMethod)
+   * @see org.spp.cocome.behavior.behavior.BehaviorPackage#getComponentImpl_PreDestroy()
+   * @model containment="true"
+   * @generated
+   */
+  LifeCycleMethod getPreDestroy();
+
+  /**
+   * Sets the value of the '{@link org.spp.cocome.behavior.behavior.ComponentImpl#getPreDestroy <em>Pre Destroy</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Pre Destroy</em>' containment reference.
+   * @see #getPreDestroy()
+   * @generated
+   */
+  void setPreDestroy(LifeCycleMethod value);
 
   /**
    * Returns the value of the '<em><b>Interfaces</b></em>' containment reference list.

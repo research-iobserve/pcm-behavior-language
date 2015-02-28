@@ -59,6 +59,15 @@ public interface BehaviorFactory extends EFactory
   ComponentImpl createComponentImpl();
 
   /**
+   * Returns a new object of class '<em>Life Cycle Method</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Life Cycle Method</em>'.
+   * @generated
+   */
+  LifeCycleMethod createLifeCycleMethod();
+
+  /**
    * Returns a new object of class '<em>Variable Decl</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

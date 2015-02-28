@@ -28,6 +28,7 @@ import org.spp.cocome.behavior.behavior.IfStatement;
 import org.spp.cocome.behavior.behavior.Import;
 import org.spp.cocome.behavior.behavior.InstantiationExpression;
 import org.spp.cocome.behavior.behavior.InterfaceRealization;
+import org.spp.cocome.behavior.behavior.LifeCycleMethod;
 import org.spp.cocome.behavior.behavior.Literal;
 import org.spp.cocome.behavior.behavior.LoopStatement;
 import org.spp.cocome.behavior.behavior.MapType;
@@ -80,6 +81,13 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
    * @generated
    */
   private EClass componentImplEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass lifeCycleMethodEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -451,9 +459,49 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getComponentImpl_Interfaces()
+  public EReference getComponentImpl_PostConstruct()
   {
     return (EReference)componentImplEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getComponentImpl_PreDestroy()
+  {
+    return (EReference)componentImplEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getComponentImpl_Interfaces()
+  {
+    return (EReference)componentImplEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLifeCycleMethod()
+  {
+    return lifeCycleMethodEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLifeCycleMethod_Body()
+  {
+    return (EReference)lifeCycleMethodEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1152,7 +1200,12 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     createEAttribute(componentImplEClass, COMPONENT_IMPL__KIND);
     createEReference(componentImplEClass, COMPONENT_IMPL__REF_COMPONENT);
     createEReference(componentImplEClass, COMPONENT_IMPL__LOCAL_DECLARATIONS);
+    createEReference(componentImplEClass, COMPONENT_IMPL__POST_CONSTRUCT);
+    createEReference(componentImplEClass, COMPONENT_IMPL__PRE_DESTROY);
     createEReference(componentImplEClass, COMPONENT_IMPL__INTERFACES);
+
+    lifeCycleMethodEClass = createEClass(LIFE_CYCLE_METHOD);
+    createEReference(lifeCycleMethodEClass, LIFE_CYCLE_METHOD__BODY);
 
     variableDeclEClass = createEClass(VARIABLE_DECL);
     createEAttribute(variableDeclEClass, VARIABLE_DECL__MODIFIER);
@@ -1310,7 +1363,12 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     initEAttribute(getComponentImpl_Kind(), this.getComponentKind(), "kind", null, 0, 1, ComponentImpl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getComponentImpl_RefComponent(), theMappingPackage.getComponent(), null, "refComponent", null, 0, 1, ComponentImpl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getComponentImpl_LocalDeclarations(), ecorePackage.getEObject(), null, "localDeclarations", null, 0, -1, ComponentImpl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getComponentImpl_PostConstruct(), this.getLifeCycleMethod(), null, "postConstruct", null, 0, 1, ComponentImpl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getComponentImpl_PreDestroy(), this.getLifeCycleMethod(), null, "preDestroy", null, 0, 1, ComponentImpl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getComponentImpl_Interfaces(), this.getInterfaceRealization(), null, "interfaces", null, 0, -1, ComponentImpl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(lifeCycleMethodEClass, LifeCycleMethod.class, "LifeCycleMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getLifeCycleMethod_Body(), this.getBlockStatement(), null, "body", null, 0, 1, LifeCycleMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(variableDeclEClass, VariableDecl.class, "VariableDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getVariableDecl_Modifier(), ecorePackage.getEString(), "modifier", null, 0, 1, VariableDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

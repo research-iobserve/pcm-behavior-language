@@ -100,6 +100,13 @@ public class BehaviorSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case BehaviorPackage.LIFE_CYCLE_METHOD:
+      {
+        LifeCycleMethod lifeCycleMethod = (LifeCycleMethod)theEObject;
+        T result = caseLifeCycleMethod(lifeCycleMethod);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case BehaviorPackage.VARIABLE_DECL:
       {
         VariableDecl variableDecl = (VariableDecl)theEObject;
@@ -343,6 +350,22 @@ public class BehaviorSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseComponentImpl(ComponentImpl object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Life Cycle Method</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Life Cycle Method</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLifeCycleMethod(LifeCycleMethod object)
   {
     return null;
   }

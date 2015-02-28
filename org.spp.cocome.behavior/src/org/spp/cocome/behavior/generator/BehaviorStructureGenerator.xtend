@@ -11,7 +11,7 @@ import static extension org.spp.cocome.behavior.generator.BehaviorExpressionGene
 import static extension org.spp.cocome.behavior.generator.BehaviorStatementGenerator.*
 import static extension org.spp.cocome.behavior.generator.BehaviorTypeGenerator.*
 import static extension org.spp.cocome.behavior.generator.BehaviorNameResolver.*
-
+import org.spp.cocome.behavior.behavior.LifeCycleMethod
 
 class BehaviorStructureGenerator {
 
@@ -25,7 +25,21 @@ class BehaviorStructureGenerator {
 		::VARIABLES::
 		«com.localDeclarations.map[decl | decl.createDeclaration].join()»
 		::VARIABLES END::
-		«com.interfaces.map[iface | iface.createInterface].join()»		
+		«IF com.postConstruct != null || com.preDestroy != null»::LIFECYCLE::«ENDIF»
+		«if (com.postConstruct != null) com.postConstruct.createLifeCycleMethod('PostConstruct', 'initialize')»
+		«if (com.preDestroy != null) com.preDestroy.createLifeCycleMethod('PreDestroy', 'shutdown')»
+		«IF com.postConstruct != null || com.preDestroy != null»::LIFECYCLE END::«ENDIF»
+		«com.interfaces.map[iface | iface.createInterface].join()»
+	'''
+	
+	/**
+	 * life cycle methods
+	 */
+	def static createLifeCycleMethod(LifeCycleMethod method, String annotation, String name) '''
+		@«annotation»
+  		public void «name»() {
+    		«method.body.handleBlockstatement»
+  		}
 	'''
 	
 	/**

@@ -206,13 +206,31 @@ public interface BehaviorPackage extends EPackage
   int COMPONENT_IMPL__LOCAL_DECLARATIONS = 2;
 
   /**
+   * The feature id for the '<em><b>Post Construct</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPONENT_IMPL__POST_CONSTRUCT = 3;
+
+  /**
+   * The feature id for the '<em><b>Pre Destroy</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPONENT_IMPL__PRE_DESTROY = 4;
+
+  /**
    * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COMPONENT_IMPL__INTERFACES = 3;
+  int COMPONENT_IMPL__INTERFACES = 5;
 
   /**
    * The number of structural features of the '<em>Component Impl</em>' class.
@@ -221,7 +239,35 @@ public interface BehaviorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPONENT_IMPL_FEATURE_COUNT = 4;
+  int COMPONENT_IMPL_FEATURE_COUNT = 6;
+
+  /**
+   * The meta object id for the '{@link org.spp.cocome.behavior.behavior.impl.LifeCycleMethodImpl <em>Life Cycle Method</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.spp.cocome.behavior.behavior.impl.LifeCycleMethodImpl
+   * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getLifeCycleMethod()
+   * @generated
+   */
+  int LIFE_CYCLE_METHOD = 4;
+
+  /**
+   * The feature id for the '<em><b>Body</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIFE_CYCLE_METHOD__BODY = 0;
+
+  /**
+   * The number of structural features of the '<em>Life Cycle Method</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIFE_CYCLE_METHOD_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.spp.cocome.behavior.behavior.impl.VariableDeclImpl <em>Variable Decl</em>}' class.
@@ -231,7 +277,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getVariableDecl()
    * @generated
    */
-  int VARIABLE_DECL = 4;
+  int VARIABLE_DECL = 5;
 
   /**
    * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -277,7 +323,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getConstantDecl()
    * @generated
    */
-  int CONSTANT_DECL = 5;
+  int CONSTANT_DECL = 6;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -314,7 +360,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getInterfaceRealization()
    * @generated
    */
-  int INTERFACE_REALIZATION = 6;
+  int INTERFACE_REALIZATION = 7;
 
   /**
    * The feature id for the '<em><b>Ref Interface</b></em>' reference.
@@ -351,7 +397,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getMethodImpl()
    * @generated
    */
-  int METHOD_IMPL = 7;
+  int METHOD_IMPL = 8;
 
   /**
    * The feature id for the '<em><b>Ref Method</b></em>' reference.
@@ -388,7 +434,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getStatement()
    * @generated
    */
-  int STATEMENT = 8;
+  int STATEMENT = 9;
 
   /**
    * The number of structural features of the '<em>Statement</em>' class.
@@ -407,7 +453,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getIfStatement()
    * @generated
    */
-  int IF_STATEMENT = 9;
+  int IF_STATEMENT = 10;
 
   /**
    * The feature id for the '<em><b>Expr</b></em>' containment reference.
@@ -453,7 +499,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getBlockStatement()
    * @generated
    */
-  int BLOCK_STATEMENT = 10;
+  int BLOCK_STATEMENT = 11;
 
   /**
    * The feature id for the '<em><b>Statements</b></em>' containment reference list.
@@ -481,7 +527,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getAssignment()
    * @generated
    */
-  int ASSIGNMENT = 11;
+  int ASSIGNMENT = 12;
 
   /**
    * The feature id for the '<em><b>Variable</b></em>' containment reference.
@@ -518,7 +564,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getLoopStatement()
    * @generated
    */
-  int LOOP_STATEMENT = 12;
+  int LOOP_STATEMENT = 13;
 
   /**
    * The feature id for the '<em><b>Variable</b></em>' containment reference.
@@ -564,7 +610,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 15;
+  int EXPRESSION = 16;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -646,7 +692,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getVariableCall()
    * @generated
    */
-  int VARIABLE_CALL = 13;
+  int VARIABLE_CALL = 14;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -755,7 +801,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getPropertyCall()
    * @generated
    */
-  int PROPERTY_CALL = 14;
+  int PROPERTY_CALL = 15;
 
   /**
    * The feature id for the '<em><b>Property</b></em>' reference.
@@ -801,7 +847,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getInstantiationExpression()
    * @generated
    */
-  int INSTANTIATION_EXPRESSION = 16;
+  int INSTANTIATION_EXPRESSION = 17;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -892,7 +938,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getDeclarationTypeReference()
    * @generated
    */
-  int DECLARATION_TYPE_REFERENCE = 20;
+  int DECLARATION_TYPE_REFERENCE = 21;
 
   /**
    * The number of structural features of the '<em>Declaration Type Reference</em>' class.
@@ -911,7 +957,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getTypeReference()
    * @generated
    */
-  int TYPE_REFERENCE = 17;
+  int TYPE_REFERENCE = 18;
 
   /**
    * The feature id for the '<em><b>Reference</b></em>' reference.
@@ -939,7 +985,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getCollectionType()
    * @generated
    */
-  int COLLECTION_TYPE = 18;
+  int COLLECTION_TYPE = 19;
 
   /**
    * The feature id for the '<em><b>Reference</b></em>' containment reference.
@@ -976,7 +1022,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getMapType()
    * @generated
    */
-  int MAP_TYPE = 19;
+  int MAP_TYPE = 20;
 
   /**
    * The feature id for the '<em><b>Reference</b></em>' containment reference.
@@ -1013,7 +1059,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getLiteral()
    * @generated
    */
-  int LITERAL = 21;
+  int LITERAL = 22;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1095,7 +1141,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getStringLiteral()
    * @generated
    */
-  int STRING_LITERAL = 22;
+  int STRING_LITERAL = 23;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1186,7 +1232,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getCharLiteral()
    * @generated
    */
-  int CHAR_LITERAL = 23;
+  int CHAR_LITERAL = 24;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1277,7 +1323,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getNumberLiteral()
    * @generated
    */
-  int NUMBER_LITERAL = 24;
+  int NUMBER_LITERAL = 25;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1368,7 +1414,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getBooleanLiteral()
    * @generated
    */
-  int BOOLEAN_LITERAL = 25;
+  int BOOLEAN_LITERAL = 26;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1459,7 +1505,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getBinaryOperation()
    * @generated
    */
-  int BINARY_OPERATION = 26;
+  int BINARY_OPERATION = 27;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1541,7 +1587,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getComponentKind()
    * @generated
    */
-  int COMPONENT_KIND = 27;
+  int COMPONENT_KIND = 28;
 
 
   /**
@@ -1684,6 +1730,28 @@ public interface BehaviorPackage extends EPackage
   EReference getComponentImpl_LocalDeclarations();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.spp.cocome.behavior.behavior.ComponentImpl#getPostConstruct <em>Post Construct</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Post Construct</em>'.
+   * @see org.spp.cocome.behavior.behavior.ComponentImpl#getPostConstruct()
+   * @see #getComponentImpl()
+   * @generated
+   */
+  EReference getComponentImpl_PostConstruct();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.spp.cocome.behavior.behavior.ComponentImpl#getPreDestroy <em>Pre Destroy</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Pre Destroy</em>'.
+   * @see org.spp.cocome.behavior.behavior.ComponentImpl#getPreDestroy()
+   * @see #getComponentImpl()
+   * @generated
+   */
+  EReference getComponentImpl_PreDestroy();
+
+  /**
    * Returns the meta object for the containment reference list '{@link org.spp.cocome.behavior.behavior.ComponentImpl#getInterfaces <em>Interfaces</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1693,6 +1761,27 @@ public interface BehaviorPackage extends EPackage
    * @generated
    */
   EReference getComponentImpl_Interfaces();
+
+  /**
+   * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.LifeCycleMethod <em>Life Cycle Method</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Life Cycle Method</em>'.
+   * @see org.spp.cocome.behavior.behavior.LifeCycleMethod
+   * @generated
+   */
+  EClass getLifeCycleMethod();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.spp.cocome.behavior.behavior.LifeCycleMethod#getBody <em>Body</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Body</em>'.
+   * @see org.spp.cocome.behavior.behavior.LifeCycleMethod#getBody()
+   * @see #getLifeCycleMethod()
+   * @generated
+   */
+  EReference getLifeCycleMethod_Body();
 
   /**
    * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.VariableDecl <em>Variable Decl</em>}'.
@@ -2521,12 +2610,46 @@ public interface BehaviorPackage extends EPackage
     EReference COMPONENT_IMPL__LOCAL_DECLARATIONS = eINSTANCE.getComponentImpl_LocalDeclarations();
 
     /**
+     * The meta object literal for the '<em><b>Post Construct</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COMPONENT_IMPL__POST_CONSTRUCT = eINSTANCE.getComponentImpl_PostConstruct();
+
+    /**
+     * The meta object literal for the '<em><b>Pre Destroy</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COMPONENT_IMPL__PRE_DESTROY = eINSTANCE.getComponentImpl_PreDestroy();
+
+    /**
      * The meta object literal for the '<em><b>Interfaces</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference COMPONENT_IMPL__INTERFACES = eINSTANCE.getComponentImpl_Interfaces();
+
+    /**
+     * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.LifeCycleMethodImpl <em>Life Cycle Method</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.spp.cocome.behavior.behavior.impl.LifeCycleMethodImpl
+     * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getLifeCycleMethod()
+     * @generated
+     */
+    EClass LIFE_CYCLE_METHOD = eINSTANCE.getLifeCycleMethod();
+
+    /**
+     * The meta object literal for the '<em><b>Body</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LIFE_CYCLE_METHOD__BODY = eINSTANCE.getLifeCycleMethod_Body();
 
     /**
      * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.VariableDeclImpl <em>Variable Decl</em>}' class.

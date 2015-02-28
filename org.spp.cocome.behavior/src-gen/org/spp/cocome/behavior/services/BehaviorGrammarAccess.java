@@ -132,19 +132,29 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cLocalDeclarationsAlternatives_4_0 = (Alternatives)cLocalDeclarationsAssignment_4.eContents().get(0);
 		private final RuleCall cLocalDeclarationsVariableDeclParserRuleCall_4_0_0 = (RuleCall)cLocalDeclarationsAlternatives_4_0.eContents().get(0);
 		private final RuleCall cLocalDeclarationsConstantDeclParserRuleCall_4_0_1 = (RuleCall)cLocalDeclarationsAlternatives_4_0.eContents().get(1);
-		private final Assignment cInterfacesAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cInterfacesInterfaceRealizationParserRuleCall_5_0 = (RuleCall)cInterfacesAssignment_5.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cPostConstructKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cPostConstructAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cPostConstructLifeCycleMethodParserRuleCall_5_1_0 = (RuleCall)cPostConstructAssignment_5_1.eContents().get(0);
+		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
+		private final Keyword cPreDestroyKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Assignment cPreDestroyAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final RuleCall cPreDestroyLifeCycleMethodParserRuleCall_6_1_0 = (RuleCall)cPreDestroyAssignment_6_1.eContents().get(0);
+		private final Assignment cInterfacesAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cInterfacesInterfaceRealizationParserRuleCall_7_0 = (RuleCall)cInterfacesAssignment_7.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		/// *
 		// * Component structure
 		// * / ComponentImpl:
 		//	"realize" kind=ComponentKind? refComponent=[mapping::Component|QualifiedName] "{" localDeclarations+=(VariableDecl |
-		//	ConstantDecl)* interfaces+=InterfaceRealization* "}";
+		//	ConstantDecl)* ("post-construct" postConstruct=LifeCycleMethod)? ("pre-destroy" preDestroy=LifeCycleMethod)?
+		//	interfaces+=InterfaceRealization* "}";
 		public ParserRule getRule() { return rule; }
 
 		//"realize" kind=ComponentKind? refComponent=[mapping::Component|QualifiedName] "{" localDeclarations+=(VariableDecl |
-		//ConstantDecl)* interfaces+=InterfaceRealization* "}"
+		//ConstantDecl)* ("post-construct" postConstruct=LifeCycleMethod)? ("pre-destroy" preDestroy=LifeCycleMethod)?
+		//interfaces+=InterfaceRealization* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"realize"
@@ -180,14 +190,62 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 		//ConstantDecl
 		public RuleCall getLocalDeclarationsConstantDeclParserRuleCall_4_0_1() { return cLocalDeclarationsConstantDeclParserRuleCall_4_0_1; }
 
+		//("post-construct" postConstruct=LifeCycleMethod)?
+		public Group getGroup_5() { return cGroup_5; }
+
+		//"post-construct"
+		public Keyword getPostConstructKeyword_5_0() { return cPostConstructKeyword_5_0; }
+
+		//postConstruct=LifeCycleMethod
+		public Assignment getPostConstructAssignment_5_1() { return cPostConstructAssignment_5_1; }
+
+		//LifeCycleMethod
+		public RuleCall getPostConstructLifeCycleMethodParserRuleCall_5_1_0() { return cPostConstructLifeCycleMethodParserRuleCall_5_1_0; }
+
+		//("pre-destroy" preDestroy=LifeCycleMethod)?
+		public Group getGroup_6() { return cGroup_6; }
+
+		//"pre-destroy"
+		public Keyword getPreDestroyKeyword_6_0() { return cPreDestroyKeyword_6_0; }
+
+		//preDestroy=LifeCycleMethod
+		public Assignment getPreDestroyAssignment_6_1() { return cPreDestroyAssignment_6_1; }
+
+		//LifeCycleMethod
+		public RuleCall getPreDestroyLifeCycleMethodParserRuleCall_6_1_0() { return cPreDestroyLifeCycleMethodParserRuleCall_6_1_0; }
+
 		//interfaces+=InterfaceRealization*
-		public Assignment getInterfacesAssignment_5() { return cInterfacesAssignment_5; }
+		public Assignment getInterfacesAssignment_7() { return cInterfacesAssignment_7; }
 
 		//InterfaceRealization
-		public RuleCall getInterfacesInterfaceRealizationParserRuleCall_5_0() { return cInterfacesInterfaceRealizationParserRuleCall_5_0; }
+		public RuleCall getInterfacesInterfaceRealizationParserRuleCall_7_0() { return cInterfacesInterfaceRealizationParserRuleCall_7_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+	}
+
+	public class LifeCycleMethodElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LifeCycleMethod");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cActionKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cBodyAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cBodyBlockStatementParserRuleCall_1_0 = (RuleCall)cBodyAssignment_1.eContents().get(0);
+		
+		//LifeCycleMethod:
+		//	"action" body=BlockStatement;
+		public ParserRule getRule() { return rule; }
+
+		//"action" body=BlockStatement
+		public Group getGroup() { return cGroup; }
+
+		//"action"
+		public Keyword getActionKeyword_0() { return cActionKeyword_0; }
+
+		//body=BlockStatement
+		public Assignment getBodyAssignment_1() { return cBodyAssignment_1; }
+
+		//BlockStatement
+		public RuleCall getBodyBlockStatementParserRuleCall_1_0() { return cBodyBlockStatementParserRuleCall_1_0; }
 	}
 
 	public class VariableDeclElements extends AbstractParserRuleElementFinder {
@@ -1576,6 +1634,7 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 	private final RepositoryReferenceElements pRepositoryReference;
 	private final ImportElements pImport;
 	private final ComponentImplElements pComponentImpl;
+	private final LifeCycleMethodElements pLifeCycleMethod;
 	private final ComponentKindElements unknownRuleComponentKind;
 	private final VariableDeclElements pVariableDecl;
 	private final ConstantDeclElements pConstantDecl;
@@ -1627,6 +1686,7 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 		this.pRepositoryReference = new RepositoryReferenceElements();
 		this.pImport = new ImportElements();
 		this.pComponentImpl = new ComponentImplElements();
+		this.pLifeCycleMethod = new LifeCycleMethodElements();
 		this.unknownRuleComponentKind = new ComponentKindElements();
 		this.pVariableDecl = new VariableDeclElements();
 		this.pConstantDecl = new ConstantDeclElements();
@@ -1727,13 +1787,24 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 	// * Component structure
 	// * / ComponentImpl:
 	//	"realize" kind=ComponentKind? refComponent=[mapping::Component|QualifiedName] "{" localDeclarations+=(VariableDecl |
-	//	ConstantDecl)* interfaces+=InterfaceRealization* "}";
+	//	ConstantDecl)* ("post-construct" postConstruct=LifeCycleMethod)? ("pre-destroy" preDestroy=LifeCycleMethod)?
+	//	interfaces+=InterfaceRealization* "}";
 	public ComponentImplElements getComponentImplAccess() {
 		return pComponentImpl;
 	}
 	
 	public ParserRule getComponentImplRule() {
 		return getComponentImplAccess().getRule();
+	}
+
+	//LifeCycleMethod:
+	//	"action" body=BlockStatement;
+	public LifeCycleMethodElements getLifeCycleMethodAccess() {
+		return pLifeCycleMethod;
+	}
+	
+	public ParserRule getLifeCycleMethodRule() {
+		return getLifeCycleMethodAccess().getRule();
 	}
 
 	//enum ComponentKind:

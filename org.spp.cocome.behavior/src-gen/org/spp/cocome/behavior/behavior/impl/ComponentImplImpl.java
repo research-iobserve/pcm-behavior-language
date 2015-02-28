@@ -23,6 +23,7 @@ import org.spp.cocome.behavior.behavior.BehaviorPackage;
 import org.spp.cocome.behavior.behavior.ComponentImpl;
 import org.spp.cocome.behavior.behavior.ComponentKind;
 import org.spp.cocome.behavior.behavior.InterfaceRealization;
+import org.spp.cocome.behavior.behavior.LifeCycleMethod;
 
 import org.spp.cocome.behavior.mapping.Component;
 
@@ -36,6 +37,8 @@ import org.spp.cocome.behavior.mapping.Component;
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.ComponentImplImpl#getKind <em>Kind</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.ComponentImplImpl#getRefComponent <em>Ref Component</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.ComponentImplImpl#getLocalDeclarations <em>Local Declarations</em>}</li>
+ *   <li>{@link org.spp.cocome.behavior.behavior.impl.ComponentImplImpl#getPostConstruct <em>Post Construct</em>}</li>
+ *   <li>{@link org.spp.cocome.behavior.behavior.impl.ComponentImplImpl#getPreDestroy <em>Pre Destroy</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.ComponentImplImpl#getInterfaces <em>Interfaces</em>}</li>
  * </ul>
  * </p>
@@ -83,6 +86,26 @@ public class ComponentImplImpl extends MinimalEObjectImpl.Container implements C
    * @ordered
    */
   protected EList<EObject> localDeclarations;
+
+  /**
+   * The cached value of the '{@link #getPostConstruct() <em>Post Construct</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPostConstruct()
+   * @generated
+   * @ordered
+   */
+  protected LifeCycleMethod postConstruct;
+
+  /**
+   * The cached value of the '{@link #getPreDestroy() <em>Pre Destroy</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPreDestroy()
+   * @generated
+   * @ordered
+   */
+  protected LifeCycleMethod preDestroy;
 
   /**
    * The cached value of the '{@link #getInterfaces() <em>Interfaces</em>}' containment reference list.
@@ -200,6 +223,102 @@ public class ComponentImplImpl extends MinimalEObjectImpl.Container implements C
    * <!-- end-user-doc -->
    * @generated
    */
+  public LifeCycleMethod getPostConstruct()
+  {
+    return postConstruct;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetPostConstruct(LifeCycleMethod newPostConstruct, NotificationChain msgs)
+  {
+    LifeCycleMethod oldPostConstruct = postConstruct;
+    postConstruct = newPostConstruct;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BehaviorPackage.COMPONENT_IMPL__POST_CONSTRUCT, oldPostConstruct, newPostConstruct);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setPostConstruct(LifeCycleMethod newPostConstruct)
+  {
+    if (newPostConstruct != postConstruct)
+    {
+      NotificationChain msgs = null;
+      if (postConstruct != null)
+        msgs = ((InternalEObject)postConstruct).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BehaviorPackage.COMPONENT_IMPL__POST_CONSTRUCT, null, msgs);
+      if (newPostConstruct != null)
+        msgs = ((InternalEObject)newPostConstruct).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BehaviorPackage.COMPONENT_IMPL__POST_CONSTRUCT, null, msgs);
+      msgs = basicSetPostConstruct(newPostConstruct, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BehaviorPackage.COMPONENT_IMPL__POST_CONSTRUCT, newPostConstruct, newPostConstruct));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LifeCycleMethod getPreDestroy()
+  {
+    return preDestroy;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetPreDestroy(LifeCycleMethod newPreDestroy, NotificationChain msgs)
+  {
+    LifeCycleMethod oldPreDestroy = preDestroy;
+    preDestroy = newPreDestroy;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BehaviorPackage.COMPONENT_IMPL__PRE_DESTROY, oldPreDestroy, newPreDestroy);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setPreDestroy(LifeCycleMethod newPreDestroy)
+  {
+    if (newPreDestroy != preDestroy)
+    {
+      NotificationChain msgs = null;
+      if (preDestroy != null)
+        msgs = ((InternalEObject)preDestroy).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BehaviorPackage.COMPONENT_IMPL__PRE_DESTROY, null, msgs);
+      if (newPreDestroy != null)
+        msgs = ((InternalEObject)newPreDestroy).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BehaviorPackage.COMPONENT_IMPL__PRE_DESTROY, null, msgs);
+      msgs = basicSetPreDestroy(newPreDestroy, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BehaviorPackage.COMPONENT_IMPL__PRE_DESTROY, newPreDestroy, newPreDestroy));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<InterfaceRealization> getInterfaces()
   {
     if (interfaces == null)
@@ -221,6 +340,10 @@ public class ComponentImplImpl extends MinimalEObjectImpl.Container implements C
     {
       case BehaviorPackage.COMPONENT_IMPL__LOCAL_DECLARATIONS:
         return ((InternalEList<?>)getLocalDeclarations()).basicRemove(otherEnd, msgs);
+      case BehaviorPackage.COMPONENT_IMPL__POST_CONSTRUCT:
+        return basicSetPostConstruct(null, msgs);
+      case BehaviorPackage.COMPONENT_IMPL__PRE_DESTROY:
+        return basicSetPreDestroy(null, msgs);
       case BehaviorPackage.COMPONENT_IMPL__INTERFACES:
         return ((InternalEList<?>)getInterfaces()).basicRemove(otherEnd, msgs);
     }
@@ -244,6 +367,10 @@ public class ComponentImplImpl extends MinimalEObjectImpl.Container implements C
         return basicGetRefComponent();
       case BehaviorPackage.COMPONENT_IMPL__LOCAL_DECLARATIONS:
         return getLocalDeclarations();
+      case BehaviorPackage.COMPONENT_IMPL__POST_CONSTRUCT:
+        return getPostConstruct();
+      case BehaviorPackage.COMPONENT_IMPL__PRE_DESTROY:
+        return getPreDestroy();
       case BehaviorPackage.COMPONENT_IMPL__INTERFACES:
         return getInterfaces();
     }
@@ -270,6 +397,12 @@ public class ComponentImplImpl extends MinimalEObjectImpl.Container implements C
       case BehaviorPackage.COMPONENT_IMPL__LOCAL_DECLARATIONS:
         getLocalDeclarations().clear();
         getLocalDeclarations().addAll((Collection<? extends EObject>)newValue);
+        return;
+      case BehaviorPackage.COMPONENT_IMPL__POST_CONSTRUCT:
+        setPostConstruct((LifeCycleMethod)newValue);
+        return;
+      case BehaviorPackage.COMPONENT_IMPL__PRE_DESTROY:
+        setPreDestroy((LifeCycleMethod)newValue);
         return;
       case BehaviorPackage.COMPONENT_IMPL__INTERFACES:
         getInterfaces().clear();
@@ -298,6 +431,12 @@ public class ComponentImplImpl extends MinimalEObjectImpl.Container implements C
       case BehaviorPackage.COMPONENT_IMPL__LOCAL_DECLARATIONS:
         getLocalDeclarations().clear();
         return;
+      case BehaviorPackage.COMPONENT_IMPL__POST_CONSTRUCT:
+        setPostConstruct((LifeCycleMethod)null);
+        return;
+      case BehaviorPackage.COMPONENT_IMPL__PRE_DESTROY:
+        setPreDestroy((LifeCycleMethod)null);
+        return;
       case BehaviorPackage.COMPONENT_IMPL__INTERFACES:
         getInterfaces().clear();
         return;
@@ -321,6 +460,10 @@ public class ComponentImplImpl extends MinimalEObjectImpl.Container implements C
         return refComponent != null;
       case BehaviorPackage.COMPONENT_IMPL__LOCAL_DECLARATIONS:
         return localDeclarations != null && !localDeclarations.isEmpty();
+      case BehaviorPackage.COMPONENT_IMPL__POST_CONSTRUCT:
+        return postConstruct != null;
+      case BehaviorPackage.COMPONENT_IMPL__PRE_DESTROY:
+        return preDestroy != null;
       case BehaviorPackage.COMPONENT_IMPL__INTERFACES:
         return interfaces != null && !interfaces.isEmpty();
     }

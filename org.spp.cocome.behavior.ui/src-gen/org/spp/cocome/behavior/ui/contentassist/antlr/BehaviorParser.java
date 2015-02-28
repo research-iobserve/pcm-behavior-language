@@ -57,6 +57,9 @@ public class BehaviorParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRepositoryReferenceAccess().getGroup(), "rule__RepositoryReference__Group__0");
 					put(grammarAccess.getImportAccess().getGroup(), "rule__Import__Group__0");
 					put(grammarAccess.getComponentImplAccess().getGroup(), "rule__ComponentImpl__Group__0");
+					put(grammarAccess.getComponentImplAccess().getGroup_5(), "rule__ComponentImpl__Group_5__0");
+					put(grammarAccess.getComponentImplAccess().getGroup_6(), "rule__ComponentImpl__Group_6__0");
+					put(grammarAccess.getLifeCycleMethodAccess().getGroup(), "rule__LifeCycleMethod__Group__0");
 					put(grammarAccess.getVariableDeclAccess().getGroup(), "rule__VariableDecl__Group__0");
 					put(grammarAccess.getConstantDeclAccess().getGroup(), "rule__ConstantDecl__Group__0");
 					put(grammarAccess.getInterfaceRealizationAccess().getGroup(), "rule__InterfaceRealization__Group__0");
@@ -123,7 +126,10 @@ public class BehaviorParser extends AbstractContentAssistParser {
 					put(grammarAccess.getComponentImplAccess().getKindAssignment_1(), "rule__ComponentImpl__KindAssignment_1");
 					put(grammarAccess.getComponentImplAccess().getRefComponentAssignment_2(), "rule__ComponentImpl__RefComponentAssignment_2");
 					put(grammarAccess.getComponentImplAccess().getLocalDeclarationsAssignment_4(), "rule__ComponentImpl__LocalDeclarationsAssignment_4");
-					put(grammarAccess.getComponentImplAccess().getInterfacesAssignment_5(), "rule__ComponentImpl__InterfacesAssignment_5");
+					put(grammarAccess.getComponentImplAccess().getPostConstructAssignment_5_1(), "rule__ComponentImpl__PostConstructAssignment_5_1");
+					put(grammarAccess.getComponentImplAccess().getPreDestroyAssignment_6_1(), "rule__ComponentImpl__PreDestroyAssignment_6_1");
+					put(grammarAccess.getComponentImplAccess().getInterfacesAssignment_7(), "rule__ComponentImpl__InterfacesAssignment_7");
+					put(grammarAccess.getLifeCycleMethodAccess().getBodyAssignment_1(), "rule__LifeCycleMethod__BodyAssignment_1");
 					put(grammarAccess.getVariableDeclAccess().getModifierAssignment_0(), "rule__VariableDecl__ModifierAssignment_0");
 					put(grammarAccess.getVariableDeclAccess().getTypeAssignment_1(), "rule__VariableDecl__TypeAssignment_1");
 					put(grammarAccess.getVariableDeclAccess().getNameAssignment_2(), "rule__VariableDecl__NameAssignment_2");

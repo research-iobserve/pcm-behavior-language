@@ -28,6 +28,7 @@ import org.spp.cocome.behavior.behavior.IfStatement;
 import org.spp.cocome.behavior.behavior.Import;
 import org.spp.cocome.behavior.behavior.InstantiationExpression;
 import org.spp.cocome.behavior.behavior.InterfaceRealization;
+import org.spp.cocome.behavior.behavior.LifeCycleMethod;
 import org.spp.cocome.behavior.behavior.LoopStatement;
 import org.spp.cocome.behavior.behavior.MapType;
 import org.spp.cocome.behavior.behavior.MethodImpl;
@@ -225,6 +226,12 @@ public class BehaviorSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case BehaviorPackage.INTERFACE_REALIZATION:
 				if(context == grammarAccess.getInterfaceRealizationRule()) {
 					sequence_InterfaceRealization(context, (InterfaceRealization) semanticObject); 
+					return; 
+				}
+				else break;
+			case BehaviorPackage.LIFE_CYCLE_METHOD:
+				if(context == grammarAccess.getLifeCycleMethodRule()) {
+					sequence_LifeCycleMethod(context, (LifeCycleMethod) semanticObject); 
 					return; 
 				}
 				else break;
@@ -548,6 +555,8 @@ public class BehaviorSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *         kind=ComponentKind? 
 	 *         refComponent=[Component|QualifiedName] 
 	 *         (localDeclarations+=VariableDecl | localDeclarations+=ConstantDecl)* 
+	 *         postConstruct=LifeCycleMethod? 
+	 *         preDestroy=LifeCycleMethod? 
 	 *         interfaces+=InterfaceRealization*
 	 *     )
 	 */
@@ -624,6 +633,22 @@ public class BehaviorSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 */
 	protected void sequence_InterfaceRealization(EObject context, InterfaceRealization semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     body=BlockStatement
+	 */
+	protected void sequence_LifeCycleMethod(EObject context, LifeCycleMethod semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, BehaviorPackage.Literals.LIFE_CYCLE_METHOD__BODY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BehaviorPackage.Literals.LIFE_CYCLE_METHOD__BODY));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getLifeCycleMethodAccess().getBodyBlockStatementParserRuleCall_1_0(), semanticObject.getBody());
+		feeder.finish();
 	}
 	
 	

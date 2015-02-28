@@ -69,6 +69,7 @@ public class BehaviorFactoryImpl extends EFactoryImpl implements BehaviorFactory
       case BehaviorPackage.REPOSITORY_REFERENCE: return createRepositoryReference();
       case BehaviorPackage.IMPORT: return createImport();
       case BehaviorPackage.COMPONENT_IMPL: return createComponentImpl();
+      case BehaviorPackage.LIFE_CYCLE_METHOD: return createLifeCycleMethod();
       case BehaviorPackage.VARIABLE_DECL: return createVariableDecl();
       case BehaviorPackage.CONSTANT_DECL: return createConstantDecl();
       case BehaviorPackage.INTERFACE_REALIZATION: return createInterfaceRealization();
@@ -173,6 +174,17 @@ public class BehaviorFactoryImpl extends EFactoryImpl implements BehaviorFactory
   {
     ComponentImplImpl componentImpl = new ComponentImplImpl();
     return componentImpl;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LifeCycleMethod createLifeCycleMethod()
+  {
+    LifeCycleMethodImpl lifeCycleMethod = new LifeCycleMethodImpl();
+    return lifeCycleMethod;
   }
 
   /**

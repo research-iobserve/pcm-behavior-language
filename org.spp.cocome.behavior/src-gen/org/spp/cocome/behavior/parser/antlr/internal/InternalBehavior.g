@@ -339,29 +339,116 @@ ruleComponentImpl returns [EObject current=null]
 )
 
 )
-)*(
+)*(	otherlv_5='post-construct' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getComponentImplAccess().getPostConstructKeyword_5_0());
+    }
+(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getComponentImplAccess().getInterfacesInterfaceRealizationParserRuleCall_5_0()); 
+	        newCompositeNode(grammarAccess.getComponentImplAccess().getPostConstructLifeCycleMethodParserRuleCall_5_1_0()); 
 	    }
-		lv_interfaces_5_0=ruleInterfaceRealization		{
+		lv_postConstruct_6_0=ruleLifeCycleMethod		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getComponentImplRule());
+	        }
+       		set(
+       			$current, 
+       			"postConstruct",
+        		lv_postConstruct_6_0, 
+        		"LifeCycleMethod");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))?(	otherlv_7='pre-destroy' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getComponentImplAccess().getPreDestroyKeyword_6_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getComponentImplAccess().getPreDestroyLifeCycleMethodParserRuleCall_6_1_0()); 
+	    }
+		lv_preDestroy_8_0=ruleLifeCycleMethod		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getComponentImplRule());
+	        }
+       		set(
+       			$current, 
+       			"preDestroy",
+        		lv_preDestroy_8_0, 
+        		"LifeCycleMethod");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))?(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getComponentImplAccess().getInterfacesInterfaceRealizationParserRuleCall_7_0()); 
+	    }
+		lv_interfaces_9_0=ruleInterfaceRealization		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getComponentImplRule());
 	        }
        		add(
        			$current, 
        			"interfaces",
-        		lv_interfaces_5_0, 
+        		lv_interfaces_9_0, 
         		"InterfaceRealization");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)*	otherlv_6='}' 
+)*	otherlv_10='}' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getComponentImplAccess().getRightCurlyBracketKeyword_6());
+    	newLeafNode(otherlv_10, grammarAccess.getComponentImplAccess().getRightCurlyBracketKeyword_8());
     }
 )
+;
+
+
+
+
+
+// Entry rule entryRuleLifeCycleMethod
+entryRuleLifeCycleMethod returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getLifeCycleMethodRule()); }
+	 iv_ruleLifeCycleMethod=ruleLifeCycleMethod 
+	 { $current=$iv_ruleLifeCycleMethod.current; } 
+	 EOF 
+;
+
+// Rule LifeCycleMethod
+ruleLifeCycleMethod returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='action' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getLifeCycleMethodAccess().getActionKeyword_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getLifeCycleMethodAccess().getBodyBlockStatementParserRuleCall_1_0()); 
+	    }
+		lv_body_1_0=ruleBlockStatement		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getLifeCycleMethodRule());
+	        }
+       		set(
+       			$current, 
+       			"body",
+        		lv_body_1_0, 
+        		"BlockStatement");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))
 ;
 
 

@@ -22,8 +22,16 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="refComponent" eType="ecore:EClass ../PCMMappingModel.ecore#//Component"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="localDeclarations" upperBound="-1"
         eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="postConstruct" eType="#//LifeCycleMethod"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="preDestroy" eType="#//LifeCycleMethod"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
         eType="#//InterfaceRealization" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LifeCycleMethod">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="body" eType="#//BlockStatement"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ComponentKind">
     <eLiterals name="STATELESS" literal="stateless"/>

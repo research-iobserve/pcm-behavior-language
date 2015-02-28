@@ -95,6 +95,11 @@ public class BehaviorAdapterFactory extends AdapterFactoryImpl
         return createComponentImplAdapter();
       }
       @Override
+      public Adapter caseLifeCycleMethod(LifeCycleMethod object)
+      {
+        return createLifeCycleMethodAdapter();
+      }
+      @Override
       public Adapter caseVariableDecl(VariableDecl object)
       {
         return createVariableDeclAdapter();
@@ -287,6 +292,21 @@ public class BehaviorAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createComponentImplAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.spp.cocome.behavior.behavior.LifeCycleMethod <em>Life Cycle Method</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.spp.cocome.behavior.behavior.LifeCycleMethod
+   * @generated
+   */
+  public Adapter createLifeCycleMethodAdapter()
   {
     return null;
   }

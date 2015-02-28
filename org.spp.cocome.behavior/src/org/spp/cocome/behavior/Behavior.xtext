@@ -22,8 +22,14 @@ Import: 'import' importedNamespace = QualifiedNameWithWildcard ;
 ComponentImpl: 
 	'realize' (kind=ComponentKind)? refComponent=[mapping::Component|QualifiedName] '{'
     	localDeclarations+=(VariableDecl|ConstantDecl)*
+    	('post-construct' postConstruct=LifeCycleMethod)?
+    	('pre-destroy' preDestroy=LifeCycleMethod)?
         interfaces+=InterfaceRealization*
     '}'
+;
+
+LifeCycleMethod:
+	'action' body=BlockStatement
 ;
 
 enum ComponentKind:

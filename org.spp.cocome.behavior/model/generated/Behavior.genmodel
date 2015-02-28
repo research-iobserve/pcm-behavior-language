@@ -28,7 +28,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Behavior.ecore#//ComponentImpl/kind"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Behavior.ecore#//ComponentImpl/refComponent"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//ComponentImpl/localDeclarations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//ComponentImpl/postConstruct"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//ComponentImpl/preDestroy"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//ComponentImpl/interfaces"/>
+    </genClasses>
+    <genClasses ecoreClass="Behavior.ecore#//LifeCycleMethod">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//LifeCycleMethod/body"/>
     </genClasses>
     <genClasses ecoreClass="Behavior.ecore#//VariableDecl">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Behavior.ecore#//VariableDecl/modifier"/>
