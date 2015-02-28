@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.spp.cocome.behavior.behavior.BehaviorPackage;
 import org.spp.cocome.behavior.behavior.ComponentImpl;
+import org.spp.cocome.behavior.behavior.ComponentKind;
 import org.spp.cocome.behavior.behavior.InterfaceRealization;
 
 import org.spp.cocome.behavior.mapping.Component;
@@ -32,6 +33,7 @@ import org.spp.cocome.behavior.mapping.Component;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.spp.cocome.behavior.behavior.impl.ComponentImplImpl#getKind <em>Kind</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.ComponentImplImpl#getRefComponent <em>Ref Component</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.ComponentImplImpl#getLocalDeclarations <em>Local Declarations</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.ComponentImplImpl#getInterfaces <em>Interfaces</em>}</li>
@@ -42,6 +44,26 @@ import org.spp.cocome.behavior.mapping.Component;
  */
 public class ComponentImplImpl extends MinimalEObjectImpl.Container implements ComponentImpl
 {
+  /**
+   * The default value of the '{@link #getKind() <em>Kind</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getKind()
+   * @generated
+   * @ordered
+   */
+  protected static final ComponentKind KIND_EDEFAULT = ComponentKind.STATELESS;
+
+  /**
+   * The cached value of the '{@link #getKind() <em>Kind</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getKind()
+   * @generated
+   * @ordered
+   */
+  protected ComponentKind kind = KIND_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getRefComponent() <em>Ref Component</em>}' reference.
    * <!-- begin-user-doc -->
@@ -91,6 +113,29 @@ public class ComponentImplImpl extends MinimalEObjectImpl.Container implements C
   protected EClass eStaticClass()
   {
     return BehaviorPackage.Literals.COMPONENT_IMPL;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ComponentKind getKind()
+  {
+    return kind;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setKind(ComponentKind newKind)
+  {
+    ComponentKind oldKind = kind;
+    kind = newKind == null ? KIND_EDEFAULT : newKind;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BehaviorPackage.COMPONENT_IMPL__KIND, oldKind, kind));
   }
 
   /**
@@ -192,6 +237,8 @@ public class ComponentImplImpl extends MinimalEObjectImpl.Container implements C
   {
     switch (featureID)
     {
+      case BehaviorPackage.COMPONENT_IMPL__KIND:
+        return getKind();
       case BehaviorPackage.COMPONENT_IMPL__REF_COMPONENT:
         if (resolve) return getRefComponent();
         return basicGetRefComponent();
@@ -214,6 +261,9 @@ public class ComponentImplImpl extends MinimalEObjectImpl.Container implements C
   {
     switch (featureID)
     {
+      case BehaviorPackage.COMPONENT_IMPL__KIND:
+        setKind((ComponentKind)newValue);
+        return;
       case BehaviorPackage.COMPONENT_IMPL__REF_COMPONENT:
         setRefComponent((Component)newValue);
         return;
@@ -239,6 +289,9 @@ public class ComponentImplImpl extends MinimalEObjectImpl.Container implements C
   {
     switch (featureID)
     {
+      case BehaviorPackage.COMPONENT_IMPL__KIND:
+        setKind(KIND_EDEFAULT);
+        return;
       case BehaviorPackage.COMPONENT_IMPL__REF_COMPONENT:
         setRefComponent((Component)null);
         return;
@@ -262,6 +315,8 @@ public class ComponentImplImpl extends MinimalEObjectImpl.Container implements C
   {
     switch (featureID)
     {
+      case BehaviorPackage.COMPONENT_IMPL__KIND:
+        return kind != KIND_EDEFAULT;
       case BehaviorPackage.COMPONENT_IMPL__REF_COMPONENT:
         return refComponent != null;
       case BehaviorPackage.COMPONENT_IMPL__LOCAL_DECLARATIONS:
@@ -270,6 +325,23 @@ public class ComponentImplImpl extends MinimalEObjectImpl.Container implements C
         return interfaces != null && !interfaces.isEmpty();
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (kind: ");
+    result.append(kind);
+    result.append(')');
+    return result.toString();
   }
 
 } //ComponentImplImpl

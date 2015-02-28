@@ -35,6 +35,9 @@
 'package'=12
 'realize'=15
 'repository'=13
+'singleton'=57
+'stateful'=56
+'stateless'=55
 'true'=53
 'val'=19
 'var'=18
@@ -92,3 +95,6 @@ T__51=51
 T__52=52
 T__53=53
 T__54=54
+T__55=55
+T__56=56
+T__57=57

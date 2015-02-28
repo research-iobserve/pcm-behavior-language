@@ -4,6 +4,7 @@ package org.spp.cocome.behavior.behavior.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -19,6 +20,7 @@ import org.spp.cocome.behavior.behavior.BooleanLiteral;
 import org.spp.cocome.behavior.behavior.CharLiteral;
 import org.spp.cocome.behavior.behavior.CollectionType;
 import org.spp.cocome.behavior.behavior.ComponentImpl;
+import org.spp.cocome.behavior.behavior.ComponentKind;
 import org.spp.cocome.behavior.behavior.ConstantDecl;
 import org.spp.cocome.behavior.behavior.DeclarationTypeReference;
 import org.spp.cocome.behavior.behavior.Expression;
@@ -241,6 +243,13 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
   private EClass binaryOperationEClass = null;
 
   /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum componentKindEEnum = null;
+
+  /**
    * Creates an instance of the model <b>Package</b>, registered with
    * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
    * package URI value.
@@ -412,9 +421,9 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getComponentImpl_RefComponent()
+  public EAttribute getComponentImpl_Kind()
   {
-    return (EReference)componentImplEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)componentImplEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -422,7 +431,7 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getComponentImpl_LocalDeclarations()
+  public EReference getComponentImpl_RefComponent()
   {
     return (EReference)componentImplEClass.getEStructuralFeatures().get(1);
   }
@@ -432,9 +441,19 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getComponentImpl_Interfaces()
+  public EReference getComponentImpl_LocalDeclarations()
   {
     return (EReference)componentImplEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getComponentImpl_Interfaces()
+  {
+    return (EReference)componentImplEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1082,6 +1101,16 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EEnum getComponentKind()
+  {
+    return componentKindEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public BehaviorFactory getBehaviorFactory()
   {
     return (BehaviorFactory)getEFactoryInstance();
@@ -1120,6 +1149,7 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     createEAttribute(importEClass, IMPORT__IMPORTED_NAMESPACE);
 
     componentImplEClass = createEClass(COMPONENT_IMPL);
+    createEAttribute(componentImplEClass, COMPONENT_IMPL__KIND);
     createEReference(componentImplEClass, COMPONENT_IMPL__REF_COMPONENT);
     createEReference(componentImplEClass, COMPONENT_IMPL__LOCAL_DECLARATIONS);
     createEReference(componentImplEClass, COMPONENT_IMPL__INTERFACES);
@@ -1210,6 +1240,9 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     createEAttribute(booleanLiteralEClass, BOOLEAN_LITERAL__VALUE);
 
     binaryOperationEClass = createEClass(BINARY_OPERATION);
+
+    // Create enums
+    componentKindEEnum = createEEnum(COMPONENT_KIND);
   }
 
   /**
@@ -1274,6 +1307,7 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     initEAttribute(getImport_ImportedNamespace(), ecorePackage.getEString(), "importedNamespace", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(componentImplEClass, ComponentImpl.class, "ComponentImpl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getComponentImpl_Kind(), this.getComponentKind(), "kind", null, 0, 1, ComponentImpl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getComponentImpl_RefComponent(), theMappingPackage.getComponent(), null, "refComponent", null, 0, 1, ComponentImpl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getComponentImpl_LocalDeclarations(), ecorePackage.getEObject(), null, "localDeclarations", null, 0, -1, ComponentImpl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getComponentImpl_Interfaces(), this.getInterfaceRealization(), null, "interfaces", null, 0, -1, ComponentImpl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1364,6 +1398,12 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     initEAttribute(getBooleanLiteral_Value(), ecorePackage.getEBoolean(), "value", null, 0, 1, BooleanLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(binaryOperationEClass, BinaryOperation.class, "BinaryOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    // Initialize enums and add enum literals
+    initEEnum(componentKindEEnum, ComponentKind.class, "ComponentKind");
+    addEEnumLiteral(componentKindEEnum, ComponentKind.STATELESS);
+    addEEnumLiteral(componentKindEEnum, ComponentKind.STATEFUL);
+    addEEnumLiteral(componentKindEEnum, ComponentKind.SINGLETON);
 
     // Create resource
     createResource(eNS_URI);

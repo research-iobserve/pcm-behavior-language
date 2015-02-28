@@ -9,8 +9,10 @@ import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.ListExtensions;
+import org.eclipse.xtext.xbase.lib.StringExtensions;
 import org.spp.cocome.behavior.behavior.BlockStatement;
 import org.spp.cocome.behavior.behavior.ComponentImpl;
+import org.spp.cocome.behavior.behavior.ComponentKind;
 import org.spp.cocome.behavior.behavior.ConstantDecl;
 import org.spp.cocome.behavior.behavior.DeclarationTypeReference;
 import org.spp.cocome.behavior.behavior.Expression;
@@ -31,6 +33,22 @@ public class BehaviorStructureGenerator {
    */
   public static CharSequence createComponent(final ComponentImpl com) {
     StringConcatenation _builder = new StringConcatenation();
+    _builder.append("::ANNOTATIONS::");
+    _builder.newLine();
+    {
+      ComponentKind _kind = com.getKind();
+      boolean _notEquals = (!Objects.equal(_kind, null));
+      if (_notEquals) {
+        _builder.append("@");
+        ComponentKind _kind_1 = com.getKind();
+        String _literal = _kind_1.getLiteral();
+        String _firstUpper = StringExtensions.toFirstUpper(_literal);
+        _builder.append(_firstUpper, "");
+      }
+    }
+    _builder.newLineIfNotEmpty();
+    _builder.append("::ANNOTATIONS END::");
+    _builder.newLine();
     _builder.append("::VARIABLES::");
     _builder.newLine();
     EList<EObject> _localDeclarations = com.getLocalDeclarations();
@@ -43,7 +61,7 @@ public class BehaviorStructureGenerator {
     String _join = IterableExtensions.join(_map);
     _builder.append(_join, "");
     _builder.newLineIfNotEmpty();
-    _builder.append("::VARIABLES_END::");
+    _builder.append("::VARIABLES END::");
     _builder.newLine();
     EList<InterfaceRealization> _interfaces = com.getInterfaces();
     final Function1<InterfaceRealization, CharSequence> _function_1 = new Function1<InterfaceRealization, CharSequence>() {
@@ -64,11 +82,10 @@ public class BehaviorStructureGenerator {
    */
   public static CharSequence createInterface(final InterfaceRealization iface) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("::METHODS_FOR_");
+    _builder.append("::METHODS FOR::");
     Interface _refInterface = iface.getRefInterface();
     String _name = _refInterface.getName();
     _builder.append(_name, "");
-    _builder.append("::");
     _builder.newLineIfNotEmpty();
     EList<MethodImpl> _methods = iface.getMethods();
     final Function1<MethodImpl, CharSequence> _function = new Function1<MethodImpl, CharSequence>() {
@@ -80,7 +97,7 @@ public class BehaviorStructureGenerator {
     String _join = IterableExtensions.join(_map);
     _builder.append(_join, "");
     _builder.newLineIfNotEmpty();
-    _builder.append("::METHODS_END::");
+    _builder.append("::METHODS END::");
     _builder.newLine();
     return _builder;
   }
@@ -90,22 +107,16 @@ public class BehaviorStructureGenerator {
    */
   public static CharSequence createMethod(final MethodImpl impl) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("::METHOD:: ");
-    _builder.newLine();
-    _builder.append("public void ");
+    _builder.append("::METHOD::");
     MethodDecl _refMethod = impl.getRefMethod();
     String _name = _refMethod.getName();
     String _methodName = BehaviorNameResolver.getMethodName(_name);
     _builder.append(_methodName, "");
-    _builder.append(" () {");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t");
     BlockStatement _body = impl.getBody();
     CharSequence _handleBlockstatement = BehaviorStatementGenerator.handleBlockstatement(_body);
-    _builder.append(_handleBlockstatement, "\t");
+    _builder.append(_handleBlockstatement, "");
     _builder.newLineIfNotEmpty();
-    _builder.append("}");
-    _builder.newLine();
     _builder.append("::METHOD_END::");
     _builder.newLine();
     return _builder;

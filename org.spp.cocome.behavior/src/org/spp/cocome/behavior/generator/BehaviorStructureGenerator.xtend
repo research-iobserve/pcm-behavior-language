@@ -19,9 +19,12 @@ class BehaviorStructureGenerator {
 	 * Hauptprozedur
 	 */
 	def static CharSequence createComponent(ComponentImpl com) '''
+		::ANNOTATIONS::
+		«IF com.kind != null»@«com.kind.literal.toFirstUpper»«ENDIF»
+		::ANNOTATIONS END::
 		::VARIABLES::
 		«com.localDeclarations.map[decl | decl.createDeclaration].join()»
-		::VARIABLES_END::
+		::VARIABLES END::
 		«com.interfaces.map[iface | iface.createInterface].join()»		
 	'''
 	
@@ -29,9 +32,9 @@ class BehaviorStructureGenerator {
 	 * Iterate over interfaces.
 	 */
 	def static createInterface(InterfaceRealization iface) '''
-		::METHODS_FOR_«iface.refInterface.name»::
+		::METHODS FOR::«iface.refInterface.name»
 		«iface.methods.map[m | m.createMethod].join()»
-		::METHODS_END::
+		::METHODS END::
 	'''
 	
 	/**
@@ -39,10 +42,8 @@ class BehaviorStructureGenerator {
 	 */
 	// TODO are all Methods void with no parameters?
 	def static createMethod(MethodImpl impl) '''
-		::METHOD:: 
-		public void «impl.refMethod.name.methodName» () {
-			«impl.body.handleBlockstatement»
-		}
+		::METHOD::«impl.refMethod.name.methodName»
+		«impl.body.handleBlockstatement»
 		::METHOD_END::
 	'''
 	

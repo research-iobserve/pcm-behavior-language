@@ -7,6 +7,11 @@
     editorPluginID="org.spp.cocome.behavior.editor" runtimeVersion="2.10" usedGenPackages="../PCMMappingModel.genmodel#//mapping platform:/resource/org.spp.cocome.types/src-gen/org/spp/cocome/types/Types.genmodel#//types">
   <genPackages prefix="Behavior" basePackage="org.spp.cocome.behavior" disposableProviderFactory="true"
       fileExtensions="bl" ecorePackage="Behavior.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Behavior.ecore#//ComponentKind">
+      <genEnumLiterals ecoreEnumLiteral="Behavior.ecore#//ComponentKind/STATELESS"/>
+      <genEnumLiterals ecoreEnumLiteral="Behavior.ecore#//ComponentKind/STATEFUL"/>
+      <genEnumLiterals ecoreEnumLiteral="Behavior.ecore#//ComponentKind/SINGLETON"/>
+    </genEnums>
     <genClasses ecoreClass="Behavior.ecore#//BehaviorModel">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Behavior.ecore#//BehaviorModel/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//BehaviorModel/imports"/>
@@ -20,6 +25,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Behavior.ecore#//Import/importedNamespace"/>
     </genClasses>
     <genClasses ecoreClass="Behavior.ecore#//ComponentImpl">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Behavior.ecore#//ComponentImpl/kind"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Behavior.ecore#//ComponentImpl/refComponent"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//ComponentImpl/localDeclarations"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//ComponentImpl/interfaces"/>

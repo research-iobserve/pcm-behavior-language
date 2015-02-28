@@ -4,6 +4,7 @@ package org.spp.cocome.behavior.behavior;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -178,13 +179,22 @@ public interface BehaviorPackage extends EPackage
   int COMPONENT_IMPL = 3;
 
   /**
+   * The feature id for the '<em><b>Kind</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPONENT_IMPL__KIND = 0;
+
+  /**
    * The feature id for the '<em><b>Ref Component</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COMPONENT_IMPL__REF_COMPONENT = 0;
+  int COMPONENT_IMPL__REF_COMPONENT = 1;
 
   /**
    * The feature id for the '<em><b>Local Declarations</b></em>' containment reference list.
@@ -193,7 +203,7 @@ public interface BehaviorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPONENT_IMPL__LOCAL_DECLARATIONS = 1;
+  int COMPONENT_IMPL__LOCAL_DECLARATIONS = 2;
 
   /**
    * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -202,7 +212,7 @@ public interface BehaviorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPONENT_IMPL__INTERFACES = 2;
+  int COMPONENT_IMPL__INTERFACES = 3;
 
   /**
    * The number of structural features of the '<em>Component Impl</em>' class.
@@ -211,7 +221,7 @@ public interface BehaviorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPONENT_IMPL_FEATURE_COUNT = 3;
+  int COMPONENT_IMPL_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link org.spp.cocome.behavior.behavior.impl.VariableDeclImpl <em>Variable Decl</em>}' class.
@@ -1523,6 +1533,16 @@ public interface BehaviorPackage extends EPackage
    */
   int BINARY_OPERATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
 
+  /**
+   * The meta object id for the '{@link org.spp.cocome.behavior.behavior.ComponentKind <em>Component Kind</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.spp.cocome.behavior.behavior.ComponentKind
+   * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getComponentKind()
+   * @generated
+   */
+  int COMPONENT_KIND = 27;
+
 
   /**
    * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.BehaviorModel <em>Model</em>}'.
@@ -1629,6 +1649,17 @@ public interface BehaviorPackage extends EPackage
    * @generated
    */
   EClass getComponentImpl();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.spp.cocome.behavior.behavior.ComponentImpl#getKind <em>Kind</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Kind</em>'.
+   * @see org.spp.cocome.behavior.behavior.ComponentImpl#getKind()
+   * @see #getComponentImpl()
+   * @generated
+   */
+  EAttribute getComponentImpl_Kind();
 
   /**
    * Returns the meta object for the reference '{@link org.spp.cocome.behavior.behavior.ComponentImpl#getRefComponent <em>Ref Component</em>}'.
@@ -2345,6 +2376,16 @@ public interface BehaviorPackage extends EPackage
   EClass getBinaryOperation();
 
   /**
+   * Returns the meta object for enum '{@link org.spp.cocome.behavior.behavior.ComponentKind <em>Component Kind</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Component Kind</em>'.
+   * @see org.spp.cocome.behavior.behavior.ComponentKind
+   * @generated
+   */
+  EEnum getComponentKind();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2454,6 +2495,14 @@ public interface BehaviorPackage extends EPackage
      * @generated
      */
     EClass COMPONENT_IMPL = eINSTANCE.getComponentImpl();
+
+    /**
+     * The meta object literal for the '<em><b>Kind</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COMPONENT_IMPL__KIND = eINSTANCE.getComponentImpl_Kind();
 
     /**
      * The meta object literal for the '<em><b>Ref Component</b></em>' reference feature.
@@ -3036,6 +3085,16 @@ public interface BehaviorPackage extends EPackage
      * @generated
      */
     EClass BINARY_OPERATION = eINSTANCE.getBinaryOperation();
+
+    /**
+     * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.ComponentKind <em>Component Kind</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.spp.cocome.behavior.behavior.ComponentKind
+     * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getComponentKind()
+     * @generated
+     */
+    EEnum COMPONENT_KIND = eINSTANCE.getComponentKind();
 
   }
 

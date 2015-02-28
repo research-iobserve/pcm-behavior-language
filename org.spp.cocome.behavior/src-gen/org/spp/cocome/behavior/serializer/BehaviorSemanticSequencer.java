@@ -544,7 +544,12 @@ public class BehaviorSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (refComponent=[Component|QualifiedName] (localDeclarations+=VariableDecl | localDeclarations+=ConstantDecl)* interfaces+=InterfaceRealization*)
+	 *     (
+	 *         kind=ComponentKind? 
+	 *         refComponent=[Component|QualifiedName] 
+	 *         (localDeclarations+=VariableDecl | localDeclarations+=ConstantDecl)* 
+	 *         interfaces+=InterfaceRealization*
+	 *     )
 	 */
 	protected void sequence_ComponentImpl(EObject context, ComponentImpl semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

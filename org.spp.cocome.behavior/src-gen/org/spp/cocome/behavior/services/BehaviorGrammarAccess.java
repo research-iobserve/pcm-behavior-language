@@ -122,64 +122,72 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ComponentImpl");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRealizeKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cRefComponentAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final CrossReference cRefComponentComponentCrossReference_1_0 = (CrossReference)cRefComponentAssignment_1.eContents().get(0);
-		private final RuleCall cRefComponentComponentQualifiedNameParserRuleCall_1_0_1 = (RuleCall)cRefComponentComponentCrossReference_1_0.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cLocalDeclarationsAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final Alternatives cLocalDeclarationsAlternatives_3_0 = (Alternatives)cLocalDeclarationsAssignment_3.eContents().get(0);
-		private final RuleCall cLocalDeclarationsVariableDeclParserRuleCall_3_0_0 = (RuleCall)cLocalDeclarationsAlternatives_3_0.eContents().get(0);
-		private final RuleCall cLocalDeclarationsConstantDeclParserRuleCall_3_0_1 = (RuleCall)cLocalDeclarationsAlternatives_3_0.eContents().get(1);
-		private final Assignment cInterfacesAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cInterfacesInterfaceRealizationParserRuleCall_4_0 = (RuleCall)cInterfacesAssignment_4.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cKindAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cKindComponentKindEnumRuleCall_1_0 = (RuleCall)cKindAssignment_1.eContents().get(0);
+		private final Assignment cRefComponentAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cRefComponentComponentCrossReference_2_0 = (CrossReference)cRefComponentAssignment_2.eContents().get(0);
+		private final RuleCall cRefComponentComponentQualifiedNameParserRuleCall_2_0_1 = (RuleCall)cRefComponentComponentCrossReference_2_0.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cLocalDeclarationsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final Alternatives cLocalDeclarationsAlternatives_4_0 = (Alternatives)cLocalDeclarationsAssignment_4.eContents().get(0);
+		private final RuleCall cLocalDeclarationsVariableDeclParserRuleCall_4_0_0 = (RuleCall)cLocalDeclarationsAlternatives_4_0.eContents().get(0);
+		private final RuleCall cLocalDeclarationsConstantDeclParserRuleCall_4_0_1 = (RuleCall)cLocalDeclarationsAlternatives_4_0.eContents().get(1);
+		private final Assignment cInterfacesAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cInterfacesInterfaceRealizationParserRuleCall_5_0 = (RuleCall)cInterfacesAssignment_5.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		/// *
 		// * Component structure
 		// * / ComponentImpl:
-		//	"realize" refComponent=[mapping::Component|QualifiedName] "{" localDeclarations+=(VariableDecl | ConstantDecl)*
-		//	interfaces+=InterfaceRealization* "}";
+		//	"realize" kind=ComponentKind? refComponent=[mapping::Component|QualifiedName] "{" localDeclarations+=(VariableDecl |
+		//	ConstantDecl)* interfaces+=InterfaceRealization* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"realize" refComponent=[mapping::Component|QualifiedName] "{" localDeclarations+=(VariableDecl | ConstantDecl)*
-		//interfaces+=InterfaceRealization* "}"
+		//"realize" kind=ComponentKind? refComponent=[mapping::Component|QualifiedName] "{" localDeclarations+=(VariableDecl |
+		//ConstantDecl)* interfaces+=InterfaceRealization* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"realize"
 		public Keyword getRealizeKeyword_0() { return cRealizeKeyword_0; }
 
+		//kind=ComponentKind?
+		public Assignment getKindAssignment_1() { return cKindAssignment_1; }
+
+		//ComponentKind
+		public RuleCall getKindComponentKindEnumRuleCall_1_0() { return cKindComponentKindEnumRuleCall_1_0; }
+
 		//refComponent=[mapping::Component|QualifiedName]
-		public Assignment getRefComponentAssignment_1() { return cRefComponentAssignment_1; }
+		public Assignment getRefComponentAssignment_2() { return cRefComponentAssignment_2; }
 
 		//[mapping::Component|QualifiedName]
-		public CrossReference getRefComponentComponentCrossReference_1_0() { return cRefComponentComponentCrossReference_1_0; }
+		public CrossReference getRefComponentComponentCrossReference_2_0() { return cRefComponentComponentCrossReference_2_0; }
 
 		//QualifiedName
-		public RuleCall getRefComponentComponentQualifiedNameParserRuleCall_1_0_1() { return cRefComponentComponentQualifiedNameParserRuleCall_1_0_1; }
+		public RuleCall getRefComponentComponentQualifiedNameParserRuleCall_2_0_1() { return cRefComponentComponentQualifiedNameParserRuleCall_2_0_1; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
 		//localDeclarations+=(VariableDecl | ConstantDecl)*
-		public Assignment getLocalDeclarationsAssignment_3() { return cLocalDeclarationsAssignment_3; }
+		public Assignment getLocalDeclarationsAssignment_4() { return cLocalDeclarationsAssignment_4; }
 
 		//VariableDecl | ConstantDecl
-		public Alternatives getLocalDeclarationsAlternatives_3_0() { return cLocalDeclarationsAlternatives_3_0; }
+		public Alternatives getLocalDeclarationsAlternatives_4_0() { return cLocalDeclarationsAlternatives_4_0; }
 
 		//VariableDecl
-		public RuleCall getLocalDeclarationsVariableDeclParserRuleCall_3_0_0() { return cLocalDeclarationsVariableDeclParserRuleCall_3_0_0; }
+		public RuleCall getLocalDeclarationsVariableDeclParserRuleCall_4_0_0() { return cLocalDeclarationsVariableDeclParserRuleCall_4_0_0; }
 
 		//ConstantDecl
-		public RuleCall getLocalDeclarationsConstantDeclParserRuleCall_3_0_1() { return cLocalDeclarationsConstantDeclParserRuleCall_3_0_1; }
+		public RuleCall getLocalDeclarationsConstantDeclParserRuleCall_4_0_1() { return cLocalDeclarationsConstantDeclParserRuleCall_4_0_1; }
 
 		//interfaces+=InterfaceRealization*
-		public Assignment getInterfacesAssignment_4() { return cInterfacesAssignment_4; }
+		public Assignment getInterfacesAssignment_5() { return cInterfacesAssignment_5; }
 
 		//InterfaceRealization
-		public RuleCall getInterfacesInterfaceRealizationParserRuleCall_4_0() { return cInterfacesInterfaceRealizationParserRuleCall_4_0; }
+		public RuleCall getInterfacesInterfaceRealizationParserRuleCall_5_0() { return cInterfacesInterfaceRealizationParserRuleCall_5_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class VariableDeclElements extends AbstractParserRuleElementFinder {
@@ -1528,10 +1536,47 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	
+	public class ComponentKindElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "ComponentKind");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cSTATELESSEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cSTATELESSStatelessKeyword_0_0 = (Keyword)cSTATELESSEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cSTATEFULEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cSTATEFULStatefulKeyword_1_0 = (Keyword)cSTATEFULEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cSINGLETONEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cSINGLETONSingletonKeyword_2_0 = (Keyword)cSINGLETONEnumLiteralDeclaration_2.eContents().get(0);
+		
+		//enum ComponentKind:
+		//	STATELESS="stateless" | STATEFUL="stateful" | SINGLETON="singleton";
+		public EnumRule getRule() { return rule; }
+
+		//STATELESS="stateless" | STATEFUL="stateful" | SINGLETON="singleton"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//STATELESS="stateless"
+		public EnumLiteralDeclaration getSTATELESSEnumLiteralDeclaration_0() { return cSTATELESSEnumLiteralDeclaration_0; }
+
+		//"stateless"
+		public Keyword getSTATELESSStatelessKeyword_0_0() { return cSTATELESSStatelessKeyword_0_0; }
+
+		//STATEFUL="stateful"
+		public EnumLiteralDeclaration getSTATEFULEnumLiteralDeclaration_1() { return cSTATEFULEnumLiteralDeclaration_1; }
+
+		//"stateful"
+		public Keyword getSTATEFULStatefulKeyword_1_0() { return cSTATEFULStatefulKeyword_1_0; }
+
+		//SINGLETON="singleton"
+		public EnumLiteralDeclaration getSINGLETONEnumLiteralDeclaration_2() { return cSINGLETONEnumLiteralDeclaration_2; }
+
+		//"singleton"
+		public Keyword getSINGLETONSingletonKeyword_2_0() { return cSINGLETONSingletonKeyword_2_0; }
+	}
+	
 	private final BehaviorModelElements pBehaviorModel;
 	private final RepositoryReferenceElements pRepositoryReference;
 	private final ImportElements pImport;
 	private final ComponentImplElements pComponentImpl;
+	private final ComponentKindElements unknownRuleComponentKind;
 	private final VariableDeclElements pVariableDecl;
 	private final ConstantDeclElements pConstantDecl;
 	private final InterfaceRealizationElements pInterfaceRealization;
@@ -1582,6 +1627,7 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 		this.pRepositoryReference = new RepositoryReferenceElements();
 		this.pImport = new ImportElements();
 		this.pComponentImpl = new ComponentImplElements();
+		this.unknownRuleComponentKind = new ComponentKindElements();
 		this.pVariableDecl = new VariableDeclElements();
 		this.pConstantDecl = new ConstantDeclElements();
 		this.pInterfaceRealization = new InterfaceRealizationElements();
@@ -1680,14 +1726,24 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 	/// *
 	// * Component structure
 	// * / ComponentImpl:
-	//	"realize" refComponent=[mapping::Component|QualifiedName] "{" localDeclarations+=(VariableDecl | ConstantDecl)*
-	//	interfaces+=InterfaceRealization* "}";
+	//	"realize" kind=ComponentKind? refComponent=[mapping::Component|QualifiedName] "{" localDeclarations+=(VariableDecl |
+	//	ConstantDecl)* interfaces+=InterfaceRealization* "}";
 	public ComponentImplElements getComponentImplAccess() {
 		return pComponentImpl;
 	}
 	
 	public ParserRule getComponentImplRule() {
 		return getComponentImplAccess().getRule();
+	}
+
+	//enum ComponentKind:
+	//	STATELESS="stateless" | STATEFUL="stateful" | SINGLETON="singleton";
+	public ComponentKindElements getComponentKindAccess() {
+		return unknownRuleComponentKind;
+	}
+	
+	public EnumRule getComponentKindRule() {
+		return getComponentKindAccess().getRule();
 	}
 
 	//VariableDecl:

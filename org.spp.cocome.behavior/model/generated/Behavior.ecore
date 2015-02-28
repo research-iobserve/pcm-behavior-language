@@ -18,11 +18,17 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importedNamespace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ComponentImpl">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="#//ComponentKind"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="refComponent" eType="ecore:EClass ../PCMMappingModel.ecore#//Component"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="localDeclarations" upperBound="-1"
         eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
         eType="#//InterfaceRealization" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ComponentKind">
+    <eLiterals name="STATELESS" literal="stateless"/>
+    <eLiterals name="STATEFUL" value="1" literal="stateful"/>
+    <eLiterals name="SINGLETON" value="2" literal="singleton"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VariableDecl">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="modifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

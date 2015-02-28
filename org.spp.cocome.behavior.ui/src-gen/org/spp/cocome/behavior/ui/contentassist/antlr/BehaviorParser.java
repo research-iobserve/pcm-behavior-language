@@ -38,7 +38,7 @@ public class BehaviorParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getBehaviorModelAccess().getAlternatives_2(), "rule__BehaviorModel__Alternatives_2");
-					put(grammarAccess.getComponentImplAccess().getLocalDeclarationsAlternatives_3_0(), "rule__ComponentImpl__LocalDeclarationsAlternatives_3_0");
+					put(grammarAccess.getComponentImplAccess().getLocalDeclarationsAlternatives_4_0(), "rule__ComponentImpl__LocalDeclarationsAlternatives_4_0");
 					put(grammarAccess.getVariableDeclAccess().getModifierAlternatives_0_0(), "rule__VariableDecl__ModifierAlternatives_0_0");
 					put(grammarAccess.getStatementAccess().getAlternatives(), "rule__Statement__Alternatives");
 					put(grammarAccess.getRelationalExpressionAccess().getFeatureAlternatives_1_0_0_1_0(), "rule__RelationalExpression__FeatureAlternatives_1_0_0_1_0");
@@ -52,6 +52,7 @@ public class BehaviorParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBOOLEANAccess().getAlternatives(), "rule__BOOLEAN__Alternatives");
 					put(grammarAccess.getNUMBERAccess().getAlternatives(), "rule__NUMBER__Alternatives");
 					put(grammarAccess.getNUMBERAccess().getAlternatives_0_0(), "rule__NUMBER__Alternatives_0_0");
+					put(grammarAccess.getComponentKindAccess().getAlternatives(), "rule__ComponentKind__Alternatives");
 					put(grammarAccess.getBehaviorModelAccess().getGroup(), "rule__BehaviorModel__Group__0");
 					put(grammarAccess.getRepositoryReferenceAccess().getGroup(), "rule__RepositoryReference__Group__0");
 					put(grammarAccess.getImportAccess().getGroup(), "rule__Import__Group__0");
@@ -119,9 +120,10 @@ public class BehaviorParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBehaviorModelAccess().getComponentImplAssignment_3(), "rule__BehaviorModel__ComponentImplAssignment_3");
 					put(grammarAccess.getRepositoryReferenceAccess().getReferenceAssignment_1(), "rule__RepositoryReference__ReferenceAssignment_1");
 					put(grammarAccess.getImportAccess().getImportedNamespaceAssignment_1(), "rule__Import__ImportedNamespaceAssignment_1");
-					put(grammarAccess.getComponentImplAccess().getRefComponentAssignment_1(), "rule__ComponentImpl__RefComponentAssignment_1");
-					put(grammarAccess.getComponentImplAccess().getLocalDeclarationsAssignment_3(), "rule__ComponentImpl__LocalDeclarationsAssignment_3");
-					put(grammarAccess.getComponentImplAccess().getInterfacesAssignment_4(), "rule__ComponentImpl__InterfacesAssignment_4");
+					put(grammarAccess.getComponentImplAccess().getKindAssignment_1(), "rule__ComponentImpl__KindAssignment_1");
+					put(grammarAccess.getComponentImplAccess().getRefComponentAssignment_2(), "rule__ComponentImpl__RefComponentAssignment_2");
+					put(grammarAccess.getComponentImplAccess().getLocalDeclarationsAssignment_4(), "rule__ComponentImpl__LocalDeclarationsAssignment_4");
+					put(grammarAccess.getComponentImplAccess().getInterfacesAssignment_5(), "rule__ComponentImpl__InterfacesAssignment_5");
 					put(grammarAccess.getVariableDeclAccess().getModifierAssignment_0(), "rule__VariableDecl__ModifierAssignment_0");
 					put(grammarAccess.getVariableDeclAccess().getTypeAssignment_1(), "rule__VariableDecl__TypeAssignment_1");
 					put(grammarAccess.getVariableDeclAccess().getNameAssignment_2(), "rule__VariableDecl__NameAssignment_2");

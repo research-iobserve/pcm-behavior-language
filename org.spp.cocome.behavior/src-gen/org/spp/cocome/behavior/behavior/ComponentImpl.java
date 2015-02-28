@@ -16,6 +16,7 @@ import org.spp.cocome.behavior.mapping.Component;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.spp.cocome.behavior.behavior.ComponentImpl#getKind <em>Kind</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.ComponentImpl#getRefComponent <em>Ref Component</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.ComponentImpl#getLocalDeclarations <em>Local Declarations</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.ComponentImpl#getInterfaces <em>Interfaces</em>}</li>
@@ -28,6 +29,35 @@ import org.spp.cocome.behavior.mapping.Component;
  */
 public interface ComponentImpl extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Kind</b></em>' attribute.
+   * The literals are from the enumeration {@link org.spp.cocome.behavior.behavior.ComponentKind}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Kind</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Kind</em>' attribute.
+   * @see org.spp.cocome.behavior.behavior.ComponentKind
+   * @see #setKind(ComponentKind)
+   * @see org.spp.cocome.behavior.behavior.BehaviorPackage#getComponentImpl_Kind()
+   * @model
+   * @generated
+   */
+  ComponentKind getKind();
+
+  /**
+   * Sets the value of the '{@link org.spp.cocome.behavior.behavior.ComponentImpl#getKind <em>Kind</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Kind</em>' attribute.
+   * @see org.spp.cocome.behavior.behavior.ComponentKind
+   * @see #getKind()
+   * @generated
+   */
+  void setKind(ComponentKind value);
+
   /**
    * Returns the value of the '<em><b>Ref Component</b></em>' reference.
    * <!-- begin-user-doc -->

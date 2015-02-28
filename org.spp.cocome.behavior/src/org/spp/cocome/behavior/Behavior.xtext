@@ -20,10 +20,16 @@ Import: 'import' importedNamespace = QualifiedNameWithWildcard ;
  * Component structure
  */
 ComponentImpl: 
-	'realize' refComponent=[mapping::Component|QualifiedName] '{'
+	'realize' (kind=ComponentKind)? refComponent=[mapping::Component|QualifiedName] '{'
     	localDeclarations+=(VariableDecl|ConstantDecl)*
         interfaces+=InterfaceRealization*
     '}'
+;
+
+enum ComponentKind:
+	STATELESS = 'stateless' |
+	STATEFUL = 'stateful' |
+	SINGLETON = 'singleton'
 ;
  
 VariableDecl: modifier=('var'|'val') type=DeclarationTypeReference name=ID ;

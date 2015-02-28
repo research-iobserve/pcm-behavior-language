@@ -24,6 +24,7 @@ import org.eclipse.xtext.parser.*;
 import org.eclipse.xtext.parser.impl.*;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.xtext.parser.antlr.AbstractInternalAntlrParser;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream.HiddenTokens;
@@ -267,52 +268,70 @@ ruleComponentImpl returns [EObject current=null]
     }
 (
 (
+		{ 
+	        newCompositeNode(grammarAccess.getComponentImplAccess().getKindComponentKindEnumRuleCall_1_0()); 
+	    }
+		lv_kind_1_0=ruleComponentKind		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getComponentImplRule());
+	        }
+       		set(
+       			$current, 
+       			"kind",
+        		lv_kind_1_0, 
+        		"ComponentKind");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)?(
+(
 		{
 			if ($current==null) {
 	            $current = createModelElement(grammarAccess.getComponentImplRule());
 	        }
         }
 		{ 
-	        newCompositeNode(grammarAccess.getComponentImplAccess().getRefComponentComponentCrossReference_1_0()); 
+	        newCompositeNode(grammarAccess.getComponentImplAccess().getRefComponentComponentCrossReference_2_0()); 
 	    }
 		ruleQualifiedName		{ 
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_2='{' 
+)	otherlv_3='{' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getComponentImplAccess().getLeftCurlyBracketKeyword_2());
+    	newLeafNode(otherlv_3, grammarAccess.getComponentImplAccess().getLeftCurlyBracketKeyword_3());
     }
 (
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getComponentImplAccess().getLocalDeclarationsVariableDeclParserRuleCall_3_0_0()); 
+	        newCompositeNode(grammarAccess.getComponentImplAccess().getLocalDeclarationsVariableDeclParserRuleCall_4_0_0()); 
 	    }
-		lv_localDeclarations_3_1=ruleVariableDecl		{
+		lv_localDeclarations_4_1=ruleVariableDecl		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getComponentImplRule());
 	        }
        		add(
        			$current, 
        			"localDeclarations",
-        		lv_localDeclarations_3_1, 
+        		lv_localDeclarations_4_1, 
         		"VariableDecl");
 	        afterParserOrEnumRuleCall();
 	    }
 
     |		{ 
-	        newCompositeNode(grammarAccess.getComponentImplAccess().getLocalDeclarationsConstantDeclParserRuleCall_3_0_1()); 
+	        newCompositeNode(grammarAccess.getComponentImplAccess().getLocalDeclarationsConstantDeclParserRuleCall_4_0_1()); 
 	    }
-		lv_localDeclarations_3_2=ruleConstantDecl		{
+		lv_localDeclarations_4_2=ruleConstantDecl		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getComponentImplRule());
 	        }
        		add(
        			$current, 
        			"localDeclarations",
-        		lv_localDeclarations_3_2, 
+        		lv_localDeclarations_4_2, 
         		"ConstantDecl");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -323,24 +342,24 @@ ruleComponentImpl returns [EObject current=null]
 )*(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getComponentImplAccess().getInterfacesInterfaceRealizationParserRuleCall_4_0()); 
+	        newCompositeNode(grammarAccess.getComponentImplAccess().getInterfacesInterfaceRealizationParserRuleCall_5_0()); 
 	    }
-		lv_interfaces_4_0=ruleInterfaceRealization		{
+		lv_interfaces_5_0=ruleInterfaceRealization		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getComponentImplRule());
 	        }
        		add(
        			$current, 
        			"interfaces",
-        		lv_interfaces_4_0, 
+        		lv_interfaces_5_0, 
         		"InterfaceRealization");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)*	otherlv_5='}' 
+)*	otherlv_6='}' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getComponentImplAccess().getRightCurlyBracketKeyword_5());
+    	newLeafNode(otherlv_6, grammarAccess.getComponentImplAccess().getRightCurlyBracketKeyword_6());
     }
 )
 ;
@@ -2688,6 +2707,31 @@ ruleNUMBER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
     ;
 
 
+
+
+
+// Rule ComponentKind
+ruleComponentKind returns [Enumerator current=null] 
+    @init { enterRule(); }
+    @after { leaveRule(); }:
+((	enumLiteral_0='stateless' 
+	{
+        $current = grammarAccess.getComponentKindAccess().getSTATELESSEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_0, grammarAccess.getComponentKindAccess().getSTATELESSEnumLiteralDeclaration_0()); 
+    }
+)
+    |(	enumLiteral_1='stateful' 
+	{
+        $current = grammarAccess.getComponentKindAccess().getSTATEFULEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getComponentKindAccess().getSTATEFULEnumLiteralDeclaration_1()); 
+    }
+)
+    |(	enumLiteral_2='singleton' 
+	{
+        $current = grammarAccess.getComponentKindAccess().getSINGLETONEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_2, grammarAccess.getComponentKindAccess().getSINGLETONEnumLiteralDeclaration_2()); 
+    }
+));
 
 
 
