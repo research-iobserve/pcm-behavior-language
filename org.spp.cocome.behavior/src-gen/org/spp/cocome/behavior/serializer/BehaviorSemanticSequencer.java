@@ -19,7 +19,6 @@ import org.spp.cocome.behavior.behavior.BehaviorPackage;
 import org.spp.cocome.behavior.behavior.BinaryOperation;
 import org.spp.cocome.behavior.behavior.BlockStatement;
 import org.spp.cocome.behavior.behavior.BooleanLiteral;
-import org.spp.cocome.behavior.behavior.CastedExpression;
 import org.spp.cocome.behavior.behavior.CharLiteral;
 import org.spp.cocome.behavior.behavior.CollectionType;
 import org.spp.cocome.behavior.behavior.ComponentImpl;
@@ -27,21 +26,18 @@ import org.spp.cocome.behavior.behavior.ConstantDecl;
 import org.spp.cocome.behavior.behavior.Expression;
 import org.spp.cocome.behavior.behavior.IfStatement;
 import org.spp.cocome.behavior.behavior.Import;
-import org.spp.cocome.behavior.behavior.InstanceOfExpression;
+import org.spp.cocome.behavior.behavior.InstantiationExpression;
 import org.spp.cocome.behavior.behavior.InterfaceRealization;
 import org.spp.cocome.behavior.behavior.LoopStatement;
 import org.spp.cocome.behavior.behavior.MapType;
 import org.spp.cocome.behavior.behavior.MethodImpl;
 import org.spp.cocome.behavior.behavior.NumberLiteral;
-import org.spp.cocome.behavior.behavior.PostfixOperation;
 import org.spp.cocome.behavior.behavior.PropertyCall;
 import org.spp.cocome.behavior.behavior.RepositoryReference;
 import org.spp.cocome.behavior.behavior.StringLiteral;
 import org.spp.cocome.behavior.behavior.TypeReference;
-import org.spp.cocome.behavior.behavior.UnaryExpression;
 import org.spp.cocome.behavior.behavior.VariableCall;
 import org.spp.cocome.behavior.behavior.VariableDecl;
-import org.spp.cocome.behavior.behavior.XBinaryOperation;
 import org.spp.cocome.behavior.services.BehaviorGrammarAccess;
 
 @SuppressWarnings("all")
@@ -68,17 +64,7 @@ public class BehaviorSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case BehaviorPackage.BINARY_OPERATION:
 				if(context == grammarAccess.getExpressionRule() ||
 				   context == grammarAccess.getExpressionAccess().getBinaryOperationLeftAction_1_0_0_0()) {
-					sequence_AndExpression_Expression_RelationalExpression(context, (BinaryOperation) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getAndExpressionRule() ||
-				   context == grammarAccess.getAndExpressionAccess().getBinaryOperationLeftAction_1_0_0_0()) {
-					sequence_AndExpression_RelationalExpression(context, (BinaryOperation) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getRelationalExpressionRule() ||
-				   context == grammarAccess.getRelationalExpressionAccess().getBinaryOperationLeftAction_1_0_0_0()) {
-					sequence_RelationalExpression(context, (BinaryOperation) semanticObject); 
+					sequence_Expression(context, (BinaryOperation) semanticObject); 
 					return; 
 				}
 				else break;
@@ -90,69 +76,49 @@ public class BehaviorSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				else break;
 			case BehaviorPackage.BOOLEAN_LITERAL:
 				if(context == grammarAccess.getAdditiveExpressionRule() ||
-				   context == grammarAccess.getAdditiveExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getAdditiveExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getAndExpressionRule() ||
-				   context == grammarAccess.getAndExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getAndExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getBooleanLiteralRule() ||
 				   context == grammarAccess.getCastedExpressionRule() ||
-				   context == grammarAccess.getCastedExpressionAccess().getCastedExpressionTargetAction_1_0_0_0() ||
+				   context == grammarAccess.getCastedExpressionAccess().getExpressionTargetAction_1_0_0_0() ||
 				   context == grammarAccess.getExpressionRule() ||
 				   context == grammarAccess.getExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getLiteralRule() ||
 				   context == grammarAccess.getMultiplicativeExpressionRule() ||
-				   context == grammarAccess.getMultiplicativeExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getMultiplicativeExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getOtherExpressionRule() ||
-				   context == grammarAccess.getOtherExpressionAccess().getInstanceOfExpressionExpressionAction_1_0_0_0() ||
+				   context == grammarAccess.getOtherExpressionAccess().getExpressionExpressionAction_1_0_0_0() ||
 				   context == grammarAccess.getPostfixOperationRule() ||
-				   context == grammarAccess.getPostfixOperationAccess().getPostfixOperationOperandAction_1_0_0() ||
+				   context == grammarAccess.getPostfixOperationAccess().getExpressionOperandAction_1_0_0() ||
 				   context == grammarAccess.getPrimaryExpressionRule() ||
 				   context == grammarAccess.getRelationalExpressionRule() ||
-				   context == grammarAccess.getRelationalExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getRelationalExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getUnaryOperationRule()) {
 					sequence_BooleanLiteral(context, (BooleanLiteral) semanticObject); 
 					return; 
 				}
 				else break;
-			case BehaviorPackage.CASTED_EXPRESSION:
-				if(context == grammarAccess.getAdditiveExpressionRule() ||
-				   context == grammarAccess.getAdditiveExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getAndExpressionRule() ||
-				   context == grammarAccess.getAndExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getCastedExpressionRule() ||
-				   context == grammarAccess.getCastedExpressionAccess().getCastedExpressionTargetAction_1_0_0_0() ||
-				   context == grammarAccess.getExpressionRule() ||
-				   context == grammarAccess.getExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getMultiplicativeExpressionRule() ||
-				   context == grammarAccess.getMultiplicativeExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getOtherExpressionRule() ||
-				   context == grammarAccess.getOtherExpressionAccess().getInstanceOfExpressionExpressionAction_1_0_0_0() ||
-				   context == grammarAccess.getRelationalExpressionRule() ||
-				   context == grammarAccess.getRelationalExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getUnaryOperationRule()) {
-					sequence_CastedExpression(context, (CastedExpression) semanticObject); 
-					return; 
-				}
-				else break;
 			case BehaviorPackage.CHAR_LITERAL:
 				if(context == grammarAccess.getAdditiveExpressionRule() ||
-				   context == grammarAccess.getAdditiveExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getAdditiveExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getAndExpressionRule() ||
-				   context == grammarAccess.getAndExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getAndExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getCastedExpressionRule() ||
-				   context == grammarAccess.getCastedExpressionAccess().getCastedExpressionTargetAction_1_0_0_0() ||
+				   context == grammarAccess.getCastedExpressionAccess().getExpressionTargetAction_1_0_0_0() ||
 				   context == grammarAccess.getCharLiteralRule() ||
 				   context == grammarAccess.getExpressionRule() ||
 				   context == grammarAccess.getExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getLiteralRule() ||
 				   context == grammarAccess.getMultiplicativeExpressionRule() ||
-				   context == grammarAccess.getMultiplicativeExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getMultiplicativeExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getOtherExpressionRule() ||
-				   context == grammarAccess.getOtherExpressionAccess().getInstanceOfExpressionExpressionAction_1_0_0_0() ||
+				   context == grammarAccess.getOtherExpressionAccess().getExpressionExpressionAction_1_0_0_0() ||
 				   context == grammarAccess.getPostfixOperationRule() ||
-				   context == grammarAccess.getPostfixOperationAccess().getPostfixOperationOperandAction_1_0_0() ||
+				   context == grammarAccess.getPostfixOperationAccess().getExpressionOperandAction_1_0_0() ||
 				   context == grammarAccess.getPrimaryExpressionRule() ||
 				   context == grammarAccess.getRelationalExpressionRule() ||
-				   context == grammarAccess.getRelationalExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getRelationalExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getUnaryOperationRule()) {
 					sequence_CharLiteral(context, (CharLiteral) semanticObject); 
 					return; 
@@ -178,26 +144,44 @@ public class BehaviorSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				}
 				else break;
 			case BehaviorPackage.EXPRESSION:
-				if(context == grammarAccess.getAdditiveExpressionRule() ||
-				   context == grammarAccess.getAdditiveExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getAndExpressionRule() ||
-				   context == grammarAccess.getAndExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getCastedExpressionRule() ||
-				   context == grammarAccess.getCastedExpressionAccess().getCastedExpressionTargetAction_1_0_0_0() ||
+				if(context == grammarAccess.getAndExpressionRule() ||
+				   context == grammarAccess.getAndExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getExpressionRule() ||
-				   context == grammarAccess.getExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getInstantiationExpressionRule() ||
-				   context == grammarAccess.getMultiplicativeExpressionRule() ||
-				   context == grammarAccess.getMultiplicativeExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getOtherExpressionRule() ||
-				   context == grammarAccess.getOtherExpressionAccess().getInstanceOfExpressionExpressionAction_1_0_0_0() ||
-				   context == grammarAccess.getPostfixOperationRule() ||
-				   context == grammarAccess.getPostfixOperationAccess().getPostfixOperationOperandAction_1_0_0() ||
-				   context == grammarAccess.getPrimaryExpressionRule() ||
-				   context == grammarAccess.getRelationalExpressionRule() ||
-				   context == grammarAccess.getRelationalExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getUnaryOperationRule()) {
-					sequence_InstantiationExpression(context, (Expression) semanticObject); 
+				   context == grammarAccess.getExpressionAccess().getBinaryOperationLeftAction_1_0_0_0()) {
+					sequence_AdditiveExpression_AndExpression_CastedExpression_MultiplicativeExpression_OtherExpression_PostfixOperation_RelationalExpression_UnaryOperation(context, (Expression) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getRelationalExpressionRule() ||
+				   context == grammarAccess.getRelationalExpressionAccess().getExpressionLeftAction_1_0_0_0()) {
+					sequence_AdditiveExpression_CastedExpression_MultiplicativeExpression_OtherExpression_PostfixOperation_RelationalExpression_UnaryOperation(context, (Expression) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getOtherExpressionRule()) {
+					sequence_AdditiveExpression_CastedExpression_MultiplicativeExpression_OtherExpression_PostfixOperation_UnaryOperation(context, (Expression) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getAdditiveExpressionRule() ||
+				   context == grammarAccess.getAdditiveExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getOtherExpressionAccess().getExpressionExpressionAction_1_0_0_0()) {
+					sequence_AdditiveExpression_CastedExpression_MultiplicativeExpression_PostfixOperation_UnaryOperation(context, (Expression) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getMultiplicativeExpressionRule() ||
+				   context == grammarAccess.getMultiplicativeExpressionAccess().getExpressionLeftAction_1_0_0_0()) {
+					sequence_CastedExpression_MultiplicativeExpression_PostfixOperation_UnaryOperation(context, (Expression) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getCastedExpressionRule() ||
+				   context == grammarAccess.getCastedExpressionAccess().getExpressionTargetAction_1_0_0_0()) {
+					sequence_CastedExpression_PostfixOperation(context, (Expression) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getUnaryOperationRule()) {
+					sequence_CastedExpression_PostfixOperation_UnaryOperation(context, (Expression) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getPostfixOperationRule()) {
+					sequence_PostfixOperation(context, (Expression) semanticObject); 
 					return; 
 				}
 				else break;
@@ -214,15 +198,27 @@ public class BehaviorSemanticSequencer extends AbstractDelegatingSemanticSequenc
 					return; 
 				}
 				else break;
-			case BehaviorPackage.INSTANCE_OF_EXPRESSION:
-				if(context == grammarAccess.getAndExpressionRule() ||
-				   context == grammarAccess.getAndExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
+			case BehaviorPackage.INSTANTIATION_EXPRESSION:
+				if(context == grammarAccess.getAdditiveExpressionRule() ||
+				   context == grammarAccess.getAdditiveExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getAndExpressionRule() ||
+				   context == grammarAccess.getAndExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getCastedExpressionRule() ||
+				   context == grammarAccess.getCastedExpressionAccess().getExpressionTargetAction_1_0_0_0() ||
 				   context == grammarAccess.getExpressionRule() ||
 				   context == grammarAccess.getExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getInstantiationExpressionRule() ||
+				   context == grammarAccess.getMultiplicativeExpressionRule() ||
+				   context == grammarAccess.getMultiplicativeExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getOtherExpressionRule() ||
+				   context == grammarAccess.getOtherExpressionAccess().getExpressionExpressionAction_1_0_0_0() ||
+				   context == grammarAccess.getPostfixOperationRule() ||
+				   context == grammarAccess.getPostfixOperationAccess().getExpressionOperandAction_1_0_0() ||
+				   context == grammarAccess.getPrimaryExpressionRule() ||
 				   context == grammarAccess.getRelationalExpressionRule() ||
-				   context == grammarAccess.getRelationalExpressionAccess().getBinaryOperationLeftAction_1_0_0_0()) {
-					sequence_OtherExpression(context, (InstanceOfExpression) semanticObject); 
+				   context == grammarAccess.getRelationalExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getUnaryOperationRule()) {
+					sequence_InstantiationExpression(context, (InstantiationExpression) semanticObject); 
 					return; 
 				}
 				else break;
@@ -254,47 +250,26 @@ public class BehaviorSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				else break;
 			case BehaviorPackage.NUMBER_LITERAL:
 				if(context == grammarAccess.getAdditiveExpressionRule() ||
-				   context == grammarAccess.getAdditiveExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getAdditiveExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getAndExpressionRule() ||
-				   context == grammarAccess.getAndExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getAndExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getCastedExpressionRule() ||
-				   context == grammarAccess.getCastedExpressionAccess().getCastedExpressionTargetAction_1_0_0_0() ||
+				   context == grammarAccess.getCastedExpressionAccess().getExpressionTargetAction_1_0_0_0() ||
 				   context == grammarAccess.getExpressionRule() ||
 				   context == grammarAccess.getExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getLiteralRule() ||
 				   context == grammarAccess.getMultiplicativeExpressionRule() ||
-				   context == grammarAccess.getMultiplicativeExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getMultiplicativeExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getNumberLiteralRule() ||
 				   context == grammarAccess.getOtherExpressionRule() ||
-				   context == grammarAccess.getOtherExpressionAccess().getInstanceOfExpressionExpressionAction_1_0_0_0() ||
+				   context == grammarAccess.getOtherExpressionAccess().getExpressionExpressionAction_1_0_0_0() ||
 				   context == grammarAccess.getPostfixOperationRule() ||
-				   context == grammarAccess.getPostfixOperationAccess().getPostfixOperationOperandAction_1_0_0() ||
+				   context == grammarAccess.getPostfixOperationAccess().getExpressionOperandAction_1_0_0() ||
 				   context == grammarAccess.getPrimaryExpressionRule() ||
 				   context == grammarAccess.getRelationalExpressionRule() ||
-				   context == grammarAccess.getRelationalExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getRelationalExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getUnaryOperationRule()) {
 					sequence_NumberLiteral(context, (NumberLiteral) semanticObject); 
-					return; 
-				}
-				else break;
-			case BehaviorPackage.POSTFIX_OPERATION:
-				if(context == grammarAccess.getAdditiveExpressionRule() ||
-				   context == grammarAccess.getAdditiveExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getAndExpressionRule() ||
-				   context == grammarAccess.getAndExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getCastedExpressionRule() ||
-				   context == grammarAccess.getCastedExpressionAccess().getCastedExpressionTargetAction_1_0_0_0() ||
-				   context == grammarAccess.getExpressionRule() ||
-				   context == grammarAccess.getExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getMultiplicativeExpressionRule() ||
-				   context == grammarAccess.getMultiplicativeExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getOtherExpressionRule() ||
-				   context == grammarAccess.getOtherExpressionAccess().getInstanceOfExpressionExpressionAction_1_0_0_0() ||
-				   context == grammarAccess.getPostfixOperationRule() ||
-				   context == grammarAccess.getRelationalExpressionRule() ||
-				   context == grammarAccess.getRelationalExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getUnaryOperationRule()) {
-					sequence_PostfixOperation(context, (PostfixOperation) semanticObject); 
 					return; 
 				}
 				else break;
@@ -312,23 +287,23 @@ public class BehaviorSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				else break;
 			case BehaviorPackage.STRING_LITERAL:
 				if(context == grammarAccess.getAdditiveExpressionRule() ||
-				   context == grammarAccess.getAdditiveExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getAdditiveExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getAndExpressionRule() ||
-				   context == grammarAccess.getAndExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getAndExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getCastedExpressionRule() ||
-				   context == grammarAccess.getCastedExpressionAccess().getCastedExpressionTargetAction_1_0_0_0() ||
+				   context == grammarAccess.getCastedExpressionAccess().getExpressionTargetAction_1_0_0_0() ||
 				   context == grammarAccess.getExpressionRule() ||
 				   context == grammarAccess.getExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getLiteralRule() ||
 				   context == grammarAccess.getMultiplicativeExpressionRule() ||
-				   context == grammarAccess.getMultiplicativeExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getMultiplicativeExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getOtherExpressionRule() ||
-				   context == grammarAccess.getOtherExpressionAccess().getInstanceOfExpressionExpressionAction_1_0_0_0() ||
+				   context == grammarAccess.getOtherExpressionAccess().getExpressionExpressionAction_1_0_0_0() ||
 				   context == grammarAccess.getPostfixOperationRule() ||
-				   context == grammarAccess.getPostfixOperationAccess().getPostfixOperationOperandAction_1_0_0() ||
+				   context == grammarAccess.getPostfixOperationAccess().getExpressionOperandAction_1_0_0() ||
 				   context == grammarAccess.getPrimaryExpressionRule() ||
 				   context == grammarAccess.getRelationalExpressionRule() ||
-				   context == grammarAccess.getRelationalExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getRelationalExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getStringLiteralRule() ||
 				   context == grammarAccess.getUnaryOperationRule()) {
 					sequence_StringLiteral(context, (StringLiteral) semanticObject); 
@@ -342,42 +317,24 @@ public class BehaviorSemanticSequencer extends AbstractDelegatingSemanticSequenc
 					return; 
 				}
 				else break;
-			case BehaviorPackage.UNARY_EXPRESSION:
-				if(context == grammarAccess.getAdditiveExpressionRule() ||
-				   context == grammarAccess.getAdditiveExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getAndExpressionRule() ||
-				   context == grammarAccess.getAndExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getExpressionRule() ||
-				   context == grammarAccess.getExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getMultiplicativeExpressionRule() ||
-				   context == grammarAccess.getMultiplicativeExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getOtherExpressionRule() ||
-				   context == grammarAccess.getOtherExpressionAccess().getInstanceOfExpressionExpressionAction_1_0_0_0() ||
-				   context == grammarAccess.getRelationalExpressionRule() ||
-				   context == grammarAccess.getRelationalExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getUnaryOperationRule()) {
-					sequence_UnaryOperation(context, (UnaryExpression) semanticObject); 
-					return; 
-				}
-				else break;
 			case BehaviorPackage.VARIABLE_CALL:
 				if(context == grammarAccess.getAdditiveExpressionRule() ||
-				   context == grammarAccess.getAdditiveExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getAdditiveExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getAndExpressionRule() ||
-				   context == grammarAccess.getAndExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getAndExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getCastedExpressionRule() ||
-				   context == grammarAccess.getCastedExpressionAccess().getCastedExpressionTargetAction_1_0_0_0() ||
+				   context == grammarAccess.getCastedExpressionAccess().getExpressionTargetAction_1_0_0_0() ||
 				   context == grammarAccess.getExpressionRule() ||
 				   context == grammarAccess.getExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getMultiplicativeExpressionRule() ||
-				   context == grammarAccess.getMultiplicativeExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getMultiplicativeExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getOtherExpressionRule() ||
-				   context == grammarAccess.getOtherExpressionAccess().getInstanceOfExpressionExpressionAction_1_0_0_0() ||
+				   context == grammarAccess.getOtherExpressionAccess().getExpressionExpressionAction_1_0_0_0() ||
 				   context == grammarAccess.getPostfixOperationRule() ||
-				   context == grammarAccess.getPostfixOperationAccess().getPostfixOperationOperandAction_1_0_0() ||
+				   context == grammarAccess.getPostfixOperationAccess().getExpressionOperandAction_1_0_0() ||
 				   context == grammarAccess.getPrimaryExpressionRule() ||
 				   context == grammarAccess.getRelationalExpressionRule() ||
-				   context == grammarAccess.getRelationalExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
+				   context == grammarAccess.getRelationalExpressionAccess().getExpressionLeftAction_1_0_0_0() ||
 				   context == grammarAccess.getUnaryOperationRule() ||
 				   context == grammarAccess.getVariableCallRule()) {
 					sequence_VariableCall(context, (VariableCall) semanticObject); 
@@ -390,26 +347,6 @@ public class BehaviorSemanticSequencer extends AbstractDelegatingSemanticSequenc
 					return; 
 				}
 				else break;
-			case BehaviorPackage.XBINARY_OPERATION:
-				if(context == grammarAccess.getAdditiveExpressionRule() ||
-				   context == grammarAccess.getAdditiveExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getAndExpressionRule() ||
-				   context == grammarAccess.getAndExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getExpressionRule() ||
-				   context == grammarAccess.getExpressionAccess().getBinaryOperationLeftAction_1_0_0_0() ||
-				   context == grammarAccess.getOtherExpressionRule() ||
-				   context == grammarAccess.getOtherExpressionAccess().getInstanceOfExpressionExpressionAction_1_0_0_0() ||
-				   context == grammarAccess.getRelationalExpressionRule() ||
-				   context == grammarAccess.getRelationalExpressionAccess().getBinaryOperationLeftAction_1_0_0_0()) {
-					sequence_AdditiveExpression_MultiplicativeExpression(context, (XBinaryOperation) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getMultiplicativeExpressionRule() ||
-				   context == grammarAccess.getMultiplicativeExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0()) {
-					sequence_MultiplicativeExpression(context, (XBinaryOperation) semanticObject); 
-					return; 
-				}
-				else break;
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
@@ -417,21 +354,14 @@ public class BehaviorSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	/**
 	 * Constraint:
 	 *     (
-	 *         (left=AdditiveExpression_XBinaryOperation_1_0_0_0 (feature='+' | feature='-') right=MultiplicativeExpression) | 
-	 *         (left=MultiplicativeExpression_XBinaryOperation_1_0_0_0 (feature='*' | feature='/' | feature='%' | feature='**') right=UnaryOperation)
-	 *     )
-	 */
-	protected void sequence_AdditiveExpression_MultiplicativeExpression(EObject context, XBinaryOperation semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (
-	 *         (left=AndExpression_BinaryOperation_1_0_0_0 feature='&&' right=RelationalExpression) | 
+	 *         (feature='!' operand=UnaryOperation) | 
+	 *         (target=CastedExpression_Expression_1_0_0_0 feature='as' type=TypeReference) | 
+	 *         (operand=PostfixOperation_Expression_1_0_0 (feature='++' | feature='--')) | 
+	 *         (left=MultiplicativeExpression_Expression_1_0_0_0 (feature='*' | feature='/' | feature='%' | feature='**') right=UnaryOperation) | 
+	 *         (left=AdditiveExpression_Expression_1_0_0_0 (feature='+' | feature='-') right=MultiplicativeExpression) | 
+	 *         (expression=OtherExpression_Expression_1_0_0_0 feature='instanceof' type=TypeReference) | 
 	 *         (
-	 *             left=RelationalExpression_BinaryOperation_1_0_0_0 
+	 *             left=RelationalExpression_Expression_1_0_0_0 
 	 *             (
 	 *                 feature='==' | 
 	 *                 feature='!=' | 
@@ -442,10 +372,10 @@ public class BehaviorSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *             ) 
 	 *             right=OtherExpression
 	 *         ) | 
-	 *         (left=Expression_BinaryOperation_1_0_0_0 feature='||' right=AndExpression)
+	 *         (left=AndExpression_Expression_1_0_0_0 feature='&&' right=RelationalExpression)
 	 *     )
 	 */
-	protected void sequence_AndExpression_Expression_RelationalExpression(EObject context, BinaryOperation semanticObject) {
+	protected void sequence_AdditiveExpression_AndExpression_CastedExpression_MultiplicativeExpression_OtherExpression_PostfixOperation_RelationalExpression_UnaryOperation(EObject context, Expression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -453,9 +383,14 @@ public class BehaviorSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	/**
 	 * Constraint:
 	 *     (
-	 *         (left=AndExpression_BinaryOperation_1_0_0_0 feature='&&' right=RelationalExpression) | 
+	 *         (feature='!' operand=UnaryOperation) | 
+	 *         (target=CastedExpression_Expression_1_0_0_0 feature='as' type=TypeReference) | 
+	 *         (operand=PostfixOperation_Expression_1_0_0 (feature='++' | feature='--')) | 
+	 *         (left=MultiplicativeExpression_Expression_1_0_0_0 (feature='*' | feature='/' | feature='%' | feature='**') right=UnaryOperation) | 
+	 *         (left=AdditiveExpression_Expression_1_0_0_0 (feature='+' | feature='-') right=MultiplicativeExpression) | 
+	 *         (expression=OtherExpression_Expression_1_0_0_0 feature='instanceof' type=TypeReference) | 
 	 *         (
-	 *             left=RelationalExpression_BinaryOperation_1_0_0_0 
+	 *             left=RelationalExpression_Expression_1_0_0_0 
 	 *             (
 	 *                 feature='==' | 
 	 *                 feature='!=' | 
@@ -468,7 +403,38 @@ public class BehaviorSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *         )
 	 *     )
 	 */
-	protected void sequence_AndExpression_RelationalExpression(EObject context, BinaryOperation semanticObject) {
+	protected void sequence_AdditiveExpression_CastedExpression_MultiplicativeExpression_OtherExpression_PostfixOperation_RelationalExpression_UnaryOperation(EObject context, Expression semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         (feature='!' operand=UnaryOperation) | 
+	 *         (target=CastedExpression_Expression_1_0_0_0 feature='as' type=TypeReference) | 
+	 *         (operand=PostfixOperation_Expression_1_0_0 (feature='++' | feature='--')) | 
+	 *         (left=MultiplicativeExpression_Expression_1_0_0_0 (feature='*' | feature='/' | feature='%' | feature='**') right=UnaryOperation) | 
+	 *         (left=AdditiveExpression_Expression_1_0_0_0 (feature='+' | feature='-') right=MultiplicativeExpression) | 
+	 *         (expression=OtherExpression_Expression_1_0_0_0 feature='instanceof' type=TypeReference)
+	 *     )
+	 */
+	protected void sequence_AdditiveExpression_CastedExpression_MultiplicativeExpression_OtherExpression_PostfixOperation_UnaryOperation(EObject context, Expression semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         (feature='!' operand=UnaryOperation) | 
+	 *         (target=CastedExpression_Expression_1_0_0_0 feature='as' type=TypeReference) | 
+	 *         (operand=PostfixOperation_Expression_1_0_0 (feature='++' | feature='--')) | 
+	 *         (left=MultiplicativeExpression_Expression_1_0_0_0 (feature='*' | feature='/' | feature='%' | feature='**') right=UnaryOperation) | 
+	 *         (left=AdditiveExpression_Expression_1_0_0_0 (feature='+' | feature='-') right=MultiplicativeExpression)
+	 *     )
+	 */
+	protected void sequence_AdditiveExpression_CastedExpression_MultiplicativeExpression_PostfixOperation_UnaryOperation(EObject context, Expression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -521,9 +487,39 @@ public class BehaviorSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (target=CastedExpression_CastedExpression_1_0_0_0 type=TypeReference)
+	 *     (
+	 *         (feature='!' operand=UnaryOperation) | 
+	 *         (target=CastedExpression_Expression_1_0_0_0 feature='as' type=TypeReference) | 
+	 *         (operand=PostfixOperation_Expression_1_0_0 (feature='++' | feature='--')) | 
+	 *         (left=MultiplicativeExpression_Expression_1_0_0_0 (feature='*' | feature='/' | feature='%' | feature='**') right=UnaryOperation)
+	 *     )
 	 */
-	protected void sequence_CastedExpression(EObject context, CastedExpression semanticObject) {
+	protected void sequence_CastedExpression_MultiplicativeExpression_PostfixOperation_UnaryOperation(EObject context, Expression semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         (target=CastedExpression_Expression_1_0_0_0 feature='as' type=TypeReference) | 
+	 *         (operand=PostfixOperation_Expression_1_0_0 (feature='++' | feature='--'))
+	 *     )
+	 */
+	protected void sequence_CastedExpression_PostfixOperation(EObject context, Expression semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         (feature='!' operand=UnaryOperation) | 
+	 *         (target=CastedExpression_Expression_1_0_0_0 feature='as' type=TypeReference) | 
+	 *         (operand=PostfixOperation_Expression_1_0_0 (feature='++' | feature='--'))
+	 *     )
+	 */
+	protected void sequence_CastedExpression_PostfixOperation_UnaryOperation(EObject context, Expression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -576,6 +572,15 @@ public class BehaviorSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
+	 *     (left=Expression_BinaryOperation_1_0_0_0 feature='||' right=AndExpression)
+	 */
+	protected void sequence_Expression(EObject context, BinaryOperation semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (expr=Expression ifStatement=BlockStatement elseStatement=BlockStatement?)
 	 */
 	protected void sequence_IfStatement(EObject context, IfStatement semanticObject) {
@@ -603,7 +608,7 @@ public class BehaviorSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 * Constraint:
 	 *     (type=TypeReference parameters+=Expression)
 	 */
-	protected void sequence_InstantiationExpression(EObject context, Expression semanticObject) {
+	protected void sequence_InstantiationExpression(EObject context, InstantiationExpression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -679,15 +684,6 @@ public class BehaviorSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (left=MultiplicativeExpression_XBinaryOperation_1_0_0_0 (feature='*' | feature='/' | feature='%' | feature='**') right=UnaryOperation)
-	 */
-	protected void sequence_MultiplicativeExpression(EObject context, XBinaryOperation semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
 	 *     value=NUMBER
 	 */
 	protected void sequence_NumberLiteral(EObject context, NumberLiteral semanticObject) {
@@ -697,18 +693,9 @@ public class BehaviorSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (expression=OtherExpression_InstanceOfExpression_1_0_0_0 type=TypeReference)
+	 *     (operand=PostfixOperation_Expression_1_0_0 (feature='++' | feature='--'))
 	 */
-	protected void sequence_OtherExpression(EObject context, InstanceOfExpression semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (operand=PostfixOperation_PostfixOperation_1_0_0 (feature='++' | feature='--'))
-	 */
-	protected void sequence_PostfixOperation(EObject context, PostfixOperation semanticObject) {
+	protected void sequence_PostfixOperation(EObject context, Expression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -718,26 +705,6 @@ public class BehaviorSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     (property=[Property|ID] index=Expression? subProperty=PropertyCall?)
 	 */
 	protected void sequence_PropertyCall(EObject context, PropertyCall semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (
-	 *         left=RelationalExpression_BinaryOperation_1_0_0_0 
-	 *         (
-	 *             feature='==' | 
-	 *             feature='!=' | 
-	 *             feature='>' | 
-	 *             feature='<' | 
-	 *             feature='>=' | 
-	 *             feature='<='
-	 *         ) 
-	 *         right=OtherExpression
-	 *     )
-	 */
-	protected void sequence_RelationalExpression(EObject context, BinaryOperation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -780,15 +747,6 @@ public class BehaviorSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getTypeReferenceAccess().getReferenceNamedTypeIDTerminalRuleCall_0_1(), semanticObject.getReference());
 		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (feature='!' operand=UnaryOperation)
-	 */
-	protected void sequence_UnaryOperation(EObject context, UnaryExpression semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

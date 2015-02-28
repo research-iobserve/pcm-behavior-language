@@ -7,8 +7,6 @@ import org.spp.cocome.behavior.behavior.Assignment
 import org.spp.cocome.behavior.behavior.LoopStatement
 import static extension org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.*
 import static extension org.spp.cocome.behavior.generator.BehaviorTypeGenerator.*
-import org.spp.cocome.behavior.behavior.VariableCall
-import org.spp.cocome.behavior.behavior.PropertyCall
 
 /**
  * Generator functions for statements.
@@ -21,39 +19,30 @@ class BehaviorStatementGenerator {
 		
 	}
 	
-		def static handleStatement(Statement statement){
-		switch(statement){
+	def static handleStatement(Statement statement) {
+		switch(statement) {
 			 IfStatement : statement.createIfStatement
 			 Assignment : statement.createAssignment
 			 LoopStatement : statement.createLoopStatement
 			 default : throw new Exception("This should not happen (handleStatement)")
 	}}
 	
-	def static createIfStatement(IfStatement ifS)'''
-	if («ifS.expr.createExpression»){
-		«ifS.ifStatement.handleBlockstatement»
-	}
-	else {
-		«ifS.elseStatement.handleBlockstatement»
-	};
+	def static createIfStatement(IfStatement statement) '''
+		if («statement.expr.createExpression») {
+			«statement.ifStatement.handleBlockstatement»
+		} else {
+			«statement.elseStatement.handleBlockstatement»
+		}
 	'''
 	
-	def static createAssignment(Assignment assignm)'''
-	«assignm.variable.handleVariableCall» = «assignm.expression.createExpression»;
+	def static createAssignment(Assignment statement)'''
+		«statement.variable.createExpression» = «statement.expression.createExpression»;
 	'''
 	
-	def static createLoopStatement(LoopStatement lS)'''
-	for («lS.variable.type.createJavaType» «lS.variable.name» : «lS.expression.createExpression») {
-		«lS.statement.handleBlockstatement»
-	};
-	'''
-	
-	//TODO
-	def static handleVariableCall(VariableCall vc)'''
-	'''
-	
-	//TODO
-	def static handlePropertyCall(PropertyCall pc)'''
+	def static createLoopStatement(LoopStatement statement) '''
+		for («statement.variable.type.createJavaTypeReference» «statement.variable.name» : «statement.expression.createExpression») {
+			«statement.statement.handleBlockstatement»
+		}
 	'''
 		
 }

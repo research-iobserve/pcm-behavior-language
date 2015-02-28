@@ -16,7 +16,6 @@ import org.spp.cocome.behavior.behavior.BehaviorPackage;
 import org.spp.cocome.behavior.behavior.BinaryOperation;
 import org.spp.cocome.behavior.behavior.BlockStatement;
 import org.spp.cocome.behavior.behavior.BooleanLiteral;
-import org.spp.cocome.behavior.behavior.CastedExpression;
 import org.spp.cocome.behavior.behavior.CharLiteral;
 import org.spp.cocome.behavior.behavior.CollectionType;
 import org.spp.cocome.behavior.behavior.ComponentImpl;
@@ -25,23 +24,20 @@ import org.spp.cocome.behavior.behavior.DeclarationTypeReference;
 import org.spp.cocome.behavior.behavior.Expression;
 import org.spp.cocome.behavior.behavior.IfStatement;
 import org.spp.cocome.behavior.behavior.Import;
-import org.spp.cocome.behavior.behavior.InstanceOfExpression;
+import org.spp.cocome.behavior.behavior.InstantiationExpression;
 import org.spp.cocome.behavior.behavior.InterfaceRealization;
 import org.spp.cocome.behavior.behavior.Literal;
 import org.spp.cocome.behavior.behavior.LoopStatement;
 import org.spp.cocome.behavior.behavior.MapType;
 import org.spp.cocome.behavior.behavior.MethodImpl;
 import org.spp.cocome.behavior.behavior.NumberLiteral;
-import org.spp.cocome.behavior.behavior.PostfixOperation;
 import org.spp.cocome.behavior.behavior.PropertyCall;
 import org.spp.cocome.behavior.behavior.RepositoryReference;
 import org.spp.cocome.behavior.behavior.Statement;
 import org.spp.cocome.behavior.behavior.StringLiteral;
 import org.spp.cocome.behavior.behavior.TypeReference;
-import org.spp.cocome.behavior.behavior.UnaryExpression;
 import org.spp.cocome.behavior.behavior.VariableCall;
 import org.spp.cocome.behavior.behavior.VariableDecl;
-import org.spp.cocome.behavior.behavior.XBinaryOperation;
 
 import org.spp.cocome.behavior.mapping.MappingPackage;
 
@@ -172,6 +168,13 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass instantiationExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass typeReferenceEClass = null;
 
   /**
@@ -236,41 +239,6 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
    * @generated
    */
   private EClass binaryOperationEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass instanceOfExpressionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass xBinaryOperationEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass unaryExpressionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass castedExpressionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass postfixOperationEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -834,7 +802,7 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getExpression_Type()
+  public EReference getExpression_Left()
   {
     return (EReference)expressionEClass.getEStructuralFeatures().get(0);
   }
@@ -844,9 +812,79 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getExpression_Parameters()
+  public EAttribute getExpression_Feature()
   {
-    return (EReference)expressionEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)expressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getExpression_Right()
+  {
+    return (EReference)expressionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getExpression_Expression()
+  {
+    return (EReference)expressionEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getExpression_Type()
+  {
+    return (EReference)expressionEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getExpression_Operand()
+  {
+    return (EReference)expressionEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getExpression_Target()
+  {
+    return (EReference)expressionEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getInstantiationExpression()
+  {
+    return instantiationExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getInstantiationExpression_Parameters()
+  {
+    return (EReference)instantiationExpressionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1044,176 +1082,6 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getBinaryOperation_Left()
-  {
-    return (EReference)binaryOperationEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getBinaryOperation_Feature()
-  {
-    return (EAttribute)binaryOperationEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getBinaryOperation_Right()
-  {
-    return (EReference)binaryOperationEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getInstanceOfExpression()
-  {
-    return instanceOfExpressionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getInstanceOfExpression_Expression()
-  {
-    return (EReference)instanceOfExpressionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getXBinaryOperation()
-  {
-    return xBinaryOperationEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getXBinaryOperation_Left()
-  {
-    return (EReference)xBinaryOperationEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getXBinaryOperation_Feature()
-  {
-    return (EAttribute)xBinaryOperationEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getXBinaryOperation_Right()
-  {
-    return (EReference)xBinaryOperationEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getUnaryExpression()
-  {
-    return unaryExpressionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getUnaryExpression_Feature()
-  {
-    return (EAttribute)unaryExpressionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getUnaryExpression_Operand()
-  {
-    return (EReference)unaryExpressionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getCastedExpression()
-  {
-    return castedExpressionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getCastedExpression_Target()
-  {
-    return (EReference)castedExpressionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getPostfixOperation()
-  {
-    return postfixOperationEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPostfixOperation_Operand()
-  {
-    return (EReference)postfixOperationEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getPostfixOperation_Feature()
-  {
-    return (EAttribute)postfixOperationEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public BehaviorFactory getBehaviorFactory()
   {
     return (BehaviorFactory)getEFactoryInstance();
@@ -1303,8 +1171,16 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     createEReference(propertyCallEClass, PROPERTY_CALL__SUB_PROPERTY);
 
     expressionEClass = createEClass(EXPRESSION);
+    createEReference(expressionEClass, EXPRESSION__LEFT);
+    createEAttribute(expressionEClass, EXPRESSION__FEATURE);
+    createEReference(expressionEClass, EXPRESSION__RIGHT);
+    createEReference(expressionEClass, EXPRESSION__EXPRESSION);
     createEReference(expressionEClass, EXPRESSION__TYPE);
-    createEReference(expressionEClass, EXPRESSION__PARAMETERS);
+    createEReference(expressionEClass, EXPRESSION__OPERAND);
+    createEReference(expressionEClass, EXPRESSION__TARGET);
+
+    instantiationExpressionEClass = createEClass(INSTANTIATION_EXPRESSION);
+    createEReference(instantiationExpressionEClass, INSTANTIATION_EXPRESSION__PARAMETERS);
 
     typeReferenceEClass = createEClass(TYPE_REFERENCE);
     createEReference(typeReferenceEClass, TYPE_REFERENCE__REFERENCE);
@@ -1334,28 +1210,6 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     createEAttribute(booleanLiteralEClass, BOOLEAN_LITERAL__VALUE);
 
     binaryOperationEClass = createEClass(BINARY_OPERATION);
-    createEReference(binaryOperationEClass, BINARY_OPERATION__LEFT);
-    createEAttribute(binaryOperationEClass, BINARY_OPERATION__FEATURE);
-    createEReference(binaryOperationEClass, BINARY_OPERATION__RIGHT);
-
-    instanceOfExpressionEClass = createEClass(INSTANCE_OF_EXPRESSION);
-    createEReference(instanceOfExpressionEClass, INSTANCE_OF_EXPRESSION__EXPRESSION);
-
-    xBinaryOperationEClass = createEClass(XBINARY_OPERATION);
-    createEReference(xBinaryOperationEClass, XBINARY_OPERATION__LEFT);
-    createEAttribute(xBinaryOperationEClass, XBINARY_OPERATION__FEATURE);
-    createEReference(xBinaryOperationEClass, XBINARY_OPERATION__RIGHT);
-
-    unaryExpressionEClass = createEClass(UNARY_EXPRESSION);
-    createEAttribute(unaryExpressionEClass, UNARY_EXPRESSION__FEATURE);
-    createEReference(unaryExpressionEClass, UNARY_EXPRESSION__OPERAND);
-
-    castedExpressionEClass = createEClass(CASTED_EXPRESSION);
-    createEReference(castedExpressionEClass, CASTED_EXPRESSION__TARGET);
-
-    postfixOperationEClass = createEClass(POSTFIX_OPERATION);
-    createEReference(postfixOperationEClass, POSTFIX_OPERATION__OPERAND);
-    createEAttribute(postfixOperationEClass, POSTFIX_OPERATION__FEATURE);
   }
 
   /**
@@ -1395,6 +1249,7 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     assignmentEClass.getESuperTypes().add(this.getStatement());
     loopStatementEClass.getESuperTypes().add(this.getStatement());
     variableCallEClass.getESuperTypes().add(this.getExpression());
+    instantiationExpressionEClass.getESuperTypes().add(this.getExpression());
     typeReferenceEClass.getESuperTypes().add(this.getDeclarationTypeReference());
     collectionTypeEClass.getESuperTypes().add(this.getDeclarationTypeReference());
     mapTypeEClass.getESuperTypes().add(this.getDeclarationTypeReference());
@@ -1404,11 +1259,6 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     numberLiteralEClass.getESuperTypes().add(this.getLiteral());
     booleanLiteralEClass.getESuperTypes().add(this.getLiteral());
     binaryOperationEClass.getESuperTypes().add(this.getExpression());
-    instanceOfExpressionEClass.getESuperTypes().add(this.getExpression());
-    xBinaryOperationEClass.getESuperTypes().add(this.getExpression());
-    unaryExpressionEClass.getESuperTypes().add(this.getExpression());
-    castedExpressionEClass.getESuperTypes().add(this.getExpression());
-    postfixOperationEClass.getESuperTypes().add(this.getExpression());
 
     // Initialize classes and features; add operations and parameters
     initEClass(behaviorModelEClass, BehaviorModel.class, "BehaviorModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1475,8 +1325,16 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     initEReference(getPropertyCall_SubProperty(), this.getPropertyCall(), null, "subProperty", null, 0, 1, PropertyCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getExpression_Left(), this.getExpression(), null, "left", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getExpression_Feature(), ecorePackage.getEString(), "feature", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExpression_Right(), this.getExpression(), null, "right", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExpression_Expression(), this.getExpression(), null, "expression", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getExpression_Type(), this.getTypeReference(), null, "type", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExpression_Parameters(), this.getExpression(), null, "parameters", null, 0, -1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExpression_Operand(), this.getExpression(), null, "operand", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExpression_Target(), this.getExpression(), null, "target", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(instantiationExpressionEClass, InstantiationExpression.class, "InstantiationExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getInstantiationExpression_Parameters(), this.getExpression(), null, "parameters", null, 0, -1, InstantiationExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(typeReferenceEClass, TypeReference.class, "TypeReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getTypeReference_Reference(), theTypesPackage.getNamedType(), null, "reference", null, 0, 1, TypeReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1506,28 +1364,6 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     initEAttribute(getBooleanLiteral_Value(), ecorePackage.getEBoolean(), "value", null, 0, 1, BooleanLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(binaryOperationEClass, BinaryOperation.class, "BinaryOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getBinaryOperation_Left(), this.getExpression(), null, "left", null, 0, 1, BinaryOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getBinaryOperation_Feature(), ecorePackage.getEString(), "feature", null, 0, 1, BinaryOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getBinaryOperation_Right(), this.getExpression(), null, "right", null, 0, 1, BinaryOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(instanceOfExpressionEClass, InstanceOfExpression.class, "InstanceOfExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getInstanceOfExpression_Expression(), this.getExpression(), null, "expression", null, 0, 1, InstanceOfExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(xBinaryOperationEClass, XBinaryOperation.class, "XBinaryOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getXBinaryOperation_Left(), this.getExpression(), null, "left", null, 0, 1, XBinaryOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getXBinaryOperation_Feature(), ecorePackage.getEString(), "feature", null, 0, 1, XBinaryOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getXBinaryOperation_Right(), this.getExpression(), null, "right", null, 0, 1, XBinaryOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(unaryExpressionEClass, UnaryExpression.class, "UnaryExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getUnaryExpression_Feature(), ecorePackage.getEString(), "feature", null, 0, 1, UnaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getUnaryExpression_Operand(), this.getExpression(), null, "operand", null, 0, 1, UnaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(castedExpressionEClass, CastedExpression.class, "CastedExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getCastedExpression_Target(), this.getExpression(), null, "target", null, 0, 1, CastedExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(postfixOperationEClass, PostfixOperation.class, "PostfixOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPostfixOperation_Operand(), this.getExpression(), null, "operand", null, 0, 1, PostfixOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPostfixOperation_Feature(), ecorePackage.getEString(), "feature", null, 0, 1, PostfixOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

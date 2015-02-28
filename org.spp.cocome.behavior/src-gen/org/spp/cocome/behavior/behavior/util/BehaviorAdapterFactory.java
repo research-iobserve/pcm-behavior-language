@@ -155,6 +155,11 @@ public class BehaviorAdapterFactory extends AdapterFactoryImpl
         return createExpressionAdapter();
       }
       @Override
+      public Adapter caseInstantiationExpression(InstantiationExpression object)
+      {
+        return createInstantiationExpressionAdapter();
+      }
+      @Override
       public Adapter caseTypeReference(TypeReference object)
       {
         return createTypeReferenceAdapter();
@@ -203,31 +208,6 @@ public class BehaviorAdapterFactory extends AdapterFactoryImpl
       public Adapter caseBinaryOperation(BinaryOperation object)
       {
         return createBinaryOperationAdapter();
-      }
-      @Override
-      public Adapter caseInstanceOfExpression(InstanceOfExpression object)
-      {
-        return createInstanceOfExpressionAdapter();
-      }
-      @Override
-      public Adapter caseXBinaryOperation(XBinaryOperation object)
-      {
-        return createXBinaryOperationAdapter();
-      }
-      @Override
-      public Adapter caseUnaryExpression(UnaryExpression object)
-      {
-        return createUnaryExpressionAdapter();
-      }
-      @Override
-      public Adapter caseCastedExpression(CastedExpression object)
-      {
-        return createCastedExpressionAdapter();
-      }
-      @Override
-      public Adapter casePostfixOperation(PostfixOperation object)
-      {
-        return createPostfixOperationAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -492,6 +472,21 @@ public class BehaviorAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.spp.cocome.behavior.behavior.InstantiationExpression <em>Instantiation Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.spp.cocome.behavior.behavior.InstantiationExpression
+   * @generated
+   */
+  public Adapter createInstantiationExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.spp.cocome.behavior.behavior.TypeReference <em>Type Reference</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -637,81 +632,6 @@ public class BehaviorAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createBinaryOperationAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.spp.cocome.behavior.behavior.InstanceOfExpression <em>Instance Of Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.spp.cocome.behavior.behavior.InstanceOfExpression
-   * @generated
-   */
-  public Adapter createInstanceOfExpressionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.spp.cocome.behavior.behavior.XBinaryOperation <em>XBinary Operation</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.spp.cocome.behavior.behavior.XBinaryOperation
-   * @generated
-   */
-  public Adapter createXBinaryOperationAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.spp.cocome.behavior.behavior.UnaryExpression <em>Unary Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.spp.cocome.behavior.behavior.UnaryExpression
-   * @generated
-   */
-  public Adapter createUnaryExpressionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.spp.cocome.behavior.behavior.CastedExpression <em>Casted Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.spp.cocome.behavior.behavior.CastedExpression
-   * @generated
-   */
-  public Adapter createCastedExpressionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.spp.cocome.behavior.behavior.PostfixOperation <em>Postfix Operation</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.spp.cocome.behavior.behavior.PostfixOperation
-   * @generated
-   */
-  public Adapter createPostfixOperationAdapter()
   {
     return null;
   }

@@ -707,33 +707,33 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Group cGroup_1_0 = (Group)cGroup_1.eContents().get(0);
 		private final Group cGroup_1_0_0 = (Group)cGroup_1_0.eContents().get(0);
-		private final Action cBinaryOperationLeftAction_1_0_0_0 = (Action)cGroup_1_0_0.eContents().get(0);
+		private final Action cExpressionLeftAction_1_0_0_0 = (Action)cGroup_1_0_0.eContents().get(0);
 		private final Assignment cFeatureAssignment_1_0_0_1 = (Assignment)cGroup_1_0_0.eContents().get(1);
 		private final Keyword cFeatureAmpersandAmpersandKeyword_1_0_0_1_0 = (Keyword)cFeatureAssignment_1_0_0_1.eContents().get(0);
 		private final Assignment cRightAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cRightRelationalExpressionParserRuleCall_1_1_0 = (RuleCall)cRightAssignment_1_1.eContents().get(0);
 		
 		//AndExpression returns Expression:
-		//	RelationalExpression (=> ({BinaryOperation.left=current} feature="&&") right=RelationalExpression)*;
+		//	RelationalExpression (=> ({Expression.left=current} feature="&&") right=RelationalExpression)*;
 		public ParserRule getRule() { return rule; }
 
-		//RelationalExpression (=> ({BinaryOperation.left=current} feature="&&") right=RelationalExpression)*
+		//RelationalExpression (=> ({Expression.left=current} feature="&&") right=RelationalExpression)*
 		public Group getGroup() { return cGroup; }
 
 		//RelationalExpression
 		public RuleCall getRelationalExpressionParserRuleCall_0() { return cRelationalExpressionParserRuleCall_0; }
 
-		//(=> ({BinaryOperation.left=current} feature="&&") right=RelationalExpression)*
+		//(=> ({Expression.left=current} feature="&&") right=RelationalExpression)*
 		public Group getGroup_1() { return cGroup_1; }
 
-		//=> ({BinaryOperation.left=current} feature="&&")
+		//=> ({Expression.left=current} feature="&&")
 		public Group getGroup_1_0() { return cGroup_1_0; }
 
-		//{BinaryOperation.left=current} feature="&&"
+		//{Expression.left=current} feature="&&"
 		public Group getGroup_1_0_0() { return cGroup_1_0_0; }
 
-		//{BinaryOperation.left=current}
-		public Action getBinaryOperationLeftAction_1_0_0_0() { return cBinaryOperationLeftAction_1_0_0_0; }
+		//{Expression.left=current}
+		public Action getExpressionLeftAction_1_0_0_0() { return cExpressionLeftAction_1_0_0_0; }
 
 		//feature="&&"
 		public Assignment getFeatureAssignment_1_0_0_1() { return cFeatureAssignment_1_0_0_1; }
@@ -755,7 +755,7 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Group cGroup_1_0 = (Group)cGroup_1.eContents().get(0);
 		private final Group cGroup_1_0_0 = (Group)cGroup_1_0.eContents().get(0);
-		private final Action cBinaryOperationLeftAction_1_0_0_0 = (Action)cGroup_1_0_0.eContents().get(0);
+		private final Action cExpressionLeftAction_1_0_0_0 = (Action)cGroup_1_0_0.eContents().get(0);
 		private final Assignment cFeatureAssignment_1_0_0_1 = (Assignment)cGroup_1_0_0.eContents().get(1);
 		private final Alternatives cFeatureAlternatives_1_0_0_1_0 = (Alternatives)cFeatureAssignment_1_0_0_1.eContents().get(0);
 		private final Keyword cFeatureEqualsSignEqualsSignKeyword_1_0_0_1_0_0 = (Keyword)cFeatureAlternatives_1_0_0_1_0.eContents().get(0);
@@ -768,28 +768,27 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRightOtherExpressionParserRuleCall_1_1_0 = (RuleCall)cRightAssignment_1_1.eContents().get(0);
 		
 		//RelationalExpression returns Expression:
-		//	OtherExpression (=> ({BinaryOperation.left=current} feature=("==" | "!=" | ">" | "<" | ">=" | "<="))
+		//	OtherExpression (=> ({Expression.left=current} feature=("==" | "!=" | ">" | "<" | ">=" | "<="))
 		//	right=OtherExpression)*;
 		public ParserRule getRule() { return rule; }
 
-		//OtherExpression (=> ({BinaryOperation.left=current} feature=("==" | "!=" | ">" | "<" | ">=" | "<="))
-		//right=OtherExpression)*
+		//OtherExpression (=> ({Expression.left=current} feature=("==" | "!=" | ">" | "<" | ">=" | "<=")) right=OtherExpression)*
 		public Group getGroup() { return cGroup; }
 
 		//OtherExpression
 		public RuleCall getOtherExpressionParserRuleCall_0() { return cOtherExpressionParserRuleCall_0; }
 
-		//(=> ({BinaryOperation.left=current} feature=("==" | "!=" | ">" | "<" | ">=" | "<=")) right=OtherExpression)*
+		//(=> ({Expression.left=current} feature=("==" | "!=" | ">" | "<" | ">=" | "<=")) right=OtherExpression)*
 		public Group getGroup_1() { return cGroup_1; }
 
-		//=> ({BinaryOperation.left=current} feature=("==" | "!=" | ">" | "<" | ">=" | "<="))
+		//=> ({Expression.left=current} feature=("==" | "!=" | ">" | "<" | ">=" | "<="))
 		public Group getGroup_1_0() { return cGroup_1_0; }
 
-		//{BinaryOperation.left=current} feature=("==" | "!=" | ">" | "<" | ">=" | "<=")
+		//{Expression.left=current} feature=("==" | "!=" | ">" | "<" | ">=" | "<=")
 		public Group getGroup_1_0_0() { return cGroup_1_0_0; }
 
-		//{BinaryOperation.left=current}
-		public Action getBinaryOperationLeftAction_1_0_0_0() { return cBinaryOperationLeftAction_1_0_0_0; }
+		//{Expression.left=current}
+		public Action getExpressionLeftAction_1_0_0_0() { return cExpressionLeftAction_1_0_0_0; }
 
 		//feature=("==" | "!=" | ">" | "<" | ">=" | "<=")
 		public Assignment getFeatureAssignment_1_0_0_1() { return cFeatureAssignment_1_0_0_1; }
@@ -829,35 +828,39 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Group cGroup_1_0 = (Group)cGroup_1.eContents().get(0);
 		private final Group cGroup_1_0_0 = (Group)cGroup_1_0.eContents().get(0);
-		private final Action cInstanceOfExpressionExpressionAction_1_0_0_0 = (Action)cGroup_1_0_0.eContents().get(0);
-		private final Keyword cInstanceofKeyword_1_0_0_1 = (Keyword)cGroup_1_0_0.eContents().get(1);
+		private final Action cExpressionExpressionAction_1_0_0_0 = (Action)cGroup_1_0_0.eContents().get(0);
+		private final Assignment cFeatureAssignment_1_0_0_1 = (Assignment)cGroup_1_0_0.eContents().get(1);
+		private final Keyword cFeatureInstanceofKeyword_1_0_0_1_0 = (Keyword)cFeatureAssignment_1_0_0_1.eContents().get(0);
 		private final Assignment cTypeAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cTypeTypeReferenceParserRuleCall_1_1_0 = (RuleCall)cTypeAssignment_1_1.eContents().get(0);
 		
 		//OtherExpression returns Expression:
-		//	AdditiveExpression (=> ({InstanceOfExpression.expression=current} "instanceof") type=TypeReference)?;
+		//	AdditiveExpression (=> ({Expression.expression=current} feature="instanceof") type=TypeReference)?;
 		public ParserRule getRule() { return rule; }
 
-		//AdditiveExpression (=> ({InstanceOfExpression.expression=current} "instanceof") type=TypeReference)?
+		//AdditiveExpression (=> ({Expression.expression=current} feature="instanceof") type=TypeReference)?
 		public Group getGroup() { return cGroup; }
 
 		//AdditiveExpression
 		public RuleCall getAdditiveExpressionParserRuleCall_0() { return cAdditiveExpressionParserRuleCall_0; }
 
-		//(=> ({InstanceOfExpression.expression=current} "instanceof") type=TypeReference)?
+		//(=> ({Expression.expression=current} feature="instanceof") type=TypeReference)?
 		public Group getGroup_1() { return cGroup_1; }
 
-		//=> ({InstanceOfExpression.expression=current} "instanceof")
+		//=> ({Expression.expression=current} feature="instanceof")
 		public Group getGroup_1_0() { return cGroup_1_0; }
 
-		//{InstanceOfExpression.expression=current} "instanceof"
+		//{Expression.expression=current} feature="instanceof"
 		public Group getGroup_1_0_0() { return cGroup_1_0_0; }
 
-		//{InstanceOfExpression.expression=current}
-		public Action getInstanceOfExpressionExpressionAction_1_0_0_0() { return cInstanceOfExpressionExpressionAction_1_0_0_0; }
+		//{Expression.expression=current}
+		public Action getExpressionExpressionAction_1_0_0_0() { return cExpressionExpressionAction_1_0_0_0; }
+
+		//feature="instanceof"
+		public Assignment getFeatureAssignment_1_0_0_1() { return cFeatureAssignment_1_0_0_1; }
 
 		//"instanceof"
-		public Keyword getInstanceofKeyword_1_0_0_1() { return cInstanceofKeyword_1_0_0_1; }
+		public Keyword getFeatureInstanceofKeyword_1_0_0_1_0() { return cFeatureInstanceofKeyword_1_0_0_1_0; }
 
 		//type=TypeReference
 		public Assignment getTypeAssignment_1_1() { return cTypeAssignment_1_1; }
@@ -873,7 +876,7 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Group cGroup_1_0 = (Group)cGroup_1.eContents().get(0);
 		private final Group cGroup_1_0_0 = (Group)cGroup_1_0.eContents().get(0);
-		private final Action cXBinaryOperationLeftAction_1_0_0_0 = (Action)cGroup_1_0_0.eContents().get(0);
+		private final Action cExpressionLeftAction_1_0_0_0 = (Action)cGroup_1_0_0.eContents().get(0);
 		private final Assignment cFeatureAssignment_1_0_0_1 = (Assignment)cGroup_1_0_0.eContents().get(1);
 		private final Alternatives cFeatureAlternatives_1_0_0_1_0 = (Alternatives)cFeatureAssignment_1_0_0_1.eContents().get(0);
 		private final Keyword cFeaturePlusSignKeyword_1_0_0_1_0_0 = (Keyword)cFeatureAlternatives_1_0_0_1_0.eContents().get(0);
@@ -882,26 +885,26 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRightMultiplicativeExpressionParserRuleCall_1_1_0 = (RuleCall)cRightAssignment_1_1.eContents().get(0);
 		
 		//AdditiveExpression returns Expression:
-		//	MultiplicativeExpression (=> ({XBinaryOperation.left=current} feature=("+" | "-")) right=MultiplicativeExpression)*;
+		//	MultiplicativeExpression (=> ({Expression.left=current} feature=("+" | "-")) right=MultiplicativeExpression)*;
 		public ParserRule getRule() { return rule; }
 
-		//MultiplicativeExpression (=> ({XBinaryOperation.left=current} feature=("+" | "-")) right=MultiplicativeExpression)*
+		//MultiplicativeExpression (=> ({Expression.left=current} feature=("+" | "-")) right=MultiplicativeExpression)*
 		public Group getGroup() { return cGroup; }
 
 		//MultiplicativeExpression
 		public RuleCall getMultiplicativeExpressionParserRuleCall_0() { return cMultiplicativeExpressionParserRuleCall_0; }
 
-		//(=> ({XBinaryOperation.left=current} feature=("+" | "-")) right=MultiplicativeExpression)*
+		//(=> ({Expression.left=current} feature=("+" | "-")) right=MultiplicativeExpression)*
 		public Group getGroup_1() { return cGroup_1; }
 
-		//=> ({XBinaryOperation.left=current} feature=("+" | "-"))
+		//=> ({Expression.left=current} feature=("+" | "-"))
 		public Group getGroup_1_0() { return cGroup_1_0; }
 
-		//{XBinaryOperation.left=current} feature=("+" | "-")
+		//{Expression.left=current} feature=("+" | "-")
 		public Group getGroup_1_0_0() { return cGroup_1_0_0; }
 
-		//{XBinaryOperation.left=current}
-		public Action getXBinaryOperationLeftAction_1_0_0_0() { return cXBinaryOperationLeftAction_1_0_0_0; }
+		//{Expression.left=current}
+		public Action getExpressionLeftAction_1_0_0_0() { return cExpressionLeftAction_1_0_0_0; }
 
 		//feature=("+" | "-")
 		public Assignment getFeatureAssignment_1_0_0_1() { return cFeatureAssignment_1_0_0_1; }
@@ -929,7 +932,7 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Group cGroup_1_0 = (Group)cGroup_1.eContents().get(0);
 		private final Group cGroup_1_0_0 = (Group)cGroup_1_0.eContents().get(0);
-		private final Action cXBinaryOperationLeftAction_1_0_0_0 = (Action)cGroup_1_0_0.eContents().get(0);
+		private final Action cExpressionLeftAction_1_0_0_0 = (Action)cGroup_1_0_0.eContents().get(0);
 		private final Assignment cFeatureAssignment_1_0_0_1 = (Assignment)cGroup_1_0_0.eContents().get(1);
 		private final Alternatives cFeatureAlternatives_1_0_0_1_0 = (Alternatives)cFeatureAssignment_1_0_0_1.eContents().get(0);
 		private final Keyword cFeatureAsteriskKeyword_1_0_0_1_0_0 = (Keyword)cFeatureAlternatives_1_0_0_1_0.eContents().get(0);
@@ -940,26 +943,26 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRightUnaryOperationParserRuleCall_1_1_0 = (RuleCall)cRightAssignment_1_1.eContents().get(0);
 		
 		//MultiplicativeExpression returns Expression:
-		//	UnaryOperation (=> ({XBinaryOperation.left=current} feature=("*" | "/" | "%" | "**")) right=UnaryOperation)*;
+		//	UnaryOperation (=> ({Expression.left=current} feature=("*" | "/" | "%" | "**")) right=UnaryOperation)*;
 		public ParserRule getRule() { return rule; }
 
-		//UnaryOperation (=> ({XBinaryOperation.left=current} feature=("*" | "/" | "%" | "**")) right=UnaryOperation)*
+		//UnaryOperation (=> ({Expression.left=current} feature=("*" | "/" | "%" | "**")) right=UnaryOperation)*
 		public Group getGroup() { return cGroup; }
 
 		//UnaryOperation
 		public RuleCall getUnaryOperationParserRuleCall_0() { return cUnaryOperationParserRuleCall_0; }
 
-		//(=> ({XBinaryOperation.left=current} feature=("*" | "/" | "%" | "**")) right=UnaryOperation)*
+		//(=> ({Expression.left=current} feature=("*" | "/" | "%" | "**")) right=UnaryOperation)*
 		public Group getGroup_1() { return cGroup_1; }
 
-		//=> ({XBinaryOperation.left=current} feature=("*" | "/" | "%" | "**"))
+		//=> ({Expression.left=current} feature=("*" | "/" | "%" | "**"))
 		public Group getGroup_1_0() { return cGroup_1_0; }
 
-		//{XBinaryOperation.left=current} feature=("*" | "/" | "%" | "**")
+		//{Expression.left=current} feature=("*" | "/" | "%" | "**")
 		public Group getGroup_1_0_0() { return cGroup_1_0_0; }
 
-		//{XBinaryOperation.left=current}
-		public Action getXBinaryOperationLeftAction_1_0_0_0() { return cXBinaryOperationLeftAction_1_0_0_0; }
+		//{Expression.left=current}
+		public Action getExpressionLeftAction_1_0_0_0() { return cExpressionLeftAction_1_0_0_0; }
 
 		//feature=("*" | "/" | "%" | "**")
 		public Assignment getFeatureAssignment_1_0_0_1() { return cFeatureAssignment_1_0_0_1; }
@@ -990,7 +993,7 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "UnaryOperation");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Action cUnaryExpressionAction_0_0 = (Action)cGroup_0.eContents().get(0);
+		private final Action cExpressionAction_0_0 = (Action)cGroup_0.eContents().get(0);
 		private final Assignment cFeatureAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
 		private final Keyword cFeatureExclamationMarkKeyword_0_1_0 = (Keyword)cFeatureAssignment_0_1.eContents().get(0);
 		private final Assignment cOperandAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
@@ -998,17 +1001,17 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCastedExpressionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//UnaryOperation returns Expression:
-		//	{UnaryExpression} feature="!" operand=UnaryOperation | CastedExpression;
+		//	{Expression} feature="!" operand=UnaryOperation | CastedExpression;
 		public ParserRule getRule() { return rule; }
 
-		//{UnaryExpression} feature="!" operand=UnaryOperation | CastedExpression
+		//{Expression} feature="!" operand=UnaryOperation | CastedExpression
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//{UnaryExpression} feature="!" operand=UnaryOperation
+		//{Expression} feature="!" operand=UnaryOperation
 		public Group getGroup_0() { return cGroup_0; }
 
-		//{UnaryExpression}
-		public Action getUnaryExpressionAction_0_0() { return cUnaryExpressionAction_0_0; }
+		//{Expression}
+		public Action getExpressionAction_0_0() { return cExpressionAction_0_0; }
 
 		//feature="!"
 		public Assignment getFeatureAssignment_0_1() { return cFeatureAssignment_0_1; }
@@ -1033,35 +1036,39 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Group cGroup_1_0 = (Group)cGroup_1.eContents().get(0);
 		private final Group cGroup_1_0_0 = (Group)cGroup_1_0.eContents().get(0);
-		private final Action cCastedExpressionTargetAction_1_0_0_0 = (Action)cGroup_1_0_0.eContents().get(0);
-		private final Keyword cAsKeyword_1_0_0_1 = (Keyword)cGroup_1_0_0.eContents().get(1);
+		private final Action cExpressionTargetAction_1_0_0_0 = (Action)cGroup_1_0_0.eContents().get(0);
+		private final Assignment cFeatureAssignment_1_0_0_1 = (Assignment)cGroup_1_0_0.eContents().get(1);
+		private final Keyword cFeatureAsKeyword_1_0_0_1_0 = (Keyword)cFeatureAssignment_1_0_0_1.eContents().get(0);
 		private final Assignment cTypeAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cTypeTypeReferenceParserRuleCall_1_1_0 = (RuleCall)cTypeAssignment_1_1.eContents().get(0);
 		
 		//CastedExpression returns Expression:
-		//	PostfixOperation (=> ({CastedExpression.target=current} "as") type=TypeReference)*;
+		//	PostfixOperation (=> ({Expression.target=current} feature="as") type=TypeReference)*;
 		public ParserRule getRule() { return rule; }
 
-		//PostfixOperation (=> ({CastedExpression.target=current} "as") type=TypeReference)*
+		//PostfixOperation (=> ({Expression.target=current} feature="as") type=TypeReference)*
 		public Group getGroup() { return cGroup; }
 
 		//PostfixOperation
 		public RuleCall getPostfixOperationParserRuleCall_0() { return cPostfixOperationParserRuleCall_0; }
 
-		//(=> ({CastedExpression.target=current} "as") type=TypeReference)*
+		//(=> ({Expression.target=current} feature="as") type=TypeReference)*
 		public Group getGroup_1() { return cGroup_1; }
 
-		//=> ({CastedExpression.target=current} "as")
+		//=> ({Expression.target=current} feature="as")
 		public Group getGroup_1_0() { return cGroup_1_0; }
 
-		//{CastedExpression.target=current} "as"
+		//{Expression.target=current} feature="as"
 		public Group getGroup_1_0_0() { return cGroup_1_0_0; }
 
-		//{CastedExpression.target=current}
-		public Action getCastedExpressionTargetAction_1_0_0_0() { return cCastedExpressionTargetAction_1_0_0_0; }
+		//{Expression.target=current}
+		public Action getExpressionTargetAction_1_0_0_0() { return cExpressionTargetAction_1_0_0_0; }
+
+		//feature="as"
+		public Assignment getFeatureAssignment_1_0_0_1() { return cFeatureAssignment_1_0_0_1; }
 
 		//"as"
-		public Keyword getAsKeyword_1_0_0_1() { return cAsKeyword_1_0_0_1; }
+		public Keyword getFeatureAsKeyword_1_0_0_1_0() { return cFeatureAsKeyword_1_0_0_1_0; }
 
 		//type=TypeReference
 		public Assignment getTypeAssignment_1_1() { return cTypeAssignment_1_1; }
@@ -1076,30 +1083,30 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPrimaryExpressionParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Group cGroup_1_0 = (Group)cGroup_1.eContents().get(0);
-		private final Action cPostfixOperationOperandAction_1_0_0 = (Action)cGroup_1_0.eContents().get(0);
+		private final Action cExpressionOperandAction_1_0_0 = (Action)cGroup_1_0.eContents().get(0);
 		private final Assignment cFeatureAssignment_1_0_1 = (Assignment)cGroup_1_0.eContents().get(1);
 		private final Alternatives cFeatureAlternatives_1_0_1_0 = (Alternatives)cFeatureAssignment_1_0_1.eContents().get(0);
 		private final Keyword cFeaturePlusSignPlusSignKeyword_1_0_1_0_0 = (Keyword)cFeatureAlternatives_1_0_1_0.eContents().get(0);
 		private final Keyword cFeatureHyphenMinusHyphenMinusKeyword_1_0_1_0_1 = (Keyword)cFeatureAlternatives_1_0_1_0.eContents().get(1);
 		
 		//PostfixOperation returns Expression:
-		//	PrimaryExpression => ({PostfixOperation.operand=current} feature=("++" | "--"))?;
+		//	PrimaryExpression => ({Expression.operand=current} feature=("++" | "--"))?;
 		public ParserRule getRule() { return rule; }
 
-		//PrimaryExpression => ({PostfixOperation.operand=current} feature=("++" | "--"))?
+		//PrimaryExpression => ({Expression.operand=current} feature=("++" | "--"))?
 		public Group getGroup() { return cGroup; }
 
 		//PrimaryExpression
 		public RuleCall getPrimaryExpressionParserRuleCall_0() { return cPrimaryExpressionParserRuleCall_0; }
 
-		//=> ({PostfixOperation.operand=current} feature=("++" | "--"))?
+		//=> ({Expression.operand=current} feature=("++" | "--"))?
 		public Group getGroup_1() { return cGroup_1; }
 
-		//{PostfixOperation.operand=current} feature=("++" | "--")
+		//{Expression.operand=current} feature=("++" | "--")
 		public Group getGroup_1_0() { return cGroup_1_0; }
 
-		//{PostfixOperation.operand=current}
-		public Action getPostfixOperationOperandAction_1_0_0() { return cPostfixOperationOperandAction_1_0_0; }
+		//{Expression.operand=current}
+		public Action getExpressionOperandAction_1_0_0() { return cExpressionOperandAction_1_0_0; }
 
 		//feature=("++" | "--")
 		public Assignment getFeatureAssignment_1_0_1() { return cFeatureAssignment_1_0_1; }
@@ -1149,7 +1156,7 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cParametersExpressionParserRuleCall_3_0 = (RuleCall)cParametersAssignment_3.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//InstantiationExpression returns Expression:
+		//InstantiationExpression:
 		//	"new" type=TypeReference "(" parameters+=Expression ")";
 		public ParserRule getRule() { return rule; }
 
@@ -1806,7 +1813,7 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//AndExpression returns Expression:
-	//	RelationalExpression (=> ({BinaryOperation.left=current} feature="&&") right=RelationalExpression)*;
+	//	RelationalExpression (=> ({Expression.left=current} feature="&&") right=RelationalExpression)*;
 	public AndExpressionElements getAndExpressionAccess() {
 		return pAndExpression;
 	}
@@ -1816,7 +1823,7 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//RelationalExpression returns Expression:
-	//	OtherExpression (=> ({BinaryOperation.left=current} feature=("==" | "!=" | ">" | "<" | ">=" | "<="))
+	//	OtherExpression (=> ({Expression.left=current} feature=("==" | "!=" | ">" | "<" | ">=" | "<="))
 	//	right=OtherExpression)*;
 	public RelationalExpressionElements getRelationalExpressionAccess() {
 		return pRelationalExpression;
@@ -1827,7 +1834,7 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//OtherExpression returns Expression:
-	//	AdditiveExpression (=> ({InstanceOfExpression.expression=current} "instanceof") type=TypeReference)?;
+	//	AdditiveExpression (=> ({Expression.expression=current} feature="instanceof") type=TypeReference)?;
 	public OtherExpressionElements getOtherExpressionAccess() {
 		return pOtherExpression;
 	}
@@ -1837,7 +1844,7 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//AdditiveExpression returns Expression:
-	//	MultiplicativeExpression (=> ({XBinaryOperation.left=current} feature=("+" | "-")) right=MultiplicativeExpression)*;
+	//	MultiplicativeExpression (=> ({Expression.left=current} feature=("+" | "-")) right=MultiplicativeExpression)*;
 	public AdditiveExpressionElements getAdditiveExpressionAccess() {
 		return pAdditiveExpression;
 	}
@@ -1847,7 +1854,7 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//MultiplicativeExpression returns Expression:
-	//	UnaryOperation (=> ({XBinaryOperation.left=current} feature=("*" | "/" | "%" | "**")) right=UnaryOperation)*;
+	//	UnaryOperation (=> ({Expression.left=current} feature=("*" | "/" | "%" | "**")) right=UnaryOperation)*;
 	public MultiplicativeExpressionElements getMultiplicativeExpressionAccess() {
 		return pMultiplicativeExpression;
 	}
@@ -1857,7 +1864,7 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//UnaryOperation returns Expression:
-	//	{UnaryExpression} feature="!" operand=UnaryOperation | CastedExpression;
+	//	{Expression} feature="!" operand=UnaryOperation | CastedExpression;
 	public UnaryOperationElements getUnaryOperationAccess() {
 		return pUnaryOperation;
 	}
@@ -1867,7 +1874,7 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//CastedExpression returns Expression:
-	//	PostfixOperation (=> ({CastedExpression.target=current} "as") type=TypeReference)*;
+	//	PostfixOperation (=> ({Expression.target=current} feature="as") type=TypeReference)*;
 	public CastedExpressionElements getCastedExpressionAccess() {
 		return pCastedExpression;
 	}
@@ -1877,7 +1884,7 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//PostfixOperation returns Expression:
-	//	PrimaryExpression => ({PostfixOperation.operand=current} feature=("++" | "--"))?;
+	//	PrimaryExpression => ({Expression.operand=current} feature=("++" | "--"))?;
 	public PostfixOperationElements getPostfixOperationAccess() {
 		return pPostfixOperation;
 	}
@@ -1896,7 +1903,7 @@ public class BehaviorGrammarAccess extends AbstractGrammarElementFinder {
 		return getPrimaryExpressionAccess().getRule();
 	}
 
-	//InstantiationExpression returns Expression:
+	//InstantiationExpression:
 	//	"new" type=TypeReference "(" parameters+=Expression ")";
 	public InstantiationExpressionElements getInstantiationExpressionAccess() {
 		return pInstantiationExpression;

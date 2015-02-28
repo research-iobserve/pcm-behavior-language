@@ -2,21 +2,14 @@
  */
 package org.spp.cocome.behavior.behavior.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.spp.cocome.behavior.behavior.BehaviorPackage;
 import org.spp.cocome.behavior.behavior.Expression;
@@ -29,8 +22,13 @@ import org.spp.cocome.behavior.behavior.TypeReference;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.spp.cocome.behavior.behavior.impl.ExpressionImpl#getLeft <em>Left</em>}</li>
+ *   <li>{@link org.spp.cocome.behavior.behavior.impl.ExpressionImpl#getFeature <em>Feature</em>}</li>
+ *   <li>{@link org.spp.cocome.behavior.behavior.impl.ExpressionImpl#getRight <em>Right</em>}</li>
+ *   <li>{@link org.spp.cocome.behavior.behavior.impl.ExpressionImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.ExpressionImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.spp.cocome.behavior.behavior.impl.ExpressionImpl#getParameters <em>Parameters</em>}</li>
+ *   <li>{@link org.spp.cocome.behavior.behavior.impl.ExpressionImpl#getOperand <em>Operand</em>}</li>
+ *   <li>{@link org.spp.cocome.behavior.behavior.impl.ExpressionImpl#getTarget <em>Target</em>}</li>
  * </ul>
  * </p>
  *
@@ -38,6 +36,56 @@ import org.spp.cocome.behavior.behavior.TypeReference;
  */
 public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expression
 {
+  /**
+   * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLeft()
+   * @generated
+   * @ordered
+   */
+  protected Expression left;
+
+  /**
+   * The default value of the '{@link #getFeature() <em>Feature</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFeature()
+   * @generated
+   * @ordered
+   */
+  protected static final String FEATURE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getFeature() <em>Feature</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFeature()
+   * @generated
+   * @ordered
+   */
+  protected String feature = FEATURE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRight()
+   * @generated
+   * @ordered
+   */
+  protected Expression right;
+
+  /**
+   * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getExpression()
+   * @generated
+   * @ordered
+   */
+  protected Expression expression;
+
   /**
    * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -49,14 +97,24 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
   protected TypeReference type;
 
   /**
-   * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference list.
+   * The cached value of the '{@link #getOperand() <em>Operand</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getParameters()
+   * @see #getOperand()
    * @generated
    * @ordered
    */
-  protected EList<Expression> parameters;
+  protected Expression operand;
+
+  /**
+   * The cached value of the '{@link #getTarget() <em>Target</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTarget()
+   * @generated
+   * @ordered
+   */
+  protected Expression target;
 
   /**
    * <!-- begin-user-doc -->
@@ -77,6 +135,173 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
   protected EClass eStaticClass()
   {
     return BehaviorPackage.Literals.EXPRESSION;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Expression getLeft()
+  {
+    return left;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetLeft(Expression newLeft, NotificationChain msgs)
+  {
+    Expression oldLeft = left;
+    left = newLeft;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BehaviorPackage.EXPRESSION__LEFT, oldLeft, newLeft);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setLeft(Expression newLeft)
+  {
+    if (newLeft != left)
+    {
+      NotificationChain msgs = null;
+      if (left != null)
+        msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BehaviorPackage.EXPRESSION__LEFT, null, msgs);
+      if (newLeft != null)
+        msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BehaviorPackage.EXPRESSION__LEFT, null, msgs);
+      msgs = basicSetLeft(newLeft, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BehaviorPackage.EXPRESSION__LEFT, newLeft, newLeft));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getFeature()
+  {
+    return feature;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setFeature(String newFeature)
+  {
+    String oldFeature = feature;
+    feature = newFeature;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BehaviorPackage.EXPRESSION__FEATURE, oldFeature, feature));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Expression getRight()
+  {
+    return right;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetRight(Expression newRight, NotificationChain msgs)
+  {
+    Expression oldRight = right;
+    right = newRight;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BehaviorPackage.EXPRESSION__RIGHT, oldRight, newRight);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRight(Expression newRight)
+  {
+    if (newRight != right)
+    {
+      NotificationChain msgs = null;
+      if (right != null)
+        msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BehaviorPackage.EXPRESSION__RIGHT, null, msgs);
+      if (newRight != null)
+        msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BehaviorPackage.EXPRESSION__RIGHT, null, msgs);
+      msgs = basicSetRight(newRight, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BehaviorPackage.EXPRESSION__RIGHT, newRight, newRight));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Expression getExpression()
+  {
+    return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetExpression(Expression newExpression, NotificationChain msgs)
+  {
+    Expression oldExpression = expression;
+    expression = newExpression;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BehaviorPackage.EXPRESSION__EXPRESSION, oldExpression, newExpression);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setExpression(Expression newExpression)
+  {
+    if (newExpression != expression)
+    {
+      NotificationChain msgs = null;
+      if (expression != null)
+        msgs = ((InternalEObject)expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BehaviorPackage.EXPRESSION__EXPRESSION, null, msgs);
+      if (newExpression != null)
+        msgs = ((InternalEObject)newExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BehaviorPackage.EXPRESSION__EXPRESSION, null, msgs);
+      msgs = basicSetExpression(newExpression, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BehaviorPackage.EXPRESSION__EXPRESSION, newExpression, newExpression));
   }
 
   /**
@@ -132,13 +357,95 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Expression> getParameters()
+  public Expression getOperand()
   {
-    if (parameters == null)
+    return operand;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetOperand(Expression newOperand, NotificationChain msgs)
+  {
+    Expression oldOperand = operand;
+    operand = newOperand;
+    if (eNotificationRequired())
     {
-      parameters = new EObjectContainmentEList<Expression>(Expression.class, this, BehaviorPackage.EXPRESSION__PARAMETERS);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BehaviorPackage.EXPRESSION__OPERAND, oldOperand, newOperand);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return parameters;
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setOperand(Expression newOperand)
+  {
+    if (newOperand != operand)
+    {
+      NotificationChain msgs = null;
+      if (operand != null)
+        msgs = ((InternalEObject)operand).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BehaviorPackage.EXPRESSION__OPERAND, null, msgs);
+      if (newOperand != null)
+        msgs = ((InternalEObject)newOperand).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BehaviorPackage.EXPRESSION__OPERAND, null, msgs);
+      msgs = basicSetOperand(newOperand, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BehaviorPackage.EXPRESSION__OPERAND, newOperand, newOperand));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Expression getTarget()
+  {
+    return target;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetTarget(Expression newTarget, NotificationChain msgs)
+  {
+    Expression oldTarget = target;
+    target = newTarget;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BehaviorPackage.EXPRESSION__TARGET, oldTarget, newTarget);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setTarget(Expression newTarget)
+  {
+    if (newTarget != target)
+    {
+      NotificationChain msgs = null;
+      if (target != null)
+        msgs = ((InternalEObject)target).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BehaviorPackage.EXPRESSION__TARGET, null, msgs);
+      if (newTarget != null)
+        msgs = ((InternalEObject)newTarget).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BehaviorPackage.EXPRESSION__TARGET, null, msgs);
+      msgs = basicSetTarget(newTarget, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BehaviorPackage.EXPRESSION__TARGET, newTarget, newTarget));
   }
 
   /**
@@ -151,10 +458,18 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
   {
     switch (featureID)
     {
+      case BehaviorPackage.EXPRESSION__LEFT:
+        return basicSetLeft(null, msgs);
+      case BehaviorPackage.EXPRESSION__RIGHT:
+        return basicSetRight(null, msgs);
+      case BehaviorPackage.EXPRESSION__EXPRESSION:
+        return basicSetExpression(null, msgs);
       case BehaviorPackage.EXPRESSION__TYPE:
         return basicSetType(null, msgs);
-      case BehaviorPackage.EXPRESSION__PARAMETERS:
-        return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
+      case BehaviorPackage.EXPRESSION__OPERAND:
+        return basicSetOperand(null, msgs);
+      case BehaviorPackage.EXPRESSION__TARGET:
+        return basicSetTarget(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -169,10 +484,20 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
   {
     switch (featureID)
     {
+      case BehaviorPackage.EXPRESSION__LEFT:
+        return getLeft();
+      case BehaviorPackage.EXPRESSION__FEATURE:
+        return getFeature();
+      case BehaviorPackage.EXPRESSION__RIGHT:
+        return getRight();
+      case BehaviorPackage.EXPRESSION__EXPRESSION:
+        return getExpression();
       case BehaviorPackage.EXPRESSION__TYPE:
         return getType();
-      case BehaviorPackage.EXPRESSION__PARAMETERS:
-        return getParameters();
+      case BehaviorPackage.EXPRESSION__OPERAND:
+        return getOperand();
+      case BehaviorPackage.EXPRESSION__TARGET:
+        return getTarget();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -182,18 +507,31 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
+      case BehaviorPackage.EXPRESSION__LEFT:
+        setLeft((Expression)newValue);
+        return;
+      case BehaviorPackage.EXPRESSION__FEATURE:
+        setFeature((String)newValue);
+        return;
+      case BehaviorPackage.EXPRESSION__RIGHT:
+        setRight((Expression)newValue);
+        return;
+      case BehaviorPackage.EXPRESSION__EXPRESSION:
+        setExpression((Expression)newValue);
+        return;
       case BehaviorPackage.EXPRESSION__TYPE:
         setType((TypeReference)newValue);
         return;
-      case BehaviorPackage.EXPRESSION__PARAMETERS:
-        getParameters().clear();
-        getParameters().addAll((Collection<? extends Expression>)newValue);
+      case BehaviorPackage.EXPRESSION__OPERAND:
+        setOperand((Expression)newValue);
+        return;
+      case BehaviorPackage.EXPRESSION__TARGET:
+        setTarget((Expression)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -209,11 +547,26 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
   {
     switch (featureID)
     {
+      case BehaviorPackage.EXPRESSION__LEFT:
+        setLeft((Expression)null);
+        return;
+      case BehaviorPackage.EXPRESSION__FEATURE:
+        setFeature(FEATURE_EDEFAULT);
+        return;
+      case BehaviorPackage.EXPRESSION__RIGHT:
+        setRight((Expression)null);
+        return;
+      case BehaviorPackage.EXPRESSION__EXPRESSION:
+        setExpression((Expression)null);
+        return;
       case BehaviorPackage.EXPRESSION__TYPE:
         setType((TypeReference)null);
         return;
-      case BehaviorPackage.EXPRESSION__PARAMETERS:
-        getParameters().clear();
+      case BehaviorPackage.EXPRESSION__OPERAND:
+        setOperand((Expression)null);
+        return;
+      case BehaviorPackage.EXPRESSION__TARGET:
+        setTarget((Expression)null);
         return;
     }
     super.eUnset(featureID);
@@ -229,12 +582,39 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
   {
     switch (featureID)
     {
+      case BehaviorPackage.EXPRESSION__LEFT:
+        return left != null;
+      case BehaviorPackage.EXPRESSION__FEATURE:
+        return FEATURE_EDEFAULT == null ? feature != null : !FEATURE_EDEFAULT.equals(feature);
+      case BehaviorPackage.EXPRESSION__RIGHT:
+        return right != null;
+      case BehaviorPackage.EXPRESSION__EXPRESSION:
+        return expression != null;
       case BehaviorPackage.EXPRESSION__TYPE:
         return type != null;
-      case BehaviorPackage.EXPRESSION__PARAMETERS:
-        return parameters != null && !parameters.isEmpty();
+      case BehaviorPackage.EXPRESSION__OPERAND:
+        return operand != null;
+      case BehaviorPackage.EXPRESSION__TARGET:
+        return target != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (feature: ");
+    result.append(feature);
+    result.append(')');
+    return result.toString();
   }
 
 } //ExpressionImpl

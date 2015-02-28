@@ -70,8 +70,16 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//PropertyCall/subProperty"/>
     </genClasses>
     <genClasses ecoreClass="Behavior.ecore#//Expression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//Expression/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Behavior.ecore#//Expression/feature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//Expression/right"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//Expression/expression"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//Expression/type"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//Expression/parameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//Expression/operand"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//Expression/target"/>
+    </genClasses>
+    <genClasses ecoreClass="Behavior.ecore#//InstantiationExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//InstantiationExpression/parameters"/>
     </genClasses>
     <genClasses ecoreClass="Behavior.ecore#//TypeReference">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Behavior.ecore#//TypeReference/reference"/>
@@ -98,29 +106,6 @@
     <genClasses ecoreClass="Behavior.ecore#//BooleanLiteral">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Behavior.ecore#//BooleanLiteral/value"/>
     </genClasses>
-    <genClasses ecoreClass="Behavior.ecore#//BinaryOperation">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//BinaryOperation/left"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Behavior.ecore#//BinaryOperation/feature"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//BinaryOperation/right"/>
-    </genClasses>
-    <genClasses ecoreClass="Behavior.ecore#//InstanceOfExpression">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//InstanceOfExpression/expression"/>
-    </genClasses>
-    <genClasses ecoreClass="Behavior.ecore#//XBinaryOperation">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//XBinaryOperation/left"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Behavior.ecore#//XBinaryOperation/feature"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//XBinaryOperation/right"/>
-    </genClasses>
-    <genClasses ecoreClass="Behavior.ecore#//UnaryExpression">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Behavior.ecore#//UnaryExpression/feature"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//UnaryExpression/operand"/>
-    </genClasses>
-    <genClasses ecoreClass="Behavior.ecore#//CastedExpression">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//CastedExpression/target"/>
-    </genClasses>
-    <genClasses ecoreClass="Behavior.ecore#//PostfixOperation">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//PostfixOperation/operand"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Behavior.ecore#//PostfixOperation/feature"/>
-    </genClasses>
+    <genClasses ecoreClass="Behavior.ecore#//BinaryOperation"/>
   </genPackages>
 </genmodel:GenModel>

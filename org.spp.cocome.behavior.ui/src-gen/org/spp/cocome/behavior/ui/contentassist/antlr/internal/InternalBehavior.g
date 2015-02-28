@@ -4025,11 +4025,11 @@ rule__AndExpression__Group_1_0_0__0__Impl
     }
 :
 (
-{ before(grammarAccess.getAndExpressionAccess().getBinaryOperationLeftAction_1_0_0_0()); }
+{ before(grammarAccess.getAndExpressionAccess().getExpressionLeftAction_1_0_0_0()); }
 (
 
 )
-{ after(grammarAccess.getAndExpressionAccess().getBinaryOperationLeftAction_1_0_0_0()); }
+{ after(grammarAccess.getAndExpressionAccess().getExpressionLeftAction_1_0_0_0()); }
 )
 
 ;
@@ -4240,11 +4240,11 @@ rule__RelationalExpression__Group_1_0_0__0__Impl
     }
 :
 (
-{ before(grammarAccess.getRelationalExpressionAccess().getBinaryOperationLeftAction_1_0_0_0()); }
+{ before(grammarAccess.getRelationalExpressionAccess().getExpressionLeftAction_1_0_0_0()); }
 (
 
 )
-{ after(grammarAccess.getRelationalExpressionAccess().getBinaryOperationLeftAction_1_0_0_0()); }
+{ after(grammarAccess.getRelationalExpressionAccess().getExpressionLeftAction_1_0_0_0()); }
 )
 
 ;
@@ -4455,11 +4455,11 @@ rule__OtherExpression__Group_1_0_0__0__Impl
     }
 :
 (
-{ before(grammarAccess.getOtherExpressionAccess().getInstanceOfExpressionExpressionAction_1_0_0_0()); }
+{ before(grammarAccess.getOtherExpressionAccess().getExpressionExpressionAction_1_0_0_0()); }
 (
 
 )
-{ after(grammarAccess.getOtherExpressionAccess().getInstanceOfExpressionExpressionAction_1_0_0_0()); }
+{ after(grammarAccess.getOtherExpressionAccess().getExpressionExpressionAction_1_0_0_0()); }
 )
 
 ;
@@ -4485,11 +4485,9 @@ rule__OtherExpression__Group_1_0_0__1__Impl
     }
 :
 (
-{ before(grammarAccess.getOtherExpressionAccess().getInstanceofKeyword_1_0_0_1()); }
-
-	'instanceof' 
-
-{ after(grammarAccess.getOtherExpressionAccess().getInstanceofKeyword_1_0_0_1()); }
+{ before(grammarAccess.getOtherExpressionAccess().getFeatureAssignment_1_0_0_1()); }
+(rule__OtherExpression__FeatureAssignment_1_0_0_1)
+{ after(grammarAccess.getOtherExpressionAccess().getFeatureAssignment_1_0_0_1()); }
 )
 
 ;
@@ -4672,11 +4670,11 @@ rule__AdditiveExpression__Group_1_0_0__0__Impl
     }
 :
 (
-{ before(grammarAccess.getAdditiveExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0()); }
+{ before(grammarAccess.getAdditiveExpressionAccess().getExpressionLeftAction_1_0_0_0()); }
 (
 
 )
-{ after(grammarAccess.getAdditiveExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0()); }
+{ after(grammarAccess.getAdditiveExpressionAccess().getExpressionLeftAction_1_0_0_0()); }
 )
 
 ;
@@ -4887,11 +4885,11 @@ rule__MultiplicativeExpression__Group_1_0_0__0__Impl
     }
 :
 (
-{ before(grammarAccess.getMultiplicativeExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0()); }
+{ before(grammarAccess.getMultiplicativeExpressionAccess().getExpressionLeftAction_1_0_0_0()); }
 (
 
 )
-{ after(grammarAccess.getMultiplicativeExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0()); }
+{ after(grammarAccess.getMultiplicativeExpressionAccess().getExpressionLeftAction_1_0_0_0()); }
 )
 
 ;
@@ -4950,11 +4948,11 @@ rule__UnaryOperation__Group_0__0__Impl
     }
 :
 (
-{ before(grammarAccess.getUnaryOperationAccess().getUnaryExpressionAction_0_0()); }
+{ before(grammarAccess.getUnaryOperationAccess().getExpressionAction_0_0()); }
 (
 
 )
-{ after(grammarAccess.getUnaryOperationAccess().getUnaryExpressionAction_0_0()); }
+{ after(grammarAccess.getUnaryOperationAccess().getExpressionAction_0_0()); }
 )
 
 ;
@@ -5196,11 +5194,11 @@ rule__CastedExpression__Group_1_0_0__0__Impl
     }
 :
 (
-{ before(grammarAccess.getCastedExpressionAccess().getCastedExpressionTargetAction_1_0_0_0()); }
+{ before(grammarAccess.getCastedExpressionAccess().getExpressionTargetAction_1_0_0_0()); }
 (
 
 )
-{ after(grammarAccess.getCastedExpressionAccess().getCastedExpressionTargetAction_1_0_0_0()); }
+{ after(grammarAccess.getCastedExpressionAccess().getExpressionTargetAction_1_0_0_0()); }
 )
 
 ;
@@ -5226,11 +5224,9 @@ rule__CastedExpression__Group_1_0_0__1__Impl
     }
 :
 (
-{ before(grammarAccess.getCastedExpressionAccess().getAsKeyword_1_0_0_1()); }
-
-	'as' 
-
-{ after(grammarAccess.getCastedExpressionAccess().getAsKeyword_1_0_0_1()); }
+{ before(grammarAccess.getCastedExpressionAccess().getFeatureAssignment_1_0_0_1()); }
+(rule__CastedExpression__FeatureAssignment_1_0_0_1)
+{ after(grammarAccess.getCastedExpressionAccess().getFeatureAssignment_1_0_0_1()); }
 )
 
 ;
@@ -5352,11 +5348,11 @@ rule__PostfixOperation__Group_1_0__0__Impl
     }
 :
 (
-{ before(grammarAccess.getPostfixOperationAccess().getPostfixOperationOperandAction_1_0_0()); }
+{ before(grammarAccess.getPostfixOperationAccess().getExpressionOperandAction_1_0_0()); }
 (
 
 )
-{ after(grammarAccess.getPostfixOperationAccess().getPostfixOperationOperandAction_1_0_0()); }
+{ after(grammarAccess.getPostfixOperationAccess().getExpressionOperandAction_1_0_0()); }
 )
 
 ;
@@ -6871,6 +6867,29 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+rule__OtherExpression__FeatureAssignment_1_0_0_1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getOtherExpressionAccess().getFeatureInstanceofKeyword_1_0_0_1_0()); }
+(
+{ before(grammarAccess.getOtherExpressionAccess().getFeatureInstanceofKeyword_1_0_0_1_0()); }
+
+	'instanceof' 
+
+{ after(grammarAccess.getOtherExpressionAccess().getFeatureInstanceofKeyword_1_0_0_1_0()); }
+)
+
+{ after(grammarAccess.getOtherExpressionAccess().getFeatureInstanceofKeyword_1_0_0_1_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 rule__OtherExpression__TypeAssignment_1_1
     @init {
 		int stackSize = keepStackSize();
@@ -6979,6 +6998,29 @@ rule__UnaryOperation__OperandAssignment_0_2
 (
 { before(grammarAccess.getUnaryOperationAccess().getOperandUnaryOperationParserRuleCall_0_2_0()); }
 	ruleUnaryOperation{ after(grammarAccess.getUnaryOperationAccess().getOperandUnaryOperationParserRuleCall_0_2_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__CastedExpression__FeatureAssignment_1_0_0_1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getCastedExpressionAccess().getFeatureAsKeyword_1_0_0_1_0()); }
+(
+{ before(grammarAccess.getCastedExpressionAccess().getFeatureAsKeyword_1_0_0_1_0()); }
+
+	'as' 
+
+{ after(grammarAccess.getCastedExpressionAccess().getFeatureAsKeyword_1_0_0_1_0()); }
+)
+
+{ after(grammarAccess.getCastedExpressionAccess().getFeatureAsKeyword_1_0_0_1_0()); }
 )
 
 ;

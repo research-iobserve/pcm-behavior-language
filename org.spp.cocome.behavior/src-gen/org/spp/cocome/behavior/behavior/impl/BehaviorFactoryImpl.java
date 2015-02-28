@@ -80,6 +80,7 @@ public class BehaviorFactoryImpl extends EFactoryImpl implements BehaviorFactory
       case BehaviorPackage.VARIABLE_CALL: return createVariableCall();
       case BehaviorPackage.PROPERTY_CALL: return createPropertyCall();
       case BehaviorPackage.EXPRESSION: return createExpression();
+      case BehaviorPackage.INSTANTIATION_EXPRESSION: return createInstantiationExpression();
       case BehaviorPackage.TYPE_REFERENCE: return createTypeReference();
       case BehaviorPackage.COLLECTION_TYPE: return createCollectionType();
       case BehaviorPackage.MAP_TYPE: return createMapType();
@@ -90,11 +91,6 @@ public class BehaviorFactoryImpl extends EFactoryImpl implements BehaviorFactory
       case BehaviorPackage.NUMBER_LITERAL: return createNumberLiteral();
       case BehaviorPackage.BOOLEAN_LITERAL: return createBooleanLiteral();
       case BehaviorPackage.BINARY_OPERATION: return createBinaryOperation();
-      case BehaviorPackage.INSTANCE_OF_EXPRESSION: return createInstanceOfExpression();
-      case BehaviorPackage.XBINARY_OPERATION: return createXBinaryOperation();
-      case BehaviorPackage.UNARY_EXPRESSION: return createUnaryExpression();
-      case BehaviorPackage.CASTED_EXPRESSION: return createCastedExpression();
-      case BehaviorPackage.POSTFIX_OPERATION: return createPostfixOperation();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -281,6 +277,17 @@ public class BehaviorFactoryImpl extends EFactoryImpl implements BehaviorFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public InstantiationExpression createInstantiationExpression()
+  {
+    InstantiationExpressionImpl instantiationExpression = new InstantiationExpressionImpl();
+    return instantiationExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public TypeReference createTypeReference()
   {
     TypeReferenceImpl typeReference = new TypeReferenceImpl();
@@ -384,61 +391,6 @@ public class BehaviorFactoryImpl extends EFactoryImpl implements BehaviorFactory
   {
     BinaryOperationImpl binaryOperation = new BinaryOperationImpl();
     return binaryOperation;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public InstanceOfExpression createInstanceOfExpression()
-  {
-    InstanceOfExpressionImpl instanceOfExpression = new InstanceOfExpressionImpl();
-    return instanceOfExpression;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public XBinaryOperation createXBinaryOperation()
-  {
-    XBinaryOperationImpl xBinaryOperation = new XBinaryOperationImpl();
-    return xBinaryOperation;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public UnaryExpression createUnaryExpression()
-  {
-    UnaryExpressionImpl unaryExpression = new UnaryExpressionImpl();
-    return unaryExpression;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public CastedExpression createCastedExpression()
-  {
-    CastedExpressionImpl castedExpression = new CastedExpressionImpl();
-    return castedExpression;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PostfixOperation createPostfixOperation()
-  {
-    PostfixOperationImpl postfixOperation = new PostfixOperationImpl();
-    return postfixOperation;
   }
 
   /**

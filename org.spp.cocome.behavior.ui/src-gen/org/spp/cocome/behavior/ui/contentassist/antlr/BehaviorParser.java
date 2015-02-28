@@ -152,6 +152,7 @@ public class BehaviorParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAndExpressionAccess().getRightAssignment_1_1(), "rule__AndExpression__RightAssignment_1_1");
 					put(grammarAccess.getRelationalExpressionAccess().getFeatureAssignment_1_0_0_1(), "rule__RelationalExpression__FeatureAssignment_1_0_0_1");
 					put(grammarAccess.getRelationalExpressionAccess().getRightAssignment_1_1(), "rule__RelationalExpression__RightAssignment_1_1");
+					put(grammarAccess.getOtherExpressionAccess().getFeatureAssignment_1_0_0_1(), "rule__OtherExpression__FeatureAssignment_1_0_0_1");
 					put(grammarAccess.getOtherExpressionAccess().getTypeAssignment_1_1(), "rule__OtherExpression__TypeAssignment_1_1");
 					put(grammarAccess.getAdditiveExpressionAccess().getFeatureAssignment_1_0_0_1(), "rule__AdditiveExpression__FeatureAssignment_1_0_0_1");
 					put(grammarAccess.getAdditiveExpressionAccess().getRightAssignment_1_1(), "rule__AdditiveExpression__RightAssignment_1_1");
@@ -159,6 +160,7 @@ public class BehaviorParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMultiplicativeExpressionAccess().getRightAssignment_1_1(), "rule__MultiplicativeExpression__RightAssignment_1_1");
 					put(grammarAccess.getUnaryOperationAccess().getFeatureAssignment_0_1(), "rule__UnaryOperation__FeatureAssignment_0_1");
 					put(grammarAccess.getUnaryOperationAccess().getOperandAssignment_0_2(), "rule__UnaryOperation__OperandAssignment_0_2");
+					put(grammarAccess.getCastedExpressionAccess().getFeatureAssignment_1_0_0_1(), "rule__CastedExpression__FeatureAssignment_1_0_0_1");
 					put(grammarAccess.getCastedExpressionAccess().getTypeAssignment_1_1(), "rule__CastedExpression__TypeAssignment_1_1");
 					put(grammarAccess.getPostfixOperationAccess().getFeatureAssignment_1_0_1(), "rule__PostfixOperation__FeatureAssignment_1_0_1");
 					put(grammarAccess.getInstantiationExpressionAccess().getTypeAssignment_1(), "rule__InstantiationExpression__TypeAssignment_1");

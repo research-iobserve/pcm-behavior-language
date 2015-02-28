@@ -58,36 +58,36 @@ Expression:
 ;
 
 AndExpression returns Expression:
-	RelationalExpression (=>({BinaryOperation.left=current} feature='&&') right=RelationalExpression)*
+	RelationalExpression (=>({Expression.left=current} feature='&&') right=RelationalExpression)*
 ;
 
 RelationalExpression returns Expression:
-	OtherExpression (=>({BinaryOperation.left=current} feature=('=='|'!='|'>'|'<'|'>='|'<=')) right=OtherExpression)*
+	OtherExpression (=>({Expression.left=current} feature=('=='|'!='|'>'|'<'|'>='|'<=')) right=OtherExpression)*
 ;
 
 OtherExpression returns Expression:
-	AdditiveExpression (=>({InstanceOfExpression.expression=current} 'instanceof') type=TypeReference)?
+	AdditiveExpression (=>({Expression.expression=current} feature='instanceof') type=TypeReference)?
 ;
 
 AdditiveExpression returns Expression:
-	MultiplicativeExpression (=>({XBinaryOperation.left=current} feature=('+'|'-')) right=MultiplicativeExpression)*
+	MultiplicativeExpression (=>({Expression.left=current} feature=('+'|'-')) right=MultiplicativeExpression)*
 ;
 
 MultiplicativeExpression returns Expression:
-	 UnaryOperation (=>({XBinaryOperation.left=current} feature=('*'|'/'|'%'|'**')) right=UnaryOperation)*
+	 UnaryOperation (=>({Expression.left=current} feature=('*'|'/'|'%'|'**')) right=UnaryOperation)*
 ;
 
-UnaryOperation returns Expression: {UnaryExpression}
+UnaryOperation returns Expression: {Expression}
 	feature='!' operand=UnaryOperation |
 	CastedExpression
 ;
 
 CastedExpression returns Expression:
-	PostfixOperation (=>({CastedExpression.target=current} 'as') type=TypeReference)*
+	PostfixOperation (=>({Expression.target=current} feature='as') type=TypeReference)*
 ;
 
 PostfixOperation returns Expression:
-	PrimaryExpression =>({PostfixOperation.operand=current} feature=('++'|'--'))?
+	PrimaryExpression =>({Expression.operand=current} feature=('++'|'--'))?
 ;
 
 PrimaryExpression returns Expression:
@@ -96,7 +96,7 @@ PrimaryExpression returns Expression:
 	Literal
 ;
 
-InstantiationExpression returns Expression:
+InstantiationExpression:
 	'new' type=TypeReference '(' parameters+=Expression ')'
 ;
 

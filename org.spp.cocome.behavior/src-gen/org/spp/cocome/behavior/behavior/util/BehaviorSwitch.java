@@ -188,6 +188,14 @@ public class BehaviorSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case BehaviorPackage.INSTANTIATION_EXPRESSION:
+      {
+        InstantiationExpression instantiationExpression = (InstantiationExpression)theEObject;
+        T result = caseInstantiationExpression(instantiationExpression);
+        if (result == null) result = caseExpression(instantiationExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case BehaviorPackage.TYPE_REFERENCE:
       {
         TypeReference typeReference = (TypeReference)theEObject;
@@ -268,46 +276,6 @@ public class BehaviorSwitch<T> extends Switch<T>
         BinaryOperation binaryOperation = (BinaryOperation)theEObject;
         T result = caseBinaryOperation(binaryOperation);
         if (result == null) result = caseExpression(binaryOperation);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case BehaviorPackage.INSTANCE_OF_EXPRESSION:
-      {
-        InstanceOfExpression instanceOfExpression = (InstanceOfExpression)theEObject;
-        T result = caseInstanceOfExpression(instanceOfExpression);
-        if (result == null) result = caseExpression(instanceOfExpression);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case BehaviorPackage.XBINARY_OPERATION:
-      {
-        XBinaryOperation xBinaryOperation = (XBinaryOperation)theEObject;
-        T result = caseXBinaryOperation(xBinaryOperation);
-        if (result == null) result = caseExpression(xBinaryOperation);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case BehaviorPackage.UNARY_EXPRESSION:
-      {
-        UnaryExpression unaryExpression = (UnaryExpression)theEObject;
-        T result = caseUnaryExpression(unaryExpression);
-        if (result == null) result = caseExpression(unaryExpression);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case BehaviorPackage.CASTED_EXPRESSION:
-      {
-        CastedExpression castedExpression = (CastedExpression)theEObject;
-        T result = caseCastedExpression(castedExpression);
-        if (result == null) result = caseExpression(castedExpression);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case BehaviorPackage.POSTFIX_OPERATION:
-      {
-        PostfixOperation postfixOperation = (PostfixOperation)theEObject;
-        T result = casePostfixOperation(postfixOperation);
-        if (result == null) result = caseExpression(postfixOperation);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -572,6 +540,22 @@ public class BehaviorSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Instantiation Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Instantiation Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInstantiationExpression(InstantiationExpression object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Type Reference</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -727,86 +711,6 @@ public class BehaviorSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseBinaryOperation(BinaryOperation object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Instance Of Expression</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Instance Of Expression</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseInstanceOfExpression(InstanceOfExpression object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>XBinary Operation</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>XBinary Operation</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseXBinaryOperation(XBinaryOperation object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Unary Expression</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Unary Expression</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseUnaryExpression(UnaryExpression object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Casted Expression</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Casted Expression</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseCastedExpression(CastedExpression object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Postfix Operation</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Postfix Operation</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casePostfixOperation(PostfixOperation object)
   {
     return null;
   }

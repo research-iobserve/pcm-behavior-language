@@ -23,7 +23,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalBehaviorParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_CHARACTER", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'var'", "'val'", "'=='", "'!='", "'>'", "'<'", "'>='", "'<='", "'+'", "'-'", "'*'", "'/'", "'%'", "'**'", "'++'", "'--'", "'true'", "'false'", "'package'", "'repository'", "'import'", "'realize'", "'{'", "'}'", "'const'", "'='", "'iface'", "'operation'", "'if'", "'('", "')'", "'else'", "'for'", "':'", "'['", "']'", "'.'", "'instanceof'", "'as'", "'new'", "'||'", "'&&'", "'!'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_CHARACTER", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'var'", "'val'", "'=='", "'!='", "'>'", "'<'", "'>='", "'<='", "'+'", "'-'", "'*'", "'/'", "'%'", "'**'", "'++'", "'--'", "'true'", "'false'", "'package'", "'repository'", "'import'", "'realize'", "'{'", "'}'", "'const'", "'='", "'iface'", "'operation'", "'if'", "'('", "')'", "'else'", "'for'", "':'", "'['", "']'", "'.'", "'new'", "'||'", "'&&'", "'instanceof'", "'!'", "'as'"
     };
     public static final int T__50=50;
     public static final int RULE_CHARACTER=7;
@@ -4221,10 +4221,10 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
             int alt8=2;
             int LA8_0 = input.LA(1);
 
-            if ( (LA8_0==54) ) {
+            if ( (LA8_0==53) ) {
                 alt8=1;
             }
-            else if ( ((LA8_0>=RULE_ID && LA8_0<=RULE_CHARACTER)||(LA8_0>=20 && LA8_0<=21)||(LA8_0>=28 && LA8_0<=29)||LA8_0==51) ) {
+            else if ( ((LA8_0>=RULE_ID && LA8_0<=RULE_CHARACTER)||(LA8_0>=20 && LA8_0<=21)||(LA8_0>=28 && LA8_0<=29)||LA8_0==49) ) {
                 alt8=2;
             }
             else {
@@ -4394,7 +4394,7 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
             // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:1429:1: ( ( ruleInstantiationExpression ) | ( ruleVariableCall ) | ( ruleLiteral ) )
             int alt10=3;
             switch ( input.LA(1) ) {
-            case 51:
+            case 49:
                 {
                 alt10=1;
                 }
@@ -4523,6 +4523,11 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
             if ( (LA11_0==RULE_ID) ) {
                 switch ( input.LA(2) ) {
+                case 17:
+                    {
+                    alt11=3;
+                    }
+                    break;
                 case EOF:
                 case RULE_ID:
                     {
@@ -4532,11 +4537,6 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
                 case 46:
                     {
                     alt11=2;
-                    }
-                    break;
-                case 17:
-                    {
-                    alt11=3;
                     }
                     break;
                 default:
@@ -4890,7 +4890,7 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
             else if ( (LA14_0==RULE_INT) ) {
                 int LA14_2 = input.LA(2);
 
-                if ( (LA14_2==EOF||LA14_2==RULE_ID||(LA14_2>=12 && LA14_2<=27)||(LA14_2>=35 && LA14_2<=36)||LA14_2==38||LA14_2==40||LA14_2==42||LA14_2==44||LA14_2==47||(LA14_2>=49 && LA14_2<=50)||(LA14_2>=52 && LA14_2<=53)) ) {
+                if ( (LA14_2==EOF||LA14_2==RULE_ID||(LA14_2>=12 && LA14_2<=27)||(LA14_2>=35 && LA14_2<=36)||LA14_2==38||LA14_2==40||LA14_2==42||LA14_2==44||LA14_2==47||(LA14_2>=50 && LA14_2<=52)||LA14_2==54) ) {
                     alt14=1;
                 }
                 else if ( (LA14_2==48) ) {
@@ -9665,7 +9665,7 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
             int alt24=2;
             int LA24_0 = input.LA(1);
 
-            if ( ((LA24_0>=RULE_ID && LA24_0<=RULE_CHARACTER)||(LA24_0>=20 && LA24_0<=21)||(LA24_0>=28 && LA24_0<=29)||LA24_0==51||LA24_0==54) ) {
+            if ( ((LA24_0>=RULE_ID && LA24_0<=RULE_CHARACTER)||(LA24_0>=20 && LA24_0<=21)||(LA24_0>=28 && LA24_0<=29)||LA24_0==49||LA24_0==53) ) {
                 alt24=1;
             }
             switch (alt24) {
@@ -10365,7 +10365,7 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
             int alt27=2;
             int LA27_0 = input.LA(1);
 
-            if ( ((LA27_0>=RULE_ID && LA27_0<=RULE_CHARACTER)||(LA27_0>=20 && LA27_0<=21)||(LA27_0>=28 && LA27_0<=29)||LA27_0==51||LA27_0==54) ) {
+            if ( ((LA27_0>=RULE_ID && LA27_0<=RULE_CHARACTER)||(LA27_0>=20 && LA27_0<=21)||(LA27_0>=28 && LA27_0<=29)||LA27_0==49||LA27_0==53) ) {
                 alt27=1;
             }
             switch (alt27) {
@@ -10782,7 +10782,7 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
                 int alt28=2;
                 int LA28_0 = input.LA(1);
 
-                if ( (LA28_0==52) ) {
+                if ( (LA28_0==50) ) {
                     alt28=1;
                 }
 
@@ -11387,7 +11387,7 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
                 int alt29=2;
                 int LA29_0 = input.LA(1);
 
-                if ( (LA29_0==53) ) {
+                if ( (LA29_0==51) ) {
                     alt29=1;
                 }
 
@@ -11743,7 +11743,7 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
             // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4028:1: ()
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getAndExpressionAccess().getBinaryOperationLeftAction_1_0_0_0()); 
+               before(grammarAccess.getAndExpressionAccess().getExpressionLeftAction_1_0_0_0()); 
             }
             // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4029:1: ()
             // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4031:1: 
@@ -11751,7 +11751,7 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getAndExpressionAccess().getBinaryOperationLeftAction_1_0_0_0()); 
+               after(grammarAccess.getAndExpressionAccess().getExpressionLeftAction_1_0_0_0()); 
             }
 
             }
@@ -12348,7 +12348,7 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
             // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4243:1: ()
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getRelationalExpressionAccess().getBinaryOperationLeftAction_1_0_0_0()); 
+               before(grammarAccess.getRelationalExpressionAccess().getExpressionLeftAction_1_0_0_0()); 
             }
             // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4244:1: ()
             // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4246:1: 
@@ -12356,7 +12356,7 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getRelationalExpressionAccess().getBinaryOperationLeftAction_1_0_0_0()); 
+               after(grammarAccess.getRelationalExpressionAccess().getExpressionLeftAction_1_0_0_0()); 
             }
 
             }
@@ -12595,7 +12595,7 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
             int alt31=2;
             int LA31_0 = input.LA(1);
 
-            if ( (LA31_0==49) ) {
+            if ( (LA31_0==52) ) {
                 alt31=1;
             }
             switch (alt31) {
@@ -12946,7 +12946,7 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
             // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4458:1: ()
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getOtherExpressionAccess().getInstanceOfExpressionExpressionAction_1_0_0_0()); 
+               before(grammarAccess.getOtherExpressionAccess().getExpressionExpressionAction_1_0_0_0()); 
             }
             // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4459:1: ()
             // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4461:1: 
@@ -12954,7 +12954,7 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getOtherExpressionAccess().getInstanceOfExpressionExpressionAction_1_0_0_0()); 
+               after(grammarAccess.getOtherExpressionAccess().getExpressionExpressionAction_1_0_0_0()); 
             }
 
             }
@@ -13007,24 +13007,34 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__OtherExpression__Group_1_0_0__1__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4482:1: rule__OtherExpression__Group_1_0_0__1__Impl : ( 'instanceof' ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4482:1: rule__OtherExpression__Group_1_0_0__1__Impl : ( ( rule__OtherExpression__FeatureAssignment_1_0_0_1 ) ) ;
     public final void rule__OtherExpression__Group_1_0_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4486:1: ( ( 'instanceof' ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4487:1: ( 'instanceof' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4486:1: ( ( ( rule__OtherExpression__FeatureAssignment_1_0_0_1 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4487:1: ( ( rule__OtherExpression__FeatureAssignment_1_0_0_1 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4487:1: ( 'instanceof' )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4488:1: 'instanceof'
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4487:1: ( ( rule__OtherExpression__FeatureAssignment_1_0_0_1 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4488:1: ( rule__OtherExpression__FeatureAssignment_1_0_0_1 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getOtherExpressionAccess().getInstanceofKeyword_1_0_0_1()); 
+               before(grammarAccess.getOtherExpressionAccess().getFeatureAssignment_1_0_0_1()); 
             }
-            match(input,49,FOLLOW_49_in_rule__OtherExpression__Group_1_0_0__1__Impl9100); if (state.failed) return ;
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4489:1: ( rule__OtherExpression__FeatureAssignment_1_0_0_1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4489:2: rule__OtherExpression__FeatureAssignment_1_0_0_1
+            {
+            pushFollow(FOLLOW_rule__OtherExpression__FeatureAssignment_1_0_0_1_in_rule__OtherExpression__Group_1_0_0__1__Impl9099);
+            rule__OtherExpression__FeatureAssignment_1_0_0_1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getOtherExpressionAccess().getInstanceofKeyword_1_0_0_1()); 
+               after(grammarAccess.getOtherExpressionAccess().getFeatureAssignment_1_0_0_1()); 
             }
 
             }
@@ -13048,21 +13058,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__AdditiveExpression__Group__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4505:1: rule__AdditiveExpression__Group__0 : rule__AdditiveExpression__Group__0__Impl rule__AdditiveExpression__Group__1 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4503:1: rule__AdditiveExpression__Group__0 : rule__AdditiveExpression__Group__0__Impl rule__AdditiveExpression__Group__1 ;
     public final void rule__AdditiveExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4509:1: ( rule__AdditiveExpression__Group__0__Impl rule__AdditiveExpression__Group__1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4510:2: rule__AdditiveExpression__Group__0__Impl rule__AdditiveExpression__Group__1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4507:1: ( rule__AdditiveExpression__Group__0__Impl rule__AdditiveExpression__Group__1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4508:2: rule__AdditiveExpression__Group__0__Impl rule__AdditiveExpression__Group__1
             {
-            pushFollow(FOLLOW_rule__AdditiveExpression__Group__0__Impl_in_rule__AdditiveExpression__Group__09135);
+            pushFollow(FOLLOW_rule__AdditiveExpression__Group__0__Impl_in_rule__AdditiveExpression__Group__09133);
             rule__AdditiveExpression__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__AdditiveExpression__Group__1_in_rule__AdditiveExpression__Group__09138);
+            pushFollow(FOLLOW_rule__AdditiveExpression__Group__1_in_rule__AdditiveExpression__Group__09136);
             rule__AdditiveExpression__Group__1();
 
             state._fsp--;
@@ -13086,22 +13096,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__AdditiveExpression__Group__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4517:1: rule__AdditiveExpression__Group__0__Impl : ( ruleMultiplicativeExpression ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4515:1: rule__AdditiveExpression__Group__0__Impl : ( ruleMultiplicativeExpression ) ;
     public final void rule__AdditiveExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4521:1: ( ( ruleMultiplicativeExpression ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4522:1: ( ruleMultiplicativeExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4519:1: ( ( ruleMultiplicativeExpression ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4520:1: ( ruleMultiplicativeExpression )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4522:1: ( ruleMultiplicativeExpression )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4523:1: ruleMultiplicativeExpression
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4520:1: ( ruleMultiplicativeExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4521:1: ruleMultiplicativeExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditiveExpressionAccess().getMultiplicativeExpressionParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleMultiplicativeExpression_in_rule__AdditiveExpression__Group__0__Impl9165);
+            pushFollow(FOLLOW_ruleMultiplicativeExpression_in_rule__AdditiveExpression__Group__0__Impl9163);
             ruleMultiplicativeExpression();
 
             state._fsp--;
@@ -13131,16 +13141,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__AdditiveExpression__Group__1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4534:1: rule__AdditiveExpression__Group__1 : rule__AdditiveExpression__Group__1__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4532:1: rule__AdditiveExpression__Group__1 : rule__AdditiveExpression__Group__1__Impl ;
     public final void rule__AdditiveExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4538:1: ( rule__AdditiveExpression__Group__1__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4539:2: rule__AdditiveExpression__Group__1__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4536:1: ( rule__AdditiveExpression__Group__1__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4537:2: rule__AdditiveExpression__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__AdditiveExpression__Group__1__Impl_in_rule__AdditiveExpression__Group__19194);
+            pushFollow(FOLLOW_rule__AdditiveExpression__Group__1__Impl_in_rule__AdditiveExpression__Group__19192);
             rule__AdditiveExpression__Group__1__Impl();
 
             state._fsp--;
@@ -13164,22 +13174,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__AdditiveExpression__Group__1__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4545:1: rule__AdditiveExpression__Group__1__Impl : ( ( rule__AdditiveExpression__Group_1__0 )* ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4543:1: rule__AdditiveExpression__Group__1__Impl : ( ( rule__AdditiveExpression__Group_1__0 )* ) ;
     public final void rule__AdditiveExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4549:1: ( ( ( rule__AdditiveExpression__Group_1__0 )* ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4550:1: ( ( rule__AdditiveExpression__Group_1__0 )* )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4547:1: ( ( ( rule__AdditiveExpression__Group_1__0 )* ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4548:1: ( ( rule__AdditiveExpression__Group_1__0 )* )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4550:1: ( ( rule__AdditiveExpression__Group_1__0 )* )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4551:1: ( rule__AdditiveExpression__Group_1__0 )*
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4548:1: ( ( rule__AdditiveExpression__Group_1__0 )* )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4549:1: ( rule__AdditiveExpression__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditiveExpressionAccess().getGroup_1()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4552:1: ( rule__AdditiveExpression__Group_1__0 )*
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4550:1: ( rule__AdditiveExpression__Group_1__0 )*
             loop32:
             do {
                 int alt32=2;
@@ -13192,9 +13202,9 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
                 switch (alt32) {
             	case 1 :
-            	    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4552:2: rule__AdditiveExpression__Group_1__0
+            	    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4550:2: rule__AdditiveExpression__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__AdditiveExpression__Group_1__0_in_rule__AdditiveExpression__Group__1__Impl9221);
+            	    pushFollow(FOLLOW_rule__AdditiveExpression__Group_1__0_in_rule__AdditiveExpression__Group__1__Impl9219);
             	    rule__AdditiveExpression__Group_1__0();
 
             	    state._fsp--;
@@ -13233,21 +13243,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__AdditiveExpression__Group_1__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4566:1: rule__AdditiveExpression__Group_1__0 : rule__AdditiveExpression__Group_1__0__Impl rule__AdditiveExpression__Group_1__1 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4564:1: rule__AdditiveExpression__Group_1__0 : rule__AdditiveExpression__Group_1__0__Impl rule__AdditiveExpression__Group_1__1 ;
     public final void rule__AdditiveExpression__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4570:1: ( rule__AdditiveExpression__Group_1__0__Impl rule__AdditiveExpression__Group_1__1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4571:2: rule__AdditiveExpression__Group_1__0__Impl rule__AdditiveExpression__Group_1__1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4568:1: ( rule__AdditiveExpression__Group_1__0__Impl rule__AdditiveExpression__Group_1__1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4569:2: rule__AdditiveExpression__Group_1__0__Impl rule__AdditiveExpression__Group_1__1
             {
-            pushFollow(FOLLOW_rule__AdditiveExpression__Group_1__0__Impl_in_rule__AdditiveExpression__Group_1__09256);
+            pushFollow(FOLLOW_rule__AdditiveExpression__Group_1__0__Impl_in_rule__AdditiveExpression__Group_1__09254);
             rule__AdditiveExpression__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__AdditiveExpression__Group_1__1_in_rule__AdditiveExpression__Group_1__09259);
+            pushFollow(FOLLOW_rule__AdditiveExpression__Group_1__1_in_rule__AdditiveExpression__Group_1__09257);
             rule__AdditiveExpression__Group_1__1();
 
             state._fsp--;
@@ -13271,25 +13281,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__AdditiveExpression__Group_1__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4578:1: rule__AdditiveExpression__Group_1__0__Impl : ( ( rule__AdditiveExpression__Group_1_0__0 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4576:1: rule__AdditiveExpression__Group_1__0__Impl : ( ( rule__AdditiveExpression__Group_1_0__0 ) ) ;
     public final void rule__AdditiveExpression__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4582:1: ( ( ( rule__AdditiveExpression__Group_1_0__0 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4583:1: ( ( rule__AdditiveExpression__Group_1_0__0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4580:1: ( ( ( rule__AdditiveExpression__Group_1_0__0 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4581:1: ( ( rule__AdditiveExpression__Group_1_0__0 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4583:1: ( ( rule__AdditiveExpression__Group_1_0__0 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4584:1: ( rule__AdditiveExpression__Group_1_0__0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4581:1: ( ( rule__AdditiveExpression__Group_1_0__0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4582:1: ( rule__AdditiveExpression__Group_1_0__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditiveExpressionAccess().getGroup_1_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4585:1: ( rule__AdditiveExpression__Group_1_0__0 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4585:2: rule__AdditiveExpression__Group_1_0__0
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4583:1: ( rule__AdditiveExpression__Group_1_0__0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4583:2: rule__AdditiveExpression__Group_1_0__0
             {
-            pushFollow(FOLLOW_rule__AdditiveExpression__Group_1_0__0_in_rule__AdditiveExpression__Group_1__0__Impl9286);
+            pushFollow(FOLLOW_rule__AdditiveExpression__Group_1_0__0_in_rule__AdditiveExpression__Group_1__0__Impl9284);
             rule__AdditiveExpression__Group_1_0__0();
 
             state._fsp--;
@@ -13322,16 +13332,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__AdditiveExpression__Group_1__1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4595:1: rule__AdditiveExpression__Group_1__1 : rule__AdditiveExpression__Group_1__1__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4593:1: rule__AdditiveExpression__Group_1__1 : rule__AdditiveExpression__Group_1__1__Impl ;
     public final void rule__AdditiveExpression__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4599:1: ( rule__AdditiveExpression__Group_1__1__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4600:2: rule__AdditiveExpression__Group_1__1__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4597:1: ( rule__AdditiveExpression__Group_1__1__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4598:2: rule__AdditiveExpression__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__AdditiveExpression__Group_1__1__Impl_in_rule__AdditiveExpression__Group_1__19316);
+            pushFollow(FOLLOW_rule__AdditiveExpression__Group_1__1__Impl_in_rule__AdditiveExpression__Group_1__19314);
             rule__AdditiveExpression__Group_1__1__Impl();
 
             state._fsp--;
@@ -13355,25 +13365,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__AdditiveExpression__Group_1__1__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4606:1: rule__AdditiveExpression__Group_1__1__Impl : ( ( rule__AdditiveExpression__RightAssignment_1_1 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4604:1: rule__AdditiveExpression__Group_1__1__Impl : ( ( rule__AdditiveExpression__RightAssignment_1_1 ) ) ;
     public final void rule__AdditiveExpression__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4610:1: ( ( ( rule__AdditiveExpression__RightAssignment_1_1 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4611:1: ( ( rule__AdditiveExpression__RightAssignment_1_1 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4608:1: ( ( ( rule__AdditiveExpression__RightAssignment_1_1 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4609:1: ( ( rule__AdditiveExpression__RightAssignment_1_1 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4611:1: ( ( rule__AdditiveExpression__RightAssignment_1_1 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4612:1: ( rule__AdditiveExpression__RightAssignment_1_1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4609:1: ( ( rule__AdditiveExpression__RightAssignment_1_1 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4610:1: ( rule__AdditiveExpression__RightAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditiveExpressionAccess().getRightAssignment_1_1()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4613:1: ( rule__AdditiveExpression__RightAssignment_1_1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4613:2: rule__AdditiveExpression__RightAssignment_1_1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4611:1: ( rule__AdditiveExpression__RightAssignment_1_1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4611:2: rule__AdditiveExpression__RightAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__AdditiveExpression__RightAssignment_1_1_in_rule__AdditiveExpression__Group_1__1__Impl9343);
+            pushFollow(FOLLOW_rule__AdditiveExpression__RightAssignment_1_1_in_rule__AdditiveExpression__Group_1__1__Impl9341);
             rule__AdditiveExpression__RightAssignment_1_1();
 
             state._fsp--;
@@ -13406,16 +13416,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__AdditiveExpression__Group_1_0__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4627:1: rule__AdditiveExpression__Group_1_0__0 : rule__AdditiveExpression__Group_1_0__0__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4625:1: rule__AdditiveExpression__Group_1_0__0 : rule__AdditiveExpression__Group_1_0__0__Impl ;
     public final void rule__AdditiveExpression__Group_1_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4631:1: ( rule__AdditiveExpression__Group_1_0__0__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4632:2: rule__AdditiveExpression__Group_1_0__0__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4629:1: ( rule__AdditiveExpression__Group_1_0__0__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4630:2: rule__AdditiveExpression__Group_1_0__0__Impl
             {
-            pushFollow(FOLLOW_rule__AdditiveExpression__Group_1_0__0__Impl_in_rule__AdditiveExpression__Group_1_0__09377);
+            pushFollow(FOLLOW_rule__AdditiveExpression__Group_1_0__0__Impl_in_rule__AdditiveExpression__Group_1_0__09375);
             rule__AdditiveExpression__Group_1_0__0__Impl();
 
             state._fsp--;
@@ -13439,25 +13449,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__AdditiveExpression__Group_1_0__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4638:1: rule__AdditiveExpression__Group_1_0__0__Impl : ( ( rule__AdditiveExpression__Group_1_0_0__0 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4636:1: rule__AdditiveExpression__Group_1_0__0__Impl : ( ( rule__AdditiveExpression__Group_1_0_0__0 ) ) ;
     public final void rule__AdditiveExpression__Group_1_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4642:1: ( ( ( rule__AdditiveExpression__Group_1_0_0__0 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4643:1: ( ( rule__AdditiveExpression__Group_1_0_0__0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4640:1: ( ( ( rule__AdditiveExpression__Group_1_0_0__0 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4641:1: ( ( rule__AdditiveExpression__Group_1_0_0__0 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4643:1: ( ( rule__AdditiveExpression__Group_1_0_0__0 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4644:1: ( rule__AdditiveExpression__Group_1_0_0__0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4641:1: ( ( rule__AdditiveExpression__Group_1_0_0__0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4642:1: ( rule__AdditiveExpression__Group_1_0_0__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditiveExpressionAccess().getGroup_1_0_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4645:1: ( rule__AdditiveExpression__Group_1_0_0__0 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4645:2: rule__AdditiveExpression__Group_1_0_0__0
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4643:1: ( rule__AdditiveExpression__Group_1_0_0__0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4643:2: rule__AdditiveExpression__Group_1_0_0__0
             {
-            pushFollow(FOLLOW_rule__AdditiveExpression__Group_1_0_0__0_in_rule__AdditiveExpression__Group_1_0__0__Impl9404);
+            pushFollow(FOLLOW_rule__AdditiveExpression__Group_1_0_0__0_in_rule__AdditiveExpression__Group_1_0__0__Impl9402);
             rule__AdditiveExpression__Group_1_0_0__0();
 
             state._fsp--;
@@ -13490,21 +13500,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__AdditiveExpression__Group_1_0_0__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4657:1: rule__AdditiveExpression__Group_1_0_0__0 : rule__AdditiveExpression__Group_1_0_0__0__Impl rule__AdditiveExpression__Group_1_0_0__1 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4655:1: rule__AdditiveExpression__Group_1_0_0__0 : rule__AdditiveExpression__Group_1_0_0__0__Impl rule__AdditiveExpression__Group_1_0_0__1 ;
     public final void rule__AdditiveExpression__Group_1_0_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4661:1: ( rule__AdditiveExpression__Group_1_0_0__0__Impl rule__AdditiveExpression__Group_1_0_0__1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4662:2: rule__AdditiveExpression__Group_1_0_0__0__Impl rule__AdditiveExpression__Group_1_0_0__1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4659:1: ( rule__AdditiveExpression__Group_1_0_0__0__Impl rule__AdditiveExpression__Group_1_0_0__1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4660:2: rule__AdditiveExpression__Group_1_0_0__0__Impl rule__AdditiveExpression__Group_1_0_0__1
             {
-            pushFollow(FOLLOW_rule__AdditiveExpression__Group_1_0_0__0__Impl_in_rule__AdditiveExpression__Group_1_0_0__09436);
+            pushFollow(FOLLOW_rule__AdditiveExpression__Group_1_0_0__0__Impl_in_rule__AdditiveExpression__Group_1_0_0__09434);
             rule__AdditiveExpression__Group_1_0_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__AdditiveExpression__Group_1_0_0__1_in_rule__AdditiveExpression__Group_1_0_0__09439);
+            pushFollow(FOLLOW_rule__AdditiveExpression__Group_1_0_0__1_in_rule__AdditiveExpression__Group_1_0_0__09437);
             rule__AdditiveExpression__Group_1_0_0__1();
 
             state._fsp--;
@@ -13528,28 +13538,28 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__AdditiveExpression__Group_1_0_0__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4669:1: rule__AdditiveExpression__Group_1_0_0__0__Impl : ( () ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4667:1: rule__AdditiveExpression__Group_1_0_0__0__Impl : ( () ) ;
     public final void rule__AdditiveExpression__Group_1_0_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4673:1: ( ( () ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4674:1: ( () )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4671:1: ( ( () ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4672:1: ( () )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4674:1: ( () )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4675:1: ()
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4672:1: ( () )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4673:1: ()
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getAdditiveExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0()); 
+               before(grammarAccess.getAdditiveExpressionAccess().getExpressionLeftAction_1_0_0_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4676:1: ()
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4678:1: 
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4674:1: ()
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4676:1: 
             {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getAdditiveExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0()); 
+               after(grammarAccess.getAdditiveExpressionAccess().getExpressionLeftAction_1_0_0_0()); 
             }
 
             }
@@ -13569,16 +13579,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__AdditiveExpression__Group_1_0_0__1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4688:1: rule__AdditiveExpression__Group_1_0_0__1 : rule__AdditiveExpression__Group_1_0_0__1__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4686:1: rule__AdditiveExpression__Group_1_0_0__1 : rule__AdditiveExpression__Group_1_0_0__1__Impl ;
     public final void rule__AdditiveExpression__Group_1_0_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4692:1: ( rule__AdditiveExpression__Group_1_0_0__1__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4693:2: rule__AdditiveExpression__Group_1_0_0__1__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4690:1: ( rule__AdditiveExpression__Group_1_0_0__1__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4691:2: rule__AdditiveExpression__Group_1_0_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__AdditiveExpression__Group_1_0_0__1__Impl_in_rule__AdditiveExpression__Group_1_0_0__19497);
+            pushFollow(FOLLOW_rule__AdditiveExpression__Group_1_0_0__1__Impl_in_rule__AdditiveExpression__Group_1_0_0__19495);
             rule__AdditiveExpression__Group_1_0_0__1__Impl();
 
             state._fsp--;
@@ -13602,25 +13612,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__AdditiveExpression__Group_1_0_0__1__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4699:1: rule__AdditiveExpression__Group_1_0_0__1__Impl : ( ( rule__AdditiveExpression__FeatureAssignment_1_0_0_1 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4697:1: rule__AdditiveExpression__Group_1_0_0__1__Impl : ( ( rule__AdditiveExpression__FeatureAssignment_1_0_0_1 ) ) ;
     public final void rule__AdditiveExpression__Group_1_0_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4703:1: ( ( ( rule__AdditiveExpression__FeatureAssignment_1_0_0_1 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4704:1: ( ( rule__AdditiveExpression__FeatureAssignment_1_0_0_1 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4701:1: ( ( ( rule__AdditiveExpression__FeatureAssignment_1_0_0_1 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4702:1: ( ( rule__AdditiveExpression__FeatureAssignment_1_0_0_1 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4704:1: ( ( rule__AdditiveExpression__FeatureAssignment_1_0_0_1 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4705:1: ( rule__AdditiveExpression__FeatureAssignment_1_0_0_1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4702:1: ( ( rule__AdditiveExpression__FeatureAssignment_1_0_0_1 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4703:1: ( rule__AdditiveExpression__FeatureAssignment_1_0_0_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditiveExpressionAccess().getFeatureAssignment_1_0_0_1()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4706:1: ( rule__AdditiveExpression__FeatureAssignment_1_0_0_1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4706:2: rule__AdditiveExpression__FeatureAssignment_1_0_0_1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4704:1: ( rule__AdditiveExpression__FeatureAssignment_1_0_0_1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4704:2: rule__AdditiveExpression__FeatureAssignment_1_0_0_1
             {
-            pushFollow(FOLLOW_rule__AdditiveExpression__FeatureAssignment_1_0_0_1_in_rule__AdditiveExpression__Group_1_0_0__1__Impl9524);
+            pushFollow(FOLLOW_rule__AdditiveExpression__FeatureAssignment_1_0_0_1_in_rule__AdditiveExpression__Group_1_0_0__1__Impl9522);
             rule__AdditiveExpression__FeatureAssignment_1_0_0_1();
 
             state._fsp--;
@@ -13653,21 +13663,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MultiplicativeExpression__Group__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4720:1: rule__MultiplicativeExpression__Group__0 : rule__MultiplicativeExpression__Group__0__Impl rule__MultiplicativeExpression__Group__1 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4718:1: rule__MultiplicativeExpression__Group__0 : rule__MultiplicativeExpression__Group__0__Impl rule__MultiplicativeExpression__Group__1 ;
     public final void rule__MultiplicativeExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4724:1: ( rule__MultiplicativeExpression__Group__0__Impl rule__MultiplicativeExpression__Group__1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4725:2: rule__MultiplicativeExpression__Group__0__Impl rule__MultiplicativeExpression__Group__1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4722:1: ( rule__MultiplicativeExpression__Group__0__Impl rule__MultiplicativeExpression__Group__1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4723:2: rule__MultiplicativeExpression__Group__0__Impl rule__MultiplicativeExpression__Group__1
             {
-            pushFollow(FOLLOW_rule__MultiplicativeExpression__Group__0__Impl_in_rule__MultiplicativeExpression__Group__09558);
+            pushFollow(FOLLOW_rule__MultiplicativeExpression__Group__0__Impl_in_rule__MultiplicativeExpression__Group__09556);
             rule__MultiplicativeExpression__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__MultiplicativeExpression__Group__1_in_rule__MultiplicativeExpression__Group__09561);
+            pushFollow(FOLLOW_rule__MultiplicativeExpression__Group__1_in_rule__MultiplicativeExpression__Group__09559);
             rule__MultiplicativeExpression__Group__1();
 
             state._fsp--;
@@ -13691,22 +13701,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MultiplicativeExpression__Group__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4732:1: rule__MultiplicativeExpression__Group__0__Impl : ( ruleUnaryOperation ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4730:1: rule__MultiplicativeExpression__Group__0__Impl : ( ruleUnaryOperation ) ;
     public final void rule__MultiplicativeExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4736:1: ( ( ruleUnaryOperation ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4737:1: ( ruleUnaryOperation )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4734:1: ( ( ruleUnaryOperation ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4735:1: ( ruleUnaryOperation )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4737:1: ( ruleUnaryOperation )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4738:1: ruleUnaryOperation
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4735:1: ( ruleUnaryOperation )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4736:1: ruleUnaryOperation
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicativeExpressionAccess().getUnaryOperationParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleUnaryOperation_in_rule__MultiplicativeExpression__Group__0__Impl9588);
+            pushFollow(FOLLOW_ruleUnaryOperation_in_rule__MultiplicativeExpression__Group__0__Impl9586);
             ruleUnaryOperation();
 
             state._fsp--;
@@ -13736,16 +13746,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MultiplicativeExpression__Group__1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4749:1: rule__MultiplicativeExpression__Group__1 : rule__MultiplicativeExpression__Group__1__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4747:1: rule__MultiplicativeExpression__Group__1 : rule__MultiplicativeExpression__Group__1__Impl ;
     public final void rule__MultiplicativeExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4753:1: ( rule__MultiplicativeExpression__Group__1__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4754:2: rule__MultiplicativeExpression__Group__1__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4751:1: ( rule__MultiplicativeExpression__Group__1__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4752:2: rule__MultiplicativeExpression__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__MultiplicativeExpression__Group__1__Impl_in_rule__MultiplicativeExpression__Group__19617);
+            pushFollow(FOLLOW_rule__MultiplicativeExpression__Group__1__Impl_in_rule__MultiplicativeExpression__Group__19615);
             rule__MultiplicativeExpression__Group__1__Impl();
 
             state._fsp--;
@@ -13769,22 +13779,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MultiplicativeExpression__Group__1__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4760:1: rule__MultiplicativeExpression__Group__1__Impl : ( ( rule__MultiplicativeExpression__Group_1__0 )* ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4758:1: rule__MultiplicativeExpression__Group__1__Impl : ( ( rule__MultiplicativeExpression__Group_1__0 )* ) ;
     public final void rule__MultiplicativeExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4764:1: ( ( ( rule__MultiplicativeExpression__Group_1__0 )* ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4765:1: ( ( rule__MultiplicativeExpression__Group_1__0 )* )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4762:1: ( ( ( rule__MultiplicativeExpression__Group_1__0 )* ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4763:1: ( ( rule__MultiplicativeExpression__Group_1__0 )* )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4765:1: ( ( rule__MultiplicativeExpression__Group_1__0 )* )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4766:1: ( rule__MultiplicativeExpression__Group_1__0 )*
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4763:1: ( ( rule__MultiplicativeExpression__Group_1__0 )* )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4764:1: ( rule__MultiplicativeExpression__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicativeExpressionAccess().getGroup_1()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4767:1: ( rule__MultiplicativeExpression__Group_1__0 )*
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4765:1: ( rule__MultiplicativeExpression__Group_1__0 )*
             loop33:
             do {
                 int alt33=2;
@@ -13797,9 +13807,9 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
                 switch (alt33) {
             	case 1 :
-            	    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4767:2: rule__MultiplicativeExpression__Group_1__0
+            	    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4765:2: rule__MultiplicativeExpression__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__MultiplicativeExpression__Group_1__0_in_rule__MultiplicativeExpression__Group__1__Impl9644);
+            	    pushFollow(FOLLOW_rule__MultiplicativeExpression__Group_1__0_in_rule__MultiplicativeExpression__Group__1__Impl9642);
             	    rule__MultiplicativeExpression__Group_1__0();
 
             	    state._fsp--;
@@ -13838,21 +13848,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MultiplicativeExpression__Group_1__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4781:1: rule__MultiplicativeExpression__Group_1__0 : rule__MultiplicativeExpression__Group_1__0__Impl rule__MultiplicativeExpression__Group_1__1 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4779:1: rule__MultiplicativeExpression__Group_1__0 : rule__MultiplicativeExpression__Group_1__0__Impl rule__MultiplicativeExpression__Group_1__1 ;
     public final void rule__MultiplicativeExpression__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4785:1: ( rule__MultiplicativeExpression__Group_1__0__Impl rule__MultiplicativeExpression__Group_1__1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4786:2: rule__MultiplicativeExpression__Group_1__0__Impl rule__MultiplicativeExpression__Group_1__1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4783:1: ( rule__MultiplicativeExpression__Group_1__0__Impl rule__MultiplicativeExpression__Group_1__1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4784:2: rule__MultiplicativeExpression__Group_1__0__Impl rule__MultiplicativeExpression__Group_1__1
             {
-            pushFollow(FOLLOW_rule__MultiplicativeExpression__Group_1__0__Impl_in_rule__MultiplicativeExpression__Group_1__09679);
+            pushFollow(FOLLOW_rule__MultiplicativeExpression__Group_1__0__Impl_in_rule__MultiplicativeExpression__Group_1__09677);
             rule__MultiplicativeExpression__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__MultiplicativeExpression__Group_1__1_in_rule__MultiplicativeExpression__Group_1__09682);
+            pushFollow(FOLLOW_rule__MultiplicativeExpression__Group_1__1_in_rule__MultiplicativeExpression__Group_1__09680);
             rule__MultiplicativeExpression__Group_1__1();
 
             state._fsp--;
@@ -13876,25 +13886,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MultiplicativeExpression__Group_1__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4793:1: rule__MultiplicativeExpression__Group_1__0__Impl : ( ( rule__MultiplicativeExpression__Group_1_0__0 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4791:1: rule__MultiplicativeExpression__Group_1__0__Impl : ( ( rule__MultiplicativeExpression__Group_1_0__0 ) ) ;
     public final void rule__MultiplicativeExpression__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4797:1: ( ( ( rule__MultiplicativeExpression__Group_1_0__0 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4798:1: ( ( rule__MultiplicativeExpression__Group_1_0__0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4795:1: ( ( ( rule__MultiplicativeExpression__Group_1_0__0 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4796:1: ( ( rule__MultiplicativeExpression__Group_1_0__0 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4798:1: ( ( rule__MultiplicativeExpression__Group_1_0__0 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4799:1: ( rule__MultiplicativeExpression__Group_1_0__0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4796:1: ( ( rule__MultiplicativeExpression__Group_1_0__0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4797:1: ( rule__MultiplicativeExpression__Group_1_0__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicativeExpressionAccess().getGroup_1_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4800:1: ( rule__MultiplicativeExpression__Group_1_0__0 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4800:2: rule__MultiplicativeExpression__Group_1_0__0
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4798:1: ( rule__MultiplicativeExpression__Group_1_0__0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4798:2: rule__MultiplicativeExpression__Group_1_0__0
             {
-            pushFollow(FOLLOW_rule__MultiplicativeExpression__Group_1_0__0_in_rule__MultiplicativeExpression__Group_1__0__Impl9709);
+            pushFollow(FOLLOW_rule__MultiplicativeExpression__Group_1_0__0_in_rule__MultiplicativeExpression__Group_1__0__Impl9707);
             rule__MultiplicativeExpression__Group_1_0__0();
 
             state._fsp--;
@@ -13927,16 +13937,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MultiplicativeExpression__Group_1__1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4810:1: rule__MultiplicativeExpression__Group_1__1 : rule__MultiplicativeExpression__Group_1__1__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4808:1: rule__MultiplicativeExpression__Group_1__1 : rule__MultiplicativeExpression__Group_1__1__Impl ;
     public final void rule__MultiplicativeExpression__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4814:1: ( rule__MultiplicativeExpression__Group_1__1__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4815:2: rule__MultiplicativeExpression__Group_1__1__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4812:1: ( rule__MultiplicativeExpression__Group_1__1__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4813:2: rule__MultiplicativeExpression__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__MultiplicativeExpression__Group_1__1__Impl_in_rule__MultiplicativeExpression__Group_1__19739);
+            pushFollow(FOLLOW_rule__MultiplicativeExpression__Group_1__1__Impl_in_rule__MultiplicativeExpression__Group_1__19737);
             rule__MultiplicativeExpression__Group_1__1__Impl();
 
             state._fsp--;
@@ -13960,25 +13970,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MultiplicativeExpression__Group_1__1__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4821:1: rule__MultiplicativeExpression__Group_1__1__Impl : ( ( rule__MultiplicativeExpression__RightAssignment_1_1 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4819:1: rule__MultiplicativeExpression__Group_1__1__Impl : ( ( rule__MultiplicativeExpression__RightAssignment_1_1 ) ) ;
     public final void rule__MultiplicativeExpression__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4825:1: ( ( ( rule__MultiplicativeExpression__RightAssignment_1_1 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4826:1: ( ( rule__MultiplicativeExpression__RightAssignment_1_1 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4823:1: ( ( ( rule__MultiplicativeExpression__RightAssignment_1_1 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4824:1: ( ( rule__MultiplicativeExpression__RightAssignment_1_1 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4826:1: ( ( rule__MultiplicativeExpression__RightAssignment_1_1 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4827:1: ( rule__MultiplicativeExpression__RightAssignment_1_1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4824:1: ( ( rule__MultiplicativeExpression__RightAssignment_1_1 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4825:1: ( rule__MultiplicativeExpression__RightAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicativeExpressionAccess().getRightAssignment_1_1()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4828:1: ( rule__MultiplicativeExpression__RightAssignment_1_1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4828:2: rule__MultiplicativeExpression__RightAssignment_1_1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4826:1: ( rule__MultiplicativeExpression__RightAssignment_1_1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4826:2: rule__MultiplicativeExpression__RightAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__MultiplicativeExpression__RightAssignment_1_1_in_rule__MultiplicativeExpression__Group_1__1__Impl9766);
+            pushFollow(FOLLOW_rule__MultiplicativeExpression__RightAssignment_1_1_in_rule__MultiplicativeExpression__Group_1__1__Impl9764);
             rule__MultiplicativeExpression__RightAssignment_1_1();
 
             state._fsp--;
@@ -14011,16 +14021,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MultiplicativeExpression__Group_1_0__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4842:1: rule__MultiplicativeExpression__Group_1_0__0 : rule__MultiplicativeExpression__Group_1_0__0__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4840:1: rule__MultiplicativeExpression__Group_1_0__0 : rule__MultiplicativeExpression__Group_1_0__0__Impl ;
     public final void rule__MultiplicativeExpression__Group_1_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4846:1: ( rule__MultiplicativeExpression__Group_1_0__0__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4847:2: rule__MultiplicativeExpression__Group_1_0__0__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4844:1: ( rule__MultiplicativeExpression__Group_1_0__0__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4845:2: rule__MultiplicativeExpression__Group_1_0__0__Impl
             {
-            pushFollow(FOLLOW_rule__MultiplicativeExpression__Group_1_0__0__Impl_in_rule__MultiplicativeExpression__Group_1_0__09800);
+            pushFollow(FOLLOW_rule__MultiplicativeExpression__Group_1_0__0__Impl_in_rule__MultiplicativeExpression__Group_1_0__09798);
             rule__MultiplicativeExpression__Group_1_0__0__Impl();
 
             state._fsp--;
@@ -14044,25 +14054,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MultiplicativeExpression__Group_1_0__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4853:1: rule__MultiplicativeExpression__Group_1_0__0__Impl : ( ( rule__MultiplicativeExpression__Group_1_0_0__0 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4851:1: rule__MultiplicativeExpression__Group_1_0__0__Impl : ( ( rule__MultiplicativeExpression__Group_1_0_0__0 ) ) ;
     public final void rule__MultiplicativeExpression__Group_1_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4857:1: ( ( ( rule__MultiplicativeExpression__Group_1_0_0__0 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4858:1: ( ( rule__MultiplicativeExpression__Group_1_0_0__0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4855:1: ( ( ( rule__MultiplicativeExpression__Group_1_0_0__0 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4856:1: ( ( rule__MultiplicativeExpression__Group_1_0_0__0 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4858:1: ( ( rule__MultiplicativeExpression__Group_1_0_0__0 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4859:1: ( rule__MultiplicativeExpression__Group_1_0_0__0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4856:1: ( ( rule__MultiplicativeExpression__Group_1_0_0__0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4857:1: ( rule__MultiplicativeExpression__Group_1_0_0__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicativeExpressionAccess().getGroup_1_0_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4860:1: ( rule__MultiplicativeExpression__Group_1_0_0__0 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4860:2: rule__MultiplicativeExpression__Group_1_0_0__0
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4858:1: ( rule__MultiplicativeExpression__Group_1_0_0__0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4858:2: rule__MultiplicativeExpression__Group_1_0_0__0
             {
-            pushFollow(FOLLOW_rule__MultiplicativeExpression__Group_1_0_0__0_in_rule__MultiplicativeExpression__Group_1_0__0__Impl9827);
+            pushFollow(FOLLOW_rule__MultiplicativeExpression__Group_1_0_0__0_in_rule__MultiplicativeExpression__Group_1_0__0__Impl9825);
             rule__MultiplicativeExpression__Group_1_0_0__0();
 
             state._fsp--;
@@ -14095,21 +14105,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MultiplicativeExpression__Group_1_0_0__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4872:1: rule__MultiplicativeExpression__Group_1_0_0__0 : rule__MultiplicativeExpression__Group_1_0_0__0__Impl rule__MultiplicativeExpression__Group_1_0_0__1 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4870:1: rule__MultiplicativeExpression__Group_1_0_0__0 : rule__MultiplicativeExpression__Group_1_0_0__0__Impl rule__MultiplicativeExpression__Group_1_0_0__1 ;
     public final void rule__MultiplicativeExpression__Group_1_0_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4876:1: ( rule__MultiplicativeExpression__Group_1_0_0__0__Impl rule__MultiplicativeExpression__Group_1_0_0__1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4877:2: rule__MultiplicativeExpression__Group_1_0_0__0__Impl rule__MultiplicativeExpression__Group_1_0_0__1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4874:1: ( rule__MultiplicativeExpression__Group_1_0_0__0__Impl rule__MultiplicativeExpression__Group_1_0_0__1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4875:2: rule__MultiplicativeExpression__Group_1_0_0__0__Impl rule__MultiplicativeExpression__Group_1_0_0__1
             {
-            pushFollow(FOLLOW_rule__MultiplicativeExpression__Group_1_0_0__0__Impl_in_rule__MultiplicativeExpression__Group_1_0_0__09859);
+            pushFollow(FOLLOW_rule__MultiplicativeExpression__Group_1_0_0__0__Impl_in_rule__MultiplicativeExpression__Group_1_0_0__09857);
             rule__MultiplicativeExpression__Group_1_0_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__MultiplicativeExpression__Group_1_0_0__1_in_rule__MultiplicativeExpression__Group_1_0_0__09862);
+            pushFollow(FOLLOW_rule__MultiplicativeExpression__Group_1_0_0__1_in_rule__MultiplicativeExpression__Group_1_0_0__09860);
             rule__MultiplicativeExpression__Group_1_0_0__1();
 
             state._fsp--;
@@ -14133,28 +14143,28 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MultiplicativeExpression__Group_1_0_0__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4884:1: rule__MultiplicativeExpression__Group_1_0_0__0__Impl : ( () ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4882:1: rule__MultiplicativeExpression__Group_1_0_0__0__Impl : ( () ) ;
     public final void rule__MultiplicativeExpression__Group_1_0_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4888:1: ( ( () ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4889:1: ( () )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4886:1: ( ( () ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4887:1: ( () )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4889:1: ( () )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4890:1: ()
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4887:1: ( () )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4888:1: ()
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getMultiplicativeExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0()); 
+               before(grammarAccess.getMultiplicativeExpressionAccess().getExpressionLeftAction_1_0_0_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4891:1: ()
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4893:1: 
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4889:1: ()
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4891:1: 
             {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getMultiplicativeExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0()); 
+               after(grammarAccess.getMultiplicativeExpressionAccess().getExpressionLeftAction_1_0_0_0()); 
             }
 
             }
@@ -14174,16 +14184,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MultiplicativeExpression__Group_1_0_0__1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4903:1: rule__MultiplicativeExpression__Group_1_0_0__1 : rule__MultiplicativeExpression__Group_1_0_0__1__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4901:1: rule__MultiplicativeExpression__Group_1_0_0__1 : rule__MultiplicativeExpression__Group_1_0_0__1__Impl ;
     public final void rule__MultiplicativeExpression__Group_1_0_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4907:1: ( rule__MultiplicativeExpression__Group_1_0_0__1__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4908:2: rule__MultiplicativeExpression__Group_1_0_0__1__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4905:1: ( rule__MultiplicativeExpression__Group_1_0_0__1__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4906:2: rule__MultiplicativeExpression__Group_1_0_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__MultiplicativeExpression__Group_1_0_0__1__Impl_in_rule__MultiplicativeExpression__Group_1_0_0__19920);
+            pushFollow(FOLLOW_rule__MultiplicativeExpression__Group_1_0_0__1__Impl_in_rule__MultiplicativeExpression__Group_1_0_0__19918);
             rule__MultiplicativeExpression__Group_1_0_0__1__Impl();
 
             state._fsp--;
@@ -14207,25 +14217,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MultiplicativeExpression__Group_1_0_0__1__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4914:1: rule__MultiplicativeExpression__Group_1_0_0__1__Impl : ( ( rule__MultiplicativeExpression__FeatureAssignment_1_0_0_1 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4912:1: rule__MultiplicativeExpression__Group_1_0_0__1__Impl : ( ( rule__MultiplicativeExpression__FeatureAssignment_1_0_0_1 ) ) ;
     public final void rule__MultiplicativeExpression__Group_1_0_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4918:1: ( ( ( rule__MultiplicativeExpression__FeatureAssignment_1_0_0_1 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4919:1: ( ( rule__MultiplicativeExpression__FeatureAssignment_1_0_0_1 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4916:1: ( ( ( rule__MultiplicativeExpression__FeatureAssignment_1_0_0_1 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4917:1: ( ( rule__MultiplicativeExpression__FeatureAssignment_1_0_0_1 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4919:1: ( ( rule__MultiplicativeExpression__FeatureAssignment_1_0_0_1 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4920:1: ( rule__MultiplicativeExpression__FeatureAssignment_1_0_0_1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4917:1: ( ( rule__MultiplicativeExpression__FeatureAssignment_1_0_0_1 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4918:1: ( rule__MultiplicativeExpression__FeatureAssignment_1_0_0_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicativeExpressionAccess().getFeatureAssignment_1_0_0_1()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4921:1: ( rule__MultiplicativeExpression__FeatureAssignment_1_0_0_1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4921:2: rule__MultiplicativeExpression__FeatureAssignment_1_0_0_1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4919:1: ( rule__MultiplicativeExpression__FeatureAssignment_1_0_0_1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4919:2: rule__MultiplicativeExpression__FeatureAssignment_1_0_0_1
             {
-            pushFollow(FOLLOW_rule__MultiplicativeExpression__FeatureAssignment_1_0_0_1_in_rule__MultiplicativeExpression__Group_1_0_0__1__Impl9947);
+            pushFollow(FOLLOW_rule__MultiplicativeExpression__FeatureAssignment_1_0_0_1_in_rule__MultiplicativeExpression__Group_1_0_0__1__Impl9945);
             rule__MultiplicativeExpression__FeatureAssignment_1_0_0_1();
 
             state._fsp--;
@@ -14258,21 +14268,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnaryOperation__Group_0__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4935:1: rule__UnaryOperation__Group_0__0 : rule__UnaryOperation__Group_0__0__Impl rule__UnaryOperation__Group_0__1 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4933:1: rule__UnaryOperation__Group_0__0 : rule__UnaryOperation__Group_0__0__Impl rule__UnaryOperation__Group_0__1 ;
     public final void rule__UnaryOperation__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4939:1: ( rule__UnaryOperation__Group_0__0__Impl rule__UnaryOperation__Group_0__1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4940:2: rule__UnaryOperation__Group_0__0__Impl rule__UnaryOperation__Group_0__1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4937:1: ( rule__UnaryOperation__Group_0__0__Impl rule__UnaryOperation__Group_0__1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4938:2: rule__UnaryOperation__Group_0__0__Impl rule__UnaryOperation__Group_0__1
             {
-            pushFollow(FOLLOW_rule__UnaryOperation__Group_0__0__Impl_in_rule__UnaryOperation__Group_0__09981);
+            pushFollow(FOLLOW_rule__UnaryOperation__Group_0__0__Impl_in_rule__UnaryOperation__Group_0__09979);
             rule__UnaryOperation__Group_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__UnaryOperation__Group_0__1_in_rule__UnaryOperation__Group_0__09984);
+            pushFollow(FOLLOW_rule__UnaryOperation__Group_0__1_in_rule__UnaryOperation__Group_0__09982);
             rule__UnaryOperation__Group_0__1();
 
             state._fsp--;
@@ -14296,28 +14306,28 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnaryOperation__Group_0__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4947:1: rule__UnaryOperation__Group_0__0__Impl : ( () ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4945:1: rule__UnaryOperation__Group_0__0__Impl : ( () ) ;
     public final void rule__UnaryOperation__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4951:1: ( ( () ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4952:1: ( () )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4949:1: ( ( () ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4950:1: ( () )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4952:1: ( () )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4953:1: ()
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4950:1: ( () )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4951:1: ()
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getUnaryOperationAccess().getUnaryExpressionAction_0_0()); 
+               before(grammarAccess.getUnaryOperationAccess().getExpressionAction_0_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4954:1: ()
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4956:1: 
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4952:1: ()
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4954:1: 
             {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getUnaryOperationAccess().getUnaryExpressionAction_0_0()); 
+               after(grammarAccess.getUnaryOperationAccess().getExpressionAction_0_0()); 
             }
 
             }
@@ -14337,21 +14347,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnaryOperation__Group_0__1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4966:1: rule__UnaryOperation__Group_0__1 : rule__UnaryOperation__Group_0__1__Impl rule__UnaryOperation__Group_0__2 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4964:1: rule__UnaryOperation__Group_0__1 : rule__UnaryOperation__Group_0__1__Impl rule__UnaryOperation__Group_0__2 ;
     public final void rule__UnaryOperation__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4970:1: ( rule__UnaryOperation__Group_0__1__Impl rule__UnaryOperation__Group_0__2 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4971:2: rule__UnaryOperation__Group_0__1__Impl rule__UnaryOperation__Group_0__2
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4968:1: ( rule__UnaryOperation__Group_0__1__Impl rule__UnaryOperation__Group_0__2 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4969:2: rule__UnaryOperation__Group_0__1__Impl rule__UnaryOperation__Group_0__2
             {
-            pushFollow(FOLLOW_rule__UnaryOperation__Group_0__1__Impl_in_rule__UnaryOperation__Group_0__110042);
+            pushFollow(FOLLOW_rule__UnaryOperation__Group_0__1__Impl_in_rule__UnaryOperation__Group_0__110040);
             rule__UnaryOperation__Group_0__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__UnaryOperation__Group_0__2_in_rule__UnaryOperation__Group_0__110045);
+            pushFollow(FOLLOW_rule__UnaryOperation__Group_0__2_in_rule__UnaryOperation__Group_0__110043);
             rule__UnaryOperation__Group_0__2();
 
             state._fsp--;
@@ -14375,25 +14385,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnaryOperation__Group_0__1__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4978:1: rule__UnaryOperation__Group_0__1__Impl : ( ( rule__UnaryOperation__FeatureAssignment_0_1 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4976:1: rule__UnaryOperation__Group_0__1__Impl : ( ( rule__UnaryOperation__FeatureAssignment_0_1 ) ) ;
     public final void rule__UnaryOperation__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4982:1: ( ( ( rule__UnaryOperation__FeatureAssignment_0_1 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4983:1: ( ( rule__UnaryOperation__FeatureAssignment_0_1 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4980:1: ( ( ( rule__UnaryOperation__FeatureAssignment_0_1 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4981:1: ( ( rule__UnaryOperation__FeatureAssignment_0_1 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4983:1: ( ( rule__UnaryOperation__FeatureAssignment_0_1 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4984:1: ( rule__UnaryOperation__FeatureAssignment_0_1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4981:1: ( ( rule__UnaryOperation__FeatureAssignment_0_1 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4982:1: ( rule__UnaryOperation__FeatureAssignment_0_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnaryOperationAccess().getFeatureAssignment_0_1()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4985:1: ( rule__UnaryOperation__FeatureAssignment_0_1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4985:2: rule__UnaryOperation__FeatureAssignment_0_1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4983:1: ( rule__UnaryOperation__FeatureAssignment_0_1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4983:2: rule__UnaryOperation__FeatureAssignment_0_1
             {
-            pushFollow(FOLLOW_rule__UnaryOperation__FeatureAssignment_0_1_in_rule__UnaryOperation__Group_0__1__Impl10072);
+            pushFollow(FOLLOW_rule__UnaryOperation__FeatureAssignment_0_1_in_rule__UnaryOperation__Group_0__1__Impl10070);
             rule__UnaryOperation__FeatureAssignment_0_1();
 
             state._fsp--;
@@ -14426,16 +14436,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnaryOperation__Group_0__2"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4995:1: rule__UnaryOperation__Group_0__2 : rule__UnaryOperation__Group_0__2__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4993:1: rule__UnaryOperation__Group_0__2 : rule__UnaryOperation__Group_0__2__Impl ;
     public final void rule__UnaryOperation__Group_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4999:1: ( rule__UnaryOperation__Group_0__2__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5000:2: rule__UnaryOperation__Group_0__2__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4997:1: ( rule__UnaryOperation__Group_0__2__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:4998:2: rule__UnaryOperation__Group_0__2__Impl
             {
-            pushFollow(FOLLOW_rule__UnaryOperation__Group_0__2__Impl_in_rule__UnaryOperation__Group_0__210102);
+            pushFollow(FOLLOW_rule__UnaryOperation__Group_0__2__Impl_in_rule__UnaryOperation__Group_0__210100);
             rule__UnaryOperation__Group_0__2__Impl();
 
             state._fsp--;
@@ -14459,25 +14469,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnaryOperation__Group_0__2__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5006:1: rule__UnaryOperation__Group_0__2__Impl : ( ( rule__UnaryOperation__OperandAssignment_0_2 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5004:1: rule__UnaryOperation__Group_0__2__Impl : ( ( rule__UnaryOperation__OperandAssignment_0_2 ) ) ;
     public final void rule__UnaryOperation__Group_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5010:1: ( ( ( rule__UnaryOperation__OperandAssignment_0_2 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5011:1: ( ( rule__UnaryOperation__OperandAssignment_0_2 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5008:1: ( ( ( rule__UnaryOperation__OperandAssignment_0_2 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5009:1: ( ( rule__UnaryOperation__OperandAssignment_0_2 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5011:1: ( ( rule__UnaryOperation__OperandAssignment_0_2 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5012:1: ( rule__UnaryOperation__OperandAssignment_0_2 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5009:1: ( ( rule__UnaryOperation__OperandAssignment_0_2 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5010:1: ( rule__UnaryOperation__OperandAssignment_0_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnaryOperationAccess().getOperandAssignment_0_2()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5013:1: ( rule__UnaryOperation__OperandAssignment_0_2 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5013:2: rule__UnaryOperation__OperandAssignment_0_2
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5011:1: ( rule__UnaryOperation__OperandAssignment_0_2 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5011:2: rule__UnaryOperation__OperandAssignment_0_2
             {
-            pushFollow(FOLLOW_rule__UnaryOperation__OperandAssignment_0_2_in_rule__UnaryOperation__Group_0__2__Impl10129);
+            pushFollow(FOLLOW_rule__UnaryOperation__OperandAssignment_0_2_in_rule__UnaryOperation__Group_0__2__Impl10127);
             rule__UnaryOperation__OperandAssignment_0_2();
 
             state._fsp--;
@@ -14510,21 +14520,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CastedExpression__Group__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5029:1: rule__CastedExpression__Group__0 : rule__CastedExpression__Group__0__Impl rule__CastedExpression__Group__1 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5027:1: rule__CastedExpression__Group__0 : rule__CastedExpression__Group__0__Impl rule__CastedExpression__Group__1 ;
     public final void rule__CastedExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5033:1: ( rule__CastedExpression__Group__0__Impl rule__CastedExpression__Group__1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5034:2: rule__CastedExpression__Group__0__Impl rule__CastedExpression__Group__1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5031:1: ( rule__CastedExpression__Group__0__Impl rule__CastedExpression__Group__1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5032:2: rule__CastedExpression__Group__0__Impl rule__CastedExpression__Group__1
             {
-            pushFollow(FOLLOW_rule__CastedExpression__Group__0__Impl_in_rule__CastedExpression__Group__010165);
+            pushFollow(FOLLOW_rule__CastedExpression__Group__0__Impl_in_rule__CastedExpression__Group__010163);
             rule__CastedExpression__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CastedExpression__Group__1_in_rule__CastedExpression__Group__010168);
+            pushFollow(FOLLOW_rule__CastedExpression__Group__1_in_rule__CastedExpression__Group__010166);
             rule__CastedExpression__Group__1();
 
             state._fsp--;
@@ -14548,22 +14558,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CastedExpression__Group__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5041:1: rule__CastedExpression__Group__0__Impl : ( rulePostfixOperation ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5039:1: rule__CastedExpression__Group__0__Impl : ( rulePostfixOperation ) ;
     public final void rule__CastedExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5045:1: ( ( rulePostfixOperation ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5046:1: ( rulePostfixOperation )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5043:1: ( ( rulePostfixOperation ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5044:1: ( rulePostfixOperation )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5046:1: ( rulePostfixOperation )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5047:1: rulePostfixOperation
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5044:1: ( rulePostfixOperation )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5045:1: rulePostfixOperation
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCastedExpressionAccess().getPostfixOperationParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_rulePostfixOperation_in_rule__CastedExpression__Group__0__Impl10195);
+            pushFollow(FOLLOW_rulePostfixOperation_in_rule__CastedExpression__Group__0__Impl10193);
             rulePostfixOperation();
 
             state._fsp--;
@@ -14593,16 +14603,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CastedExpression__Group__1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5058:1: rule__CastedExpression__Group__1 : rule__CastedExpression__Group__1__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5056:1: rule__CastedExpression__Group__1 : rule__CastedExpression__Group__1__Impl ;
     public final void rule__CastedExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5062:1: ( rule__CastedExpression__Group__1__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5063:2: rule__CastedExpression__Group__1__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5060:1: ( rule__CastedExpression__Group__1__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5061:2: rule__CastedExpression__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__CastedExpression__Group__1__Impl_in_rule__CastedExpression__Group__110224);
+            pushFollow(FOLLOW_rule__CastedExpression__Group__1__Impl_in_rule__CastedExpression__Group__110222);
             rule__CastedExpression__Group__1__Impl();
 
             state._fsp--;
@@ -14626,37 +14636,37 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CastedExpression__Group__1__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5069:1: rule__CastedExpression__Group__1__Impl : ( ( rule__CastedExpression__Group_1__0 )* ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5067:1: rule__CastedExpression__Group__1__Impl : ( ( rule__CastedExpression__Group_1__0 )* ) ;
     public final void rule__CastedExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5073:1: ( ( ( rule__CastedExpression__Group_1__0 )* ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5074:1: ( ( rule__CastedExpression__Group_1__0 )* )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5071:1: ( ( ( rule__CastedExpression__Group_1__0 )* ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5072:1: ( ( rule__CastedExpression__Group_1__0 )* )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5074:1: ( ( rule__CastedExpression__Group_1__0 )* )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5075:1: ( rule__CastedExpression__Group_1__0 )*
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5072:1: ( ( rule__CastedExpression__Group_1__0 )* )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5073:1: ( rule__CastedExpression__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCastedExpressionAccess().getGroup_1()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5076:1: ( rule__CastedExpression__Group_1__0 )*
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5074:1: ( rule__CastedExpression__Group_1__0 )*
             loop34:
             do {
                 int alt34=2;
                 int LA34_0 = input.LA(1);
 
-                if ( (LA34_0==50) ) {
+                if ( (LA34_0==54) ) {
                     alt34=1;
                 }
 
 
                 switch (alt34) {
             	case 1 :
-            	    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5076:2: rule__CastedExpression__Group_1__0
+            	    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5074:2: rule__CastedExpression__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__CastedExpression__Group_1__0_in_rule__CastedExpression__Group__1__Impl10251);
+            	    pushFollow(FOLLOW_rule__CastedExpression__Group_1__0_in_rule__CastedExpression__Group__1__Impl10249);
             	    rule__CastedExpression__Group_1__0();
 
             	    state._fsp--;
@@ -14695,21 +14705,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CastedExpression__Group_1__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5090:1: rule__CastedExpression__Group_1__0 : rule__CastedExpression__Group_1__0__Impl rule__CastedExpression__Group_1__1 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5088:1: rule__CastedExpression__Group_1__0 : rule__CastedExpression__Group_1__0__Impl rule__CastedExpression__Group_1__1 ;
     public final void rule__CastedExpression__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5094:1: ( rule__CastedExpression__Group_1__0__Impl rule__CastedExpression__Group_1__1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5095:2: rule__CastedExpression__Group_1__0__Impl rule__CastedExpression__Group_1__1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5092:1: ( rule__CastedExpression__Group_1__0__Impl rule__CastedExpression__Group_1__1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5093:2: rule__CastedExpression__Group_1__0__Impl rule__CastedExpression__Group_1__1
             {
-            pushFollow(FOLLOW_rule__CastedExpression__Group_1__0__Impl_in_rule__CastedExpression__Group_1__010286);
+            pushFollow(FOLLOW_rule__CastedExpression__Group_1__0__Impl_in_rule__CastedExpression__Group_1__010284);
             rule__CastedExpression__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CastedExpression__Group_1__1_in_rule__CastedExpression__Group_1__010289);
+            pushFollow(FOLLOW_rule__CastedExpression__Group_1__1_in_rule__CastedExpression__Group_1__010287);
             rule__CastedExpression__Group_1__1();
 
             state._fsp--;
@@ -14733,25 +14743,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CastedExpression__Group_1__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5102:1: rule__CastedExpression__Group_1__0__Impl : ( ( rule__CastedExpression__Group_1_0__0 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5100:1: rule__CastedExpression__Group_1__0__Impl : ( ( rule__CastedExpression__Group_1_0__0 ) ) ;
     public final void rule__CastedExpression__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5106:1: ( ( ( rule__CastedExpression__Group_1_0__0 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5107:1: ( ( rule__CastedExpression__Group_1_0__0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5104:1: ( ( ( rule__CastedExpression__Group_1_0__0 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5105:1: ( ( rule__CastedExpression__Group_1_0__0 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5107:1: ( ( rule__CastedExpression__Group_1_0__0 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5108:1: ( rule__CastedExpression__Group_1_0__0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5105:1: ( ( rule__CastedExpression__Group_1_0__0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5106:1: ( rule__CastedExpression__Group_1_0__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCastedExpressionAccess().getGroup_1_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5109:1: ( rule__CastedExpression__Group_1_0__0 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5109:2: rule__CastedExpression__Group_1_0__0
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5107:1: ( rule__CastedExpression__Group_1_0__0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5107:2: rule__CastedExpression__Group_1_0__0
             {
-            pushFollow(FOLLOW_rule__CastedExpression__Group_1_0__0_in_rule__CastedExpression__Group_1__0__Impl10316);
+            pushFollow(FOLLOW_rule__CastedExpression__Group_1_0__0_in_rule__CastedExpression__Group_1__0__Impl10314);
             rule__CastedExpression__Group_1_0__0();
 
             state._fsp--;
@@ -14784,16 +14794,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CastedExpression__Group_1__1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5119:1: rule__CastedExpression__Group_1__1 : rule__CastedExpression__Group_1__1__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5117:1: rule__CastedExpression__Group_1__1 : rule__CastedExpression__Group_1__1__Impl ;
     public final void rule__CastedExpression__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5123:1: ( rule__CastedExpression__Group_1__1__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5124:2: rule__CastedExpression__Group_1__1__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5121:1: ( rule__CastedExpression__Group_1__1__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5122:2: rule__CastedExpression__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__CastedExpression__Group_1__1__Impl_in_rule__CastedExpression__Group_1__110346);
+            pushFollow(FOLLOW_rule__CastedExpression__Group_1__1__Impl_in_rule__CastedExpression__Group_1__110344);
             rule__CastedExpression__Group_1__1__Impl();
 
             state._fsp--;
@@ -14817,25 +14827,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CastedExpression__Group_1__1__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5130:1: rule__CastedExpression__Group_1__1__Impl : ( ( rule__CastedExpression__TypeAssignment_1_1 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5128:1: rule__CastedExpression__Group_1__1__Impl : ( ( rule__CastedExpression__TypeAssignment_1_1 ) ) ;
     public final void rule__CastedExpression__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5134:1: ( ( ( rule__CastedExpression__TypeAssignment_1_1 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5135:1: ( ( rule__CastedExpression__TypeAssignment_1_1 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5132:1: ( ( ( rule__CastedExpression__TypeAssignment_1_1 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5133:1: ( ( rule__CastedExpression__TypeAssignment_1_1 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5135:1: ( ( rule__CastedExpression__TypeAssignment_1_1 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5136:1: ( rule__CastedExpression__TypeAssignment_1_1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5133:1: ( ( rule__CastedExpression__TypeAssignment_1_1 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5134:1: ( rule__CastedExpression__TypeAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCastedExpressionAccess().getTypeAssignment_1_1()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5137:1: ( rule__CastedExpression__TypeAssignment_1_1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5137:2: rule__CastedExpression__TypeAssignment_1_1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5135:1: ( rule__CastedExpression__TypeAssignment_1_1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5135:2: rule__CastedExpression__TypeAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__CastedExpression__TypeAssignment_1_1_in_rule__CastedExpression__Group_1__1__Impl10373);
+            pushFollow(FOLLOW_rule__CastedExpression__TypeAssignment_1_1_in_rule__CastedExpression__Group_1__1__Impl10371);
             rule__CastedExpression__TypeAssignment_1_1();
 
             state._fsp--;
@@ -14868,16 +14878,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CastedExpression__Group_1_0__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5151:1: rule__CastedExpression__Group_1_0__0 : rule__CastedExpression__Group_1_0__0__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5149:1: rule__CastedExpression__Group_1_0__0 : rule__CastedExpression__Group_1_0__0__Impl ;
     public final void rule__CastedExpression__Group_1_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5155:1: ( rule__CastedExpression__Group_1_0__0__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5156:2: rule__CastedExpression__Group_1_0__0__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5153:1: ( rule__CastedExpression__Group_1_0__0__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5154:2: rule__CastedExpression__Group_1_0__0__Impl
             {
-            pushFollow(FOLLOW_rule__CastedExpression__Group_1_0__0__Impl_in_rule__CastedExpression__Group_1_0__010407);
+            pushFollow(FOLLOW_rule__CastedExpression__Group_1_0__0__Impl_in_rule__CastedExpression__Group_1_0__010405);
             rule__CastedExpression__Group_1_0__0__Impl();
 
             state._fsp--;
@@ -14901,25 +14911,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CastedExpression__Group_1_0__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5162:1: rule__CastedExpression__Group_1_0__0__Impl : ( ( rule__CastedExpression__Group_1_0_0__0 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5160:1: rule__CastedExpression__Group_1_0__0__Impl : ( ( rule__CastedExpression__Group_1_0_0__0 ) ) ;
     public final void rule__CastedExpression__Group_1_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5166:1: ( ( ( rule__CastedExpression__Group_1_0_0__0 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5167:1: ( ( rule__CastedExpression__Group_1_0_0__0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5164:1: ( ( ( rule__CastedExpression__Group_1_0_0__0 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5165:1: ( ( rule__CastedExpression__Group_1_0_0__0 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5167:1: ( ( rule__CastedExpression__Group_1_0_0__0 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5168:1: ( rule__CastedExpression__Group_1_0_0__0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5165:1: ( ( rule__CastedExpression__Group_1_0_0__0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5166:1: ( rule__CastedExpression__Group_1_0_0__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCastedExpressionAccess().getGroup_1_0_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5169:1: ( rule__CastedExpression__Group_1_0_0__0 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5169:2: rule__CastedExpression__Group_1_0_0__0
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5167:1: ( rule__CastedExpression__Group_1_0_0__0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5167:2: rule__CastedExpression__Group_1_0_0__0
             {
-            pushFollow(FOLLOW_rule__CastedExpression__Group_1_0_0__0_in_rule__CastedExpression__Group_1_0__0__Impl10434);
+            pushFollow(FOLLOW_rule__CastedExpression__Group_1_0_0__0_in_rule__CastedExpression__Group_1_0__0__Impl10432);
             rule__CastedExpression__Group_1_0_0__0();
 
             state._fsp--;
@@ -14952,21 +14962,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CastedExpression__Group_1_0_0__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5181:1: rule__CastedExpression__Group_1_0_0__0 : rule__CastedExpression__Group_1_0_0__0__Impl rule__CastedExpression__Group_1_0_0__1 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5179:1: rule__CastedExpression__Group_1_0_0__0 : rule__CastedExpression__Group_1_0_0__0__Impl rule__CastedExpression__Group_1_0_0__1 ;
     public final void rule__CastedExpression__Group_1_0_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5185:1: ( rule__CastedExpression__Group_1_0_0__0__Impl rule__CastedExpression__Group_1_0_0__1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5186:2: rule__CastedExpression__Group_1_0_0__0__Impl rule__CastedExpression__Group_1_0_0__1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5183:1: ( rule__CastedExpression__Group_1_0_0__0__Impl rule__CastedExpression__Group_1_0_0__1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5184:2: rule__CastedExpression__Group_1_0_0__0__Impl rule__CastedExpression__Group_1_0_0__1
             {
-            pushFollow(FOLLOW_rule__CastedExpression__Group_1_0_0__0__Impl_in_rule__CastedExpression__Group_1_0_0__010466);
+            pushFollow(FOLLOW_rule__CastedExpression__Group_1_0_0__0__Impl_in_rule__CastedExpression__Group_1_0_0__010464);
             rule__CastedExpression__Group_1_0_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CastedExpression__Group_1_0_0__1_in_rule__CastedExpression__Group_1_0_0__010469);
+            pushFollow(FOLLOW_rule__CastedExpression__Group_1_0_0__1_in_rule__CastedExpression__Group_1_0_0__010467);
             rule__CastedExpression__Group_1_0_0__1();
 
             state._fsp--;
@@ -14990,28 +15000,28 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CastedExpression__Group_1_0_0__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5193:1: rule__CastedExpression__Group_1_0_0__0__Impl : ( () ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5191:1: rule__CastedExpression__Group_1_0_0__0__Impl : ( () ) ;
     public final void rule__CastedExpression__Group_1_0_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5197:1: ( ( () ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5198:1: ( () )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5195:1: ( ( () ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5196:1: ( () )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5198:1: ( () )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5199:1: ()
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5196:1: ( () )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5197:1: ()
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getCastedExpressionAccess().getCastedExpressionTargetAction_1_0_0_0()); 
+               before(grammarAccess.getCastedExpressionAccess().getExpressionTargetAction_1_0_0_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5200:1: ()
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5202:1: 
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5198:1: ()
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5200:1: 
             {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getCastedExpressionAccess().getCastedExpressionTargetAction_1_0_0_0()); 
+               after(grammarAccess.getCastedExpressionAccess().getExpressionTargetAction_1_0_0_0()); 
             }
 
             }
@@ -15031,16 +15041,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CastedExpression__Group_1_0_0__1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5212:1: rule__CastedExpression__Group_1_0_0__1 : rule__CastedExpression__Group_1_0_0__1__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5210:1: rule__CastedExpression__Group_1_0_0__1 : rule__CastedExpression__Group_1_0_0__1__Impl ;
     public final void rule__CastedExpression__Group_1_0_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5216:1: ( rule__CastedExpression__Group_1_0_0__1__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5217:2: rule__CastedExpression__Group_1_0_0__1__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5214:1: ( rule__CastedExpression__Group_1_0_0__1__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5215:2: rule__CastedExpression__Group_1_0_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__CastedExpression__Group_1_0_0__1__Impl_in_rule__CastedExpression__Group_1_0_0__110527);
+            pushFollow(FOLLOW_rule__CastedExpression__Group_1_0_0__1__Impl_in_rule__CastedExpression__Group_1_0_0__110525);
             rule__CastedExpression__Group_1_0_0__1__Impl();
 
             state._fsp--;
@@ -15064,24 +15074,34 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CastedExpression__Group_1_0_0__1__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5223:1: rule__CastedExpression__Group_1_0_0__1__Impl : ( 'as' ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5221:1: rule__CastedExpression__Group_1_0_0__1__Impl : ( ( rule__CastedExpression__FeatureAssignment_1_0_0_1 ) ) ;
     public final void rule__CastedExpression__Group_1_0_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5227:1: ( ( 'as' ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5228:1: ( 'as' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5225:1: ( ( ( rule__CastedExpression__FeatureAssignment_1_0_0_1 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5226:1: ( ( rule__CastedExpression__FeatureAssignment_1_0_0_1 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5228:1: ( 'as' )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5229:1: 'as'
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5226:1: ( ( rule__CastedExpression__FeatureAssignment_1_0_0_1 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5227:1: ( rule__CastedExpression__FeatureAssignment_1_0_0_1 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getCastedExpressionAccess().getAsKeyword_1_0_0_1()); 
+               before(grammarAccess.getCastedExpressionAccess().getFeatureAssignment_1_0_0_1()); 
             }
-            match(input,50,FOLLOW_50_in_rule__CastedExpression__Group_1_0_0__1__Impl10555); if (state.failed) return ;
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5228:1: ( rule__CastedExpression__FeatureAssignment_1_0_0_1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5228:2: rule__CastedExpression__FeatureAssignment_1_0_0_1
+            {
+            pushFollow(FOLLOW_rule__CastedExpression__FeatureAssignment_1_0_0_1_in_rule__CastedExpression__Group_1_0_0__1__Impl10552);
+            rule__CastedExpression__FeatureAssignment_1_0_0_1();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getCastedExpressionAccess().getAsKeyword_1_0_0_1()); 
+               after(grammarAccess.getCastedExpressionAccess().getFeatureAssignment_1_0_0_1()); 
             }
 
             }
@@ -15105,21 +15125,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PostfixOperation__Group__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5246:1: rule__PostfixOperation__Group__0 : rule__PostfixOperation__Group__0__Impl rule__PostfixOperation__Group__1 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5242:1: rule__PostfixOperation__Group__0 : rule__PostfixOperation__Group__0__Impl rule__PostfixOperation__Group__1 ;
     public final void rule__PostfixOperation__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5250:1: ( rule__PostfixOperation__Group__0__Impl rule__PostfixOperation__Group__1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5251:2: rule__PostfixOperation__Group__0__Impl rule__PostfixOperation__Group__1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5246:1: ( rule__PostfixOperation__Group__0__Impl rule__PostfixOperation__Group__1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5247:2: rule__PostfixOperation__Group__0__Impl rule__PostfixOperation__Group__1
             {
-            pushFollow(FOLLOW_rule__PostfixOperation__Group__0__Impl_in_rule__PostfixOperation__Group__010590);
+            pushFollow(FOLLOW_rule__PostfixOperation__Group__0__Impl_in_rule__PostfixOperation__Group__010586);
             rule__PostfixOperation__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__PostfixOperation__Group__1_in_rule__PostfixOperation__Group__010593);
+            pushFollow(FOLLOW_rule__PostfixOperation__Group__1_in_rule__PostfixOperation__Group__010589);
             rule__PostfixOperation__Group__1();
 
             state._fsp--;
@@ -15143,22 +15163,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PostfixOperation__Group__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5258:1: rule__PostfixOperation__Group__0__Impl : ( rulePrimaryExpression ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5254:1: rule__PostfixOperation__Group__0__Impl : ( rulePrimaryExpression ) ;
     public final void rule__PostfixOperation__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5262:1: ( ( rulePrimaryExpression ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5263:1: ( rulePrimaryExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5258:1: ( ( rulePrimaryExpression ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5259:1: ( rulePrimaryExpression )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5263:1: ( rulePrimaryExpression )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5264:1: rulePrimaryExpression
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5259:1: ( rulePrimaryExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5260:1: rulePrimaryExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPostfixOperationAccess().getPrimaryExpressionParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_rulePrimaryExpression_in_rule__PostfixOperation__Group__0__Impl10620);
+            pushFollow(FOLLOW_rulePrimaryExpression_in_rule__PostfixOperation__Group__0__Impl10616);
             rulePrimaryExpression();
 
             state._fsp--;
@@ -15188,16 +15208,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PostfixOperation__Group__1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5275:1: rule__PostfixOperation__Group__1 : rule__PostfixOperation__Group__1__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5271:1: rule__PostfixOperation__Group__1 : rule__PostfixOperation__Group__1__Impl ;
     public final void rule__PostfixOperation__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5279:1: ( rule__PostfixOperation__Group__1__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5280:2: rule__PostfixOperation__Group__1__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5275:1: ( rule__PostfixOperation__Group__1__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5276:2: rule__PostfixOperation__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__PostfixOperation__Group__1__Impl_in_rule__PostfixOperation__Group__110649);
+            pushFollow(FOLLOW_rule__PostfixOperation__Group__1__Impl_in_rule__PostfixOperation__Group__110645);
             rule__PostfixOperation__Group__1__Impl();
 
             state._fsp--;
@@ -15221,22 +15241,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PostfixOperation__Group__1__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5286:1: rule__PostfixOperation__Group__1__Impl : ( ( rule__PostfixOperation__Group_1__0 )? ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5282:1: rule__PostfixOperation__Group__1__Impl : ( ( rule__PostfixOperation__Group_1__0 )? ) ;
     public final void rule__PostfixOperation__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5290:1: ( ( ( rule__PostfixOperation__Group_1__0 )? ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5291:1: ( ( rule__PostfixOperation__Group_1__0 )? )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5286:1: ( ( ( rule__PostfixOperation__Group_1__0 )? ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5287:1: ( ( rule__PostfixOperation__Group_1__0 )? )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5291:1: ( ( rule__PostfixOperation__Group_1__0 )? )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5292:1: ( rule__PostfixOperation__Group_1__0 )?
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5287:1: ( ( rule__PostfixOperation__Group_1__0 )? )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5288:1: ( rule__PostfixOperation__Group_1__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPostfixOperationAccess().getGroup_1()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5293:1: ( rule__PostfixOperation__Group_1__0 )?
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5289:1: ( rule__PostfixOperation__Group_1__0 )?
             int alt35=2;
             int LA35_0 = input.LA(1);
 
@@ -15245,9 +15265,9 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
             }
             switch (alt35) {
                 case 1 :
-                    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5293:2: rule__PostfixOperation__Group_1__0
+                    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5289:2: rule__PostfixOperation__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__PostfixOperation__Group_1__0_in_rule__PostfixOperation__Group__1__Impl10676);
+                    pushFollow(FOLLOW_rule__PostfixOperation__Group_1__0_in_rule__PostfixOperation__Group__1__Impl10672);
                     rule__PostfixOperation__Group_1__0();
 
                     state._fsp--;
@@ -15283,16 +15303,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PostfixOperation__Group_1__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5307:1: rule__PostfixOperation__Group_1__0 : rule__PostfixOperation__Group_1__0__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5303:1: rule__PostfixOperation__Group_1__0 : rule__PostfixOperation__Group_1__0__Impl ;
     public final void rule__PostfixOperation__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5311:1: ( rule__PostfixOperation__Group_1__0__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5312:2: rule__PostfixOperation__Group_1__0__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5307:1: ( rule__PostfixOperation__Group_1__0__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5308:2: rule__PostfixOperation__Group_1__0__Impl
             {
-            pushFollow(FOLLOW_rule__PostfixOperation__Group_1__0__Impl_in_rule__PostfixOperation__Group_1__010711);
+            pushFollow(FOLLOW_rule__PostfixOperation__Group_1__0__Impl_in_rule__PostfixOperation__Group_1__010707);
             rule__PostfixOperation__Group_1__0__Impl();
 
             state._fsp--;
@@ -15316,25 +15336,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PostfixOperation__Group_1__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5318:1: rule__PostfixOperation__Group_1__0__Impl : ( ( rule__PostfixOperation__Group_1_0__0 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5314:1: rule__PostfixOperation__Group_1__0__Impl : ( ( rule__PostfixOperation__Group_1_0__0 ) ) ;
     public final void rule__PostfixOperation__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5322:1: ( ( ( rule__PostfixOperation__Group_1_0__0 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5323:1: ( ( rule__PostfixOperation__Group_1_0__0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5318:1: ( ( ( rule__PostfixOperation__Group_1_0__0 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5319:1: ( ( rule__PostfixOperation__Group_1_0__0 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5323:1: ( ( rule__PostfixOperation__Group_1_0__0 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5324:1: ( rule__PostfixOperation__Group_1_0__0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5319:1: ( ( rule__PostfixOperation__Group_1_0__0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5320:1: ( rule__PostfixOperation__Group_1_0__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPostfixOperationAccess().getGroup_1_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5325:1: ( rule__PostfixOperation__Group_1_0__0 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5325:2: rule__PostfixOperation__Group_1_0__0
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5321:1: ( rule__PostfixOperation__Group_1_0__0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5321:2: rule__PostfixOperation__Group_1_0__0
             {
-            pushFollow(FOLLOW_rule__PostfixOperation__Group_1_0__0_in_rule__PostfixOperation__Group_1__0__Impl10738);
+            pushFollow(FOLLOW_rule__PostfixOperation__Group_1_0__0_in_rule__PostfixOperation__Group_1__0__Impl10734);
             rule__PostfixOperation__Group_1_0__0();
 
             state._fsp--;
@@ -15367,21 +15387,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PostfixOperation__Group_1_0__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5337:1: rule__PostfixOperation__Group_1_0__0 : rule__PostfixOperation__Group_1_0__0__Impl rule__PostfixOperation__Group_1_0__1 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5333:1: rule__PostfixOperation__Group_1_0__0 : rule__PostfixOperation__Group_1_0__0__Impl rule__PostfixOperation__Group_1_0__1 ;
     public final void rule__PostfixOperation__Group_1_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5341:1: ( rule__PostfixOperation__Group_1_0__0__Impl rule__PostfixOperation__Group_1_0__1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5342:2: rule__PostfixOperation__Group_1_0__0__Impl rule__PostfixOperation__Group_1_0__1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5337:1: ( rule__PostfixOperation__Group_1_0__0__Impl rule__PostfixOperation__Group_1_0__1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5338:2: rule__PostfixOperation__Group_1_0__0__Impl rule__PostfixOperation__Group_1_0__1
             {
-            pushFollow(FOLLOW_rule__PostfixOperation__Group_1_0__0__Impl_in_rule__PostfixOperation__Group_1_0__010770);
+            pushFollow(FOLLOW_rule__PostfixOperation__Group_1_0__0__Impl_in_rule__PostfixOperation__Group_1_0__010766);
             rule__PostfixOperation__Group_1_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__PostfixOperation__Group_1_0__1_in_rule__PostfixOperation__Group_1_0__010773);
+            pushFollow(FOLLOW_rule__PostfixOperation__Group_1_0__1_in_rule__PostfixOperation__Group_1_0__010769);
             rule__PostfixOperation__Group_1_0__1();
 
             state._fsp--;
@@ -15405,28 +15425,28 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PostfixOperation__Group_1_0__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5349:1: rule__PostfixOperation__Group_1_0__0__Impl : ( () ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5345:1: rule__PostfixOperation__Group_1_0__0__Impl : ( () ) ;
     public final void rule__PostfixOperation__Group_1_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5353:1: ( ( () ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5354:1: ( () )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5349:1: ( ( () ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5350:1: ( () )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5354:1: ( () )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5355:1: ()
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5350:1: ( () )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5351:1: ()
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getPostfixOperationAccess().getPostfixOperationOperandAction_1_0_0()); 
+               before(grammarAccess.getPostfixOperationAccess().getExpressionOperandAction_1_0_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5356:1: ()
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5358:1: 
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5352:1: ()
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5354:1: 
             {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getPostfixOperationAccess().getPostfixOperationOperandAction_1_0_0()); 
+               after(grammarAccess.getPostfixOperationAccess().getExpressionOperandAction_1_0_0()); 
             }
 
             }
@@ -15446,16 +15466,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PostfixOperation__Group_1_0__1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5368:1: rule__PostfixOperation__Group_1_0__1 : rule__PostfixOperation__Group_1_0__1__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5364:1: rule__PostfixOperation__Group_1_0__1 : rule__PostfixOperation__Group_1_0__1__Impl ;
     public final void rule__PostfixOperation__Group_1_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5372:1: ( rule__PostfixOperation__Group_1_0__1__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5373:2: rule__PostfixOperation__Group_1_0__1__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5368:1: ( rule__PostfixOperation__Group_1_0__1__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5369:2: rule__PostfixOperation__Group_1_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__PostfixOperation__Group_1_0__1__Impl_in_rule__PostfixOperation__Group_1_0__110831);
+            pushFollow(FOLLOW_rule__PostfixOperation__Group_1_0__1__Impl_in_rule__PostfixOperation__Group_1_0__110827);
             rule__PostfixOperation__Group_1_0__1__Impl();
 
             state._fsp--;
@@ -15479,25 +15499,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PostfixOperation__Group_1_0__1__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5379:1: rule__PostfixOperation__Group_1_0__1__Impl : ( ( rule__PostfixOperation__FeatureAssignment_1_0_1 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5375:1: rule__PostfixOperation__Group_1_0__1__Impl : ( ( rule__PostfixOperation__FeatureAssignment_1_0_1 ) ) ;
     public final void rule__PostfixOperation__Group_1_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5383:1: ( ( ( rule__PostfixOperation__FeatureAssignment_1_0_1 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5384:1: ( ( rule__PostfixOperation__FeatureAssignment_1_0_1 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5379:1: ( ( ( rule__PostfixOperation__FeatureAssignment_1_0_1 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5380:1: ( ( rule__PostfixOperation__FeatureAssignment_1_0_1 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5384:1: ( ( rule__PostfixOperation__FeatureAssignment_1_0_1 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5385:1: ( rule__PostfixOperation__FeatureAssignment_1_0_1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5380:1: ( ( rule__PostfixOperation__FeatureAssignment_1_0_1 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5381:1: ( rule__PostfixOperation__FeatureAssignment_1_0_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPostfixOperationAccess().getFeatureAssignment_1_0_1()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5386:1: ( rule__PostfixOperation__FeatureAssignment_1_0_1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5386:2: rule__PostfixOperation__FeatureAssignment_1_0_1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5382:1: ( rule__PostfixOperation__FeatureAssignment_1_0_1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5382:2: rule__PostfixOperation__FeatureAssignment_1_0_1
             {
-            pushFollow(FOLLOW_rule__PostfixOperation__FeatureAssignment_1_0_1_in_rule__PostfixOperation__Group_1_0__1__Impl10858);
+            pushFollow(FOLLOW_rule__PostfixOperation__FeatureAssignment_1_0_1_in_rule__PostfixOperation__Group_1_0__1__Impl10854);
             rule__PostfixOperation__FeatureAssignment_1_0_1();
 
             state._fsp--;
@@ -15530,21 +15550,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__InstantiationExpression__Group__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5400:1: rule__InstantiationExpression__Group__0 : rule__InstantiationExpression__Group__0__Impl rule__InstantiationExpression__Group__1 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5396:1: rule__InstantiationExpression__Group__0 : rule__InstantiationExpression__Group__0__Impl rule__InstantiationExpression__Group__1 ;
     public final void rule__InstantiationExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5404:1: ( rule__InstantiationExpression__Group__0__Impl rule__InstantiationExpression__Group__1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5405:2: rule__InstantiationExpression__Group__0__Impl rule__InstantiationExpression__Group__1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5400:1: ( rule__InstantiationExpression__Group__0__Impl rule__InstantiationExpression__Group__1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5401:2: rule__InstantiationExpression__Group__0__Impl rule__InstantiationExpression__Group__1
             {
-            pushFollow(FOLLOW_rule__InstantiationExpression__Group__0__Impl_in_rule__InstantiationExpression__Group__010892);
+            pushFollow(FOLLOW_rule__InstantiationExpression__Group__0__Impl_in_rule__InstantiationExpression__Group__010888);
             rule__InstantiationExpression__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__InstantiationExpression__Group__1_in_rule__InstantiationExpression__Group__010895);
+            pushFollow(FOLLOW_rule__InstantiationExpression__Group__1_in_rule__InstantiationExpression__Group__010891);
             rule__InstantiationExpression__Group__1();
 
             state._fsp--;
@@ -15568,22 +15588,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__InstantiationExpression__Group__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5412:1: rule__InstantiationExpression__Group__0__Impl : ( 'new' ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5408:1: rule__InstantiationExpression__Group__0__Impl : ( 'new' ) ;
     public final void rule__InstantiationExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5416:1: ( ( 'new' ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5417:1: ( 'new' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5412:1: ( ( 'new' ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5413:1: ( 'new' )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5417:1: ( 'new' )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5418:1: 'new'
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5413:1: ( 'new' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5414:1: 'new'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInstantiationExpressionAccess().getNewKeyword_0()); 
             }
-            match(input,51,FOLLOW_51_in_rule__InstantiationExpression__Group__0__Impl10923); if (state.failed) return ;
+            match(input,49,FOLLOW_49_in_rule__InstantiationExpression__Group__0__Impl10919); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getInstantiationExpressionAccess().getNewKeyword_0()); 
             }
@@ -15609,21 +15629,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__InstantiationExpression__Group__1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5431:1: rule__InstantiationExpression__Group__1 : rule__InstantiationExpression__Group__1__Impl rule__InstantiationExpression__Group__2 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5427:1: rule__InstantiationExpression__Group__1 : rule__InstantiationExpression__Group__1__Impl rule__InstantiationExpression__Group__2 ;
     public final void rule__InstantiationExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5435:1: ( rule__InstantiationExpression__Group__1__Impl rule__InstantiationExpression__Group__2 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5436:2: rule__InstantiationExpression__Group__1__Impl rule__InstantiationExpression__Group__2
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5431:1: ( rule__InstantiationExpression__Group__1__Impl rule__InstantiationExpression__Group__2 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5432:2: rule__InstantiationExpression__Group__1__Impl rule__InstantiationExpression__Group__2
             {
-            pushFollow(FOLLOW_rule__InstantiationExpression__Group__1__Impl_in_rule__InstantiationExpression__Group__110954);
+            pushFollow(FOLLOW_rule__InstantiationExpression__Group__1__Impl_in_rule__InstantiationExpression__Group__110950);
             rule__InstantiationExpression__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__InstantiationExpression__Group__2_in_rule__InstantiationExpression__Group__110957);
+            pushFollow(FOLLOW_rule__InstantiationExpression__Group__2_in_rule__InstantiationExpression__Group__110953);
             rule__InstantiationExpression__Group__2();
 
             state._fsp--;
@@ -15647,25 +15667,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__InstantiationExpression__Group__1__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5443:1: rule__InstantiationExpression__Group__1__Impl : ( ( rule__InstantiationExpression__TypeAssignment_1 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5439:1: rule__InstantiationExpression__Group__1__Impl : ( ( rule__InstantiationExpression__TypeAssignment_1 ) ) ;
     public final void rule__InstantiationExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5447:1: ( ( ( rule__InstantiationExpression__TypeAssignment_1 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5448:1: ( ( rule__InstantiationExpression__TypeAssignment_1 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5443:1: ( ( ( rule__InstantiationExpression__TypeAssignment_1 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5444:1: ( ( rule__InstantiationExpression__TypeAssignment_1 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5448:1: ( ( rule__InstantiationExpression__TypeAssignment_1 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5449:1: ( rule__InstantiationExpression__TypeAssignment_1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5444:1: ( ( rule__InstantiationExpression__TypeAssignment_1 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5445:1: ( rule__InstantiationExpression__TypeAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInstantiationExpressionAccess().getTypeAssignment_1()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5450:1: ( rule__InstantiationExpression__TypeAssignment_1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5450:2: rule__InstantiationExpression__TypeAssignment_1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5446:1: ( rule__InstantiationExpression__TypeAssignment_1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5446:2: rule__InstantiationExpression__TypeAssignment_1
             {
-            pushFollow(FOLLOW_rule__InstantiationExpression__TypeAssignment_1_in_rule__InstantiationExpression__Group__1__Impl10984);
+            pushFollow(FOLLOW_rule__InstantiationExpression__TypeAssignment_1_in_rule__InstantiationExpression__Group__1__Impl10980);
             rule__InstantiationExpression__TypeAssignment_1();
 
             state._fsp--;
@@ -15698,21 +15718,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__InstantiationExpression__Group__2"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5460:1: rule__InstantiationExpression__Group__2 : rule__InstantiationExpression__Group__2__Impl rule__InstantiationExpression__Group__3 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5456:1: rule__InstantiationExpression__Group__2 : rule__InstantiationExpression__Group__2__Impl rule__InstantiationExpression__Group__3 ;
     public final void rule__InstantiationExpression__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5464:1: ( rule__InstantiationExpression__Group__2__Impl rule__InstantiationExpression__Group__3 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5465:2: rule__InstantiationExpression__Group__2__Impl rule__InstantiationExpression__Group__3
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5460:1: ( rule__InstantiationExpression__Group__2__Impl rule__InstantiationExpression__Group__3 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5461:2: rule__InstantiationExpression__Group__2__Impl rule__InstantiationExpression__Group__3
             {
-            pushFollow(FOLLOW_rule__InstantiationExpression__Group__2__Impl_in_rule__InstantiationExpression__Group__211014);
+            pushFollow(FOLLOW_rule__InstantiationExpression__Group__2__Impl_in_rule__InstantiationExpression__Group__211010);
             rule__InstantiationExpression__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__InstantiationExpression__Group__3_in_rule__InstantiationExpression__Group__211017);
+            pushFollow(FOLLOW_rule__InstantiationExpression__Group__3_in_rule__InstantiationExpression__Group__211013);
             rule__InstantiationExpression__Group__3();
 
             state._fsp--;
@@ -15736,22 +15756,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__InstantiationExpression__Group__2__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5472:1: rule__InstantiationExpression__Group__2__Impl : ( '(' ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5468:1: rule__InstantiationExpression__Group__2__Impl : ( '(' ) ;
     public final void rule__InstantiationExpression__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5476:1: ( ( '(' ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5477:1: ( '(' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5472:1: ( ( '(' ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5473:1: ( '(' )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5477:1: ( '(' )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5478:1: '('
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5473:1: ( '(' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5474:1: '('
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInstantiationExpressionAccess().getLeftParenthesisKeyword_2()); 
             }
-            match(input,41,FOLLOW_41_in_rule__InstantiationExpression__Group__2__Impl11045); if (state.failed) return ;
+            match(input,41,FOLLOW_41_in_rule__InstantiationExpression__Group__2__Impl11041); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getInstantiationExpressionAccess().getLeftParenthesisKeyword_2()); 
             }
@@ -15777,21 +15797,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__InstantiationExpression__Group__3"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5491:1: rule__InstantiationExpression__Group__3 : rule__InstantiationExpression__Group__3__Impl rule__InstantiationExpression__Group__4 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5487:1: rule__InstantiationExpression__Group__3 : rule__InstantiationExpression__Group__3__Impl rule__InstantiationExpression__Group__4 ;
     public final void rule__InstantiationExpression__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5495:1: ( rule__InstantiationExpression__Group__3__Impl rule__InstantiationExpression__Group__4 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5496:2: rule__InstantiationExpression__Group__3__Impl rule__InstantiationExpression__Group__4
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5491:1: ( rule__InstantiationExpression__Group__3__Impl rule__InstantiationExpression__Group__4 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5492:2: rule__InstantiationExpression__Group__3__Impl rule__InstantiationExpression__Group__4
             {
-            pushFollow(FOLLOW_rule__InstantiationExpression__Group__3__Impl_in_rule__InstantiationExpression__Group__311076);
+            pushFollow(FOLLOW_rule__InstantiationExpression__Group__3__Impl_in_rule__InstantiationExpression__Group__311072);
             rule__InstantiationExpression__Group__3__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__InstantiationExpression__Group__4_in_rule__InstantiationExpression__Group__311079);
+            pushFollow(FOLLOW_rule__InstantiationExpression__Group__4_in_rule__InstantiationExpression__Group__311075);
             rule__InstantiationExpression__Group__4();
 
             state._fsp--;
@@ -15815,25 +15835,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__InstantiationExpression__Group__3__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5503:1: rule__InstantiationExpression__Group__3__Impl : ( ( rule__InstantiationExpression__ParametersAssignment_3 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5499:1: rule__InstantiationExpression__Group__3__Impl : ( ( rule__InstantiationExpression__ParametersAssignment_3 ) ) ;
     public final void rule__InstantiationExpression__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5507:1: ( ( ( rule__InstantiationExpression__ParametersAssignment_3 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5508:1: ( ( rule__InstantiationExpression__ParametersAssignment_3 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5503:1: ( ( ( rule__InstantiationExpression__ParametersAssignment_3 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5504:1: ( ( rule__InstantiationExpression__ParametersAssignment_3 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5508:1: ( ( rule__InstantiationExpression__ParametersAssignment_3 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5509:1: ( rule__InstantiationExpression__ParametersAssignment_3 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5504:1: ( ( rule__InstantiationExpression__ParametersAssignment_3 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5505:1: ( rule__InstantiationExpression__ParametersAssignment_3 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInstantiationExpressionAccess().getParametersAssignment_3()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5510:1: ( rule__InstantiationExpression__ParametersAssignment_3 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5510:2: rule__InstantiationExpression__ParametersAssignment_3
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5506:1: ( rule__InstantiationExpression__ParametersAssignment_3 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5506:2: rule__InstantiationExpression__ParametersAssignment_3
             {
-            pushFollow(FOLLOW_rule__InstantiationExpression__ParametersAssignment_3_in_rule__InstantiationExpression__Group__3__Impl11106);
+            pushFollow(FOLLOW_rule__InstantiationExpression__ParametersAssignment_3_in_rule__InstantiationExpression__Group__3__Impl11102);
             rule__InstantiationExpression__ParametersAssignment_3();
 
             state._fsp--;
@@ -15866,16 +15886,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__InstantiationExpression__Group__4"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5520:1: rule__InstantiationExpression__Group__4 : rule__InstantiationExpression__Group__4__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5516:1: rule__InstantiationExpression__Group__4 : rule__InstantiationExpression__Group__4__Impl ;
     public final void rule__InstantiationExpression__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5524:1: ( rule__InstantiationExpression__Group__4__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5525:2: rule__InstantiationExpression__Group__4__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5520:1: ( rule__InstantiationExpression__Group__4__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5521:2: rule__InstantiationExpression__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__InstantiationExpression__Group__4__Impl_in_rule__InstantiationExpression__Group__411136);
+            pushFollow(FOLLOW_rule__InstantiationExpression__Group__4__Impl_in_rule__InstantiationExpression__Group__411132);
             rule__InstantiationExpression__Group__4__Impl();
 
             state._fsp--;
@@ -15899,22 +15919,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__InstantiationExpression__Group__4__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5531:1: rule__InstantiationExpression__Group__4__Impl : ( ')' ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5527:1: rule__InstantiationExpression__Group__4__Impl : ( ')' ) ;
     public final void rule__InstantiationExpression__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5535:1: ( ( ')' ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5536:1: ( ')' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5531:1: ( ( ')' ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5532:1: ( ')' )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5536:1: ( ')' )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5537:1: ')'
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5532:1: ( ')' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5533:1: ')'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInstantiationExpressionAccess().getRightParenthesisKeyword_4()); 
             }
-            match(input,42,FOLLOW_42_in_rule__InstantiationExpression__Group__4__Impl11164); if (state.failed) return ;
+            match(input,42,FOLLOW_42_in_rule__InstantiationExpression__Group__4__Impl11160); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getInstantiationExpressionAccess().getRightParenthesisKeyword_4()); 
             }
@@ -15940,21 +15960,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CollectionType__Group__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5560:1: rule__CollectionType__Group__0 : rule__CollectionType__Group__0__Impl rule__CollectionType__Group__1 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5556:1: rule__CollectionType__Group__0 : rule__CollectionType__Group__0__Impl rule__CollectionType__Group__1 ;
     public final void rule__CollectionType__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5564:1: ( rule__CollectionType__Group__0__Impl rule__CollectionType__Group__1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5565:2: rule__CollectionType__Group__0__Impl rule__CollectionType__Group__1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5560:1: ( rule__CollectionType__Group__0__Impl rule__CollectionType__Group__1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5561:2: rule__CollectionType__Group__0__Impl rule__CollectionType__Group__1
             {
-            pushFollow(FOLLOW_rule__CollectionType__Group__0__Impl_in_rule__CollectionType__Group__011205);
+            pushFollow(FOLLOW_rule__CollectionType__Group__0__Impl_in_rule__CollectionType__Group__011201);
             rule__CollectionType__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CollectionType__Group__1_in_rule__CollectionType__Group__011208);
+            pushFollow(FOLLOW_rule__CollectionType__Group__1_in_rule__CollectionType__Group__011204);
             rule__CollectionType__Group__1();
 
             state._fsp--;
@@ -15978,25 +15998,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CollectionType__Group__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5572:1: rule__CollectionType__Group__0__Impl : ( ( rule__CollectionType__ReferenceAssignment_0 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5568:1: rule__CollectionType__Group__0__Impl : ( ( rule__CollectionType__ReferenceAssignment_0 ) ) ;
     public final void rule__CollectionType__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5576:1: ( ( ( rule__CollectionType__ReferenceAssignment_0 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5577:1: ( ( rule__CollectionType__ReferenceAssignment_0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5572:1: ( ( ( rule__CollectionType__ReferenceAssignment_0 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5573:1: ( ( rule__CollectionType__ReferenceAssignment_0 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5577:1: ( ( rule__CollectionType__ReferenceAssignment_0 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5578:1: ( rule__CollectionType__ReferenceAssignment_0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5573:1: ( ( rule__CollectionType__ReferenceAssignment_0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5574:1: ( rule__CollectionType__ReferenceAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCollectionTypeAccess().getReferenceAssignment_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5579:1: ( rule__CollectionType__ReferenceAssignment_0 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5579:2: rule__CollectionType__ReferenceAssignment_0
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5575:1: ( rule__CollectionType__ReferenceAssignment_0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5575:2: rule__CollectionType__ReferenceAssignment_0
             {
-            pushFollow(FOLLOW_rule__CollectionType__ReferenceAssignment_0_in_rule__CollectionType__Group__0__Impl11235);
+            pushFollow(FOLLOW_rule__CollectionType__ReferenceAssignment_0_in_rule__CollectionType__Group__0__Impl11231);
             rule__CollectionType__ReferenceAssignment_0();
 
             state._fsp--;
@@ -16029,21 +16049,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CollectionType__Group__1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5589:1: rule__CollectionType__Group__1 : rule__CollectionType__Group__1__Impl rule__CollectionType__Group__2 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5585:1: rule__CollectionType__Group__1 : rule__CollectionType__Group__1__Impl rule__CollectionType__Group__2 ;
     public final void rule__CollectionType__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5593:1: ( rule__CollectionType__Group__1__Impl rule__CollectionType__Group__2 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5594:2: rule__CollectionType__Group__1__Impl rule__CollectionType__Group__2
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5589:1: ( rule__CollectionType__Group__1__Impl rule__CollectionType__Group__2 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5590:2: rule__CollectionType__Group__1__Impl rule__CollectionType__Group__2
             {
-            pushFollow(FOLLOW_rule__CollectionType__Group__1__Impl_in_rule__CollectionType__Group__111265);
+            pushFollow(FOLLOW_rule__CollectionType__Group__1__Impl_in_rule__CollectionType__Group__111261);
             rule__CollectionType__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CollectionType__Group__2_in_rule__CollectionType__Group__111268);
+            pushFollow(FOLLOW_rule__CollectionType__Group__2_in_rule__CollectionType__Group__111264);
             rule__CollectionType__Group__2();
 
             state._fsp--;
@@ -16067,22 +16087,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CollectionType__Group__1__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5601:1: rule__CollectionType__Group__1__Impl : ( '[' ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5597:1: rule__CollectionType__Group__1__Impl : ( '[' ) ;
     public final void rule__CollectionType__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5605:1: ( ( '[' ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5606:1: ( '[' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5601:1: ( ( '[' ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5602:1: ( '[' )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5606:1: ( '[' )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5607:1: '['
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5602:1: ( '[' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5603:1: '['
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCollectionTypeAccess().getLeftSquareBracketKeyword_1()); 
             }
-            match(input,46,FOLLOW_46_in_rule__CollectionType__Group__1__Impl11296); if (state.failed) return ;
+            match(input,46,FOLLOW_46_in_rule__CollectionType__Group__1__Impl11292); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCollectionTypeAccess().getLeftSquareBracketKeyword_1()); 
             }
@@ -16108,21 +16128,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CollectionType__Group__2"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5620:1: rule__CollectionType__Group__2 : rule__CollectionType__Group__2__Impl rule__CollectionType__Group__3 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5616:1: rule__CollectionType__Group__2 : rule__CollectionType__Group__2__Impl rule__CollectionType__Group__3 ;
     public final void rule__CollectionType__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5624:1: ( rule__CollectionType__Group__2__Impl rule__CollectionType__Group__3 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5625:2: rule__CollectionType__Group__2__Impl rule__CollectionType__Group__3
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5620:1: ( rule__CollectionType__Group__2__Impl rule__CollectionType__Group__3 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5621:2: rule__CollectionType__Group__2__Impl rule__CollectionType__Group__3
             {
-            pushFollow(FOLLOW_rule__CollectionType__Group__2__Impl_in_rule__CollectionType__Group__211327);
+            pushFollow(FOLLOW_rule__CollectionType__Group__2__Impl_in_rule__CollectionType__Group__211323);
             rule__CollectionType__Group__2__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__CollectionType__Group__3_in_rule__CollectionType__Group__211330);
+            pushFollow(FOLLOW_rule__CollectionType__Group__3_in_rule__CollectionType__Group__211326);
             rule__CollectionType__Group__3();
 
             state._fsp--;
@@ -16146,22 +16166,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CollectionType__Group__2__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5632:1: rule__CollectionType__Group__2__Impl : ( ( rule__CollectionType__SizeAssignment_2 )? ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5628:1: rule__CollectionType__Group__2__Impl : ( ( rule__CollectionType__SizeAssignment_2 )? ) ;
     public final void rule__CollectionType__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5636:1: ( ( ( rule__CollectionType__SizeAssignment_2 )? ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5637:1: ( ( rule__CollectionType__SizeAssignment_2 )? )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5632:1: ( ( ( rule__CollectionType__SizeAssignment_2 )? ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5633:1: ( ( rule__CollectionType__SizeAssignment_2 )? )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5637:1: ( ( rule__CollectionType__SizeAssignment_2 )? )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5638:1: ( rule__CollectionType__SizeAssignment_2 )?
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5633:1: ( ( rule__CollectionType__SizeAssignment_2 )? )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5634:1: ( rule__CollectionType__SizeAssignment_2 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCollectionTypeAccess().getSizeAssignment_2()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5639:1: ( rule__CollectionType__SizeAssignment_2 )?
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5635:1: ( rule__CollectionType__SizeAssignment_2 )?
             int alt36=2;
             int LA36_0 = input.LA(1);
 
@@ -16170,9 +16190,9 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
             }
             switch (alt36) {
                 case 1 :
-                    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5639:2: rule__CollectionType__SizeAssignment_2
+                    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5635:2: rule__CollectionType__SizeAssignment_2
                     {
-                    pushFollow(FOLLOW_rule__CollectionType__SizeAssignment_2_in_rule__CollectionType__Group__2__Impl11357);
+                    pushFollow(FOLLOW_rule__CollectionType__SizeAssignment_2_in_rule__CollectionType__Group__2__Impl11353);
                     rule__CollectionType__SizeAssignment_2();
 
                     state._fsp--;
@@ -16208,16 +16228,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CollectionType__Group__3"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5649:1: rule__CollectionType__Group__3 : rule__CollectionType__Group__3__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5645:1: rule__CollectionType__Group__3 : rule__CollectionType__Group__3__Impl ;
     public final void rule__CollectionType__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5653:1: ( rule__CollectionType__Group__3__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5654:2: rule__CollectionType__Group__3__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5649:1: ( rule__CollectionType__Group__3__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5650:2: rule__CollectionType__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__CollectionType__Group__3__Impl_in_rule__CollectionType__Group__311388);
+            pushFollow(FOLLOW_rule__CollectionType__Group__3__Impl_in_rule__CollectionType__Group__311384);
             rule__CollectionType__Group__3__Impl();
 
             state._fsp--;
@@ -16241,22 +16261,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CollectionType__Group__3__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5660:1: rule__CollectionType__Group__3__Impl : ( ']' ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5656:1: rule__CollectionType__Group__3__Impl : ( ']' ) ;
     public final void rule__CollectionType__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5664:1: ( ( ']' ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5665:1: ( ']' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5660:1: ( ( ']' ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5661:1: ( ']' )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5665:1: ( ']' )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5666:1: ']'
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5661:1: ( ']' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5662:1: ']'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCollectionTypeAccess().getRightSquareBracketKeyword_3()); 
             }
-            match(input,47,FOLLOW_47_in_rule__CollectionType__Group__3__Impl11416); if (state.failed) return ;
+            match(input,47,FOLLOW_47_in_rule__CollectionType__Group__3__Impl11412); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCollectionTypeAccess().getRightSquareBracketKeyword_3()); 
             }
@@ -16282,21 +16302,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MapType__Group__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5687:1: rule__MapType__Group__0 : rule__MapType__Group__0__Impl rule__MapType__Group__1 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5683:1: rule__MapType__Group__0 : rule__MapType__Group__0__Impl rule__MapType__Group__1 ;
     public final void rule__MapType__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5691:1: ( rule__MapType__Group__0__Impl rule__MapType__Group__1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5692:2: rule__MapType__Group__0__Impl rule__MapType__Group__1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5687:1: ( rule__MapType__Group__0__Impl rule__MapType__Group__1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5688:2: rule__MapType__Group__0__Impl rule__MapType__Group__1
             {
-            pushFollow(FOLLOW_rule__MapType__Group__0__Impl_in_rule__MapType__Group__011455);
+            pushFollow(FOLLOW_rule__MapType__Group__0__Impl_in_rule__MapType__Group__011451);
             rule__MapType__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__MapType__Group__1_in_rule__MapType__Group__011458);
+            pushFollow(FOLLOW_rule__MapType__Group__1_in_rule__MapType__Group__011454);
             rule__MapType__Group__1();
 
             state._fsp--;
@@ -16320,25 +16340,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MapType__Group__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5699:1: rule__MapType__Group__0__Impl : ( ( rule__MapType__ReferenceAssignment_0 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5695:1: rule__MapType__Group__0__Impl : ( ( rule__MapType__ReferenceAssignment_0 ) ) ;
     public final void rule__MapType__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5703:1: ( ( ( rule__MapType__ReferenceAssignment_0 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5704:1: ( ( rule__MapType__ReferenceAssignment_0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5699:1: ( ( ( rule__MapType__ReferenceAssignment_0 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5700:1: ( ( rule__MapType__ReferenceAssignment_0 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5704:1: ( ( rule__MapType__ReferenceAssignment_0 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5705:1: ( rule__MapType__ReferenceAssignment_0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5700:1: ( ( rule__MapType__ReferenceAssignment_0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5701:1: ( rule__MapType__ReferenceAssignment_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMapTypeAccess().getReferenceAssignment_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5706:1: ( rule__MapType__ReferenceAssignment_0 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5706:2: rule__MapType__ReferenceAssignment_0
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5702:1: ( rule__MapType__ReferenceAssignment_0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5702:2: rule__MapType__ReferenceAssignment_0
             {
-            pushFollow(FOLLOW_rule__MapType__ReferenceAssignment_0_in_rule__MapType__Group__0__Impl11485);
+            pushFollow(FOLLOW_rule__MapType__ReferenceAssignment_0_in_rule__MapType__Group__0__Impl11481);
             rule__MapType__ReferenceAssignment_0();
 
             state._fsp--;
@@ -16371,21 +16391,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MapType__Group__1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5716:1: rule__MapType__Group__1 : rule__MapType__Group__1__Impl rule__MapType__Group__2 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5712:1: rule__MapType__Group__1 : rule__MapType__Group__1__Impl rule__MapType__Group__2 ;
     public final void rule__MapType__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5720:1: ( rule__MapType__Group__1__Impl rule__MapType__Group__2 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5721:2: rule__MapType__Group__1__Impl rule__MapType__Group__2
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5716:1: ( rule__MapType__Group__1__Impl rule__MapType__Group__2 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5717:2: rule__MapType__Group__1__Impl rule__MapType__Group__2
             {
-            pushFollow(FOLLOW_rule__MapType__Group__1__Impl_in_rule__MapType__Group__111515);
+            pushFollow(FOLLOW_rule__MapType__Group__1__Impl_in_rule__MapType__Group__111511);
             rule__MapType__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__MapType__Group__2_in_rule__MapType__Group__111518);
+            pushFollow(FOLLOW_rule__MapType__Group__2_in_rule__MapType__Group__111514);
             rule__MapType__Group__2();
 
             state._fsp--;
@@ -16409,22 +16429,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MapType__Group__1__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5728:1: rule__MapType__Group__1__Impl : ( '<' ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5724:1: rule__MapType__Group__1__Impl : ( '<' ) ;
     public final void rule__MapType__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5732:1: ( ( '<' ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5733:1: ( '<' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5728:1: ( ( '<' ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5729:1: ( '<' )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5733:1: ( '<' )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5734:1: '<'
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5729:1: ( '<' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5730:1: '<'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMapTypeAccess().getLessThanSignKeyword_1()); 
             }
-            match(input,17,FOLLOW_17_in_rule__MapType__Group__1__Impl11546); if (state.failed) return ;
+            match(input,17,FOLLOW_17_in_rule__MapType__Group__1__Impl11542); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMapTypeAccess().getLessThanSignKeyword_1()); 
             }
@@ -16450,16 +16470,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MapType__Group__2"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5747:1: rule__MapType__Group__2 : rule__MapType__Group__2__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5743:1: rule__MapType__Group__2 : rule__MapType__Group__2__Impl ;
     public final void rule__MapType__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5751:1: ( rule__MapType__Group__2__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5752:2: rule__MapType__Group__2__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5747:1: ( rule__MapType__Group__2__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5748:2: rule__MapType__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__MapType__Group__2__Impl_in_rule__MapType__Group__211577);
+            pushFollow(FOLLOW_rule__MapType__Group__2__Impl_in_rule__MapType__Group__211573);
             rule__MapType__Group__2__Impl();
 
             state._fsp--;
@@ -16483,25 +16503,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MapType__Group__2__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5758:1: rule__MapType__Group__2__Impl : ( ( rule__MapType__Group_2__0 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5754:1: rule__MapType__Group__2__Impl : ( ( rule__MapType__Group_2__0 ) ) ;
     public final void rule__MapType__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5762:1: ( ( ( rule__MapType__Group_2__0 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5763:1: ( ( rule__MapType__Group_2__0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5758:1: ( ( ( rule__MapType__Group_2__0 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5759:1: ( ( rule__MapType__Group_2__0 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5763:1: ( ( rule__MapType__Group_2__0 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5764:1: ( rule__MapType__Group_2__0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5759:1: ( ( rule__MapType__Group_2__0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5760:1: ( rule__MapType__Group_2__0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMapTypeAccess().getGroup_2()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5765:1: ( rule__MapType__Group_2__0 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5765:2: rule__MapType__Group_2__0
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5761:1: ( rule__MapType__Group_2__0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5761:2: rule__MapType__Group_2__0
             {
-            pushFollow(FOLLOW_rule__MapType__Group_2__0_in_rule__MapType__Group__2__Impl11604);
+            pushFollow(FOLLOW_rule__MapType__Group_2__0_in_rule__MapType__Group__2__Impl11600);
             rule__MapType__Group_2__0();
 
             state._fsp--;
@@ -16534,21 +16554,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MapType__Group_2__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5781:1: rule__MapType__Group_2__0 : rule__MapType__Group_2__0__Impl rule__MapType__Group_2__1 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5777:1: rule__MapType__Group_2__0 : rule__MapType__Group_2__0__Impl rule__MapType__Group_2__1 ;
     public final void rule__MapType__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5785:1: ( rule__MapType__Group_2__0__Impl rule__MapType__Group_2__1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5786:2: rule__MapType__Group_2__0__Impl rule__MapType__Group_2__1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5781:1: ( rule__MapType__Group_2__0__Impl rule__MapType__Group_2__1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5782:2: rule__MapType__Group_2__0__Impl rule__MapType__Group_2__1
             {
-            pushFollow(FOLLOW_rule__MapType__Group_2__0__Impl_in_rule__MapType__Group_2__011640);
+            pushFollow(FOLLOW_rule__MapType__Group_2__0__Impl_in_rule__MapType__Group_2__011636);
             rule__MapType__Group_2__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__MapType__Group_2__1_in_rule__MapType__Group_2__011643);
+            pushFollow(FOLLOW_rule__MapType__Group_2__1_in_rule__MapType__Group_2__011639);
             rule__MapType__Group_2__1();
 
             state._fsp--;
@@ -16572,25 +16592,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MapType__Group_2__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5793:1: rule__MapType__Group_2__0__Impl : ( ( rule__MapType__KeyTypeAssignment_2_0 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5789:1: rule__MapType__Group_2__0__Impl : ( ( rule__MapType__KeyTypeAssignment_2_0 ) ) ;
     public final void rule__MapType__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5797:1: ( ( ( rule__MapType__KeyTypeAssignment_2_0 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5798:1: ( ( rule__MapType__KeyTypeAssignment_2_0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5793:1: ( ( ( rule__MapType__KeyTypeAssignment_2_0 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5794:1: ( ( rule__MapType__KeyTypeAssignment_2_0 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5798:1: ( ( rule__MapType__KeyTypeAssignment_2_0 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5799:1: ( rule__MapType__KeyTypeAssignment_2_0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5794:1: ( ( rule__MapType__KeyTypeAssignment_2_0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5795:1: ( rule__MapType__KeyTypeAssignment_2_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMapTypeAccess().getKeyTypeAssignment_2_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5800:1: ( rule__MapType__KeyTypeAssignment_2_0 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5800:2: rule__MapType__KeyTypeAssignment_2_0
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5796:1: ( rule__MapType__KeyTypeAssignment_2_0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5796:2: rule__MapType__KeyTypeAssignment_2_0
             {
-            pushFollow(FOLLOW_rule__MapType__KeyTypeAssignment_2_0_in_rule__MapType__Group_2__0__Impl11670);
+            pushFollow(FOLLOW_rule__MapType__KeyTypeAssignment_2_0_in_rule__MapType__Group_2__0__Impl11666);
             rule__MapType__KeyTypeAssignment_2_0();
 
             state._fsp--;
@@ -16623,16 +16643,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MapType__Group_2__1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5810:1: rule__MapType__Group_2__1 : rule__MapType__Group_2__1__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5806:1: rule__MapType__Group_2__1 : rule__MapType__Group_2__1__Impl ;
     public final void rule__MapType__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5814:1: ( rule__MapType__Group_2__1__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5815:2: rule__MapType__Group_2__1__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5810:1: ( rule__MapType__Group_2__1__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5811:2: rule__MapType__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__MapType__Group_2__1__Impl_in_rule__MapType__Group_2__111700);
+            pushFollow(FOLLOW_rule__MapType__Group_2__1__Impl_in_rule__MapType__Group_2__111696);
             rule__MapType__Group_2__1__Impl();
 
             state._fsp--;
@@ -16656,22 +16676,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MapType__Group_2__1__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5821:1: rule__MapType__Group_2__1__Impl : ( '>' ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5817:1: rule__MapType__Group_2__1__Impl : ( '>' ) ;
     public final void rule__MapType__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5825:1: ( ( '>' ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5826:1: ( '>' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5821:1: ( ( '>' ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5822:1: ( '>' )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5826:1: ( '>' )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5827:1: '>'
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5822:1: ( '>' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5823:1: '>'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMapTypeAccess().getGreaterThanSignKeyword_2_1()); 
             }
-            match(input,16,FOLLOW_16_in_rule__MapType__Group_2__1__Impl11728); if (state.failed) return ;
+            match(input,16,FOLLOW_16_in_rule__MapType__Group_2__1__Impl11724); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMapTypeAccess().getGreaterThanSignKeyword_2_1()); 
             }
@@ -16697,21 +16717,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__QualifiedName__Group__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5844:1: rule__QualifiedName__Group__0 : rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5840:1: rule__QualifiedName__Group__0 : rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 ;
     public final void rule__QualifiedName__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5848:1: ( rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5849:2: rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5844:1: ( rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5845:2: rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1
             {
-            pushFollow(FOLLOW_rule__QualifiedName__Group__0__Impl_in_rule__QualifiedName__Group__011763);
+            pushFollow(FOLLOW_rule__QualifiedName__Group__0__Impl_in_rule__QualifiedName__Group__011759);
             rule__QualifiedName__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__QualifiedName__Group__1_in_rule__QualifiedName__Group__011766);
+            pushFollow(FOLLOW_rule__QualifiedName__Group__1_in_rule__QualifiedName__Group__011762);
             rule__QualifiedName__Group__1();
 
             state._fsp--;
@@ -16735,22 +16755,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__QualifiedName__Group__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5856:1: rule__QualifiedName__Group__0__Impl : ( RULE_ID ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5852:1: rule__QualifiedName__Group__0__Impl : ( RULE_ID ) ;
     public final void rule__QualifiedName__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5860:1: ( ( RULE_ID ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5861:1: ( RULE_ID )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5856:1: ( ( RULE_ID ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5857:1: ( RULE_ID )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5861:1: ( RULE_ID )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5862:1: RULE_ID
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5857:1: ( RULE_ID )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5858:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__QualifiedName__Group__0__Impl11793); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__QualifiedName__Group__0__Impl11789); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0()); 
             }
@@ -16776,16 +16796,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__QualifiedName__Group__1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5873:1: rule__QualifiedName__Group__1 : rule__QualifiedName__Group__1__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5869:1: rule__QualifiedName__Group__1 : rule__QualifiedName__Group__1__Impl ;
     public final void rule__QualifiedName__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5877:1: ( rule__QualifiedName__Group__1__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5878:2: rule__QualifiedName__Group__1__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5873:1: ( rule__QualifiedName__Group__1__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5874:2: rule__QualifiedName__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__QualifiedName__Group__1__Impl_in_rule__QualifiedName__Group__111822);
+            pushFollow(FOLLOW_rule__QualifiedName__Group__1__Impl_in_rule__QualifiedName__Group__111818);
             rule__QualifiedName__Group__1__Impl();
 
             state._fsp--;
@@ -16809,22 +16829,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__QualifiedName__Group__1__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5884:1: rule__QualifiedName__Group__1__Impl : ( ( rule__QualifiedName__Group_1__0 )* ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5880:1: rule__QualifiedName__Group__1__Impl : ( ( rule__QualifiedName__Group_1__0 )* ) ;
     public final void rule__QualifiedName__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5888:1: ( ( ( rule__QualifiedName__Group_1__0 )* ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5889:1: ( ( rule__QualifiedName__Group_1__0 )* )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5884:1: ( ( ( rule__QualifiedName__Group_1__0 )* ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5885:1: ( ( rule__QualifiedName__Group_1__0 )* )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5889:1: ( ( rule__QualifiedName__Group_1__0 )* )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5890:1: ( rule__QualifiedName__Group_1__0 )*
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5885:1: ( ( rule__QualifiedName__Group_1__0 )* )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5886:1: ( rule__QualifiedName__Group_1__0 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getGroup_1()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5891:1: ( rule__QualifiedName__Group_1__0 )*
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5887:1: ( rule__QualifiedName__Group_1__0 )*
             loop37:
             do {
                 int alt37=2;
@@ -16843,9 +16863,9 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
                 switch (alt37) {
             	case 1 :
-            	    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5891:2: rule__QualifiedName__Group_1__0
+            	    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5887:2: rule__QualifiedName__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__QualifiedName__Group_1__0_in_rule__QualifiedName__Group__1__Impl11849);
+            	    pushFollow(FOLLOW_rule__QualifiedName__Group_1__0_in_rule__QualifiedName__Group__1__Impl11845);
             	    rule__QualifiedName__Group_1__0();
 
             	    state._fsp--;
@@ -16884,21 +16904,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5905:1: rule__QualifiedName__Group_1__0 : rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5901:1: rule__QualifiedName__Group_1__0 : rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 ;
     public final void rule__QualifiedName__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5909:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5910:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5905:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5906:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
             {
-            pushFollow(FOLLOW_rule__QualifiedName__Group_1__0__Impl_in_rule__QualifiedName__Group_1__011884);
+            pushFollow(FOLLOW_rule__QualifiedName__Group_1__0__Impl_in_rule__QualifiedName__Group_1__011880);
             rule__QualifiedName__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__QualifiedName__Group_1__1_in_rule__QualifiedName__Group_1__011887);
+            pushFollow(FOLLOW_rule__QualifiedName__Group_1__1_in_rule__QualifiedName__Group_1__011883);
             rule__QualifiedName__Group_1__1();
 
             state._fsp--;
@@ -16922,22 +16942,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5917:1: rule__QualifiedName__Group_1__0__Impl : ( '.' ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5913:1: rule__QualifiedName__Group_1__0__Impl : ( '.' ) ;
     public final void rule__QualifiedName__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5921:1: ( ( '.' ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5922:1: ( '.' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5917:1: ( ( '.' ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5918:1: ( '.' )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5922:1: ( '.' )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5923:1: '.'
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5918:1: ( '.' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5919:1: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
             }
-            match(input,48,FOLLOW_48_in_rule__QualifiedName__Group_1__0__Impl11915); if (state.failed) return ;
+            match(input,48,FOLLOW_48_in_rule__QualifiedName__Group_1__0__Impl11911); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
             }
@@ -16963,16 +16983,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5936:1: rule__QualifiedName__Group_1__1 : rule__QualifiedName__Group_1__1__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5932:1: rule__QualifiedName__Group_1__1 : rule__QualifiedName__Group_1__1__Impl ;
     public final void rule__QualifiedName__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5940:1: ( rule__QualifiedName__Group_1__1__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5941:2: rule__QualifiedName__Group_1__1__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5936:1: ( rule__QualifiedName__Group_1__1__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5937:2: rule__QualifiedName__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__QualifiedName__Group_1__1__Impl_in_rule__QualifiedName__Group_1__111946);
+            pushFollow(FOLLOW_rule__QualifiedName__Group_1__1__Impl_in_rule__QualifiedName__Group_1__111942);
             rule__QualifiedName__Group_1__1__Impl();
 
             state._fsp--;
@@ -16996,22 +17016,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__1__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5947:1: rule__QualifiedName__Group_1__1__Impl : ( RULE_ID ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5943:1: rule__QualifiedName__Group_1__1__Impl : ( RULE_ID ) ;
     public final void rule__QualifiedName__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5951:1: ( ( RULE_ID ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5952:1: ( RULE_ID )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5947:1: ( ( RULE_ID ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5948:1: ( RULE_ID )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5952:1: ( RULE_ID )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5953:1: RULE_ID
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5948:1: ( RULE_ID )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5949:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_1_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__QualifiedName__Group_1__1__Impl11973); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__QualifiedName__Group_1__1__Impl11969); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_1_1()); 
             }
@@ -17037,21 +17057,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__QualifiedNameWithWildcard__Group__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5968:1: rule__QualifiedNameWithWildcard__Group__0 : rule__QualifiedNameWithWildcard__Group__0__Impl rule__QualifiedNameWithWildcard__Group__1 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5964:1: rule__QualifiedNameWithWildcard__Group__0 : rule__QualifiedNameWithWildcard__Group__0__Impl rule__QualifiedNameWithWildcard__Group__1 ;
     public final void rule__QualifiedNameWithWildcard__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5972:1: ( rule__QualifiedNameWithWildcard__Group__0__Impl rule__QualifiedNameWithWildcard__Group__1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5973:2: rule__QualifiedNameWithWildcard__Group__0__Impl rule__QualifiedNameWithWildcard__Group__1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5968:1: ( rule__QualifiedNameWithWildcard__Group__0__Impl rule__QualifiedNameWithWildcard__Group__1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5969:2: rule__QualifiedNameWithWildcard__Group__0__Impl rule__QualifiedNameWithWildcard__Group__1
             {
-            pushFollow(FOLLOW_rule__QualifiedNameWithWildcard__Group__0__Impl_in_rule__QualifiedNameWithWildcard__Group__012006);
+            pushFollow(FOLLOW_rule__QualifiedNameWithWildcard__Group__0__Impl_in_rule__QualifiedNameWithWildcard__Group__012002);
             rule__QualifiedNameWithWildcard__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__QualifiedNameWithWildcard__Group__1_in_rule__QualifiedNameWithWildcard__Group__012009);
+            pushFollow(FOLLOW_rule__QualifiedNameWithWildcard__Group__1_in_rule__QualifiedNameWithWildcard__Group__012005);
             rule__QualifiedNameWithWildcard__Group__1();
 
             state._fsp--;
@@ -17075,22 +17095,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__QualifiedNameWithWildcard__Group__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5980:1: rule__QualifiedNameWithWildcard__Group__0__Impl : ( ruleQualifiedName ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5976:1: rule__QualifiedNameWithWildcard__Group__0__Impl : ( ruleQualifiedName ) ;
     public final void rule__QualifiedNameWithWildcard__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5984:1: ( ( ruleQualifiedName ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5985:1: ( ruleQualifiedName )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5980:1: ( ( ruleQualifiedName ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5981:1: ( ruleQualifiedName )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5985:1: ( ruleQualifiedName )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5986:1: ruleQualifiedName
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5981:1: ( ruleQualifiedName )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5982:1: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameWithWildcardAccess().getQualifiedNameParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleQualifiedName_in_rule__QualifiedNameWithWildcard__Group__0__Impl12036);
+            pushFollow(FOLLOW_ruleQualifiedName_in_rule__QualifiedNameWithWildcard__Group__0__Impl12032);
             ruleQualifiedName();
 
             state._fsp--;
@@ -17120,16 +17140,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__QualifiedNameWithWildcard__Group__1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5997:1: rule__QualifiedNameWithWildcard__Group__1 : rule__QualifiedNameWithWildcard__Group__1__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5993:1: rule__QualifiedNameWithWildcard__Group__1 : rule__QualifiedNameWithWildcard__Group__1__Impl ;
     public final void rule__QualifiedNameWithWildcard__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6001:1: ( rule__QualifiedNameWithWildcard__Group__1__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6002:2: rule__QualifiedNameWithWildcard__Group__1__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5997:1: ( rule__QualifiedNameWithWildcard__Group__1__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:5998:2: rule__QualifiedNameWithWildcard__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__QualifiedNameWithWildcard__Group__1__Impl_in_rule__QualifiedNameWithWildcard__Group__112065);
+            pushFollow(FOLLOW_rule__QualifiedNameWithWildcard__Group__1__Impl_in_rule__QualifiedNameWithWildcard__Group__112061);
             rule__QualifiedNameWithWildcard__Group__1__Impl();
 
             state._fsp--;
@@ -17153,22 +17173,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__QualifiedNameWithWildcard__Group__1__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6008:1: rule__QualifiedNameWithWildcard__Group__1__Impl : ( ( rule__QualifiedNameWithWildcard__Group_1__0 )? ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6004:1: rule__QualifiedNameWithWildcard__Group__1__Impl : ( ( rule__QualifiedNameWithWildcard__Group_1__0 )? ) ;
     public final void rule__QualifiedNameWithWildcard__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6012:1: ( ( ( rule__QualifiedNameWithWildcard__Group_1__0 )? ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6013:1: ( ( rule__QualifiedNameWithWildcard__Group_1__0 )? )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6008:1: ( ( ( rule__QualifiedNameWithWildcard__Group_1__0 )? ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6009:1: ( ( rule__QualifiedNameWithWildcard__Group_1__0 )? )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6013:1: ( ( rule__QualifiedNameWithWildcard__Group_1__0 )? )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6014:1: ( rule__QualifiedNameWithWildcard__Group_1__0 )?
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6009:1: ( ( rule__QualifiedNameWithWildcard__Group_1__0 )? )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6010:1: ( rule__QualifiedNameWithWildcard__Group_1__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameWithWildcardAccess().getGroup_1()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6015:1: ( rule__QualifiedNameWithWildcard__Group_1__0 )?
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6011:1: ( rule__QualifiedNameWithWildcard__Group_1__0 )?
             int alt38=2;
             int LA38_0 = input.LA(1);
 
@@ -17177,9 +17197,9 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
             }
             switch (alt38) {
                 case 1 :
-                    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6015:2: rule__QualifiedNameWithWildcard__Group_1__0
+                    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6011:2: rule__QualifiedNameWithWildcard__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__QualifiedNameWithWildcard__Group_1__0_in_rule__QualifiedNameWithWildcard__Group__1__Impl12092);
+                    pushFollow(FOLLOW_rule__QualifiedNameWithWildcard__Group_1__0_in_rule__QualifiedNameWithWildcard__Group__1__Impl12088);
                     rule__QualifiedNameWithWildcard__Group_1__0();
 
                     state._fsp--;
@@ -17215,21 +17235,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__QualifiedNameWithWildcard__Group_1__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6029:1: rule__QualifiedNameWithWildcard__Group_1__0 : rule__QualifiedNameWithWildcard__Group_1__0__Impl rule__QualifiedNameWithWildcard__Group_1__1 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6025:1: rule__QualifiedNameWithWildcard__Group_1__0 : rule__QualifiedNameWithWildcard__Group_1__0__Impl rule__QualifiedNameWithWildcard__Group_1__1 ;
     public final void rule__QualifiedNameWithWildcard__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6033:1: ( rule__QualifiedNameWithWildcard__Group_1__0__Impl rule__QualifiedNameWithWildcard__Group_1__1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6034:2: rule__QualifiedNameWithWildcard__Group_1__0__Impl rule__QualifiedNameWithWildcard__Group_1__1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6029:1: ( rule__QualifiedNameWithWildcard__Group_1__0__Impl rule__QualifiedNameWithWildcard__Group_1__1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6030:2: rule__QualifiedNameWithWildcard__Group_1__0__Impl rule__QualifiedNameWithWildcard__Group_1__1
             {
-            pushFollow(FOLLOW_rule__QualifiedNameWithWildcard__Group_1__0__Impl_in_rule__QualifiedNameWithWildcard__Group_1__012127);
+            pushFollow(FOLLOW_rule__QualifiedNameWithWildcard__Group_1__0__Impl_in_rule__QualifiedNameWithWildcard__Group_1__012123);
             rule__QualifiedNameWithWildcard__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__QualifiedNameWithWildcard__Group_1__1_in_rule__QualifiedNameWithWildcard__Group_1__012130);
+            pushFollow(FOLLOW_rule__QualifiedNameWithWildcard__Group_1__1_in_rule__QualifiedNameWithWildcard__Group_1__012126);
             rule__QualifiedNameWithWildcard__Group_1__1();
 
             state._fsp--;
@@ -17253,22 +17273,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__QualifiedNameWithWildcard__Group_1__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6041:1: rule__QualifiedNameWithWildcard__Group_1__0__Impl : ( '.' ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6037:1: rule__QualifiedNameWithWildcard__Group_1__0__Impl : ( '.' ) ;
     public final void rule__QualifiedNameWithWildcard__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6045:1: ( ( '.' ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6046:1: ( '.' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6041:1: ( ( '.' ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6042:1: ( '.' )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6046:1: ( '.' )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6047:1: '.'
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6042:1: ( '.' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6043:1: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameWithWildcardAccess().getFullStopKeyword_1_0()); 
             }
-            match(input,48,FOLLOW_48_in_rule__QualifiedNameWithWildcard__Group_1__0__Impl12158); if (state.failed) return ;
+            match(input,48,FOLLOW_48_in_rule__QualifiedNameWithWildcard__Group_1__0__Impl12154); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getQualifiedNameWithWildcardAccess().getFullStopKeyword_1_0()); 
             }
@@ -17294,16 +17314,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__QualifiedNameWithWildcard__Group_1__1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6060:1: rule__QualifiedNameWithWildcard__Group_1__1 : rule__QualifiedNameWithWildcard__Group_1__1__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6056:1: rule__QualifiedNameWithWildcard__Group_1__1 : rule__QualifiedNameWithWildcard__Group_1__1__Impl ;
     public final void rule__QualifiedNameWithWildcard__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6064:1: ( rule__QualifiedNameWithWildcard__Group_1__1__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6065:2: rule__QualifiedNameWithWildcard__Group_1__1__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6060:1: ( rule__QualifiedNameWithWildcard__Group_1__1__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6061:2: rule__QualifiedNameWithWildcard__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__QualifiedNameWithWildcard__Group_1__1__Impl_in_rule__QualifiedNameWithWildcard__Group_1__112189);
+            pushFollow(FOLLOW_rule__QualifiedNameWithWildcard__Group_1__1__Impl_in_rule__QualifiedNameWithWildcard__Group_1__112185);
             rule__QualifiedNameWithWildcard__Group_1__1__Impl();
 
             state._fsp--;
@@ -17327,22 +17347,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__QualifiedNameWithWildcard__Group_1__1__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6071:1: rule__QualifiedNameWithWildcard__Group_1__1__Impl : ( '*' ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6067:1: rule__QualifiedNameWithWildcard__Group_1__1__Impl : ( '*' ) ;
     public final void rule__QualifiedNameWithWildcard__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6075:1: ( ( '*' ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6076:1: ( '*' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6071:1: ( ( '*' ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6072:1: ( '*' )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6076:1: ( '*' )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6077:1: '*'
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6072:1: ( '*' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6073:1: '*'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getQualifiedNameWithWildcardAccess().getAsteriskKeyword_1_1()); 
             }
-            match(input,22,FOLLOW_22_in_rule__QualifiedNameWithWildcard__Group_1__1__Impl12217); if (state.failed) return ;
+            match(input,22,FOLLOW_22_in_rule__QualifiedNameWithWildcard__Group_1__1__Impl12213); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getQualifiedNameWithWildcardAccess().getAsteriskKeyword_1_1()); 
             }
@@ -17368,21 +17388,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NUMBER__Group_0__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6094:1: rule__NUMBER__Group_0__0 : rule__NUMBER__Group_0__0__Impl rule__NUMBER__Group_0__1 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6090:1: rule__NUMBER__Group_0__0 : rule__NUMBER__Group_0__0__Impl rule__NUMBER__Group_0__1 ;
     public final void rule__NUMBER__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6098:1: ( rule__NUMBER__Group_0__0__Impl rule__NUMBER__Group_0__1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6099:2: rule__NUMBER__Group_0__0__Impl rule__NUMBER__Group_0__1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6094:1: ( rule__NUMBER__Group_0__0__Impl rule__NUMBER__Group_0__1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6095:2: rule__NUMBER__Group_0__0__Impl rule__NUMBER__Group_0__1
             {
-            pushFollow(FOLLOW_rule__NUMBER__Group_0__0__Impl_in_rule__NUMBER__Group_0__012252);
+            pushFollow(FOLLOW_rule__NUMBER__Group_0__0__Impl_in_rule__NUMBER__Group_0__012248);
             rule__NUMBER__Group_0__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__NUMBER__Group_0__1_in_rule__NUMBER__Group_0__012255);
+            pushFollow(FOLLOW_rule__NUMBER__Group_0__1_in_rule__NUMBER__Group_0__012251);
             rule__NUMBER__Group_0__1();
 
             state._fsp--;
@@ -17406,22 +17426,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NUMBER__Group_0__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6106:1: rule__NUMBER__Group_0__0__Impl : ( ( rule__NUMBER__Alternatives_0_0 )? ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6102:1: rule__NUMBER__Group_0__0__Impl : ( ( rule__NUMBER__Alternatives_0_0 )? ) ;
     public final void rule__NUMBER__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6110:1: ( ( ( rule__NUMBER__Alternatives_0_0 )? ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6111:1: ( ( rule__NUMBER__Alternatives_0_0 )? )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6106:1: ( ( ( rule__NUMBER__Alternatives_0_0 )? ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6107:1: ( ( rule__NUMBER__Alternatives_0_0 )? )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6111:1: ( ( rule__NUMBER__Alternatives_0_0 )? )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6112:1: ( rule__NUMBER__Alternatives_0_0 )?
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6107:1: ( ( rule__NUMBER__Alternatives_0_0 )? )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6108:1: ( rule__NUMBER__Alternatives_0_0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNUMBERAccess().getAlternatives_0_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6113:1: ( rule__NUMBER__Alternatives_0_0 )?
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6109:1: ( rule__NUMBER__Alternatives_0_0 )?
             int alt39=2;
             int LA39_0 = input.LA(1);
 
@@ -17430,9 +17450,9 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
             }
             switch (alt39) {
                 case 1 :
-                    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6113:2: rule__NUMBER__Alternatives_0_0
+                    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6109:2: rule__NUMBER__Alternatives_0_0
                     {
-                    pushFollow(FOLLOW_rule__NUMBER__Alternatives_0_0_in_rule__NUMBER__Group_0__0__Impl12282);
+                    pushFollow(FOLLOW_rule__NUMBER__Alternatives_0_0_in_rule__NUMBER__Group_0__0__Impl12278);
                     rule__NUMBER__Alternatives_0_0();
 
                     state._fsp--;
@@ -17468,16 +17488,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NUMBER__Group_0__1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6123:1: rule__NUMBER__Group_0__1 : rule__NUMBER__Group_0__1__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6119:1: rule__NUMBER__Group_0__1 : rule__NUMBER__Group_0__1__Impl ;
     public final void rule__NUMBER__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6127:1: ( rule__NUMBER__Group_0__1__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6128:2: rule__NUMBER__Group_0__1__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6123:1: ( rule__NUMBER__Group_0__1__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6124:2: rule__NUMBER__Group_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__NUMBER__Group_0__1__Impl_in_rule__NUMBER__Group_0__112313);
+            pushFollow(FOLLOW_rule__NUMBER__Group_0__1__Impl_in_rule__NUMBER__Group_0__112309);
             rule__NUMBER__Group_0__1__Impl();
 
             state._fsp--;
@@ -17501,22 +17521,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NUMBER__Group_0__1__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6134:1: rule__NUMBER__Group_0__1__Impl : ( RULE_INT ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6130:1: rule__NUMBER__Group_0__1__Impl : ( RULE_INT ) ;
     public final void rule__NUMBER__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6138:1: ( ( RULE_INT ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6139:1: ( RULE_INT )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6134:1: ( ( RULE_INT ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6135:1: ( RULE_INT )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6139:1: ( RULE_INT )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6140:1: RULE_INT
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6135:1: ( RULE_INT )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6136:1: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNUMBERAccess().getINTTerminalRuleCall_0_1()); 
             }
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__NUMBER__Group_0__1__Impl12340); if (state.failed) return ;
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__NUMBER__Group_0__1__Impl12336); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNUMBERAccess().getINTTerminalRuleCall_0_1()); 
             }
@@ -17542,21 +17562,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NUMBER__Group_1__0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6155:1: rule__NUMBER__Group_1__0 : rule__NUMBER__Group_1__0__Impl rule__NUMBER__Group_1__1 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6151:1: rule__NUMBER__Group_1__0 : rule__NUMBER__Group_1__0__Impl rule__NUMBER__Group_1__1 ;
     public final void rule__NUMBER__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6159:1: ( rule__NUMBER__Group_1__0__Impl rule__NUMBER__Group_1__1 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6160:2: rule__NUMBER__Group_1__0__Impl rule__NUMBER__Group_1__1
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6155:1: ( rule__NUMBER__Group_1__0__Impl rule__NUMBER__Group_1__1 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6156:2: rule__NUMBER__Group_1__0__Impl rule__NUMBER__Group_1__1
             {
-            pushFollow(FOLLOW_rule__NUMBER__Group_1__0__Impl_in_rule__NUMBER__Group_1__012373);
+            pushFollow(FOLLOW_rule__NUMBER__Group_1__0__Impl_in_rule__NUMBER__Group_1__012369);
             rule__NUMBER__Group_1__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__NUMBER__Group_1__1_in_rule__NUMBER__Group_1__012376);
+            pushFollow(FOLLOW_rule__NUMBER__Group_1__1_in_rule__NUMBER__Group_1__012372);
             rule__NUMBER__Group_1__1();
 
             state._fsp--;
@@ -17580,22 +17600,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NUMBER__Group_1__0__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6167:1: rule__NUMBER__Group_1__0__Impl : ( RULE_INT ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6163:1: rule__NUMBER__Group_1__0__Impl : ( RULE_INT ) ;
     public final void rule__NUMBER__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6171:1: ( ( RULE_INT ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6172:1: ( RULE_INT )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6167:1: ( ( RULE_INT ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6168:1: ( RULE_INT )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6172:1: ( RULE_INT )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6173:1: RULE_INT
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6168:1: ( RULE_INT )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6169:1: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNUMBERAccess().getINTTerminalRuleCall_1_0()); 
             }
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__NUMBER__Group_1__0__Impl12403); if (state.failed) return ;
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__NUMBER__Group_1__0__Impl12399); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNUMBERAccess().getINTTerminalRuleCall_1_0()); 
             }
@@ -17621,21 +17641,21 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NUMBER__Group_1__1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6184:1: rule__NUMBER__Group_1__1 : rule__NUMBER__Group_1__1__Impl rule__NUMBER__Group_1__2 ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6180:1: rule__NUMBER__Group_1__1 : rule__NUMBER__Group_1__1__Impl rule__NUMBER__Group_1__2 ;
     public final void rule__NUMBER__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6188:1: ( rule__NUMBER__Group_1__1__Impl rule__NUMBER__Group_1__2 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6189:2: rule__NUMBER__Group_1__1__Impl rule__NUMBER__Group_1__2
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6184:1: ( rule__NUMBER__Group_1__1__Impl rule__NUMBER__Group_1__2 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6185:2: rule__NUMBER__Group_1__1__Impl rule__NUMBER__Group_1__2
             {
-            pushFollow(FOLLOW_rule__NUMBER__Group_1__1__Impl_in_rule__NUMBER__Group_1__112432);
+            pushFollow(FOLLOW_rule__NUMBER__Group_1__1__Impl_in_rule__NUMBER__Group_1__112428);
             rule__NUMBER__Group_1__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__NUMBER__Group_1__2_in_rule__NUMBER__Group_1__112435);
+            pushFollow(FOLLOW_rule__NUMBER__Group_1__2_in_rule__NUMBER__Group_1__112431);
             rule__NUMBER__Group_1__2();
 
             state._fsp--;
@@ -17659,22 +17679,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NUMBER__Group_1__1__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6196:1: rule__NUMBER__Group_1__1__Impl : ( '.' ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6192:1: rule__NUMBER__Group_1__1__Impl : ( '.' ) ;
     public final void rule__NUMBER__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6200:1: ( ( '.' ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6201:1: ( '.' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6196:1: ( ( '.' ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6197:1: ( '.' )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6201:1: ( '.' )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6202:1: '.'
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6197:1: ( '.' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6198:1: '.'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNUMBERAccess().getFullStopKeyword_1_1()); 
             }
-            match(input,48,FOLLOW_48_in_rule__NUMBER__Group_1__1__Impl12463); if (state.failed) return ;
+            match(input,48,FOLLOW_48_in_rule__NUMBER__Group_1__1__Impl12459); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNUMBERAccess().getFullStopKeyword_1_1()); 
             }
@@ -17700,16 +17720,16 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NUMBER__Group_1__2"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6215:1: rule__NUMBER__Group_1__2 : rule__NUMBER__Group_1__2__Impl ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6211:1: rule__NUMBER__Group_1__2 : rule__NUMBER__Group_1__2__Impl ;
     public final void rule__NUMBER__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6219:1: ( rule__NUMBER__Group_1__2__Impl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6220:2: rule__NUMBER__Group_1__2__Impl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6215:1: ( rule__NUMBER__Group_1__2__Impl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6216:2: rule__NUMBER__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__NUMBER__Group_1__2__Impl_in_rule__NUMBER__Group_1__212494);
+            pushFollow(FOLLOW_rule__NUMBER__Group_1__2__Impl_in_rule__NUMBER__Group_1__212490);
             rule__NUMBER__Group_1__2__Impl();
 
             state._fsp--;
@@ -17733,22 +17753,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NUMBER__Group_1__2__Impl"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6226:1: rule__NUMBER__Group_1__2__Impl : ( RULE_INT ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6222:1: rule__NUMBER__Group_1__2__Impl : ( RULE_INT ) ;
     public final void rule__NUMBER__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6230:1: ( ( RULE_INT ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6231:1: ( RULE_INT )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6226:1: ( ( RULE_INT ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6227:1: ( RULE_INT )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6231:1: ( RULE_INT )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6232:1: RULE_INT
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6227:1: ( RULE_INT )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6228:1: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNUMBERAccess().getINTTerminalRuleCall_1_2()); 
             }
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__NUMBER__Group_1__2__Impl12521); if (state.failed) return ;
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__NUMBER__Group_1__2__Impl12517); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getNUMBERAccess().getINTTerminalRuleCall_1_2()); 
             }
@@ -17774,22 +17794,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BehaviorModel__NameAssignment_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6250:1: rule__BehaviorModel__NameAssignment_1 : ( ruleQualifiedName ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6246:1: rule__BehaviorModel__NameAssignment_1 : ( ruleQualifiedName ) ;
     public final void rule__BehaviorModel__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6254:1: ( ( ruleQualifiedName ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6255:1: ( ruleQualifiedName )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6250:1: ( ( ruleQualifiedName ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6251:1: ( ruleQualifiedName )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6255:1: ( ruleQualifiedName )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6256:1: ruleQualifiedName
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6251:1: ( ruleQualifiedName )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6252:1: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBehaviorModelAccess().getNameQualifiedNameParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleQualifiedName_in_rule__BehaviorModel__NameAssignment_112561);
+            pushFollow(FOLLOW_ruleQualifiedName_in_rule__BehaviorModel__NameAssignment_112557);
             ruleQualifiedName();
 
             state._fsp--;
@@ -17819,22 +17839,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BehaviorModel__ImportsAssignment_2_0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6265:1: rule__BehaviorModel__ImportsAssignment_2_0 : ( ruleImport ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6261:1: rule__BehaviorModel__ImportsAssignment_2_0 : ( ruleImport ) ;
     public final void rule__BehaviorModel__ImportsAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6269:1: ( ( ruleImport ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6270:1: ( ruleImport )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6265:1: ( ( ruleImport ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6266:1: ( ruleImport )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6270:1: ( ruleImport )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6271:1: ruleImport
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6266:1: ( ruleImport )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6267:1: ruleImport
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBehaviorModelAccess().getImportsImportParserRuleCall_2_0_0()); 
             }
-            pushFollow(FOLLOW_ruleImport_in_rule__BehaviorModel__ImportsAssignment_2_012592);
+            pushFollow(FOLLOW_ruleImport_in_rule__BehaviorModel__ImportsAssignment_2_012588);
             ruleImport();
 
             state._fsp--;
@@ -17864,22 +17884,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BehaviorModel__RepositoriesAssignment_2_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6280:1: rule__BehaviorModel__RepositoriesAssignment_2_1 : ( ruleRepositoryReference ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6276:1: rule__BehaviorModel__RepositoriesAssignment_2_1 : ( ruleRepositoryReference ) ;
     public final void rule__BehaviorModel__RepositoriesAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6284:1: ( ( ruleRepositoryReference ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6285:1: ( ruleRepositoryReference )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6280:1: ( ( ruleRepositoryReference ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6281:1: ( ruleRepositoryReference )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6285:1: ( ruleRepositoryReference )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6286:1: ruleRepositoryReference
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6281:1: ( ruleRepositoryReference )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6282:1: ruleRepositoryReference
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBehaviorModelAccess().getRepositoriesRepositoryReferenceParserRuleCall_2_1_0()); 
             }
-            pushFollow(FOLLOW_ruleRepositoryReference_in_rule__BehaviorModel__RepositoriesAssignment_2_112623);
+            pushFollow(FOLLOW_ruleRepositoryReference_in_rule__BehaviorModel__RepositoriesAssignment_2_112619);
             ruleRepositoryReference();
 
             state._fsp--;
@@ -17909,22 +17929,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BehaviorModel__ComponentImplAssignment_3"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6295:1: rule__BehaviorModel__ComponentImplAssignment_3 : ( ruleComponentImpl ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6291:1: rule__BehaviorModel__ComponentImplAssignment_3 : ( ruleComponentImpl ) ;
     public final void rule__BehaviorModel__ComponentImplAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6299:1: ( ( ruleComponentImpl ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6300:1: ( ruleComponentImpl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6295:1: ( ( ruleComponentImpl ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6296:1: ( ruleComponentImpl )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6300:1: ( ruleComponentImpl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6301:1: ruleComponentImpl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6296:1: ( ruleComponentImpl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6297:1: ruleComponentImpl
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBehaviorModelAccess().getComponentImplComponentImplParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleComponentImpl_in_rule__BehaviorModel__ComponentImplAssignment_312654);
+            pushFollow(FOLLOW_ruleComponentImpl_in_rule__BehaviorModel__ComponentImplAssignment_312650);
             ruleComponentImpl();
 
             state._fsp--;
@@ -17954,22 +17974,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__RepositoryReference__ReferenceAssignment_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6310:1: rule__RepositoryReference__ReferenceAssignment_1 : ( RULE_STRING ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6306:1: rule__RepositoryReference__ReferenceAssignment_1 : ( RULE_STRING ) ;
     public final void rule__RepositoryReference__ReferenceAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6314:1: ( ( RULE_STRING ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6315:1: ( RULE_STRING )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6310:1: ( ( RULE_STRING ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6311:1: ( RULE_STRING )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6315:1: ( RULE_STRING )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6316:1: RULE_STRING
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6311:1: ( RULE_STRING )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6312:1: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRepositoryReferenceAccess().getReferenceSTRINGTerminalRuleCall_1_0()); 
             }
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__RepositoryReference__ReferenceAssignment_112685); if (state.failed) return ;
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__RepositoryReference__ReferenceAssignment_112681); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getRepositoryReferenceAccess().getReferenceSTRINGTerminalRuleCall_1_0()); 
             }
@@ -17995,22 +18015,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Import__ImportedNamespaceAssignment_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6325:1: rule__Import__ImportedNamespaceAssignment_1 : ( ruleQualifiedNameWithWildcard ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6321:1: rule__Import__ImportedNamespaceAssignment_1 : ( ruleQualifiedNameWithWildcard ) ;
     public final void rule__Import__ImportedNamespaceAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6329:1: ( ( ruleQualifiedNameWithWildcard ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6330:1: ( ruleQualifiedNameWithWildcard )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6325:1: ( ( ruleQualifiedNameWithWildcard ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6326:1: ( ruleQualifiedNameWithWildcard )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6330:1: ( ruleQualifiedNameWithWildcard )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6331:1: ruleQualifiedNameWithWildcard
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6326:1: ( ruleQualifiedNameWithWildcard )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6327:1: ruleQualifiedNameWithWildcard
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getImportAccess().getImportedNamespaceQualifiedNameWithWildcardParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleQualifiedNameWithWildcard_in_rule__Import__ImportedNamespaceAssignment_112716);
+            pushFollow(FOLLOW_ruleQualifiedNameWithWildcard_in_rule__Import__ImportedNamespaceAssignment_112712);
             ruleQualifiedNameWithWildcard();
 
             state._fsp--;
@@ -18040,28 +18060,28 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ComponentImpl__RefComponentAssignment_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6340:1: rule__ComponentImpl__RefComponentAssignment_1 : ( ( ruleQualifiedName ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6336:1: rule__ComponentImpl__RefComponentAssignment_1 : ( ( ruleQualifiedName ) ) ;
     public final void rule__ComponentImpl__RefComponentAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6344:1: ( ( ( ruleQualifiedName ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6345:1: ( ( ruleQualifiedName ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6340:1: ( ( ( ruleQualifiedName ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6341:1: ( ( ruleQualifiedName ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6345:1: ( ( ruleQualifiedName ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6346:1: ( ruleQualifiedName )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6341:1: ( ( ruleQualifiedName ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6342:1: ( ruleQualifiedName )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComponentImplAccess().getRefComponentComponentCrossReference_1_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6347:1: ( ruleQualifiedName )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6348:1: ruleQualifiedName
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6343:1: ( ruleQualifiedName )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6344:1: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComponentImplAccess().getRefComponentComponentQualifiedNameParserRuleCall_1_0_1()); 
             }
-            pushFollow(FOLLOW_ruleQualifiedName_in_rule__ComponentImpl__RefComponentAssignment_112751);
+            pushFollow(FOLLOW_ruleQualifiedName_in_rule__ComponentImpl__RefComponentAssignment_112747);
             ruleQualifiedName();
 
             state._fsp--;
@@ -18097,25 +18117,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ComponentImpl__LocalDeclarationsAssignment_3"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6359:1: rule__ComponentImpl__LocalDeclarationsAssignment_3 : ( ( rule__ComponentImpl__LocalDeclarationsAlternatives_3_0 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6355:1: rule__ComponentImpl__LocalDeclarationsAssignment_3 : ( ( rule__ComponentImpl__LocalDeclarationsAlternatives_3_0 ) ) ;
     public final void rule__ComponentImpl__LocalDeclarationsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6363:1: ( ( ( rule__ComponentImpl__LocalDeclarationsAlternatives_3_0 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6364:1: ( ( rule__ComponentImpl__LocalDeclarationsAlternatives_3_0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6359:1: ( ( ( rule__ComponentImpl__LocalDeclarationsAlternatives_3_0 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6360:1: ( ( rule__ComponentImpl__LocalDeclarationsAlternatives_3_0 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6364:1: ( ( rule__ComponentImpl__LocalDeclarationsAlternatives_3_0 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6365:1: ( rule__ComponentImpl__LocalDeclarationsAlternatives_3_0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6360:1: ( ( rule__ComponentImpl__LocalDeclarationsAlternatives_3_0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6361:1: ( rule__ComponentImpl__LocalDeclarationsAlternatives_3_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComponentImplAccess().getLocalDeclarationsAlternatives_3_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6366:1: ( rule__ComponentImpl__LocalDeclarationsAlternatives_3_0 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6366:2: rule__ComponentImpl__LocalDeclarationsAlternatives_3_0
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6362:1: ( rule__ComponentImpl__LocalDeclarationsAlternatives_3_0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6362:2: rule__ComponentImpl__LocalDeclarationsAlternatives_3_0
             {
-            pushFollow(FOLLOW_rule__ComponentImpl__LocalDeclarationsAlternatives_3_0_in_rule__ComponentImpl__LocalDeclarationsAssignment_312786);
+            pushFollow(FOLLOW_rule__ComponentImpl__LocalDeclarationsAlternatives_3_0_in_rule__ComponentImpl__LocalDeclarationsAssignment_312782);
             rule__ComponentImpl__LocalDeclarationsAlternatives_3_0();
 
             state._fsp--;
@@ -18148,22 +18168,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ComponentImpl__InterfacesAssignment_4"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6375:1: rule__ComponentImpl__InterfacesAssignment_4 : ( ruleInterfaceRealization ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6371:1: rule__ComponentImpl__InterfacesAssignment_4 : ( ruleInterfaceRealization ) ;
     public final void rule__ComponentImpl__InterfacesAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6379:1: ( ( ruleInterfaceRealization ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6380:1: ( ruleInterfaceRealization )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6375:1: ( ( ruleInterfaceRealization ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6376:1: ( ruleInterfaceRealization )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6380:1: ( ruleInterfaceRealization )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6381:1: ruleInterfaceRealization
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6376:1: ( ruleInterfaceRealization )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6377:1: ruleInterfaceRealization
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getComponentImplAccess().getInterfacesInterfaceRealizationParserRuleCall_4_0()); 
             }
-            pushFollow(FOLLOW_ruleInterfaceRealization_in_rule__ComponentImpl__InterfacesAssignment_412819);
+            pushFollow(FOLLOW_ruleInterfaceRealization_in_rule__ComponentImpl__InterfacesAssignment_412815);
             ruleInterfaceRealization();
 
             state._fsp--;
@@ -18193,25 +18213,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__VariableDecl__ModifierAssignment_0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6390:1: rule__VariableDecl__ModifierAssignment_0 : ( ( rule__VariableDecl__ModifierAlternatives_0_0 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6386:1: rule__VariableDecl__ModifierAssignment_0 : ( ( rule__VariableDecl__ModifierAlternatives_0_0 ) ) ;
     public final void rule__VariableDecl__ModifierAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6394:1: ( ( ( rule__VariableDecl__ModifierAlternatives_0_0 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6395:1: ( ( rule__VariableDecl__ModifierAlternatives_0_0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6390:1: ( ( ( rule__VariableDecl__ModifierAlternatives_0_0 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6391:1: ( ( rule__VariableDecl__ModifierAlternatives_0_0 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6395:1: ( ( rule__VariableDecl__ModifierAlternatives_0_0 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6396:1: ( rule__VariableDecl__ModifierAlternatives_0_0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6391:1: ( ( rule__VariableDecl__ModifierAlternatives_0_0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6392:1: ( rule__VariableDecl__ModifierAlternatives_0_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariableDeclAccess().getModifierAlternatives_0_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6397:1: ( rule__VariableDecl__ModifierAlternatives_0_0 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6397:2: rule__VariableDecl__ModifierAlternatives_0_0
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6393:1: ( rule__VariableDecl__ModifierAlternatives_0_0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6393:2: rule__VariableDecl__ModifierAlternatives_0_0
             {
-            pushFollow(FOLLOW_rule__VariableDecl__ModifierAlternatives_0_0_in_rule__VariableDecl__ModifierAssignment_012850);
+            pushFollow(FOLLOW_rule__VariableDecl__ModifierAlternatives_0_0_in_rule__VariableDecl__ModifierAssignment_012846);
             rule__VariableDecl__ModifierAlternatives_0_0();
 
             state._fsp--;
@@ -18244,22 +18264,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__VariableDecl__TypeAssignment_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6406:1: rule__VariableDecl__TypeAssignment_1 : ( ruleDeclarationTypeReference ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6402:1: rule__VariableDecl__TypeAssignment_1 : ( ruleDeclarationTypeReference ) ;
     public final void rule__VariableDecl__TypeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6410:1: ( ( ruleDeclarationTypeReference ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6411:1: ( ruleDeclarationTypeReference )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6406:1: ( ( ruleDeclarationTypeReference ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6407:1: ( ruleDeclarationTypeReference )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6411:1: ( ruleDeclarationTypeReference )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6412:1: ruleDeclarationTypeReference
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6407:1: ( ruleDeclarationTypeReference )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6408:1: ruleDeclarationTypeReference
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariableDeclAccess().getTypeDeclarationTypeReferenceParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleDeclarationTypeReference_in_rule__VariableDecl__TypeAssignment_112883);
+            pushFollow(FOLLOW_ruleDeclarationTypeReference_in_rule__VariableDecl__TypeAssignment_112879);
             ruleDeclarationTypeReference();
 
             state._fsp--;
@@ -18289,22 +18309,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__VariableDecl__NameAssignment_2"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6421:1: rule__VariableDecl__NameAssignment_2 : ( RULE_ID ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6417:1: rule__VariableDecl__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__VariableDecl__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6425:1: ( ( RULE_ID ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6426:1: ( RULE_ID )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6421:1: ( ( RULE_ID ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6422:1: ( RULE_ID )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6426:1: ( RULE_ID )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6427:1: RULE_ID
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6422:1: ( RULE_ID )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6423:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariableDeclAccess().getNameIDTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__VariableDecl__NameAssignment_212914); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__VariableDecl__NameAssignment_212910); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getVariableDeclAccess().getNameIDTerminalRuleCall_2_0()); 
             }
@@ -18330,22 +18350,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ConstantDecl__NameAssignment_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6436:1: rule__ConstantDecl__NameAssignment_1 : ( RULE_ID ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6432:1: rule__ConstantDecl__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__ConstantDecl__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6440:1: ( ( RULE_ID ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6441:1: ( RULE_ID )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6436:1: ( ( RULE_ID ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6437:1: ( RULE_ID )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6441:1: ( RULE_ID )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6442:1: RULE_ID
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6437:1: ( RULE_ID )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6438:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstantDeclAccess().getNameIDTerminalRuleCall_1_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ConstantDecl__NameAssignment_112945); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ConstantDecl__NameAssignment_112941); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getConstantDeclAccess().getNameIDTerminalRuleCall_1_0()); 
             }
@@ -18371,22 +18391,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__ConstantDecl__ValueAssignment_3"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6451:1: rule__ConstantDecl__ValueAssignment_3 : ( ruleExpression ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6447:1: rule__ConstantDecl__ValueAssignment_3 : ( ruleExpression ) ;
     public final void rule__ConstantDecl__ValueAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6455:1: ( ( ruleExpression ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6456:1: ( ruleExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6451:1: ( ( ruleExpression ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6452:1: ( ruleExpression )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6456:1: ( ruleExpression )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6457:1: ruleExpression
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6452:1: ( ruleExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6453:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConstantDeclAccess().getValueExpressionParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__ConstantDecl__ValueAssignment_312976);
+            pushFollow(FOLLOW_ruleExpression_in_rule__ConstantDecl__ValueAssignment_312972);
             ruleExpression();
 
             state._fsp--;
@@ -18416,28 +18436,28 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__InterfaceRealization__RefInterfaceAssignment_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6466:1: rule__InterfaceRealization__RefInterfaceAssignment_1 : ( ( ruleQualifiedName ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6462:1: rule__InterfaceRealization__RefInterfaceAssignment_1 : ( ( ruleQualifiedName ) ) ;
     public final void rule__InterfaceRealization__RefInterfaceAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6470:1: ( ( ( ruleQualifiedName ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6471:1: ( ( ruleQualifiedName ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6466:1: ( ( ( ruleQualifiedName ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6467:1: ( ( ruleQualifiedName ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6471:1: ( ( ruleQualifiedName ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6472:1: ( ruleQualifiedName )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6467:1: ( ( ruleQualifiedName ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6468:1: ( ruleQualifiedName )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInterfaceRealizationAccess().getRefInterfaceInterfaceCrossReference_1_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6473:1: ( ruleQualifiedName )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6474:1: ruleQualifiedName
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6469:1: ( ruleQualifiedName )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6470:1: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInterfaceRealizationAccess().getRefInterfaceInterfaceQualifiedNameParserRuleCall_1_0_1()); 
             }
-            pushFollow(FOLLOW_ruleQualifiedName_in_rule__InterfaceRealization__RefInterfaceAssignment_113011);
+            pushFollow(FOLLOW_ruleQualifiedName_in_rule__InterfaceRealization__RefInterfaceAssignment_113007);
             ruleQualifiedName();
 
             state._fsp--;
@@ -18473,22 +18493,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__InterfaceRealization__MethodsAssignment_2"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6485:1: rule__InterfaceRealization__MethodsAssignment_2 : ( ruleMethodImpl ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6481:1: rule__InterfaceRealization__MethodsAssignment_2 : ( ruleMethodImpl ) ;
     public final void rule__InterfaceRealization__MethodsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6489:1: ( ( ruleMethodImpl ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6490:1: ( ruleMethodImpl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6485:1: ( ( ruleMethodImpl ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6486:1: ( ruleMethodImpl )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6490:1: ( ruleMethodImpl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6491:1: ruleMethodImpl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6486:1: ( ruleMethodImpl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6487:1: ruleMethodImpl
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInterfaceRealizationAccess().getMethodsMethodImplParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleMethodImpl_in_rule__InterfaceRealization__MethodsAssignment_213046);
+            pushFollow(FOLLOW_ruleMethodImpl_in_rule__InterfaceRealization__MethodsAssignment_213042);
             ruleMethodImpl();
 
             state._fsp--;
@@ -18518,28 +18538,28 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MethodImpl__RefMethodAssignment_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6500:1: rule__MethodImpl__RefMethodAssignment_1 : ( ( ruleQualifiedName ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6496:1: rule__MethodImpl__RefMethodAssignment_1 : ( ( ruleQualifiedName ) ) ;
     public final void rule__MethodImpl__RefMethodAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6504:1: ( ( ( ruleQualifiedName ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6505:1: ( ( ruleQualifiedName ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6500:1: ( ( ( ruleQualifiedName ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6501:1: ( ( ruleQualifiedName ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6505:1: ( ( ruleQualifiedName ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6506:1: ( ruleQualifiedName )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6501:1: ( ( ruleQualifiedName ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6502:1: ( ruleQualifiedName )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodImplAccess().getRefMethodMethodDeclCrossReference_1_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6507:1: ( ruleQualifiedName )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6508:1: ruleQualifiedName
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6503:1: ( ruleQualifiedName )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6504:1: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodImplAccess().getRefMethodMethodDeclQualifiedNameParserRuleCall_1_0_1()); 
             }
-            pushFollow(FOLLOW_ruleQualifiedName_in_rule__MethodImpl__RefMethodAssignment_113081);
+            pushFollow(FOLLOW_ruleQualifiedName_in_rule__MethodImpl__RefMethodAssignment_113077);
             ruleQualifiedName();
 
             state._fsp--;
@@ -18575,22 +18595,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MethodImpl__BodyAssignment_2"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6519:1: rule__MethodImpl__BodyAssignment_2 : ( ruleBlockStatement ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6515:1: rule__MethodImpl__BodyAssignment_2 : ( ruleBlockStatement ) ;
     public final void rule__MethodImpl__BodyAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6523:1: ( ( ruleBlockStatement ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6524:1: ( ruleBlockStatement )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6519:1: ( ( ruleBlockStatement ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6520:1: ( ruleBlockStatement )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6524:1: ( ruleBlockStatement )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6525:1: ruleBlockStatement
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6520:1: ( ruleBlockStatement )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6521:1: ruleBlockStatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMethodImplAccess().getBodyBlockStatementParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleBlockStatement_in_rule__MethodImpl__BodyAssignment_213116);
+            pushFollow(FOLLOW_ruleBlockStatement_in_rule__MethodImpl__BodyAssignment_213112);
             ruleBlockStatement();
 
             state._fsp--;
@@ -18620,22 +18640,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__IfStatement__ExprAssignment_2"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6534:1: rule__IfStatement__ExprAssignment_2 : ( ruleExpression ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6530:1: rule__IfStatement__ExprAssignment_2 : ( ruleExpression ) ;
     public final void rule__IfStatement__ExprAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6538:1: ( ( ruleExpression ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6539:1: ( ruleExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6534:1: ( ( ruleExpression ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6535:1: ( ruleExpression )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6539:1: ( ruleExpression )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6540:1: ruleExpression
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6535:1: ( ruleExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6536:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfStatementAccess().getExprExpressionParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__IfStatement__ExprAssignment_213147);
+            pushFollow(FOLLOW_ruleExpression_in_rule__IfStatement__ExprAssignment_213143);
             ruleExpression();
 
             state._fsp--;
@@ -18665,22 +18685,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__IfStatement__IfStatementAssignment_4"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6549:1: rule__IfStatement__IfStatementAssignment_4 : ( ruleBlockStatement ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6545:1: rule__IfStatement__IfStatementAssignment_4 : ( ruleBlockStatement ) ;
     public final void rule__IfStatement__IfStatementAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6553:1: ( ( ruleBlockStatement ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6554:1: ( ruleBlockStatement )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6549:1: ( ( ruleBlockStatement ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6550:1: ( ruleBlockStatement )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6554:1: ( ruleBlockStatement )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6555:1: ruleBlockStatement
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6550:1: ( ruleBlockStatement )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6551:1: ruleBlockStatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfStatementAccess().getIfStatementBlockStatementParserRuleCall_4_0()); 
             }
-            pushFollow(FOLLOW_ruleBlockStatement_in_rule__IfStatement__IfStatementAssignment_413178);
+            pushFollow(FOLLOW_ruleBlockStatement_in_rule__IfStatement__IfStatementAssignment_413174);
             ruleBlockStatement();
 
             state._fsp--;
@@ -18710,22 +18730,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__IfStatement__ElseStatementAssignment_5_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6564:1: rule__IfStatement__ElseStatementAssignment_5_1 : ( ruleBlockStatement ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6560:1: rule__IfStatement__ElseStatementAssignment_5_1 : ( ruleBlockStatement ) ;
     public final void rule__IfStatement__ElseStatementAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6568:1: ( ( ruleBlockStatement ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6569:1: ( ruleBlockStatement )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6564:1: ( ( ruleBlockStatement ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6565:1: ( ruleBlockStatement )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6569:1: ( ruleBlockStatement )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6570:1: ruleBlockStatement
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6565:1: ( ruleBlockStatement )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6566:1: ruleBlockStatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIfStatementAccess().getElseStatementBlockStatementParserRuleCall_5_1_0()); 
             }
-            pushFollow(FOLLOW_ruleBlockStatement_in_rule__IfStatement__ElseStatementAssignment_5_113209);
+            pushFollow(FOLLOW_ruleBlockStatement_in_rule__IfStatement__ElseStatementAssignment_5_113205);
             ruleBlockStatement();
 
             state._fsp--;
@@ -18755,22 +18775,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BlockStatement__StatementsAssignment_2"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6579:1: rule__BlockStatement__StatementsAssignment_2 : ( ruleStatement ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6575:1: rule__BlockStatement__StatementsAssignment_2 : ( ruleStatement ) ;
     public final void rule__BlockStatement__StatementsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6583:1: ( ( ruleStatement ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6584:1: ( ruleStatement )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6579:1: ( ( ruleStatement ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6580:1: ( ruleStatement )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6584:1: ( ruleStatement )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6585:1: ruleStatement
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6580:1: ( ruleStatement )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6581:1: ruleStatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBlockStatementAccess().getStatementsStatementParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleStatement_in_rule__BlockStatement__StatementsAssignment_213240);
+            pushFollow(FOLLOW_ruleStatement_in_rule__BlockStatement__StatementsAssignment_213236);
             ruleStatement();
 
             state._fsp--;
@@ -18800,22 +18820,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Assignment__VariableAssignment_0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6594:1: rule__Assignment__VariableAssignment_0 : ( ruleVariableCall ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6590:1: rule__Assignment__VariableAssignment_0 : ( ruleVariableCall ) ;
     public final void rule__Assignment__VariableAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6598:1: ( ( ruleVariableCall ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6599:1: ( ruleVariableCall )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6594:1: ( ( ruleVariableCall ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6595:1: ( ruleVariableCall )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6599:1: ( ruleVariableCall )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6600:1: ruleVariableCall
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6595:1: ( ruleVariableCall )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6596:1: ruleVariableCall
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssignmentAccess().getVariableVariableCallParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleVariableCall_in_rule__Assignment__VariableAssignment_013271);
+            pushFollow(FOLLOW_ruleVariableCall_in_rule__Assignment__VariableAssignment_013267);
             ruleVariableCall();
 
             state._fsp--;
@@ -18845,22 +18865,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Assignment__ExpressionAssignment_2"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6609:1: rule__Assignment__ExpressionAssignment_2 : ( ruleExpression ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6605:1: rule__Assignment__ExpressionAssignment_2 : ( ruleExpression ) ;
     public final void rule__Assignment__ExpressionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6613:1: ( ( ruleExpression ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6614:1: ( ruleExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6609:1: ( ( ruleExpression ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6610:1: ( ruleExpression )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6614:1: ( ruleExpression )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6615:1: ruleExpression
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6610:1: ( ruleExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6611:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAssignmentAccess().getExpressionExpressionParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__Assignment__ExpressionAssignment_213302);
+            pushFollow(FOLLOW_ruleExpression_in_rule__Assignment__ExpressionAssignment_213298);
             ruleExpression();
 
             state._fsp--;
@@ -18890,22 +18910,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LoopStatement__VariableAssignment_2"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6624:1: rule__LoopStatement__VariableAssignment_2 : ( ruleVariableDecl ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6620:1: rule__LoopStatement__VariableAssignment_2 : ( ruleVariableDecl ) ;
     public final void rule__LoopStatement__VariableAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6628:1: ( ( ruleVariableDecl ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6629:1: ( ruleVariableDecl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6624:1: ( ( ruleVariableDecl ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6625:1: ( ruleVariableDecl )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6629:1: ( ruleVariableDecl )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6630:1: ruleVariableDecl
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6625:1: ( ruleVariableDecl )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6626:1: ruleVariableDecl
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLoopStatementAccess().getVariableVariableDeclParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleVariableDecl_in_rule__LoopStatement__VariableAssignment_213333);
+            pushFollow(FOLLOW_ruleVariableDecl_in_rule__LoopStatement__VariableAssignment_213329);
             ruleVariableDecl();
 
             state._fsp--;
@@ -18935,22 +18955,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LoopStatement__ExpressionAssignment_4"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6639:1: rule__LoopStatement__ExpressionAssignment_4 : ( ruleExpression ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6635:1: rule__LoopStatement__ExpressionAssignment_4 : ( ruleExpression ) ;
     public final void rule__LoopStatement__ExpressionAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6643:1: ( ( ruleExpression ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6644:1: ( ruleExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6639:1: ( ( ruleExpression ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6640:1: ( ruleExpression )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6644:1: ( ruleExpression )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6645:1: ruleExpression
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6640:1: ( ruleExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6641:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLoopStatementAccess().getExpressionExpressionParserRuleCall_4_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__LoopStatement__ExpressionAssignment_413364);
+            pushFollow(FOLLOW_ruleExpression_in_rule__LoopStatement__ExpressionAssignment_413360);
             ruleExpression();
 
             state._fsp--;
@@ -18980,22 +19000,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__LoopStatement__StatementAssignment_6"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6654:1: rule__LoopStatement__StatementAssignment_6 : ( ruleBlockStatement ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6650:1: rule__LoopStatement__StatementAssignment_6 : ( ruleBlockStatement ) ;
     public final void rule__LoopStatement__StatementAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6658:1: ( ( ruleBlockStatement ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6659:1: ( ruleBlockStatement )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6654:1: ( ( ruleBlockStatement ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6655:1: ( ruleBlockStatement )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6659:1: ( ruleBlockStatement )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6660:1: ruleBlockStatement
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6655:1: ( ruleBlockStatement )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6656:1: ruleBlockStatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLoopStatementAccess().getStatementBlockStatementParserRuleCall_6_0()); 
             }
-            pushFollow(FOLLOW_ruleBlockStatement_in_rule__LoopStatement__StatementAssignment_613395);
+            pushFollow(FOLLOW_ruleBlockStatement_in_rule__LoopStatement__StatementAssignment_613391);
             ruleBlockStatement();
 
             state._fsp--;
@@ -19025,28 +19045,28 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__VariableCall__VariableAssignment_0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6669:1: rule__VariableCall__VariableAssignment_0 : ( ( RULE_ID ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6665:1: rule__VariableCall__VariableAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__VariableCall__VariableAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6673:1: ( ( ( RULE_ID ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6674:1: ( ( RULE_ID ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6669:1: ( ( ( RULE_ID ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6670:1: ( ( RULE_ID ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6674:1: ( ( RULE_ID ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6675:1: ( RULE_ID )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6670:1: ( ( RULE_ID ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6671:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariableCallAccess().getVariableVariableDeclCrossReference_0_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6676:1: ( RULE_ID )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6677:1: RULE_ID
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6672:1: ( RULE_ID )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6673:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariableCallAccess().getVariableVariableDeclIDTerminalRuleCall_0_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__VariableCall__VariableAssignment_013430); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__VariableCall__VariableAssignment_013426); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getVariableCallAccess().getVariableVariableDeclIDTerminalRuleCall_0_0_1()); 
             }
@@ -19078,22 +19098,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__VariableCall__IndexAssignment_1_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6688:1: rule__VariableCall__IndexAssignment_1_1 : ( ruleExpression ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6684:1: rule__VariableCall__IndexAssignment_1_1 : ( ruleExpression ) ;
     public final void rule__VariableCall__IndexAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6692:1: ( ( ruleExpression ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6693:1: ( ruleExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6688:1: ( ( ruleExpression ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6689:1: ( ruleExpression )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6693:1: ( ruleExpression )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6694:1: ruleExpression
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6689:1: ( ruleExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6690:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariableCallAccess().getIndexExpressionParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__VariableCall__IndexAssignment_1_113465);
+            pushFollow(FOLLOW_ruleExpression_in_rule__VariableCall__IndexAssignment_1_113461);
             ruleExpression();
 
             state._fsp--;
@@ -19123,22 +19143,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__VariableCall__SubPropertyAssignment_2_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6703:1: rule__VariableCall__SubPropertyAssignment_2_1 : ( rulePropertyCall ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6699:1: rule__VariableCall__SubPropertyAssignment_2_1 : ( rulePropertyCall ) ;
     public final void rule__VariableCall__SubPropertyAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6707:1: ( ( rulePropertyCall ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6708:1: ( rulePropertyCall )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6703:1: ( ( rulePropertyCall ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6704:1: ( rulePropertyCall )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6708:1: ( rulePropertyCall )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6709:1: rulePropertyCall
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6704:1: ( rulePropertyCall )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6705:1: rulePropertyCall
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVariableCallAccess().getSubPropertyPropertyCallParserRuleCall_2_1_0()); 
             }
-            pushFollow(FOLLOW_rulePropertyCall_in_rule__VariableCall__SubPropertyAssignment_2_113496);
+            pushFollow(FOLLOW_rulePropertyCall_in_rule__VariableCall__SubPropertyAssignment_2_113492);
             rulePropertyCall();
 
             state._fsp--;
@@ -19168,28 +19188,28 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PropertyCall__PropertyAssignment_0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6718:1: rule__PropertyCall__PropertyAssignment_0 : ( ( RULE_ID ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6714:1: rule__PropertyCall__PropertyAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__PropertyCall__PropertyAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6722:1: ( ( ( RULE_ID ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6723:1: ( ( RULE_ID ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6718:1: ( ( ( RULE_ID ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6719:1: ( ( RULE_ID ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6723:1: ( ( RULE_ID ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6724:1: ( RULE_ID )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6719:1: ( ( RULE_ID ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6720:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPropertyCallAccess().getPropertyPropertyCrossReference_0_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6725:1: ( RULE_ID )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6726:1: RULE_ID
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6721:1: ( RULE_ID )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6722:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPropertyCallAccess().getPropertyPropertyIDTerminalRuleCall_0_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PropertyCall__PropertyAssignment_013531); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PropertyCall__PropertyAssignment_013527); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPropertyCallAccess().getPropertyPropertyIDTerminalRuleCall_0_0_1()); 
             }
@@ -19221,22 +19241,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PropertyCall__IndexAssignment_1_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6737:1: rule__PropertyCall__IndexAssignment_1_1 : ( ruleExpression ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6733:1: rule__PropertyCall__IndexAssignment_1_1 : ( ruleExpression ) ;
     public final void rule__PropertyCall__IndexAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6741:1: ( ( ruleExpression ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6742:1: ( ruleExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6737:1: ( ( ruleExpression ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6738:1: ( ruleExpression )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6742:1: ( ruleExpression )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6743:1: ruleExpression
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6738:1: ( ruleExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6739:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPropertyCallAccess().getIndexExpressionParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__PropertyCall__IndexAssignment_1_113566);
+            pushFollow(FOLLOW_ruleExpression_in_rule__PropertyCall__IndexAssignment_1_113562);
             ruleExpression();
 
             state._fsp--;
@@ -19266,22 +19286,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PropertyCall__SubPropertyAssignment_2_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6752:1: rule__PropertyCall__SubPropertyAssignment_2_1 : ( rulePropertyCall ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6748:1: rule__PropertyCall__SubPropertyAssignment_2_1 : ( rulePropertyCall ) ;
     public final void rule__PropertyCall__SubPropertyAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6756:1: ( ( rulePropertyCall ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6757:1: ( rulePropertyCall )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6752:1: ( ( rulePropertyCall ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6753:1: ( rulePropertyCall )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6757:1: ( rulePropertyCall )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6758:1: rulePropertyCall
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6753:1: ( rulePropertyCall )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6754:1: rulePropertyCall
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPropertyCallAccess().getSubPropertyPropertyCallParserRuleCall_2_1_0()); 
             }
-            pushFollow(FOLLOW_rulePropertyCall_in_rule__PropertyCall__SubPropertyAssignment_2_113597);
+            pushFollow(FOLLOW_rulePropertyCall_in_rule__PropertyCall__SubPropertyAssignment_2_113593);
             rulePropertyCall();
 
             state._fsp--;
@@ -19311,28 +19331,28 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Expression__FeatureAssignment_1_0_0_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6767:1: rule__Expression__FeatureAssignment_1_0_0_1 : ( ( '||' ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6763:1: rule__Expression__FeatureAssignment_1_0_0_1 : ( ( '||' ) ) ;
     public final void rule__Expression__FeatureAssignment_1_0_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6771:1: ( ( ( '||' ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6772:1: ( ( '||' ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6767:1: ( ( ( '||' ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6768:1: ( ( '||' ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6772:1: ( ( '||' ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6773:1: ( '||' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getExpressionAccess().getFeatureVerticalLineVerticalLineKeyword_1_0_0_1_0()); 
-            }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6774:1: ( '||' )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6775:1: '||'
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6768:1: ( ( '||' ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6769:1: ( '||' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpressionAccess().getFeatureVerticalLineVerticalLineKeyword_1_0_0_1_0()); 
             }
-            match(input,52,FOLLOW_52_in_rule__Expression__FeatureAssignment_1_0_0_113633); if (state.failed) return ;
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6770:1: ( '||' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6771:1: '||'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getExpressionAccess().getFeatureVerticalLineVerticalLineKeyword_1_0_0_1_0()); 
+            }
+            match(input,50,FOLLOW_50_in_rule__Expression__FeatureAssignment_1_0_0_113629); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getExpressionAccess().getFeatureVerticalLineVerticalLineKeyword_1_0_0_1_0()); 
             }
@@ -19364,22 +19384,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Expression__RightAssignment_1_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6790:1: rule__Expression__RightAssignment_1_1 : ( ruleAndExpression ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6786:1: rule__Expression__RightAssignment_1_1 : ( ruleAndExpression ) ;
     public final void rule__Expression__RightAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6794:1: ( ( ruleAndExpression ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6795:1: ( ruleAndExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6790:1: ( ( ruleAndExpression ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6791:1: ( ruleAndExpression )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6795:1: ( ruleAndExpression )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6796:1: ruleAndExpression
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6791:1: ( ruleAndExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6792:1: ruleAndExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExpressionAccess().getRightAndExpressionParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleAndExpression_in_rule__Expression__RightAssignment_1_113672);
+            pushFollow(FOLLOW_ruleAndExpression_in_rule__Expression__RightAssignment_1_113668);
             ruleAndExpression();
 
             state._fsp--;
@@ -19409,28 +19429,28 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__AndExpression__FeatureAssignment_1_0_0_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6805:1: rule__AndExpression__FeatureAssignment_1_0_0_1 : ( ( '&&' ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6801:1: rule__AndExpression__FeatureAssignment_1_0_0_1 : ( ( '&&' ) ) ;
     public final void rule__AndExpression__FeatureAssignment_1_0_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6809:1: ( ( ( '&&' ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6810:1: ( ( '&&' ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6805:1: ( ( ( '&&' ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6806:1: ( ( '&&' ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6810:1: ( ( '&&' ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6811:1: ( '&&' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getAndExpressionAccess().getFeatureAmpersandAmpersandKeyword_1_0_0_1_0()); 
-            }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6812:1: ( '&&' )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6813:1: '&&'
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6806:1: ( ( '&&' ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6807:1: ( '&&' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndExpressionAccess().getFeatureAmpersandAmpersandKeyword_1_0_0_1_0()); 
             }
-            match(input,53,FOLLOW_53_in_rule__AndExpression__FeatureAssignment_1_0_0_113708); if (state.failed) return ;
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6808:1: ( '&&' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6809:1: '&&'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getAndExpressionAccess().getFeatureAmpersandAmpersandKeyword_1_0_0_1_0()); 
+            }
+            match(input,51,FOLLOW_51_in_rule__AndExpression__FeatureAssignment_1_0_0_113704); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAndExpressionAccess().getFeatureAmpersandAmpersandKeyword_1_0_0_1_0()); 
             }
@@ -19462,22 +19482,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__AndExpression__RightAssignment_1_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6828:1: rule__AndExpression__RightAssignment_1_1 : ( ruleRelationalExpression ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6824:1: rule__AndExpression__RightAssignment_1_1 : ( ruleRelationalExpression ) ;
     public final void rule__AndExpression__RightAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6832:1: ( ( ruleRelationalExpression ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6833:1: ( ruleRelationalExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6828:1: ( ( ruleRelationalExpression ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6829:1: ( ruleRelationalExpression )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6833:1: ( ruleRelationalExpression )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6834:1: ruleRelationalExpression
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6829:1: ( ruleRelationalExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6830:1: ruleRelationalExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAndExpressionAccess().getRightRelationalExpressionParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleRelationalExpression_in_rule__AndExpression__RightAssignment_1_113747);
+            pushFollow(FOLLOW_ruleRelationalExpression_in_rule__AndExpression__RightAssignment_1_113743);
             ruleRelationalExpression();
 
             state._fsp--;
@@ -19507,25 +19527,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__RelationalExpression__FeatureAssignment_1_0_0_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6843:1: rule__RelationalExpression__FeatureAssignment_1_0_0_1 : ( ( rule__RelationalExpression__FeatureAlternatives_1_0_0_1_0 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6839:1: rule__RelationalExpression__FeatureAssignment_1_0_0_1 : ( ( rule__RelationalExpression__FeatureAlternatives_1_0_0_1_0 ) ) ;
     public final void rule__RelationalExpression__FeatureAssignment_1_0_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6847:1: ( ( ( rule__RelationalExpression__FeatureAlternatives_1_0_0_1_0 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6848:1: ( ( rule__RelationalExpression__FeatureAlternatives_1_0_0_1_0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6843:1: ( ( ( rule__RelationalExpression__FeatureAlternatives_1_0_0_1_0 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6844:1: ( ( rule__RelationalExpression__FeatureAlternatives_1_0_0_1_0 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6848:1: ( ( rule__RelationalExpression__FeatureAlternatives_1_0_0_1_0 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6849:1: ( rule__RelationalExpression__FeatureAlternatives_1_0_0_1_0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6844:1: ( ( rule__RelationalExpression__FeatureAlternatives_1_0_0_1_0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6845:1: ( rule__RelationalExpression__FeatureAlternatives_1_0_0_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRelationalExpressionAccess().getFeatureAlternatives_1_0_0_1_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6850:1: ( rule__RelationalExpression__FeatureAlternatives_1_0_0_1_0 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6850:2: rule__RelationalExpression__FeatureAlternatives_1_0_0_1_0
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6846:1: ( rule__RelationalExpression__FeatureAlternatives_1_0_0_1_0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6846:2: rule__RelationalExpression__FeatureAlternatives_1_0_0_1_0
             {
-            pushFollow(FOLLOW_rule__RelationalExpression__FeatureAlternatives_1_0_0_1_0_in_rule__RelationalExpression__FeatureAssignment_1_0_0_113778);
+            pushFollow(FOLLOW_rule__RelationalExpression__FeatureAlternatives_1_0_0_1_0_in_rule__RelationalExpression__FeatureAssignment_1_0_0_113774);
             rule__RelationalExpression__FeatureAlternatives_1_0_0_1_0();
 
             state._fsp--;
@@ -19558,22 +19578,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__RelationalExpression__RightAssignment_1_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6859:1: rule__RelationalExpression__RightAssignment_1_1 : ( ruleOtherExpression ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6855:1: rule__RelationalExpression__RightAssignment_1_1 : ( ruleOtherExpression ) ;
     public final void rule__RelationalExpression__RightAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6863:1: ( ( ruleOtherExpression ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6864:1: ( ruleOtherExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6859:1: ( ( ruleOtherExpression ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6860:1: ( ruleOtherExpression )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6864:1: ( ruleOtherExpression )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6865:1: ruleOtherExpression
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6860:1: ( ruleOtherExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6861:1: ruleOtherExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getRelationalExpressionAccess().getRightOtherExpressionParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleOtherExpression_in_rule__RelationalExpression__RightAssignment_1_113811);
+            pushFollow(FOLLOW_ruleOtherExpression_in_rule__RelationalExpression__RightAssignment_1_113807);
             ruleOtherExpression();
 
             state._fsp--;
@@ -19602,23 +19622,76 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__RelationalExpression__RightAssignment_1_1"
 
 
+    // $ANTLR start "rule__OtherExpression__FeatureAssignment_1_0_0_1"
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6870:1: rule__OtherExpression__FeatureAssignment_1_0_0_1 : ( ( 'instanceof' ) ) ;
+    public final void rule__OtherExpression__FeatureAssignment_1_0_0_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6874:1: ( ( ( 'instanceof' ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6875:1: ( ( 'instanceof' ) )
+            {
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6875:1: ( ( 'instanceof' ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6876:1: ( 'instanceof' )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getOtherExpressionAccess().getFeatureInstanceofKeyword_1_0_0_1_0()); 
+            }
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6877:1: ( 'instanceof' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6878:1: 'instanceof'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getOtherExpressionAccess().getFeatureInstanceofKeyword_1_0_0_1_0()); 
+            }
+            match(input,52,FOLLOW_52_in_rule__OtherExpression__FeatureAssignment_1_0_0_113843); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getOtherExpressionAccess().getFeatureInstanceofKeyword_1_0_0_1_0()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getOtherExpressionAccess().getFeatureInstanceofKeyword_1_0_0_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__OtherExpression__FeatureAssignment_1_0_0_1"
+
+
     // $ANTLR start "rule__OtherExpression__TypeAssignment_1_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6874:1: rule__OtherExpression__TypeAssignment_1_1 : ( ruleTypeReference ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6893:1: rule__OtherExpression__TypeAssignment_1_1 : ( ruleTypeReference ) ;
     public final void rule__OtherExpression__TypeAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6878:1: ( ( ruleTypeReference ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6879:1: ( ruleTypeReference )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6897:1: ( ( ruleTypeReference ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6898:1: ( ruleTypeReference )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6879:1: ( ruleTypeReference )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6880:1: ruleTypeReference
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6898:1: ( ruleTypeReference )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6899:1: ruleTypeReference
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOtherExpressionAccess().getTypeTypeReferenceParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleTypeReference_in_rule__OtherExpression__TypeAssignment_1_113842);
+            pushFollow(FOLLOW_ruleTypeReference_in_rule__OtherExpression__TypeAssignment_1_113882);
             ruleTypeReference();
 
             state._fsp--;
@@ -19648,25 +19721,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__AdditiveExpression__FeatureAssignment_1_0_0_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6889:1: rule__AdditiveExpression__FeatureAssignment_1_0_0_1 : ( ( rule__AdditiveExpression__FeatureAlternatives_1_0_0_1_0 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6908:1: rule__AdditiveExpression__FeatureAssignment_1_0_0_1 : ( ( rule__AdditiveExpression__FeatureAlternatives_1_0_0_1_0 ) ) ;
     public final void rule__AdditiveExpression__FeatureAssignment_1_0_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6893:1: ( ( ( rule__AdditiveExpression__FeatureAlternatives_1_0_0_1_0 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6894:1: ( ( rule__AdditiveExpression__FeatureAlternatives_1_0_0_1_0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6912:1: ( ( ( rule__AdditiveExpression__FeatureAlternatives_1_0_0_1_0 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6913:1: ( ( rule__AdditiveExpression__FeatureAlternatives_1_0_0_1_0 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6894:1: ( ( rule__AdditiveExpression__FeatureAlternatives_1_0_0_1_0 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6895:1: ( rule__AdditiveExpression__FeatureAlternatives_1_0_0_1_0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6913:1: ( ( rule__AdditiveExpression__FeatureAlternatives_1_0_0_1_0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6914:1: ( rule__AdditiveExpression__FeatureAlternatives_1_0_0_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditiveExpressionAccess().getFeatureAlternatives_1_0_0_1_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6896:1: ( rule__AdditiveExpression__FeatureAlternatives_1_0_0_1_0 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6896:2: rule__AdditiveExpression__FeatureAlternatives_1_0_0_1_0
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6915:1: ( rule__AdditiveExpression__FeatureAlternatives_1_0_0_1_0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6915:2: rule__AdditiveExpression__FeatureAlternatives_1_0_0_1_0
             {
-            pushFollow(FOLLOW_rule__AdditiveExpression__FeatureAlternatives_1_0_0_1_0_in_rule__AdditiveExpression__FeatureAssignment_1_0_0_113873);
+            pushFollow(FOLLOW_rule__AdditiveExpression__FeatureAlternatives_1_0_0_1_0_in_rule__AdditiveExpression__FeatureAssignment_1_0_0_113913);
             rule__AdditiveExpression__FeatureAlternatives_1_0_0_1_0();
 
             state._fsp--;
@@ -19699,22 +19772,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__AdditiveExpression__RightAssignment_1_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6905:1: rule__AdditiveExpression__RightAssignment_1_1 : ( ruleMultiplicativeExpression ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6924:1: rule__AdditiveExpression__RightAssignment_1_1 : ( ruleMultiplicativeExpression ) ;
     public final void rule__AdditiveExpression__RightAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6909:1: ( ( ruleMultiplicativeExpression ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6910:1: ( ruleMultiplicativeExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6928:1: ( ( ruleMultiplicativeExpression ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6929:1: ( ruleMultiplicativeExpression )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6910:1: ( ruleMultiplicativeExpression )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6911:1: ruleMultiplicativeExpression
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6929:1: ( ruleMultiplicativeExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6930:1: ruleMultiplicativeExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAdditiveExpressionAccess().getRightMultiplicativeExpressionParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleMultiplicativeExpression_in_rule__AdditiveExpression__RightAssignment_1_113906);
+            pushFollow(FOLLOW_ruleMultiplicativeExpression_in_rule__AdditiveExpression__RightAssignment_1_113946);
             ruleMultiplicativeExpression();
 
             state._fsp--;
@@ -19744,25 +19817,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MultiplicativeExpression__FeatureAssignment_1_0_0_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6920:1: rule__MultiplicativeExpression__FeatureAssignment_1_0_0_1 : ( ( rule__MultiplicativeExpression__FeatureAlternatives_1_0_0_1_0 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6939:1: rule__MultiplicativeExpression__FeatureAssignment_1_0_0_1 : ( ( rule__MultiplicativeExpression__FeatureAlternatives_1_0_0_1_0 ) ) ;
     public final void rule__MultiplicativeExpression__FeatureAssignment_1_0_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6924:1: ( ( ( rule__MultiplicativeExpression__FeatureAlternatives_1_0_0_1_0 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6925:1: ( ( rule__MultiplicativeExpression__FeatureAlternatives_1_0_0_1_0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6943:1: ( ( ( rule__MultiplicativeExpression__FeatureAlternatives_1_0_0_1_0 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6944:1: ( ( rule__MultiplicativeExpression__FeatureAlternatives_1_0_0_1_0 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6925:1: ( ( rule__MultiplicativeExpression__FeatureAlternatives_1_0_0_1_0 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6926:1: ( rule__MultiplicativeExpression__FeatureAlternatives_1_0_0_1_0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6944:1: ( ( rule__MultiplicativeExpression__FeatureAlternatives_1_0_0_1_0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6945:1: ( rule__MultiplicativeExpression__FeatureAlternatives_1_0_0_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicativeExpressionAccess().getFeatureAlternatives_1_0_0_1_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6927:1: ( rule__MultiplicativeExpression__FeatureAlternatives_1_0_0_1_0 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6927:2: rule__MultiplicativeExpression__FeatureAlternatives_1_0_0_1_0
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6946:1: ( rule__MultiplicativeExpression__FeatureAlternatives_1_0_0_1_0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6946:2: rule__MultiplicativeExpression__FeatureAlternatives_1_0_0_1_0
             {
-            pushFollow(FOLLOW_rule__MultiplicativeExpression__FeatureAlternatives_1_0_0_1_0_in_rule__MultiplicativeExpression__FeatureAssignment_1_0_0_113937);
+            pushFollow(FOLLOW_rule__MultiplicativeExpression__FeatureAlternatives_1_0_0_1_0_in_rule__MultiplicativeExpression__FeatureAssignment_1_0_0_113977);
             rule__MultiplicativeExpression__FeatureAlternatives_1_0_0_1_0();
 
             state._fsp--;
@@ -19795,22 +19868,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MultiplicativeExpression__RightAssignment_1_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6936:1: rule__MultiplicativeExpression__RightAssignment_1_1 : ( ruleUnaryOperation ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6955:1: rule__MultiplicativeExpression__RightAssignment_1_1 : ( ruleUnaryOperation ) ;
     public final void rule__MultiplicativeExpression__RightAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6940:1: ( ( ruleUnaryOperation ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6941:1: ( ruleUnaryOperation )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6959:1: ( ( ruleUnaryOperation ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6960:1: ( ruleUnaryOperation )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6941:1: ( ruleUnaryOperation )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6942:1: ruleUnaryOperation
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6960:1: ( ruleUnaryOperation )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6961:1: ruleUnaryOperation
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMultiplicativeExpressionAccess().getRightUnaryOperationParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleUnaryOperation_in_rule__MultiplicativeExpression__RightAssignment_1_113970);
+            pushFollow(FOLLOW_ruleUnaryOperation_in_rule__MultiplicativeExpression__RightAssignment_1_114010);
             ruleUnaryOperation();
 
             state._fsp--;
@@ -19840,28 +19913,28 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnaryOperation__FeatureAssignment_0_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6951:1: rule__UnaryOperation__FeatureAssignment_0_1 : ( ( '!' ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6970:1: rule__UnaryOperation__FeatureAssignment_0_1 : ( ( '!' ) ) ;
     public final void rule__UnaryOperation__FeatureAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6955:1: ( ( ( '!' ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6956:1: ( ( '!' ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6974:1: ( ( ( '!' ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6975:1: ( ( '!' ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6956:1: ( ( '!' ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6957:1: ( '!' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getUnaryOperationAccess().getFeatureExclamationMarkKeyword_0_1_0()); 
-            }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6958:1: ( '!' )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6959:1: '!'
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6975:1: ( ( '!' ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6976:1: ( '!' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnaryOperationAccess().getFeatureExclamationMarkKeyword_0_1_0()); 
             }
-            match(input,54,FOLLOW_54_in_rule__UnaryOperation__FeatureAssignment_0_114006); if (state.failed) return ;
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6977:1: ( '!' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6978:1: '!'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getUnaryOperationAccess().getFeatureExclamationMarkKeyword_0_1_0()); 
+            }
+            match(input,53,FOLLOW_53_in_rule__UnaryOperation__FeatureAssignment_0_114046); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUnaryOperationAccess().getFeatureExclamationMarkKeyword_0_1_0()); 
             }
@@ -19893,22 +19966,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__UnaryOperation__OperandAssignment_0_2"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6974:1: rule__UnaryOperation__OperandAssignment_0_2 : ( ruleUnaryOperation ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6993:1: rule__UnaryOperation__OperandAssignment_0_2 : ( ruleUnaryOperation ) ;
     public final void rule__UnaryOperation__OperandAssignment_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6978:1: ( ( ruleUnaryOperation ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6979:1: ( ruleUnaryOperation )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6997:1: ( ( ruleUnaryOperation ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6998:1: ( ruleUnaryOperation )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6979:1: ( ruleUnaryOperation )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6980:1: ruleUnaryOperation
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6998:1: ( ruleUnaryOperation )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6999:1: ruleUnaryOperation
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUnaryOperationAccess().getOperandUnaryOperationParserRuleCall_0_2_0()); 
             }
-            pushFollow(FOLLOW_ruleUnaryOperation_in_rule__UnaryOperation__OperandAssignment_0_214045);
+            pushFollow(FOLLOW_ruleUnaryOperation_in_rule__UnaryOperation__OperandAssignment_0_214085);
             ruleUnaryOperation();
 
             state._fsp--;
@@ -19937,23 +20010,76 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__UnaryOperation__OperandAssignment_0_2"
 
 
+    // $ANTLR start "rule__CastedExpression__FeatureAssignment_1_0_0_1"
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7008:1: rule__CastedExpression__FeatureAssignment_1_0_0_1 : ( ( 'as' ) ) ;
+    public final void rule__CastedExpression__FeatureAssignment_1_0_0_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7012:1: ( ( ( 'as' ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7013:1: ( ( 'as' ) )
+            {
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7013:1: ( ( 'as' ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7014:1: ( 'as' )
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getCastedExpressionAccess().getFeatureAsKeyword_1_0_0_1_0()); 
+            }
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7015:1: ( 'as' )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7016:1: 'as'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getCastedExpressionAccess().getFeatureAsKeyword_1_0_0_1_0()); 
+            }
+            match(input,54,FOLLOW_54_in_rule__CastedExpression__FeatureAssignment_1_0_0_114121); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getCastedExpressionAccess().getFeatureAsKeyword_1_0_0_1_0()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getCastedExpressionAccess().getFeatureAsKeyword_1_0_0_1_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__CastedExpression__FeatureAssignment_1_0_0_1"
+
+
     // $ANTLR start "rule__CastedExpression__TypeAssignment_1_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6989:1: rule__CastedExpression__TypeAssignment_1_1 : ( ruleTypeReference ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7031:1: rule__CastedExpression__TypeAssignment_1_1 : ( ruleTypeReference ) ;
     public final void rule__CastedExpression__TypeAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6993:1: ( ( ruleTypeReference ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6994:1: ( ruleTypeReference )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7035:1: ( ( ruleTypeReference ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7036:1: ( ruleTypeReference )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6994:1: ( ruleTypeReference )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:6995:1: ruleTypeReference
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7036:1: ( ruleTypeReference )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7037:1: ruleTypeReference
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCastedExpressionAccess().getTypeTypeReferenceParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleTypeReference_in_rule__CastedExpression__TypeAssignment_1_114076);
+            pushFollow(FOLLOW_ruleTypeReference_in_rule__CastedExpression__TypeAssignment_1_114160);
             ruleTypeReference();
 
             state._fsp--;
@@ -19983,25 +20109,25 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PostfixOperation__FeatureAssignment_1_0_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7004:1: rule__PostfixOperation__FeatureAssignment_1_0_1 : ( ( rule__PostfixOperation__FeatureAlternatives_1_0_1_0 ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7046:1: rule__PostfixOperation__FeatureAssignment_1_0_1 : ( ( rule__PostfixOperation__FeatureAlternatives_1_0_1_0 ) ) ;
     public final void rule__PostfixOperation__FeatureAssignment_1_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7008:1: ( ( ( rule__PostfixOperation__FeatureAlternatives_1_0_1_0 ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7009:1: ( ( rule__PostfixOperation__FeatureAlternatives_1_0_1_0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7050:1: ( ( ( rule__PostfixOperation__FeatureAlternatives_1_0_1_0 ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7051:1: ( ( rule__PostfixOperation__FeatureAlternatives_1_0_1_0 ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7009:1: ( ( rule__PostfixOperation__FeatureAlternatives_1_0_1_0 ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7010:1: ( rule__PostfixOperation__FeatureAlternatives_1_0_1_0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7051:1: ( ( rule__PostfixOperation__FeatureAlternatives_1_0_1_0 ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7052:1: ( rule__PostfixOperation__FeatureAlternatives_1_0_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPostfixOperationAccess().getFeatureAlternatives_1_0_1_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7011:1: ( rule__PostfixOperation__FeatureAlternatives_1_0_1_0 )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7011:2: rule__PostfixOperation__FeatureAlternatives_1_0_1_0
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7053:1: ( rule__PostfixOperation__FeatureAlternatives_1_0_1_0 )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7053:2: rule__PostfixOperation__FeatureAlternatives_1_0_1_0
             {
-            pushFollow(FOLLOW_rule__PostfixOperation__FeatureAlternatives_1_0_1_0_in_rule__PostfixOperation__FeatureAssignment_1_0_114107);
+            pushFollow(FOLLOW_rule__PostfixOperation__FeatureAlternatives_1_0_1_0_in_rule__PostfixOperation__FeatureAssignment_1_0_114191);
             rule__PostfixOperation__FeatureAlternatives_1_0_1_0();
 
             state._fsp--;
@@ -20034,22 +20160,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__InstantiationExpression__TypeAssignment_1"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7020:1: rule__InstantiationExpression__TypeAssignment_1 : ( ruleTypeReference ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7062:1: rule__InstantiationExpression__TypeAssignment_1 : ( ruleTypeReference ) ;
     public final void rule__InstantiationExpression__TypeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7024:1: ( ( ruleTypeReference ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7025:1: ( ruleTypeReference )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7066:1: ( ( ruleTypeReference ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7067:1: ( ruleTypeReference )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7025:1: ( ruleTypeReference )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7026:1: ruleTypeReference
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7067:1: ( ruleTypeReference )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7068:1: ruleTypeReference
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInstantiationExpressionAccess().getTypeTypeReferenceParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleTypeReference_in_rule__InstantiationExpression__TypeAssignment_114140);
+            pushFollow(FOLLOW_ruleTypeReference_in_rule__InstantiationExpression__TypeAssignment_114224);
             ruleTypeReference();
 
             state._fsp--;
@@ -20079,22 +20205,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__InstantiationExpression__ParametersAssignment_3"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7035:1: rule__InstantiationExpression__ParametersAssignment_3 : ( ruleExpression ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7077:1: rule__InstantiationExpression__ParametersAssignment_3 : ( ruleExpression ) ;
     public final void rule__InstantiationExpression__ParametersAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7039:1: ( ( ruleExpression ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7040:1: ( ruleExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7081:1: ( ( ruleExpression ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7082:1: ( ruleExpression )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7040:1: ( ruleExpression )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7041:1: ruleExpression
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7082:1: ( ruleExpression )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7083:1: ruleExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInstantiationExpressionAccess().getParametersExpressionParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleExpression_in_rule__InstantiationExpression__ParametersAssignment_314171);
+            pushFollow(FOLLOW_ruleExpression_in_rule__InstantiationExpression__ParametersAssignment_314255);
             ruleExpression();
 
             state._fsp--;
@@ -20124,28 +20250,28 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TypeReference__ReferenceAssignment"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7050:1: rule__TypeReference__ReferenceAssignment : ( ( RULE_ID ) ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7092:1: rule__TypeReference__ReferenceAssignment : ( ( RULE_ID ) ) ;
     public final void rule__TypeReference__ReferenceAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7054:1: ( ( ( RULE_ID ) ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7055:1: ( ( RULE_ID ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7096:1: ( ( ( RULE_ID ) ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7097:1: ( ( RULE_ID ) )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7055:1: ( ( RULE_ID ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7056:1: ( RULE_ID )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7097:1: ( ( RULE_ID ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7098:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTypeReferenceAccess().getReferenceNamedTypeCrossReference_0()); 
             }
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7057:1: ( RULE_ID )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7058:1: RULE_ID
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7099:1: ( RULE_ID )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7100:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTypeReferenceAccess().getReferenceNamedTypeIDTerminalRuleCall_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__TypeReference__ReferenceAssignment14206); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__TypeReference__ReferenceAssignment14290); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getTypeReferenceAccess().getReferenceNamedTypeIDTerminalRuleCall_0_1()); 
             }
@@ -20177,22 +20303,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CollectionType__ReferenceAssignment_0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7069:1: rule__CollectionType__ReferenceAssignment_0 : ( ruleTypeReference ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7111:1: rule__CollectionType__ReferenceAssignment_0 : ( ruleTypeReference ) ;
     public final void rule__CollectionType__ReferenceAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7073:1: ( ( ruleTypeReference ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7074:1: ( ruleTypeReference )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7115:1: ( ( ruleTypeReference ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7116:1: ( ruleTypeReference )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7074:1: ( ruleTypeReference )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7075:1: ruleTypeReference
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7116:1: ( ruleTypeReference )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7117:1: ruleTypeReference
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCollectionTypeAccess().getReferenceTypeReferenceParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleTypeReference_in_rule__CollectionType__ReferenceAssignment_014241);
+            pushFollow(FOLLOW_ruleTypeReference_in_rule__CollectionType__ReferenceAssignment_014325);
             ruleTypeReference();
 
             state._fsp--;
@@ -20222,22 +20348,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CollectionType__SizeAssignment_2"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7084:1: rule__CollectionType__SizeAssignment_2 : ( RULE_INT ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7126:1: rule__CollectionType__SizeAssignment_2 : ( RULE_INT ) ;
     public final void rule__CollectionType__SizeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7088:1: ( ( RULE_INT ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7089:1: ( RULE_INT )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7130:1: ( ( RULE_INT ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7131:1: ( RULE_INT )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7089:1: ( RULE_INT )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7090:1: RULE_INT
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7131:1: ( RULE_INT )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7132:1: RULE_INT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCollectionTypeAccess().getSizeINTTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__CollectionType__SizeAssignment_214272); if (state.failed) return ;
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__CollectionType__SizeAssignment_214356); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCollectionTypeAccess().getSizeINTTerminalRuleCall_2_0()); 
             }
@@ -20263,22 +20389,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MapType__ReferenceAssignment_0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7099:1: rule__MapType__ReferenceAssignment_0 : ( ruleTypeReference ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7141:1: rule__MapType__ReferenceAssignment_0 : ( ruleTypeReference ) ;
     public final void rule__MapType__ReferenceAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7103:1: ( ( ruleTypeReference ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7104:1: ( ruleTypeReference )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7145:1: ( ( ruleTypeReference ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7146:1: ( ruleTypeReference )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7104:1: ( ruleTypeReference )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7105:1: ruleTypeReference
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7146:1: ( ruleTypeReference )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7147:1: ruleTypeReference
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMapTypeAccess().getReferenceTypeReferenceParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleTypeReference_in_rule__MapType__ReferenceAssignment_014303);
+            pushFollow(FOLLOW_ruleTypeReference_in_rule__MapType__ReferenceAssignment_014387);
             ruleTypeReference();
 
             state._fsp--;
@@ -20308,22 +20434,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__MapType__KeyTypeAssignment_2_0"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7114:1: rule__MapType__KeyTypeAssignment_2_0 : ( ruleTypeReference ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7156:1: rule__MapType__KeyTypeAssignment_2_0 : ( ruleTypeReference ) ;
     public final void rule__MapType__KeyTypeAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7118:1: ( ( ruleTypeReference ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7119:1: ( ruleTypeReference )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7160:1: ( ( ruleTypeReference ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7161:1: ( ruleTypeReference )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7119:1: ( ruleTypeReference )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7120:1: ruleTypeReference
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7161:1: ( ruleTypeReference )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7162:1: ruleTypeReference
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMapTypeAccess().getKeyTypeTypeReferenceParserRuleCall_2_0_0()); 
             }
-            pushFollow(FOLLOW_ruleTypeReference_in_rule__MapType__KeyTypeAssignment_2_014334);
+            pushFollow(FOLLOW_ruleTypeReference_in_rule__MapType__KeyTypeAssignment_2_014418);
             ruleTypeReference();
 
             state._fsp--;
@@ -20353,22 +20479,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__StringLiteral__ValueAssignment"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7129:1: rule__StringLiteral__ValueAssignment : ( RULE_STRING ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7171:1: rule__StringLiteral__ValueAssignment : ( RULE_STRING ) ;
     public final void rule__StringLiteral__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7133:1: ( ( RULE_STRING ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7134:1: ( RULE_STRING )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7175:1: ( ( RULE_STRING ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7176:1: ( RULE_STRING )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7134:1: ( RULE_STRING )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7135:1: RULE_STRING
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7176:1: ( RULE_STRING )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7177:1: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getStringLiteralAccess().getValueSTRINGTerminalRuleCall_0()); 
             }
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__StringLiteral__ValueAssignment14365); if (state.failed) return ;
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__StringLiteral__ValueAssignment14449); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getStringLiteralAccess().getValueSTRINGTerminalRuleCall_0()); 
             }
@@ -20394,22 +20520,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CharLiteral__ValueAssignment"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7144:1: rule__CharLiteral__ValueAssignment : ( RULE_CHARACTER ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7186:1: rule__CharLiteral__ValueAssignment : ( RULE_CHARACTER ) ;
     public final void rule__CharLiteral__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7148:1: ( ( RULE_CHARACTER ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7149:1: ( RULE_CHARACTER )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7190:1: ( ( RULE_CHARACTER ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7191:1: ( RULE_CHARACTER )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7149:1: ( RULE_CHARACTER )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7150:1: RULE_CHARACTER
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7191:1: ( RULE_CHARACTER )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7192:1: RULE_CHARACTER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCharLiteralAccess().getValueCHARACTERTerminalRuleCall_0()); 
             }
-            match(input,RULE_CHARACTER,FOLLOW_RULE_CHARACTER_in_rule__CharLiteral__ValueAssignment14396); if (state.failed) return ;
+            match(input,RULE_CHARACTER,FOLLOW_RULE_CHARACTER_in_rule__CharLiteral__ValueAssignment14480); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCharLiteralAccess().getValueCHARACTERTerminalRuleCall_0()); 
             }
@@ -20435,22 +20561,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NumberLiteral__ValueAssignment"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7159:1: rule__NumberLiteral__ValueAssignment : ( ruleNUMBER ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7201:1: rule__NumberLiteral__ValueAssignment : ( ruleNUMBER ) ;
     public final void rule__NumberLiteral__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7163:1: ( ( ruleNUMBER ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7164:1: ( ruleNUMBER )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7205:1: ( ( ruleNUMBER ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7206:1: ( ruleNUMBER )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7164:1: ( ruleNUMBER )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7165:1: ruleNUMBER
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7206:1: ( ruleNUMBER )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7207:1: ruleNUMBER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNumberLiteralAccess().getValueNUMBERParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleNUMBER_in_rule__NumberLiteral__ValueAssignment14427);
+            pushFollow(FOLLOW_ruleNUMBER_in_rule__NumberLiteral__ValueAssignment14511);
             ruleNUMBER();
 
             state._fsp--;
@@ -20480,22 +20606,22 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BooleanLiteral__ValueAssignment"
-    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7174:1: rule__BooleanLiteral__ValueAssignment : ( ruleBOOLEAN ) ;
+    // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7216:1: rule__BooleanLiteral__ValueAssignment : ( ruleBOOLEAN ) ;
     public final void rule__BooleanLiteral__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7178:1: ( ( ruleBOOLEAN ) )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7179:1: ( ruleBOOLEAN )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7220:1: ( ( ruleBOOLEAN ) )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7221:1: ( ruleBOOLEAN )
             {
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7179:1: ( ruleBOOLEAN )
-            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7180:1: ruleBOOLEAN
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7221:1: ( ruleBOOLEAN )
+            // ../org.spp.cocome.behavior.ui/src-gen/org/spp/cocome/behavior/ui/contentassist/antlr/internal/InternalBehavior.g:7222:1: ruleBOOLEAN
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBooleanLiteralAccess().getValueBOOLEANParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleBOOLEAN_in_rule__BooleanLiteral__ValueAssignment14458);
+            pushFollow(FOLLOW_ruleBOOLEAN_in_rule__BooleanLiteral__ValueAssignment14542);
             ruleBOOLEAN();
 
             state._fsp--;
@@ -20738,7 +20864,7 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_rule__ConstantDecl__Group__1__Impl_in_rule__ConstantDecl__Group__14517 = new BitSet(new long[]{0x0000002000000000L});
     public static final BitSet FOLLOW_rule__ConstantDecl__Group__2_in_rule__ConstantDecl__Group__14520 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ConstantDecl__NameAssignment_1_in_rule__ConstantDecl__Group__1__Impl4547 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ConstantDecl__Group__2__Impl_in_rule__ConstantDecl__Group__24577 = new BitSet(new long[]{0x00480000303000F0L});
+    public static final BitSet FOLLOW_rule__ConstantDecl__Group__2__Impl_in_rule__ConstantDecl__Group__24577 = new BitSet(new long[]{0x00220000303000F0L});
     public static final BitSet FOLLOW_rule__ConstantDecl__Group__3_in_rule__ConstantDecl__Group__24580 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_37_in_rule__ConstantDecl__Group__2__Impl4608 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ConstantDecl__Group__3__Impl_in_rule__ConstantDecl__Group__34639 = new BitSet(new long[]{0x0000000000000002L});
@@ -20762,7 +20888,7 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_rule__IfStatement__Group__0__Impl_in_rule__IfStatement__Group__05075 = new BitSet(new long[]{0x0000020000000000L});
     public static final BitSet FOLLOW_rule__IfStatement__Group__1_in_rule__IfStatement__Group__05078 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_40_in_rule__IfStatement__Group__0__Impl5106 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__IfStatement__Group__1__Impl_in_rule__IfStatement__Group__15137 = new BitSet(new long[]{0x00480000303000F0L});
+    public static final BitSet FOLLOW_rule__IfStatement__Group__1__Impl_in_rule__IfStatement__Group__15137 = new BitSet(new long[]{0x00220000303000F0L});
     public static final BitSet FOLLOW_rule__IfStatement__Group__2_in_rule__IfStatement__Group__15140 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_41_in_rule__IfStatement__Group__1__Impl5168 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__IfStatement__Group__2__Impl_in_rule__IfStatement__Group__25199 = new BitSet(new long[]{0x0000040000000000L});
@@ -20794,7 +20920,7 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_rule__Assignment__Group__0__Impl_in_rule__Assignment__Group__05825 = new BitSet(new long[]{0x0000002000000000L});
     public static final BitSet FOLLOW_rule__Assignment__Group__1_in_rule__Assignment__Group__05828 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Assignment__VariableAssignment_0_in_rule__Assignment__Group__0__Impl5855 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Assignment__Group__1__Impl_in_rule__Assignment__Group__15885 = new BitSet(new long[]{0x00480000303000F0L});
+    public static final BitSet FOLLOW_rule__Assignment__Group__1__Impl_in_rule__Assignment__Group__15885 = new BitSet(new long[]{0x00220000303000F0L});
     public static final BitSet FOLLOW_rule__Assignment__Group__2_in_rule__Assignment__Group__15888 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_37_in_rule__Assignment__Group__1__Impl5916 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Assignment__Group__2__Impl_in_rule__Assignment__Group__25947 = new BitSet(new long[]{0x0000000000000002L});
@@ -20808,7 +20934,7 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_rule__LoopStatement__Group__2__Impl_in_rule__LoopStatement__Group__26134 = new BitSet(new long[]{0x0000200000000000L});
     public static final BitSet FOLLOW_rule__LoopStatement__Group__3_in_rule__LoopStatement__Group__26137 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__LoopStatement__VariableAssignment_2_in_rule__LoopStatement__Group__2__Impl6164 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LoopStatement__Group__3__Impl_in_rule__LoopStatement__Group__36194 = new BitSet(new long[]{0x00480000303000F0L});
+    public static final BitSet FOLLOW_rule__LoopStatement__Group__3__Impl_in_rule__LoopStatement__Group__36194 = new BitSet(new long[]{0x00220000303000F0L});
     public static final BitSet FOLLOW_rule__LoopStatement__Group__4_in_rule__LoopStatement__Group__36197 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_45_in_rule__LoopStatement__Group__3__Impl6225 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__LoopStatement__Group__4__Impl_in_rule__LoopStatement__Group__46256 = new BitSet(new long[]{0x0000040000000000L});
@@ -20827,10 +20953,10 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_rule__VariableCall__Group_1__0_in_rule__VariableCall__Group__1__Impl6539 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__VariableCall__Group__2__Impl_in_rule__VariableCall__Group__26570 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__VariableCall__Group_2__0_in_rule__VariableCall__Group__2__Impl6597 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__VariableCall__Group_1__0__Impl_in_rule__VariableCall__Group_1__06634 = new BitSet(new long[]{0x00488000303000F0L});
+    public static final BitSet FOLLOW_rule__VariableCall__Group_1__0__Impl_in_rule__VariableCall__Group_1__06634 = new BitSet(new long[]{0x00228000303000F0L});
     public static final BitSet FOLLOW_rule__VariableCall__Group_1__1_in_rule__VariableCall__Group_1__06637 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_46_in_rule__VariableCall__Group_1__0__Impl6665 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__VariableCall__Group_1__1__Impl_in_rule__VariableCall__Group_1__16696 = new BitSet(new long[]{0x00488000303000F0L});
+    public static final BitSet FOLLOW_rule__VariableCall__Group_1__1__Impl_in_rule__VariableCall__Group_1__16696 = new BitSet(new long[]{0x00228000303000F0L});
     public static final BitSet FOLLOW_rule__VariableCall__Group_1__2_in_rule__VariableCall__Group_1__16699 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__VariableCall__IndexAssignment_1_1_in_rule__VariableCall__Group_1__1__Impl6726 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__VariableCall__Group_1__2__Impl_in_rule__VariableCall__Group_1__26757 = new BitSet(new long[]{0x0000000000000002L});
@@ -20848,10 +20974,10 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_rule__PropertyCall__Group_1__0_in_rule__PropertyCall__Group__1__Impl7035 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__PropertyCall__Group__2__Impl_in_rule__PropertyCall__Group__27066 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__PropertyCall__Group_2__0_in_rule__PropertyCall__Group__2__Impl7093 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PropertyCall__Group_1__0__Impl_in_rule__PropertyCall__Group_1__07130 = new BitSet(new long[]{0x00488000303000F0L});
+    public static final BitSet FOLLOW_rule__PropertyCall__Group_1__0__Impl_in_rule__PropertyCall__Group_1__07130 = new BitSet(new long[]{0x00228000303000F0L});
     public static final BitSet FOLLOW_rule__PropertyCall__Group_1__1_in_rule__PropertyCall__Group_1__07133 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_46_in_rule__PropertyCall__Group_1__0__Impl7161 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PropertyCall__Group_1__1__Impl_in_rule__PropertyCall__Group_1__17192 = new BitSet(new long[]{0x00488000303000F0L});
+    public static final BitSet FOLLOW_rule__PropertyCall__Group_1__1__Impl_in_rule__PropertyCall__Group_1__17192 = new BitSet(new long[]{0x00228000303000F0L});
     public static final BitSet FOLLOW_rule__PropertyCall__Group_1__2_in_rule__PropertyCall__Group_1__17195 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__PropertyCall__IndexAssignment_1_1_in_rule__PropertyCall__Group_1__1__Impl7222 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__PropertyCall__Group_1__2__Impl_in_rule__PropertyCall__Group_1__27253 = new BitSet(new long[]{0x0000000000000002L});
@@ -20861,35 +20987,35 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_48_in_rule__PropertyCall__Group_2__0__Impl7349 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__PropertyCall__Group_2__1__Impl_in_rule__PropertyCall__Group_2__17380 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__PropertyCall__SubPropertyAssignment_2_1_in_rule__PropertyCall__Group_2__1__Impl7407 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group__0__Impl_in_rule__Expression__Group__07441 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_rule__Expression__Group__0__Impl_in_rule__Expression__Group__07441 = new BitSet(new long[]{0x0004000000000000L});
     public static final BitSet FOLLOW_rule__Expression__Group__1_in_rule__Expression__Group__07444 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAndExpression_in_rule__Expression__Group__0__Impl7471 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Expression__Group__1__Impl_in_rule__Expression__Group__17500 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group_1__0_in_rule__Expression__Group__1__Impl7527 = new BitSet(new long[]{0x0010000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group_1__0__Impl_in_rule__Expression__Group_1__07562 = new BitSet(new long[]{0x00480000303000F0L});
+    public static final BitSet FOLLOW_rule__Expression__Group_1__0_in_rule__Expression__Group__1__Impl7527 = new BitSet(new long[]{0x0004000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group_1__0__Impl_in_rule__Expression__Group_1__07562 = new BitSet(new long[]{0x00220000303000F0L});
     public static final BitSet FOLLOW_rule__Expression__Group_1__1_in_rule__Expression__Group_1__07565 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Expression__Group_1_0__0_in_rule__Expression__Group_1__0__Impl7592 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Expression__Group_1__1__Impl_in_rule__Expression__Group_1__17622 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Expression__RightAssignment_1_1_in_rule__Expression__Group_1__1__Impl7649 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Expression__Group_1_0__0__Impl_in_rule__Expression__Group_1_0__07683 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Expression__Group_1_0_0__0_in_rule__Expression__Group_1_0__0__Impl7710 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group_1_0_0__0__Impl_in_rule__Expression__Group_1_0_0__07742 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_rule__Expression__Group_1_0_0__0__Impl_in_rule__Expression__Group_1_0_0__07742 = new BitSet(new long[]{0x0004000000000000L});
     public static final BitSet FOLLOW_rule__Expression__Group_1_0_0__1_in_rule__Expression__Group_1_0_0__07745 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Expression__Group_1_0_0__1__Impl_in_rule__Expression__Group_1_0_0__17803 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Expression__FeatureAssignment_1_0_0_1_in_rule__Expression__Group_1_0_0__1__Impl7830 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AndExpression__Group__0__Impl_in_rule__AndExpression__Group__07864 = new BitSet(new long[]{0x0020000000000000L});
+    public static final BitSet FOLLOW_rule__AndExpression__Group__0__Impl_in_rule__AndExpression__Group__07864 = new BitSet(new long[]{0x0008000000000000L});
     public static final BitSet FOLLOW_rule__AndExpression__Group__1_in_rule__AndExpression__Group__07867 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleRelationalExpression_in_rule__AndExpression__Group__0__Impl7894 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__AndExpression__Group__1__Impl_in_rule__AndExpression__Group__17923 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AndExpression__Group_1__0_in_rule__AndExpression__Group__1__Impl7950 = new BitSet(new long[]{0x0020000000000002L});
-    public static final BitSet FOLLOW_rule__AndExpression__Group_1__0__Impl_in_rule__AndExpression__Group_1__07985 = new BitSet(new long[]{0x00480000303000F0L});
+    public static final BitSet FOLLOW_rule__AndExpression__Group_1__0_in_rule__AndExpression__Group__1__Impl7950 = new BitSet(new long[]{0x0008000000000002L});
+    public static final BitSet FOLLOW_rule__AndExpression__Group_1__0__Impl_in_rule__AndExpression__Group_1__07985 = new BitSet(new long[]{0x00220000303000F0L});
     public static final BitSet FOLLOW_rule__AndExpression__Group_1__1_in_rule__AndExpression__Group_1__07988 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__AndExpression__Group_1_0__0_in_rule__AndExpression__Group_1__0__Impl8015 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__AndExpression__Group_1__1__Impl_in_rule__AndExpression__Group_1__18045 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__AndExpression__RightAssignment_1_1_in_rule__AndExpression__Group_1__1__Impl8072 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__AndExpression__Group_1_0__0__Impl_in_rule__AndExpression__Group_1_0__08106 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__AndExpression__Group_1_0_0__0_in_rule__AndExpression__Group_1_0__0__Impl8133 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AndExpression__Group_1_0_0__0__Impl_in_rule__AndExpression__Group_1_0_0__08165 = new BitSet(new long[]{0x0020000000000000L});
+    public static final BitSet FOLLOW_rule__AndExpression__Group_1_0_0__0__Impl_in_rule__AndExpression__Group_1_0_0__08165 = new BitSet(new long[]{0x0008000000000000L});
     public static final BitSet FOLLOW_rule__AndExpression__Group_1_0_0__1_in_rule__AndExpression__Group_1_0_0__08168 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__AndExpression__Group_1_0_0__1__Impl_in_rule__AndExpression__Group_1_0_0__18226 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__AndExpression__FeatureAssignment_1_0_0_1_in_rule__AndExpression__Group_1_0_0__1__Impl8253 = new BitSet(new long[]{0x0000000000000002L});
@@ -20898,7 +21024,7 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_ruleOtherExpression_in_rule__RelationalExpression__Group__0__Impl8317 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__RelationalExpression__Group__1__Impl_in_rule__RelationalExpression__Group__18346 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__RelationalExpression__Group_1__0_in_rule__RelationalExpression__Group__1__Impl8373 = new BitSet(new long[]{0x00000000000FC002L});
-    public static final BitSet FOLLOW_rule__RelationalExpression__Group_1__0__Impl_in_rule__RelationalExpression__Group_1__08408 = new BitSet(new long[]{0x00480000303000F0L});
+    public static final BitSet FOLLOW_rule__RelationalExpression__Group_1__0__Impl_in_rule__RelationalExpression__Group_1__08408 = new BitSet(new long[]{0x00220000303000F0L});
     public static final BitSet FOLLOW_rule__RelationalExpression__Group_1__1_in_rule__RelationalExpression__Group_1__08411 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__RelationalExpression__Group_1_0__0_in_rule__RelationalExpression__Group_1__0__Impl8438 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__RelationalExpression__Group_1__1__Impl_in_rule__RelationalExpression__Group_1__18468 = new BitSet(new long[]{0x0000000000000002L});
@@ -20909,7 +21035,7 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_rule__RelationalExpression__Group_1_0_0__1_in_rule__RelationalExpression__Group_1_0_0__08591 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__RelationalExpression__Group_1_0_0__1__Impl_in_rule__RelationalExpression__Group_1_0_0__18649 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__RelationalExpression__FeatureAssignment_1_0_0_1_in_rule__RelationalExpression__Group_1_0_0__1__Impl8676 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OtherExpression__Group__0__Impl_in_rule__OtherExpression__Group__08710 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_rule__OtherExpression__Group__0__Impl_in_rule__OtherExpression__Group__08710 = new BitSet(new long[]{0x0010000000000000L});
     public static final BitSet FOLLOW_rule__OtherExpression__Group__1_in_rule__OtherExpression__Group__08713 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAdditiveExpression_in_rule__OtherExpression__Group__0__Impl8740 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__OtherExpression__Group__1__Impl_in_rule__OtherExpression__Group__18769 = new BitSet(new long[]{0x0000000000000002L});
@@ -20921,205 +21047,207 @@ public class InternalBehaviorParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_rule__OtherExpression__TypeAssignment_1_1_in_rule__OtherExpression__Group_1__1__Impl8918 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__OtherExpression__Group_1_0__0__Impl_in_rule__OtherExpression__Group_1_0__08952 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__OtherExpression__Group_1_0_0__0_in_rule__OtherExpression__Group_1_0__0__Impl8979 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OtherExpression__Group_1_0_0__0__Impl_in_rule__OtherExpression__Group_1_0_0__09011 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_rule__OtherExpression__Group_1_0_0__0__Impl_in_rule__OtherExpression__Group_1_0_0__09011 = new BitSet(new long[]{0x0010000000000000L});
     public static final BitSet FOLLOW_rule__OtherExpression__Group_1_0_0__1_in_rule__OtherExpression__Group_1_0_0__09014 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__OtherExpression__Group_1_0_0__1__Impl_in_rule__OtherExpression__Group_1_0_0__19072 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_rule__OtherExpression__Group_1_0_0__1__Impl9100 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditiveExpression__Group__0__Impl_in_rule__AdditiveExpression__Group__09135 = new BitSet(new long[]{0x0000000000300000L});
-    public static final BitSet FOLLOW_rule__AdditiveExpression__Group__1_in_rule__AdditiveExpression__Group__09138 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultiplicativeExpression_in_rule__AdditiveExpression__Group__0__Impl9165 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditiveExpression__Group__1__Impl_in_rule__AdditiveExpression__Group__19194 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditiveExpression__Group_1__0_in_rule__AdditiveExpression__Group__1__Impl9221 = new BitSet(new long[]{0x0000000000300002L});
-    public static final BitSet FOLLOW_rule__AdditiveExpression__Group_1__0__Impl_in_rule__AdditiveExpression__Group_1__09256 = new BitSet(new long[]{0x00480000303000F0L});
-    public static final BitSet FOLLOW_rule__AdditiveExpression__Group_1__1_in_rule__AdditiveExpression__Group_1__09259 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditiveExpression__Group_1_0__0_in_rule__AdditiveExpression__Group_1__0__Impl9286 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditiveExpression__Group_1__1__Impl_in_rule__AdditiveExpression__Group_1__19316 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditiveExpression__RightAssignment_1_1_in_rule__AdditiveExpression__Group_1__1__Impl9343 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditiveExpression__Group_1_0__0__Impl_in_rule__AdditiveExpression__Group_1_0__09377 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditiveExpression__Group_1_0_0__0_in_rule__AdditiveExpression__Group_1_0__0__Impl9404 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditiveExpression__Group_1_0_0__0__Impl_in_rule__AdditiveExpression__Group_1_0_0__09436 = new BitSet(new long[]{0x0000000000300000L});
-    public static final BitSet FOLLOW_rule__AdditiveExpression__Group_1_0_0__1_in_rule__AdditiveExpression__Group_1_0_0__09439 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditiveExpression__Group_1_0_0__1__Impl_in_rule__AdditiveExpression__Group_1_0_0__19497 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditiveExpression__FeatureAssignment_1_0_0_1_in_rule__AdditiveExpression__Group_1_0_0__1__Impl9524 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group__0__Impl_in_rule__MultiplicativeExpression__Group__09558 = new BitSet(new long[]{0x0000000003C00000L});
-    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group__1_in_rule__MultiplicativeExpression__Group__09561 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUnaryOperation_in_rule__MultiplicativeExpression__Group__0__Impl9588 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group__1__Impl_in_rule__MultiplicativeExpression__Group__19617 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group_1__0_in_rule__MultiplicativeExpression__Group__1__Impl9644 = new BitSet(new long[]{0x0000000003C00002L});
-    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group_1__0__Impl_in_rule__MultiplicativeExpression__Group_1__09679 = new BitSet(new long[]{0x00480000303000F0L});
-    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group_1__1_in_rule__MultiplicativeExpression__Group_1__09682 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group_1_0__0_in_rule__MultiplicativeExpression__Group_1__0__Impl9709 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group_1__1__Impl_in_rule__MultiplicativeExpression__Group_1__19739 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicativeExpression__RightAssignment_1_1_in_rule__MultiplicativeExpression__Group_1__1__Impl9766 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group_1_0__0__Impl_in_rule__MultiplicativeExpression__Group_1_0__09800 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group_1_0_0__0_in_rule__MultiplicativeExpression__Group_1_0__0__Impl9827 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group_1_0_0__0__Impl_in_rule__MultiplicativeExpression__Group_1_0_0__09859 = new BitSet(new long[]{0x0000000003C00000L});
-    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group_1_0_0__1_in_rule__MultiplicativeExpression__Group_1_0_0__09862 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group_1_0_0__1__Impl_in_rule__MultiplicativeExpression__Group_1_0_0__19920 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicativeExpression__FeatureAssignment_1_0_0_1_in_rule__MultiplicativeExpression__Group_1_0_0__1__Impl9947 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnaryOperation__Group_0__0__Impl_in_rule__UnaryOperation__Group_0__09981 = new BitSet(new long[]{0x0040000000000000L});
-    public static final BitSet FOLLOW_rule__UnaryOperation__Group_0__1_in_rule__UnaryOperation__Group_0__09984 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnaryOperation__Group_0__1__Impl_in_rule__UnaryOperation__Group_0__110042 = new BitSet(new long[]{0x00480000303000F0L});
-    public static final BitSet FOLLOW_rule__UnaryOperation__Group_0__2_in_rule__UnaryOperation__Group_0__110045 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnaryOperation__FeatureAssignment_0_1_in_rule__UnaryOperation__Group_0__1__Impl10072 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnaryOperation__Group_0__2__Impl_in_rule__UnaryOperation__Group_0__210102 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnaryOperation__OperandAssignment_0_2_in_rule__UnaryOperation__Group_0__2__Impl10129 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CastedExpression__Group__0__Impl_in_rule__CastedExpression__Group__010165 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_rule__CastedExpression__Group__1_in_rule__CastedExpression__Group__010168 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePostfixOperation_in_rule__CastedExpression__Group__0__Impl10195 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CastedExpression__Group__1__Impl_in_rule__CastedExpression__Group__110224 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CastedExpression__Group_1__0_in_rule__CastedExpression__Group__1__Impl10251 = new BitSet(new long[]{0x0004000000000002L});
-    public static final BitSet FOLLOW_rule__CastedExpression__Group_1__0__Impl_in_rule__CastedExpression__Group_1__010286 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__CastedExpression__Group_1__1_in_rule__CastedExpression__Group_1__010289 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CastedExpression__Group_1_0__0_in_rule__CastedExpression__Group_1__0__Impl10316 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CastedExpression__Group_1__1__Impl_in_rule__CastedExpression__Group_1__110346 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CastedExpression__TypeAssignment_1_1_in_rule__CastedExpression__Group_1__1__Impl10373 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CastedExpression__Group_1_0__0__Impl_in_rule__CastedExpression__Group_1_0__010407 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CastedExpression__Group_1_0_0__0_in_rule__CastedExpression__Group_1_0__0__Impl10434 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CastedExpression__Group_1_0_0__0__Impl_in_rule__CastedExpression__Group_1_0_0__010466 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_rule__CastedExpression__Group_1_0_0__1_in_rule__CastedExpression__Group_1_0_0__010469 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CastedExpression__Group_1_0_0__1__Impl_in_rule__CastedExpression__Group_1_0_0__110527 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_rule__CastedExpression__Group_1_0_0__1__Impl10555 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PostfixOperation__Group__0__Impl_in_rule__PostfixOperation__Group__010590 = new BitSet(new long[]{0x000000000C000000L});
-    public static final BitSet FOLLOW_rule__PostfixOperation__Group__1_in_rule__PostfixOperation__Group__010593 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimaryExpression_in_rule__PostfixOperation__Group__0__Impl10620 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PostfixOperation__Group__1__Impl_in_rule__PostfixOperation__Group__110649 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PostfixOperation__Group_1__0_in_rule__PostfixOperation__Group__1__Impl10676 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PostfixOperation__Group_1__0__Impl_in_rule__PostfixOperation__Group_1__010711 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PostfixOperation__Group_1_0__0_in_rule__PostfixOperation__Group_1__0__Impl10738 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PostfixOperation__Group_1_0__0__Impl_in_rule__PostfixOperation__Group_1_0__010770 = new BitSet(new long[]{0x000000000C000000L});
-    public static final BitSet FOLLOW_rule__PostfixOperation__Group_1_0__1_in_rule__PostfixOperation__Group_1_0__010773 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PostfixOperation__Group_1_0__1__Impl_in_rule__PostfixOperation__Group_1_0__110831 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PostfixOperation__FeatureAssignment_1_0_1_in_rule__PostfixOperation__Group_1_0__1__Impl10858 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InstantiationExpression__Group__0__Impl_in_rule__InstantiationExpression__Group__010892 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__InstantiationExpression__Group__1_in_rule__InstantiationExpression__Group__010895 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_51_in_rule__InstantiationExpression__Group__0__Impl10923 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InstantiationExpression__Group__1__Impl_in_rule__InstantiationExpression__Group__110954 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_rule__InstantiationExpression__Group__2_in_rule__InstantiationExpression__Group__110957 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InstantiationExpression__TypeAssignment_1_in_rule__InstantiationExpression__Group__1__Impl10984 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InstantiationExpression__Group__2__Impl_in_rule__InstantiationExpression__Group__211014 = new BitSet(new long[]{0x00480000303000F0L});
-    public static final BitSet FOLLOW_rule__InstantiationExpression__Group__3_in_rule__InstantiationExpression__Group__211017 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__InstantiationExpression__Group__2__Impl11045 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InstantiationExpression__Group__3__Impl_in_rule__InstantiationExpression__Group__311076 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_rule__InstantiationExpression__Group__4_in_rule__InstantiationExpression__Group__311079 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InstantiationExpression__ParametersAssignment_3_in_rule__InstantiationExpression__Group__3__Impl11106 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InstantiationExpression__Group__4__Impl_in_rule__InstantiationExpression__Group__411136 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_rule__InstantiationExpression__Group__4__Impl11164 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CollectionType__Group__0__Impl_in_rule__CollectionType__Group__011205 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_rule__CollectionType__Group__1_in_rule__CollectionType__Group__011208 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CollectionType__ReferenceAssignment_0_in_rule__CollectionType__Group__0__Impl11235 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CollectionType__Group__1__Impl_in_rule__CollectionType__Group__111265 = new BitSet(new long[]{0x0000800000000020L});
-    public static final BitSet FOLLOW_rule__CollectionType__Group__2_in_rule__CollectionType__Group__111268 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_rule__CollectionType__Group__1__Impl11296 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CollectionType__Group__2__Impl_in_rule__CollectionType__Group__211327 = new BitSet(new long[]{0x0000800000000020L});
-    public static final BitSet FOLLOW_rule__CollectionType__Group__3_in_rule__CollectionType__Group__211330 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CollectionType__SizeAssignment_2_in_rule__CollectionType__Group__2__Impl11357 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CollectionType__Group__3__Impl_in_rule__CollectionType__Group__311388 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_rule__CollectionType__Group__3__Impl11416 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MapType__Group__0__Impl_in_rule__MapType__Group__011455 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_rule__MapType__Group__1_in_rule__MapType__Group__011458 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MapType__ReferenceAssignment_0_in_rule__MapType__Group__0__Impl11485 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MapType__Group__1__Impl_in_rule__MapType__Group__111515 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__MapType__Group__2_in_rule__MapType__Group__111518 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__MapType__Group__1__Impl11546 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MapType__Group__2__Impl_in_rule__MapType__Group__211577 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MapType__Group_2__0_in_rule__MapType__Group__2__Impl11604 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MapType__Group_2__0__Impl_in_rule__MapType__Group_2__011640 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_rule__MapType__Group_2__1_in_rule__MapType__Group_2__011643 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MapType__KeyTypeAssignment_2_0_in_rule__MapType__Group_2__0__Impl11670 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MapType__Group_2__1__Impl_in_rule__MapType__Group_2__111700 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__MapType__Group_2__1__Impl11728 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group__0__Impl_in_rule__QualifiedName__Group__011763 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group__1_in_rule__QualifiedName__Group__011766 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__QualifiedName__Group__0__Impl11793 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group__1__Impl_in_rule__QualifiedName__Group__111822 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__0_in_rule__QualifiedName__Group__1__Impl11849 = new BitSet(new long[]{0x0001000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__0__Impl_in_rule__QualifiedName__Group_1__011884 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__1_in_rule__QualifiedName__Group_1__011887 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_rule__QualifiedName__Group_1__0__Impl11915 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__1__Impl_in_rule__QualifiedName__Group_1__111946 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__QualifiedName__Group_1__1__Impl11973 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedNameWithWildcard__Group__0__Impl_in_rule__QualifiedNameWithWildcard__Group__012006 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_rule__QualifiedNameWithWildcard__Group__1_in_rule__QualifiedNameWithWildcard__Group__012009 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__QualifiedNameWithWildcard__Group__0__Impl12036 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedNameWithWildcard__Group__1__Impl_in_rule__QualifiedNameWithWildcard__Group__112065 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedNameWithWildcard__Group_1__0_in_rule__QualifiedNameWithWildcard__Group__1__Impl12092 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedNameWithWildcard__Group_1__0__Impl_in_rule__QualifiedNameWithWildcard__Group_1__012127 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__QualifiedNameWithWildcard__Group_1__1_in_rule__QualifiedNameWithWildcard__Group_1__012130 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_rule__QualifiedNameWithWildcard__Group_1__0__Impl12158 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedNameWithWildcard__Group_1__1__Impl_in_rule__QualifiedNameWithWildcard__Group_1__112189 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__QualifiedNameWithWildcard__Group_1__1__Impl12217 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NUMBER__Group_0__0__Impl_in_rule__NUMBER__Group_0__012252 = new BitSet(new long[]{0x0000000000300020L});
-    public static final BitSet FOLLOW_rule__NUMBER__Group_0__1_in_rule__NUMBER__Group_0__012255 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NUMBER__Alternatives_0_0_in_rule__NUMBER__Group_0__0__Impl12282 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NUMBER__Group_0__1__Impl_in_rule__NUMBER__Group_0__112313 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__NUMBER__Group_0__1__Impl12340 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NUMBER__Group_1__0__Impl_in_rule__NUMBER__Group_1__012373 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_rule__NUMBER__Group_1__1_in_rule__NUMBER__Group_1__012376 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__NUMBER__Group_1__0__Impl12403 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NUMBER__Group_1__1__Impl_in_rule__NUMBER__Group_1__112432 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__NUMBER__Group_1__2_in_rule__NUMBER__Group_1__112435 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_rule__NUMBER__Group_1__1__Impl12463 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NUMBER__Group_1__2__Impl_in_rule__NUMBER__Group_1__212494 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__NUMBER__Group_1__2__Impl12521 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__BehaviorModel__NameAssignment_112561 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImport_in_rule__BehaviorModel__ImportsAssignment_2_012592 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRepositoryReference_in_rule__BehaviorModel__RepositoriesAssignment_2_112623 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComponentImpl_in_rule__BehaviorModel__ComponentImplAssignment_312654 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__RepositoryReference__ReferenceAssignment_112685 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedNameWithWildcard_in_rule__Import__ImportedNamespaceAssignment_112716 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__ComponentImpl__RefComponentAssignment_112751 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ComponentImpl__LocalDeclarationsAlternatives_3_0_in_rule__ComponentImpl__LocalDeclarationsAssignment_312786 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInterfaceRealization_in_rule__ComponentImpl__InterfacesAssignment_412819 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__VariableDecl__ModifierAlternatives_0_0_in_rule__VariableDecl__ModifierAssignment_012850 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDeclarationTypeReference_in_rule__VariableDecl__TypeAssignment_112883 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__VariableDecl__NameAssignment_212914 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ConstantDecl__NameAssignment_112945 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__ConstantDecl__ValueAssignment_312976 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__InterfaceRealization__RefInterfaceAssignment_113011 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMethodImpl_in_rule__InterfaceRealization__MethodsAssignment_213046 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__MethodImpl__RefMethodAssignment_113081 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBlockStatement_in_rule__MethodImpl__BodyAssignment_213116 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__IfStatement__ExprAssignment_213147 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBlockStatement_in_rule__IfStatement__IfStatementAssignment_413178 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBlockStatement_in_rule__IfStatement__ElseStatementAssignment_5_113209 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStatement_in_rule__BlockStatement__StatementsAssignment_213240 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariableCall_in_rule__Assignment__VariableAssignment_013271 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__Assignment__ExpressionAssignment_213302 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariableDecl_in_rule__LoopStatement__VariableAssignment_213333 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__LoopStatement__ExpressionAssignment_413364 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBlockStatement_in_rule__LoopStatement__StatementAssignment_613395 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__VariableCall__VariableAssignment_013430 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__VariableCall__IndexAssignment_1_113465 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePropertyCall_in_rule__VariableCall__SubPropertyAssignment_2_113496 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__PropertyCall__PropertyAssignment_013531 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__PropertyCall__IndexAssignment_1_113566 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePropertyCall_in_rule__PropertyCall__SubPropertyAssignment_2_113597 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_rule__Expression__FeatureAssignment_1_0_0_113633 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAndExpression_in_rule__Expression__RightAssignment_1_113672 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_rule__AndExpression__FeatureAssignment_1_0_0_113708 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRelationalExpression_in_rule__AndExpression__RightAssignment_1_113747 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RelationalExpression__FeatureAlternatives_1_0_0_1_0_in_rule__RelationalExpression__FeatureAssignment_1_0_0_113778 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOtherExpression_in_rule__RelationalExpression__RightAssignment_1_113811 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTypeReference_in_rule__OtherExpression__TypeAssignment_1_113842 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AdditiveExpression__FeatureAlternatives_1_0_0_1_0_in_rule__AdditiveExpression__FeatureAssignment_1_0_0_113873 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultiplicativeExpression_in_rule__AdditiveExpression__RightAssignment_1_113906 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MultiplicativeExpression__FeatureAlternatives_1_0_0_1_0_in_rule__MultiplicativeExpression__FeatureAssignment_1_0_0_113937 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUnaryOperation_in_rule__MultiplicativeExpression__RightAssignment_1_113970 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_54_in_rule__UnaryOperation__FeatureAssignment_0_114006 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUnaryOperation_in_rule__UnaryOperation__OperandAssignment_0_214045 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTypeReference_in_rule__CastedExpression__TypeAssignment_1_114076 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PostfixOperation__FeatureAlternatives_1_0_1_0_in_rule__PostfixOperation__FeatureAssignment_1_0_114107 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTypeReference_in_rule__InstantiationExpression__TypeAssignment_114140 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__InstantiationExpression__ParametersAssignment_314171 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__TypeReference__ReferenceAssignment14206 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTypeReference_in_rule__CollectionType__ReferenceAssignment_014241 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__CollectionType__SizeAssignment_214272 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTypeReference_in_rule__MapType__ReferenceAssignment_014303 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTypeReference_in_rule__MapType__KeyTypeAssignment_2_014334 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__StringLiteral__ValueAssignment14365 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_CHARACTER_in_rule__CharLiteral__ValueAssignment14396 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNUMBER_in_rule__NumberLiteral__ValueAssignment14427 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBOOLEAN_in_rule__BooleanLiteral__ValueAssignment14458 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OtherExpression__FeatureAssignment_1_0_0_1_in_rule__OtherExpression__Group_1_0_0__1__Impl9099 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditiveExpression__Group__0__Impl_in_rule__AdditiveExpression__Group__09133 = new BitSet(new long[]{0x0000000000300000L});
+    public static final BitSet FOLLOW_rule__AdditiveExpression__Group__1_in_rule__AdditiveExpression__Group__09136 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultiplicativeExpression_in_rule__AdditiveExpression__Group__0__Impl9163 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditiveExpression__Group__1__Impl_in_rule__AdditiveExpression__Group__19192 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditiveExpression__Group_1__0_in_rule__AdditiveExpression__Group__1__Impl9219 = new BitSet(new long[]{0x0000000000300002L});
+    public static final BitSet FOLLOW_rule__AdditiveExpression__Group_1__0__Impl_in_rule__AdditiveExpression__Group_1__09254 = new BitSet(new long[]{0x00220000303000F0L});
+    public static final BitSet FOLLOW_rule__AdditiveExpression__Group_1__1_in_rule__AdditiveExpression__Group_1__09257 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditiveExpression__Group_1_0__0_in_rule__AdditiveExpression__Group_1__0__Impl9284 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditiveExpression__Group_1__1__Impl_in_rule__AdditiveExpression__Group_1__19314 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditiveExpression__RightAssignment_1_1_in_rule__AdditiveExpression__Group_1__1__Impl9341 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditiveExpression__Group_1_0__0__Impl_in_rule__AdditiveExpression__Group_1_0__09375 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditiveExpression__Group_1_0_0__0_in_rule__AdditiveExpression__Group_1_0__0__Impl9402 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditiveExpression__Group_1_0_0__0__Impl_in_rule__AdditiveExpression__Group_1_0_0__09434 = new BitSet(new long[]{0x0000000000300000L});
+    public static final BitSet FOLLOW_rule__AdditiveExpression__Group_1_0_0__1_in_rule__AdditiveExpression__Group_1_0_0__09437 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditiveExpression__Group_1_0_0__1__Impl_in_rule__AdditiveExpression__Group_1_0_0__19495 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditiveExpression__FeatureAssignment_1_0_0_1_in_rule__AdditiveExpression__Group_1_0_0__1__Impl9522 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group__0__Impl_in_rule__MultiplicativeExpression__Group__09556 = new BitSet(new long[]{0x0000000003C00000L});
+    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group__1_in_rule__MultiplicativeExpression__Group__09559 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUnaryOperation_in_rule__MultiplicativeExpression__Group__0__Impl9586 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group__1__Impl_in_rule__MultiplicativeExpression__Group__19615 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group_1__0_in_rule__MultiplicativeExpression__Group__1__Impl9642 = new BitSet(new long[]{0x0000000003C00002L});
+    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group_1__0__Impl_in_rule__MultiplicativeExpression__Group_1__09677 = new BitSet(new long[]{0x00220000303000F0L});
+    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group_1__1_in_rule__MultiplicativeExpression__Group_1__09680 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group_1_0__0_in_rule__MultiplicativeExpression__Group_1__0__Impl9707 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group_1__1__Impl_in_rule__MultiplicativeExpression__Group_1__19737 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicativeExpression__RightAssignment_1_1_in_rule__MultiplicativeExpression__Group_1__1__Impl9764 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group_1_0__0__Impl_in_rule__MultiplicativeExpression__Group_1_0__09798 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group_1_0_0__0_in_rule__MultiplicativeExpression__Group_1_0__0__Impl9825 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group_1_0_0__0__Impl_in_rule__MultiplicativeExpression__Group_1_0_0__09857 = new BitSet(new long[]{0x0000000003C00000L});
+    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group_1_0_0__1_in_rule__MultiplicativeExpression__Group_1_0_0__09860 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicativeExpression__Group_1_0_0__1__Impl_in_rule__MultiplicativeExpression__Group_1_0_0__19918 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicativeExpression__FeatureAssignment_1_0_0_1_in_rule__MultiplicativeExpression__Group_1_0_0__1__Impl9945 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UnaryOperation__Group_0__0__Impl_in_rule__UnaryOperation__Group_0__09979 = new BitSet(new long[]{0x0020000000000000L});
+    public static final BitSet FOLLOW_rule__UnaryOperation__Group_0__1_in_rule__UnaryOperation__Group_0__09982 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UnaryOperation__Group_0__1__Impl_in_rule__UnaryOperation__Group_0__110040 = new BitSet(new long[]{0x00220000303000F0L});
+    public static final BitSet FOLLOW_rule__UnaryOperation__Group_0__2_in_rule__UnaryOperation__Group_0__110043 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UnaryOperation__FeatureAssignment_0_1_in_rule__UnaryOperation__Group_0__1__Impl10070 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UnaryOperation__Group_0__2__Impl_in_rule__UnaryOperation__Group_0__210100 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UnaryOperation__OperandAssignment_0_2_in_rule__UnaryOperation__Group_0__2__Impl10127 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CastedExpression__Group__0__Impl_in_rule__CastedExpression__Group__010163 = new BitSet(new long[]{0x0040000000000000L});
+    public static final BitSet FOLLOW_rule__CastedExpression__Group__1_in_rule__CastedExpression__Group__010166 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePostfixOperation_in_rule__CastedExpression__Group__0__Impl10193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CastedExpression__Group__1__Impl_in_rule__CastedExpression__Group__110222 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CastedExpression__Group_1__0_in_rule__CastedExpression__Group__1__Impl10249 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_rule__CastedExpression__Group_1__0__Impl_in_rule__CastedExpression__Group_1__010284 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__CastedExpression__Group_1__1_in_rule__CastedExpression__Group_1__010287 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CastedExpression__Group_1_0__0_in_rule__CastedExpression__Group_1__0__Impl10314 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CastedExpression__Group_1__1__Impl_in_rule__CastedExpression__Group_1__110344 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CastedExpression__TypeAssignment_1_1_in_rule__CastedExpression__Group_1__1__Impl10371 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CastedExpression__Group_1_0__0__Impl_in_rule__CastedExpression__Group_1_0__010405 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CastedExpression__Group_1_0_0__0_in_rule__CastedExpression__Group_1_0__0__Impl10432 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CastedExpression__Group_1_0_0__0__Impl_in_rule__CastedExpression__Group_1_0_0__010464 = new BitSet(new long[]{0x0040000000000000L});
+    public static final BitSet FOLLOW_rule__CastedExpression__Group_1_0_0__1_in_rule__CastedExpression__Group_1_0_0__010467 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CastedExpression__Group_1_0_0__1__Impl_in_rule__CastedExpression__Group_1_0_0__110525 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CastedExpression__FeatureAssignment_1_0_0_1_in_rule__CastedExpression__Group_1_0_0__1__Impl10552 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PostfixOperation__Group__0__Impl_in_rule__PostfixOperation__Group__010586 = new BitSet(new long[]{0x000000000C000000L});
+    public static final BitSet FOLLOW_rule__PostfixOperation__Group__1_in_rule__PostfixOperation__Group__010589 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrimaryExpression_in_rule__PostfixOperation__Group__0__Impl10616 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PostfixOperation__Group__1__Impl_in_rule__PostfixOperation__Group__110645 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PostfixOperation__Group_1__0_in_rule__PostfixOperation__Group__1__Impl10672 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PostfixOperation__Group_1__0__Impl_in_rule__PostfixOperation__Group_1__010707 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PostfixOperation__Group_1_0__0_in_rule__PostfixOperation__Group_1__0__Impl10734 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PostfixOperation__Group_1_0__0__Impl_in_rule__PostfixOperation__Group_1_0__010766 = new BitSet(new long[]{0x000000000C000000L});
+    public static final BitSet FOLLOW_rule__PostfixOperation__Group_1_0__1_in_rule__PostfixOperation__Group_1_0__010769 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PostfixOperation__Group_1_0__1__Impl_in_rule__PostfixOperation__Group_1_0__110827 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PostfixOperation__FeatureAssignment_1_0_1_in_rule__PostfixOperation__Group_1_0__1__Impl10854 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InstantiationExpression__Group__0__Impl_in_rule__InstantiationExpression__Group__010888 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__InstantiationExpression__Group__1_in_rule__InstantiationExpression__Group__010891 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_rule__InstantiationExpression__Group__0__Impl10919 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InstantiationExpression__Group__1__Impl_in_rule__InstantiationExpression__Group__110950 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__InstantiationExpression__Group__2_in_rule__InstantiationExpression__Group__110953 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InstantiationExpression__TypeAssignment_1_in_rule__InstantiationExpression__Group__1__Impl10980 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InstantiationExpression__Group__2__Impl_in_rule__InstantiationExpression__Group__211010 = new BitSet(new long[]{0x00220000303000F0L});
+    public static final BitSet FOLLOW_rule__InstantiationExpression__Group__3_in_rule__InstantiationExpression__Group__211013 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__InstantiationExpression__Group__2__Impl11041 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InstantiationExpression__Group__3__Impl_in_rule__InstantiationExpression__Group__311072 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_rule__InstantiationExpression__Group__4_in_rule__InstantiationExpression__Group__311075 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InstantiationExpression__ParametersAssignment_3_in_rule__InstantiationExpression__Group__3__Impl11102 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InstantiationExpression__Group__4__Impl_in_rule__InstantiationExpression__Group__411132 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__InstantiationExpression__Group__4__Impl11160 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CollectionType__Group__0__Impl_in_rule__CollectionType__Group__011201 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_rule__CollectionType__Group__1_in_rule__CollectionType__Group__011204 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CollectionType__ReferenceAssignment_0_in_rule__CollectionType__Group__0__Impl11231 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CollectionType__Group__1__Impl_in_rule__CollectionType__Group__111261 = new BitSet(new long[]{0x0000800000000020L});
+    public static final BitSet FOLLOW_rule__CollectionType__Group__2_in_rule__CollectionType__Group__111264 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_rule__CollectionType__Group__1__Impl11292 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CollectionType__Group__2__Impl_in_rule__CollectionType__Group__211323 = new BitSet(new long[]{0x0000800000000020L});
+    public static final BitSet FOLLOW_rule__CollectionType__Group__3_in_rule__CollectionType__Group__211326 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CollectionType__SizeAssignment_2_in_rule__CollectionType__Group__2__Impl11353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CollectionType__Group__3__Impl_in_rule__CollectionType__Group__311384 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_rule__CollectionType__Group__3__Impl11412 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MapType__Group__0__Impl_in_rule__MapType__Group__011451 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_rule__MapType__Group__1_in_rule__MapType__Group__011454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MapType__ReferenceAssignment_0_in_rule__MapType__Group__0__Impl11481 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MapType__Group__1__Impl_in_rule__MapType__Group__111511 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__MapType__Group__2_in_rule__MapType__Group__111514 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__MapType__Group__1__Impl11542 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MapType__Group__2__Impl_in_rule__MapType__Group__211573 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MapType__Group_2__0_in_rule__MapType__Group__2__Impl11600 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MapType__Group_2__0__Impl_in_rule__MapType__Group_2__011636 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__MapType__Group_2__1_in_rule__MapType__Group_2__011639 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MapType__KeyTypeAssignment_2_0_in_rule__MapType__Group_2__0__Impl11666 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MapType__Group_2__1__Impl_in_rule__MapType__Group_2__111696 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__MapType__Group_2__1__Impl11724 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group__0__Impl_in_rule__QualifiedName__Group__011759 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group__1_in_rule__QualifiedName__Group__011762 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__QualifiedName__Group__0__Impl11789 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group__1__Impl_in_rule__QualifiedName__Group__111818 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__0_in_rule__QualifiedName__Group__1__Impl11845 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__0__Impl_in_rule__QualifiedName__Group_1__011880 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__1_in_rule__QualifiedName__Group_1__011883 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_rule__QualifiedName__Group_1__0__Impl11911 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__1__Impl_in_rule__QualifiedName__Group_1__111942 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__QualifiedName__Group_1__1__Impl11969 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedNameWithWildcard__Group__0__Impl_in_rule__QualifiedNameWithWildcard__Group__012002 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_rule__QualifiedNameWithWildcard__Group__1_in_rule__QualifiedNameWithWildcard__Group__012005 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__QualifiedNameWithWildcard__Group__0__Impl12032 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedNameWithWildcard__Group__1__Impl_in_rule__QualifiedNameWithWildcard__Group__112061 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedNameWithWildcard__Group_1__0_in_rule__QualifiedNameWithWildcard__Group__1__Impl12088 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedNameWithWildcard__Group_1__0__Impl_in_rule__QualifiedNameWithWildcard__Group_1__012123 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__QualifiedNameWithWildcard__Group_1__1_in_rule__QualifiedNameWithWildcard__Group_1__012126 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_rule__QualifiedNameWithWildcard__Group_1__0__Impl12154 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedNameWithWildcard__Group_1__1__Impl_in_rule__QualifiedNameWithWildcard__Group_1__112185 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__QualifiedNameWithWildcard__Group_1__1__Impl12213 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NUMBER__Group_0__0__Impl_in_rule__NUMBER__Group_0__012248 = new BitSet(new long[]{0x0000000000300020L});
+    public static final BitSet FOLLOW_rule__NUMBER__Group_0__1_in_rule__NUMBER__Group_0__012251 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NUMBER__Alternatives_0_0_in_rule__NUMBER__Group_0__0__Impl12278 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NUMBER__Group_0__1__Impl_in_rule__NUMBER__Group_0__112309 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__NUMBER__Group_0__1__Impl12336 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NUMBER__Group_1__0__Impl_in_rule__NUMBER__Group_1__012369 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_rule__NUMBER__Group_1__1_in_rule__NUMBER__Group_1__012372 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__NUMBER__Group_1__0__Impl12399 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NUMBER__Group_1__1__Impl_in_rule__NUMBER__Group_1__112428 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__NUMBER__Group_1__2_in_rule__NUMBER__Group_1__112431 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_rule__NUMBER__Group_1__1__Impl12459 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NUMBER__Group_1__2__Impl_in_rule__NUMBER__Group_1__212490 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__NUMBER__Group_1__2__Impl12517 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__BehaviorModel__NameAssignment_112557 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImport_in_rule__BehaviorModel__ImportsAssignment_2_012588 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRepositoryReference_in_rule__BehaviorModel__RepositoriesAssignment_2_112619 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComponentImpl_in_rule__BehaviorModel__ComponentImplAssignment_312650 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__RepositoryReference__ReferenceAssignment_112681 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedNameWithWildcard_in_rule__Import__ImportedNamespaceAssignment_112712 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__ComponentImpl__RefComponentAssignment_112747 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ComponentImpl__LocalDeclarationsAlternatives_3_0_in_rule__ComponentImpl__LocalDeclarationsAssignment_312782 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInterfaceRealization_in_rule__ComponentImpl__InterfacesAssignment_412815 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__VariableDecl__ModifierAlternatives_0_0_in_rule__VariableDecl__ModifierAssignment_012846 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDeclarationTypeReference_in_rule__VariableDecl__TypeAssignment_112879 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__VariableDecl__NameAssignment_212910 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ConstantDecl__NameAssignment_112941 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__ConstantDecl__ValueAssignment_312972 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__InterfaceRealization__RefInterfaceAssignment_113007 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMethodImpl_in_rule__InterfaceRealization__MethodsAssignment_213042 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__MethodImpl__RefMethodAssignment_113077 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBlockStatement_in_rule__MethodImpl__BodyAssignment_213112 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__IfStatement__ExprAssignment_213143 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBlockStatement_in_rule__IfStatement__IfStatementAssignment_413174 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBlockStatement_in_rule__IfStatement__ElseStatementAssignment_5_113205 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStatement_in_rule__BlockStatement__StatementsAssignment_213236 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariableCall_in_rule__Assignment__VariableAssignment_013267 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__Assignment__ExpressionAssignment_213298 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariableDecl_in_rule__LoopStatement__VariableAssignment_213329 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__LoopStatement__ExpressionAssignment_413360 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBlockStatement_in_rule__LoopStatement__StatementAssignment_613391 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__VariableCall__VariableAssignment_013426 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__VariableCall__IndexAssignment_1_113461 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePropertyCall_in_rule__VariableCall__SubPropertyAssignment_2_113492 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__PropertyCall__PropertyAssignment_013527 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__PropertyCall__IndexAssignment_1_113562 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePropertyCall_in_rule__PropertyCall__SubPropertyAssignment_2_113593 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_50_in_rule__Expression__FeatureAssignment_1_0_0_113629 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAndExpression_in_rule__Expression__RightAssignment_1_113668 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_rule__AndExpression__FeatureAssignment_1_0_0_113704 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRelationalExpression_in_rule__AndExpression__RightAssignment_1_113743 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RelationalExpression__FeatureAlternatives_1_0_0_1_0_in_rule__RelationalExpression__FeatureAssignment_1_0_0_113774 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOtherExpression_in_rule__RelationalExpression__RightAssignment_1_113807 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_rule__OtherExpression__FeatureAssignment_1_0_0_113843 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTypeReference_in_rule__OtherExpression__TypeAssignment_1_113882 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AdditiveExpression__FeatureAlternatives_1_0_0_1_0_in_rule__AdditiveExpression__FeatureAssignment_1_0_0_113913 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultiplicativeExpression_in_rule__AdditiveExpression__RightAssignment_1_113946 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MultiplicativeExpression__FeatureAlternatives_1_0_0_1_0_in_rule__MultiplicativeExpression__FeatureAssignment_1_0_0_113977 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUnaryOperation_in_rule__MultiplicativeExpression__RightAssignment_1_114010 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_53_in_rule__UnaryOperation__FeatureAssignment_0_114046 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUnaryOperation_in_rule__UnaryOperation__OperandAssignment_0_214085 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_54_in_rule__CastedExpression__FeatureAssignment_1_0_0_114121 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTypeReference_in_rule__CastedExpression__TypeAssignment_1_114160 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PostfixOperation__FeatureAlternatives_1_0_1_0_in_rule__PostfixOperation__FeatureAssignment_1_0_114191 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTypeReference_in_rule__InstantiationExpression__TypeAssignment_114224 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__InstantiationExpression__ParametersAssignment_314255 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__TypeReference__ReferenceAssignment14290 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTypeReference_in_rule__CollectionType__ReferenceAssignment_014325 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__CollectionType__SizeAssignment_214356 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTypeReference_in_rule__MapType__ReferenceAssignment_014387 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTypeReference_in_rule__MapType__KeyTypeAssignment_2_014418 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__StringLiteral__ValueAssignment14449 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_CHARACTER_in_rule__CharLiteral__ValueAssignment14480 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNUMBER_in_rule__NumberLiteral__ValueAssignment14511 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBOOLEAN_in_rule__BooleanLiteral__ValueAssignment14542 = new BitSet(new long[]{0x0000000000000002L});
 
 }

@@ -1236,7 +1236,7 @@ ruleAndExpression returns [EObject current=null]
 )))=>((
     {
         $current = forceCreateModelElementAndSet(
-            grammarAccess.getAndExpressionAccess().getBinaryOperationLeftAction_1_0_0_0(),
+            grammarAccess.getAndExpressionAccess().getExpressionLeftAction_1_0_0_0(),
             $current);
     }
 )(
@@ -1330,7 +1330,7 @@ ruleRelationalExpression returns [EObject current=null]
 )))=>((
     {
         $current = forceCreateModelElementAndSet(
-            grammarAccess.getRelationalExpressionAccess().getBinaryOperationLeftAction_1_0_0_0(),
+            grammarAccess.getRelationalExpressionAccess().getExpressionLeftAction_1_0_0_0(),
             $current);
     }
 )(
@@ -1460,18 +1460,34 @@ ruleOtherExpression returns [EObject current=null]
         afterParserOrEnumRuleCall();
     }
 (((((
-)	'instanceof' 
-))=>((
+)(
+(
+	'instanceof' 
+ 
+
+)
+)))=>((
     {
         $current = forceCreateModelElementAndSet(
-            grammarAccess.getOtherExpressionAccess().getInstanceOfExpressionExpressionAction_1_0_0_0(),
+            grammarAccess.getOtherExpressionAccess().getExpressionExpressionAction_1_0_0_0(),
             $current);
     }
-)	otherlv_2='instanceof' 
+)(
+(
+		lv_feature_2_0=	'instanceof' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getOtherExpressionAccess().getInstanceofKeyword_1_0_0_1());
+        newLeafNode(lv_feature_2_0, grammarAccess.getOtherExpressionAccess().getFeatureInstanceofKeyword_1_0_0_1_0());
     }
-))(
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getOtherExpressionRule());
+	        }
+       		setWithLastConsumed($current, "feature", lv_feature_2_0, "instanceof");
+	    }
+
+)
+)))(
 (
 		{ 
 	        newCompositeNode(grammarAccess.getOtherExpressionAccess().getTypeTypeReferenceParserRuleCall_1_1_0()); 
@@ -1535,7 +1551,7 @@ ruleAdditiveExpression returns [EObject current=null]
 )))=>((
     {
         $current = forceCreateModelElementAndSet(
-            grammarAccess.getAdditiveExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0(),
+            grammarAccess.getAdditiveExpressionAccess().getExpressionLeftAction_1_0_0_0(),
             $current);
     }
 )(
@@ -1638,7 +1654,7 @@ ruleMultiplicativeExpression returns [EObject current=null]
 )))=>((
     {
         $current = forceCreateModelElementAndSet(
-            grammarAccess.getMultiplicativeExpressionAccess().getXBinaryOperationLeftAction_1_0_0_0(),
+            grammarAccess.getMultiplicativeExpressionAccess().getExpressionLeftAction_1_0_0_0(),
             $current);
     }
 )(
@@ -1737,7 +1753,7 @@ ruleUnaryOperation returns [EObject current=null]
 (((
     {
         $current = forceCreateModelElement(
-            grammarAccess.getUnaryOperationAccess().getUnaryExpressionAction_0_0(),
+            grammarAccess.getUnaryOperationAccess().getExpressionAction_0_0(),
             $current);
     }
 )(
@@ -1814,18 +1830,34 @@ ruleCastedExpression returns [EObject current=null]
         afterParserOrEnumRuleCall();
     }
 (((((
-)	'as' 
-))=>((
+)(
+(
+	'as' 
+ 
+
+)
+)))=>((
     {
         $current = forceCreateModelElementAndSet(
-            grammarAccess.getCastedExpressionAccess().getCastedExpressionTargetAction_1_0_0_0(),
+            grammarAccess.getCastedExpressionAccess().getExpressionTargetAction_1_0_0_0(),
             $current);
     }
-)	otherlv_2='as' 
+)(
+(
+		lv_feature_2_0=	'as' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getCastedExpressionAccess().getAsKeyword_1_0_0_1());
+        newLeafNode(lv_feature_2_0, grammarAccess.getCastedExpressionAccess().getFeatureAsKeyword_1_0_0_1_0());
     }
-))(
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getCastedExpressionRule());
+	        }
+       		setWithLastConsumed($current, "feature", lv_feature_2_0, "as");
+	    }
+
+)
+)))(
 (
 		{ 
 	        newCompositeNode(grammarAccess.getCastedExpressionAccess().getTypeTypeReferenceParserRuleCall_1_1_0()); 
@@ -1889,7 +1921,7 @@ rulePostfixOperation returns [EObject current=null]
 )))=>((
     {
         $current = forceCreateModelElementAndSet(
-            grammarAccess.getPostfixOperationAccess().getPostfixOperationOperandAction_1_0_0(),
+            grammarAccess.getPostfixOperationAccess().getExpressionOperandAction_1_0_0(),
             $current);
     }
 )(

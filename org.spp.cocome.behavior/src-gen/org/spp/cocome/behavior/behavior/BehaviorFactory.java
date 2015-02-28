@@ -167,6 +167,15 @@ public interface BehaviorFactory extends EFactory
   Expression createExpression();
 
   /**
+   * Returns a new object of class '<em>Instantiation Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Instantiation Expression</em>'.
+   * @generated
+   */
+  InstantiationExpression createInstantiationExpression();
+
+  /**
    * Returns a new object of class '<em>Type Reference</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -255,51 +264,6 @@ public interface BehaviorFactory extends EFactory
    * @generated
    */
   BinaryOperation createBinaryOperation();
-
-  /**
-   * Returns a new object of class '<em>Instance Of Expression</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Instance Of Expression</em>'.
-   * @generated
-   */
-  InstanceOfExpression createInstanceOfExpression();
-
-  /**
-   * Returns a new object of class '<em>XBinary Operation</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>XBinary Operation</em>'.
-   * @generated
-   */
-  XBinaryOperation createXBinaryOperation();
-
-  /**
-   * Returns a new object of class '<em>Unary Expression</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Unary Expression</em>'.
-   * @generated
-   */
-  UnaryExpression createUnaryExpression();
-
-  /**
-   * Returns a new object of class '<em>Casted Expression</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Casted Expression</em>'.
-   * @generated
-   */
-  CastedExpression createCastedExpression();
-
-  /**
-   * Returns a new object of class '<em>Postfix Operation</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Postfix Operation</em>'.
-   * @generated
-   */
-  PostfixOperation createPostfixOperation();
 
   /**
    * Returns the package supported by this factory.

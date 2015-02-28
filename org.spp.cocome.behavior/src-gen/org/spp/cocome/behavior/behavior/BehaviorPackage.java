@@ -557,22 +557,67 @@ public interface BehaviorPackage extends EPackage
   int EXPRESSION = 15;
 
   /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION__LEFT = 0;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION__FEATURE = 1;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION__RIGHT = 2;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION__EXPRESSION = 3;
+
+  /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXPRESSION__TYPE = 0;
+  int EXPRESSION__TYPE = 4;
 
   /**
-   * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+   * The feature id for the '<em><b>Operand</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXPRESSION__PARAMETERS = 1;
+  int EXPRESSION__OPERAND = 5;
+
+  /**
+   * The feature id for the '<em><b>Target</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION__TARGET = 6;
 
   /**
    * The number of structural features of the '<em>Expression</em>' class.
@@ -581,7 +626,7 @@ public interface BehaviorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXPRESSION_FEATURE_COUNT = 2;
+  int EXPRESSION_FEATURE_COUNT = 7;
 
   /**
    * The meta object id for the '{@link org.spp.cocome.behavior.behavior.impl.VariableCallImpl <em>Variable Call</em>}' class.
@@ -594,6 +639,42 @@ public interface BehaviorPackage extends EPackage
   int VARIABLE_CALL = 13;
 
   /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE_CALL__LEFT = EXPRESSION__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE_CALL__FEATURE = EXPRESSION__FEATURE;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE_CALL__RIGHT = EXPRESSION__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE_CALL__EXPRESSION = EXPRESSION__EXPRESSION;
+
+  /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -603,13 +684,22 @@ public interface BehaviorPackage extends EPackage
   int VARIABLE_CALL__TYPE = EXPRESSION__TYPE;
 
   /**
-   * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+   * The feature id for the '<em><b>Operand</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int VARIABLE_CALL__PARAMETERS = EXPRESSION__PARAMETERS;
+  int VARIABLE_CALL__OPERAND = EXPRESSION__OPERAND;
+
+  /**
+   * The feature id for the '<em><b>Target</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE_CALL__TARGET = EXPRESSION__TARGET;
 
   /**
    * The feature id for the '<em><b>Variable</b></em>' reference.
@@ -694,6 +784,97 @@ public interface BehaviorPackage extends EPackage
   int PROPERTY_CALL_FEATURE_COUNT = 3;
 
   /**
+   * The meta object id for the '{@link org.spp.cocome.behavior.behavior.impl.InstantiationExpressionImpl <em>Instantiation Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.spp.cocome.behavior.behavior.impl.InstantiationExpressionImpl
+   * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getInstantiationExpression()
+   * @generated
+   */
+  int INSTANTIATION_EXPRESSION = 16;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INSTANTIATION_EXPRESSION__LEFT = EXPRESSION__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INSTANTIATION_EXPRESSION__FEATURE = EXPRESSION__FEATURE;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INSTANTIATION_EXPRESSION__RIGHT = EXPRESSION__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INSTANTIATION_EXPRESSION__EXPRESSION = EXPRESSION__EXPRESSION;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INSTANTIATION_EXPRESSION__TYPE = EXPRESSION__TYPE;
+
+  /**
+   * The feature id for the '<em><b>Operand</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INSTANTIATION_EXPRESSION__OPERAND = EXPRESSION__OPERAND;
+
+  /**
+   * The feature id for the '<em><b>Target</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INSTANTIATION_EXPRESSION__TARGET = EXPRESSION__TARGET;
+
+  /**
+   * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INSTANTIATION_EXPRESSION__PARAMETERS = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Instantiation Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INSTANTIATION_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link org.spp.cocome.behavior.behavior.impl.DeclarationTypeReferenceImpl <em>Declaration Type Reference</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -701,7 +882,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getDeclarationTypeReference()
    * @generated
    */
-  int DECLARATION_TYPE_REFERENCE = 19;
+  int DECLARATION_TYPE_REFERENCE = 20;
 
   /**
    * The number of structural features of the '<em>Declaration Type Reference</em>' class.
@@ -720,7 +901,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getTypeReference()
    * @generated
    */
-  int TYPE_REFERENCE = 16;
+  int TYPE_REFERENCE = 17;
 
   /**
    * The feature id for the '<em><b>Reference</b></em>' reference.
@@ -748,7 +929,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getCollectionType()
    * @generated
    */
-  int COLLECTION_TYPE = 17;
+  int COLLECTION_TYPE = 18;
 
   /**
    * The feature id for the '<em><b>Reference</b></em>' containment reference.
@@ -785,7 +966,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getMapType()
    * @generated
    */
-  int MAP_TYPE = 18;
+  int MAP_TYPE = 19;
 
   /**
    * The feature id for the '<em><b>Reference</b></em>' containment reference.
@@ -822,7 +1003,43 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getLiteral()
    * @generated
    */
-  int LITERAL = 20;
+  int LITERAL = 21;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL__LEFT = EXPRESSION__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL__FEATURE = EXPRESSION__FEATURE;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL__RIGHT = EXPRESSION__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL__EXPRESSION = EXPRESSION__EXPRESSION;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -834,13 +1051,22 @@ public interface BehaviorPackage extends EPackage
   int LITERAL__TYPE = EXPRESSION__TYPE;
 
   /**
-   * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+   * The feature id for the '<em><b>Operand</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LITERAL__PARAMETERS = EXPRESSION__PARAMETERS;
+  int LITERAL__OPERAND = EXPRESSION__OPERAND;
+
+  /**
+   * The feature id for the '<em><b>Target</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL__TARGET = EXPRESSION__TARGET;
 
   /**
    * The number of structural features of the '<em>Literal</em>' class.
@@ -859,7 +1085,43 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getStringLiteral()
    * @generated
    */
-  int STRING_LITERAL = 21;
+  int STRING_LITERAL = 22;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING_LITERAL__LEFT = LITERAL__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING_LITERAL__FEATURE = LITERAL__FEATURE;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING_LITERAL__RIGHT = LITERAL__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING_LITERAL__EXPRESSION = LITERAL__EXPRESSION;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -871,13 +1133,22 @@ public interface BehaviorPackage extends EPackage
   int STRING_LITERAL__TYPE = LITERAL__TYPE;
 
   /**
-   * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+   * The feature id for the '<em><b>Operand</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STRING_LITERAL__PARAMETERS = LITERAL__PARAMETERS;
+  int STRING_LITERAL__OPERAND = LITERAL__OPERAND;
+
+  /**
+   * The feature id for the '<em><b>Target</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING_LITERAL__TARGET = LITERAL__TARGET;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -905,7 +1176,43 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getCharLiteral()
    * @generated
    */
-  int CHAR_LITERAL = 22;
+  int CHAR_LITERAL = 23;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHAR_LITERAL__LEFT = LITERAL__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHAR_LITERAL__FEATURE = LITERAL__FEATURE;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHAR_LITERAL__RIGHT = LITERAL__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHAR_LITERAL__EXPRESSION = LITERAL__EXPRESSION;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -917,13 +1224,22 @@ public interface BehaviorPackage extends EPackage
   int CHAR_LITERAL__TYPE = LITERAL__TYPE;
 
   /**
-   * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+   * The feature id for the '<em><b>Operand</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CHAR_LITERAL__PARAMETERS = LITERAL__PARAMETERS;
+  int CHAR_LITERAL__OPERAND = LITERAL__OPERAND;
+
+  /**
+   * The feature id for the '<em><b>Target</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHAR_LITERAL__TARGET = LITERAL__TARGET;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -951,7 +1267,43 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getNumberLiteral()
    * @generated
    */
-  int NUMBER_LITERAL = 23;
+  int NUMBER_LITERAL = 24;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NUMBER_LITERAL__LEFT = LITERAL__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NUMBER_LITERAL__FEATURE = LITERAL__FEATURE;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NUMBER_LITERAL__RIGHT = LITERAL__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NUMBER_LITERAL__EXPRESSION = LITERAL__EXPRESSION;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -963,13 +1315,22 @@ public interface BehaviorPackage extends EPackage
   int NUMBER_LITERAL__TYPE = LITERAL__TYPE;
 
   /**
-   * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+   * The feature id for the '<em><b>Operand</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NUMBER_LITERAL__PARAMETERS = LITERAL__PARAMETERS;
+  int NUMBER_LITERAL__OPERAND = LITERAL__OPERAND;
+
+  /**
+   * The feature id for the '<em><b>Target</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NUMBER_LITERAL__TARGET = LITERAL__TARGET;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -997,7 +1358,43 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getBooleanLiteral()
    * @generated
    */
-  int BOOLEAN_LITERAL = 24;
+  int BOOLEAN_LITERAL = 25;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_LITERAL__LEFT = LITERAL__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_LITERAL__FEATURE = LITERAL__FEATURE;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_LITERAL__RIGHT = LITERAL__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_LITERAL__EXPRESSION = LITERAL__EXPRESSION;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -1009,13 +1406,22 @@ public interface BehaviorPackage extends EPackage
   int BOOLEAN_LITERAL__TYPE = LITERAL__TYPE;
 
   /**
-   * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+   * The feature id for the '<em><b>Operand</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BOOLEAN_LITERAL__PARAMETERS = LITERAL__PARAMETERS;
+  int BOOLEAN_LITERAL__OPERAND = LITERAL__OPERAND;
+
+  /**
+   * The feature id for the '<em><b>Target</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_LITERAL__TARGET = LITERAL__TARGET;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1043,7 +1449,43 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getBinaryOperation()
    * @generated
    */
-  int BINARY_OPERATION = 25;
+  int BINARY_OPERATION = 26;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_OPERATION__LEFT = EXPRESSION__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_OPERATION__FEATURE = EXPRESSION__FEATURE;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_OPERATION__RIGHT = EXPRESSION__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINARY_OPERATION__EXPRESSION = EXPRESSION__EXPRESSION;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -1055,242 +1497,13 @@ public interface BehaviorPackage extends EPackage
   int BINARY_OPERATION__TYPE = EXPRESSION__TYPE;
 
   /**
-   * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_OPERATION__PARAMETERS = EXPRESSION__PARAMETERS;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_OPERATION__LEFT = EXPRESSION_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Feature</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_OPERATION__FEATURE = EXPRESSION_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_OPERATION__RIGHT = EXPRESSION_FEATURE_COUNT + 2;
-
-  /**
-   * The number of structural features of the '<em>Binary Operation</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINARY_OPERATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
-
-  /**
-   * The meta object id for the '{@link org.spp.cocome.behavior.behavior.impl.InstanceOfExpressionImpl <em>Instance Of Expression</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.spp.cocome.behavior.behavior.impl.InstanceOfExpressionImpl
-   * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getInstanceOfExpression()
-   * @generated
-   */
-  int INSTANCE_OF_EXPRESSION = 26;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INSTANCE_OF_EXPRESSION__TYPE = EXPRESSION__TYPE;
-
-  /**
-   * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INSTANCE_OF_EXPRESSION__PARAMETERS = EXPRESSION__PARAMETERS;
-
-  /**
-   * The feature id for the '<em><b>Expression</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INSTANCE_OF_EXPRESSION__EXPRESSION = EXPRESSION_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Instance Of Expression</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INSTANCE_OF_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link org.spp.cocome.behavior.behavior.impl.XBinaryOperationImpl <em>XBinary Operation</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.spp.cocome.behavior.behavior.impl.XBinaryOperationImpl
-   * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getXBinaryOperation()
-   * @generated
-   */
-  int XBINARY_OPERATION = 27;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int XBINARY_OPERATION__TYPE = EXPRESSION__TYPE;
-
-  /**
-   * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int XBINARY_OPERATION__PARAMETERS = EXPRESSION__PARAMETERS;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int XBINARY_OPERATION__LEFT = EXPRESSION_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Feature</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int XBINARY_OPERATION__FEATURE = EXPRESSION_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int XBINARY_OPERATION__RIGHT = EXPRESSION_FEATURE_COUNT + 2;
-
-  /**
-   * The number of structural features of the '<em>XBinary Operation</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int XBINARY_OPERATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
-
-  /**
-   * The meta object id for the '{@link org.spp.cocome.behavior.behavior.impl.UnaryExpressionImpl <em>Unary Expression</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.spp.cocome.behavior.behavior.impl.UnaryExpressionImpl
-   * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getUnaryExpression()
-   * @generated
-   */
-  int UNARY_EXPRESSION = 28;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int UNARY_EXPRESSION__TYPE = EXPRESSION__TYPE;
-
-  /**
-   * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int UNARY_EXPRESSION__PARAMETERS = EXPRESSION__PARAMETERS;
-
-  /**
-   * The feature id for the '<em><b>Feature</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int UNARY_EXPRESSION__FEATURE = EXPRESSION_FEATURE_COUNT + 0;
-
-  /**
    * The feature id for the '<em><b>Operand</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int UNARY_EXPRESSION__OPERAND = EXPRESSION_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Unary Expression</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int UNARY_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.spp.cocome.behavior.behavior.impl.CastedExpressionImpl <em>Casted Expression</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.spp.cocome.behavior.behavior.impl.CastedExpressionImpl
-   * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getCastedExpression()
-   * @generated
-   */
-  int CASTED_EXPRESSION = 29;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CASTED_EXPRESSION__TYPE = EXPRESSION__TYPE;
-
-  /**
-   * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CASTED_EXPRESSION__PARAMETERS = EXPRESSION__PARAMETERS;
+  int BINARY_OPERATION__OPERAND = EXPRESSION__OPERAND;
 
   /**
    * The feature id for the '<em><b>Target</b></em>' containment reference.
@@ -1299,71 +1512,16 @@ public interface BehaviorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CASTED_EXPRESSION__TARGET = EXPRESSION_FEATURE_COUNT + 0;
+  int BINARY_OPERATION__TARGET = EXPRESSION__TARGET;
 
   /**
-   * The number of structural features of the '<em>Casted Expression</em>' class.
+   * The number of structural features of the '<em>Binary Operation</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CASTED_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link org.spp.cocome.behavior.behavior.impl.PostfixOperationImpl <em>Postfix Operation</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.spp.cocome.behavior.behavior.impl.PostfixOperationImpl
-   * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getPostfixOperation()
-   * @generated
-   */
-  int POSTFIX_OPERATION = 30;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POSTFIX_OPERATION__TYPE = EXPRESSION__TYPE;
-
-  /**
-   * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POSTFIX_OPERATION__PARAMETERS = EXPRESSION__PARAMETERS;
-
-  /**
-   * The feature id for the '<em><b>Operand</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POSTFIX_OPERATION__OPERAND = EXPRESSION_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Feature</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POSTFIX_OPERATION__FEATURE = EXPRESSION_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Postfix Operation</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int POSTFIX_OPERATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+  int BINARY_OPERATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
 
 
   /**
@@ -1890,6 +2048,50 @@ public interface BehaviorPackage extends EPackage
   EClass getExpression();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.spp.cocome.behavior.behavior.Expression#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.spp.cocome.behavior.behavior.Expression#getLeft()
+   * @see #getExpression()
+   * @generated
+   */
+  EReference getExpression_Left();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.spp.cocome.behavior.behavior.Expression#getFeature <em>Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Feature</em>'.
+   * @see org.spp.cocome.behavior.behavior.Expression#getFeature()
+   * @see #getExpression()
+   * @generated
+   */
+  EAttribute getExpression_Feature();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.spp.cocome.behavior.behavior.Expression#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.spp.cocome.behavior.behavior.Expression#getRight()
+   * @see #getExpression()
+   * @generated
+   */
+  EReference getExpression_Right();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.spp.cocome.behavior.behavior.Expression#getExpression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expression</em>'.
+   * @see org.spp.cocome.behavior.behavior.Expression#getExpression()
+   * @see #getExpression()
+   * @generated
+   */
+  EReference getExpression_Expression();
+
+  /**
    * Returns the meta object for the containment reference '{@link org.spp.cocome.behavior.behavior.Expression#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1901,15 +2103,47 @@ public interface BehaviorPackage extends EPackage
   EReference getExpression_Type();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.spp.cocome.behavior.behavior.Expression#getParameters <em>Parameters</em>}'.
+   * Returns the meta object for the containment reference '{@link org.spp.cocome.behavior.behavior.Expression#getOperand <em>Operand</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Parameters</em>'.
-   * @see org.spp.cocome.behavior.behavior.Expression#getParameters()
+   * @return the meta object for the containment reference '<em>Operand</em>'.
+   * @see org.spp.cocome.behavior.behavior.Expression#getOperand()
    * @see #getExpression()
    * @generated
    */
-  EReference getExpression_Parameters();
+  EReference getExpression_Operand();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.spp.cocome.behavior.behavior.Expression#getTarget <em>Target</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Target</em>'.
+   * @see org.spp.cocome.behavior.behavior.Expression#getTarget()
+   * @see #getExpression()
+   * @generated
+   */
+  EReference getExpression_Target();
+
+  /**
+   * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.InstantiationExpression <em>Instantiation Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Instantiation Expression</em>'.
+   * @see org.spp.cocome.behavior.behavior.InstantiationExpression
+   * @generated
+   */
+  EClass getInstantiationExpression();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.spp.cocome.behavior.behavior.InstantiationExpression#getParameters <em>Parameters</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Parameters</em>'.
+   * @see org.spp.cocome.behavior.behavior.InstantiationExpression#getParameters()
+   * @see #getInstantiationExpression()
+   * @generated
+   */
+  EReference getInstantiationExpression_Parameters();
 
   /**
    * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.TypeReference <em>Type Reference</em>}'.
@@ -2109,188 +2343,6 @@ public interface BehaviorPackage extends EPackage
    * @generated
    */
   EClass getBinaryOperation();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.spp.cocome.behavior.behavior.BinaryOperation#getLeft <em>Left</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see org.spp.cocome.behavior.behavior.BinaryOperation#getLeft()
-   * @see #getBinaryOperation()
-   * @generated
-   */
-  EReference getBinaryOperation_Left();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.spp.cocome.behavior.behavior.BinaryOperation#getFeature <em>Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Feature</em>'.
-   * @see org.spp.cocome.behavior.behavior.BinaryOperation#getFeature()
-   * @see #getBinaryOperation()
-   * @generated
-   */
-  EAttribute getBinaryOperation_Feature();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.spp.cocome.behavior.behavior.BinaryOperation#getRight <em>Right</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Right</em>'.
-   * @see org.spp.cocome.behavior.behavior.BinaryOperation#getRight()
-   * @see #getBinaryOperation()
-   * @generated
-   */
-  EReference getBinaryOperation_Right();
-
-  /**
-   * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.InstanceOfExpression <em>Instance Of Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Instance Of Expression</em>'.
-   * @see org.spp.cocome.behavior.behavior.InstanceOfExpression
-   * @generated
-   */
-  EClass getInstanceOfExpression();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.spp.cocome.behavior.behavior.InstanceOfExpression#getExpression <em>Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Expression</em>'.
-   * @see org.spp.cocome.behavior.behavior.InstanceOfExpression#getExpression()
-   * @see #getInstanceOfExpression()
-   * @generated
-   */
-  EReference getInstanceOfExpression_Expression();
-
-  /**
-   * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.XBinaryOperation <em>XBinary Operation</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>XBinary Operation</em>'.
-   * @see org.spp.cocome.behavior.behavior.XBinaryOperation
-   * @generated
-   */
-  EClass getXBinaryOperation();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.spp.cocome.behavior.behavior.XBinaryOperation#getLeft <em>Left</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see org.spp.cocome.behavior.behavior.XBinaryOperation#getLeft()
-   * @see #getXBinaryOperation()
-   * @generated
-   */
-  EReference getXBinaryOperation_Left();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.spp.cocome.behavior.behavior.XBinaryOperation#getFeature <em>Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Feature</em>'.
-   * @see org.spp.cocome.behavior.behavior.XBinaryOperation#getFeature()
-   * @see #getXBinaryOperation()
-   * @generated
-   */
-  EAttribute getXBinaryOperation_Feature();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.spp.cocome.behavior.behavior.XBinaryOperation#getRight <em>Right</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Right</em>'.
-   * @see org.spp.cocome.behavior.behavior.XBinaryOperation#getRight()
-   * @see #getXBinaryOperation()
-   * @generated
-   */
-  EReference getXBinaryOperation_Right();
-
-  /**
-   * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.UnaryExpression <em>Unary Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Unary Expression</em>'.
-   * @see org.spp.cocome.behavior.behavior.UnaryExpression
-   * @generated
-   */
-  EClass getUnaryExpression();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.spp.cocome.behavior.behavior.UnaryExpression#getFeature <em>Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Feature</em>'.
-   * @see org.spp.cocome.behavior.behavior.UnaryExpression#getFeature()
-   * @see #getUnaryExpression()
-   * @generated
-   */
-  EAttribute getUnaryExpression_Feature();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.spp.cocome.behavior.behavior.UnaryExpression#getOperand <em>Operand</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Operand</em>'.
-   * @see org.spp.cocome.behavior.behavior.UnaryExpression#getOperand()
-   * @see #getUnaryExpression()
-   * @generated
-   */
-  EReference getUnaryExpression_Operand();
-
-  /**
-   * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.CastedExpression <em>Casted Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Casted Expression</em>'.
-   * @see org.spp.cocome.behavior.behavior.CastedExpression
-   * @generated
-   */
-  EClass getCastedExpression();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.spp.cocome.behavior.behavior.CastedExpression#getTarget <em>Target</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Target</em>'.
-   * @see org.spp.cocome.behavior.behavior.CastedExpression#getTarget()
-   * @see #getCastedExpression()
-   * @generated
-   */
-  EReference getCastedExpression_Target();
-
-  /**
-   * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.PostfixOperation <em>Postfix Operation</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Postfix Operation</em>'.
-   * @see org.spp.cocome.behavior.behavior.PostfixOperation
-   * @generated
-   */
-  EClass getPostfixOperation();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.spp.cocome.behavior.behavior.PostfixOperation#getOperand <em>Operand</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Operand</em>'.
-   * @see org.spp.cocome.behavior.behavior.PostfixOperation#getOperand()
-   * @see #getPostfixOperation()
-   * @generated
-   */
-  EReference getPostfixOperation_Operand();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.spp.cocome.behavior.behavior.PostfixOperation#getFeature <em>Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Feature</em>'.
-   * @see org.spp.cocome.behavior.behavior.PostfixOperation#getFeature()
-   * @see #getPostfixOperation()
-   * @generated
-   */
-  EAttribute getPostfixOperation_Feature();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -2740,6 +2792,38 @@ public interface BehaviorPackage extends EPackage
     EClass EXPRESSION = eINSTANCE.getExpression();
 
     /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRESSION__LEFT = eINSTANCE.getExpression_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Feature</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXPRESSION__FEATURE = eINSTANCE.getExpression_Feature();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRESSION__RIGHT = eINSTANCE.getExpression_Right();
+
+    /**
+     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRESSION__EXPRESSION = eINSTANCE.getExpression_Expression();
+
+    /**
      * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2748,12 +2832,38 @@ public interface BehaviorPackage extends EPackage
     EReference EXPRESSION__TYPE = eINSTANCE.getExpression_Type();
 
     /**
+     * The meta object literal for the '<em><b>Operand</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRESSION__OPERAND = eINSTANCE.getExpression_Operand();
+
+    /**
+     * The meta object literal for the '<em><b>Target</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRESSION__TARGET = eINSTANCE.getExpression_Target();
+
+    /**
+     * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.InstantiationExpressionImpl <em>Instantiation Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.spp.cocome.behavior.behavior.impl.InstantiationExpressionImpl
+     * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getInstantiationExpression()
+     * @generated
+     */
+    EClass INSTANTIATION_EXPRESSION = eINSTANCE.getInstantiationExpression();
+
+    /**
      * The meta object literal for the '<em><b>Parameters</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference EXPRESSION__PARAMETERS = eINSTANCE.getExpression_Parameters();
+    EReference INSTANTIATION_EXPRESSION__PARAMETERS = eINSTANCE.getInstantiationExpression_Parameters();
 
     /**
      * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.TypeReferenceImpl <em>Type Reference</em>}' class.
@@ -2926,152 +3036,6 @@ public interface BehaviorPackage extends EPackage
      * @generated
      */
     EClass BINARY_OPERATION = eINSTANCE.getBinaryOperation();
-
-    /**
-     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference BINARY_OPERATION__LEFT = eINSTANCE.getBinaryOperation_Left();
-
-    /**
-     * The meta object literal for the '<em><b>Feature</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute BINARY_OPERATION__FEATURE = eINSTANCE.getBinaryOperation_Feature();
-
-    /**
-     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference BINARY_OPERATION__RIGHT = eINSTANCE.getBinaryOperation_Right();
-
-    /**
-     * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.InstanceOfExpressionImpl <em>Instance Of Expression</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.spp.cocome.behavior.behavior.impl.InstanceOfExpressionImpl
-     * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getInstanceOfExpression()
-     * @generated
-     */
-    EClass INSTANCE_OF_EXPRESSION = eINSTANCE.getInstanceOfExpression();
-
-    /**
-     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference INSTANCE_OF_EXPRESSION__EXPRESSION = eINSTANCE.getInstanceOfExpression_Expression();
-
-    /**
-     * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.XBinaryOperationImpl <em>XBinary Operation</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.spp.cocome.behavior.behavior.impl.XBinaryOperationImpl
-     * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getXBinaryOperation()
-     * @generated
-     */
-    EClass XBINARY_OPERATION = eINSTANCE.getXBinaryOperation();
-
-    /**
-     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference XBINARY_OPERATION__LEFT = eINSTANCE.getXBinaryOperation_Left();
-
-    /**
-     * The meta object literal for the '<em><b>Feature</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute XBINARY_OPERATION__FEATURE = eINSTANCE.getXBinaryOperation_Feature();
-
-    /**
-     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference XBINARY_OPERATION__RIGHT = eINSTANCE.getXBinaryOperation_Right();
-
-    /**
-     * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.UnaryExpressionImpl <em>Unary Expression</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.spp.cocome.behavior.behavior.impl.UnaryExpressionImpl
-     * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getUnaryExpression()
-     * @generated
-     */
-    EClass UNARY_EXPRESSION = eINSTANCE.getUnaryExpression();
-
-    /**
-     * The meta object literal for the '<em><b>Feature</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute UNARY_EXPRESSION__FEATURE = eINSTANCE.getUnaryExpression_Feature();
-
-    /**
-     * The meta object literal for the '<em><b>Operand</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference UNARY_EXPRESSION__OPERAND = eINSTANCE.getUnaryExpression_Operand();
-
-    /**
-     * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.CastedExpressionImpl <em>Casted Expression</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.spp.cocome.behavior.behavior.impl.CastedExpressionImpl
-     * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getCastedExpression()
-     * @generated
-     */
-    EClass CASTED_EXPRESSION = eINSTANCE.getCastedExpression();
-
-    /**
-     * The meta object literal for the '<em><b>Target</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference CASTED_EXPRESSION__TARGET = eINSTANCE.getCastedExpression_Target();
-
-    /**
-     * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.PostfixOperationImpl <em>Postfix Operation</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.spp.cocome.behavior.behavior.impl.PostfixOperationImpl
-     * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getPostfixOperation()
-     * @generated
-     */
-    EClass POSTFIX_OPERATION = eINSTANCE.getPostfixOperation();
-
-    /**
-     * The meta object literal for the '<em><b>Operand</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference POSTFIX_OPERATION__OPERAND = eINSTANCE.getPostfixOperation_Operand();
-
-    /**
-     * The meta object literal for the '<em><b>Feature</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute POSTFIX_OPERATION__FEATURE = eINSTANCE.getPostfixOperation_Feature();
 
   }
 

@@ -4,24 +4,15 @@
 package org.spp.cocome.behavior.generator
 
 import java.io.File
-import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
-import org.spp.cocome.behavior.behavior.CollectionType
 import org.spp.cocome.behavior.behavior.ComponentImpl
-import org.spp.cocome.behavior.behavior.ConstantDecl
-import org.spp.cocome.behavior.behavior.DeclarationTypeReference
-import org.spp.cocome.behavior.behavior.InterfaceRealization
-import org.spp.cocome.behavior.behavior.MapType
-import org.spp.cocome.behavior.behavior.MethodImpl
-import org.spp.cocome.behavior.behavior.TypeReference
-import org.spp.cocome.behavior.behavior.VariableDecl
 import org.spp.cocome.types.types.Model
 
-import static extension org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.*
-import static extension org.spp.cocome.behavior.generator.BehaviorStatementGenerator.*
-import static extension org.spp.cocome.behavior.generator.BehaviorTypeGenerator.*
+
+import static extension org.spp.cocome.behavior.generator.BehaviorStructureGenerator.*
+import static extension org.spp.cocome.behavior.generator.BehaviorNameResolver.*
 
 /**
  * Generates code from your model files on save.
@@ -31,64 +22,21 @@ import static extension org.spp.cocome.behavior.generator.BehaviorTypeGenerator.
 class BehaviorGenerator implements IGenerator {
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-		resource.allContents.filter(typeof(ComponentImpl)).forEach[ComponentImpl c | fsa.generateFile(c.createFileName,c.createComponentImpl)]
+		resource.allContents.filter(ComponentImpl).forEach[component | 
+			fsa.generateFile(component.createFileName,component.createComponent)
+		]
+	}
+		
+	private def createFileName(ComponentImpl com) {
+		(com.eContainer as Model).name.replace('.',File::separator) + 
+		File::separator + com.createComponentName + '.frag'
 	}
 	
-	def createFileName(ComponentImpl com) {
-		(com.eContainer as Model).name.replace('.',File::separator) + File::separator + com.name + '.frag'
+		
+	private def createComponentName (ComponentImpl component) {
+		component.refComponent.name.className
 	}
 	
-	//Hauptprozedur
-	def createComponentImpl (ComponentImpl com) '''
-		::VARIABLES::
-		«com.localDeclarations.map[decl | decl.createDeclaration].join()»
-		::VARIABLES_END::
-		«com.interfaces.map[iface | iface.createInterface].join()»		
-	'''
-	
-	def createInterface(InterfaceRealization iface)'''
-		::METHODS_FOR_«iface.refInterface.name»::
-		«iface.methods.map[m | m.createMethod].join()»
-		::METHODS_END::
-	'''
-	
-	//TODO are all Methods void with no parameters?
-	def createMethod(MethodImpl impl)'''
-	::METHOD:: 
-	public void «impl.refMethod.name» (){
-		«impl.body.handleBlockstatement»
-	}
-	::METHOD_END::
-	'''
-	
-	def createDeclaration(EObject object) {
-		switch(object) {
-			VariableDecl: object.createVariableDeclaration
-			ConstantDecl: object.createConstantDeclaration
-			default: throw new Exception()
-		}
-	}
-	
-	def createConstantDeclaration(ConstantDecl decl)'''
-	public static final «decl.name» = «createExpression(decl.value)»;	
-	'''
-	
-	def createVariableDeclaration(VariableDecl decl)'''
-	public «if(decl.modifier=='val') '''static''' else{}» «decl.type.handleDeclarationTypeReference» «decl.name»;	
-	'''
-	
-	def handleDeclarationTypeReference(DeclarationTypeReference ref){
-		switch(ref){
-				TypeReference : ref.createJavaType
-				CollectionType : ref.createJavaType
-				MapType : ref.createJavaType
-				default : throw new Exception("This should not happen (Error in handleDeclarationReference)")
-		}
-	}
-	
-	def name (ComponentImpl c){
-		c.refComponent.name
-	}
 }
 
 // 	« »
