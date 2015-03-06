@@ -3,14 +3,11 @@ package org.spp.cocome.behavior.generator;
 import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.xtend2.lib.StringConcatenation;
-import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.ListExtensions;
 import org.spp.cocome.behavior.behavior.Assignment;
 import org.spp.cocome.behavior.behavior.BlockStatement;
-import org.spp.cocome.behavior.behavior.DataAccessOperation;
-import org.spp.cocome.behavior.behavior.DataAccessStatement;
 import org.spp.cocome.behavior.behavior.DeclarationTypeReference;
 import org.spp.cocome.behavior.behavior.Expression;
 import org.spp.cocome.behavior.behavior.IfStatement;
@@ -38,40 +35,10 @@ public class BehaviorStatementGenerator {
   }
   
   public static CharSequence handleStatement(final Statement statement) {
-    try {
-      CharSequence _switchResult = null;
-      boolean _matched = false;
-      if (!_matched) {
-        if (statement instanceof IfStatement) {
-          _matched=true;
-          _switchResult = BehaviorStatementGenerator.createIfStatement(((IfStatement)statement));
-        }
-      }
-      if (!_matched) {
-        if (statement instanceof Assignment) {
-          _matched=true;
-          _switchResult = BehaviorStatementGenerator.createAssignment(((Assignment)statement));
-        }
-      }
-      if (!_matched) {
-        if (statement instanceof LoopStatement) {
-          _matched=true;
-          _switchResult = BehaviorStatementGenerator.createLoopStatement(((LoopStatement)statement));
-        }
-      }
-      if (!_matched) {
-        if (statement instanceof DataAccessStatement) {
-          _matched=true;
-          _switchResult = BehaviorStatementGenerator.createDataAccessStatement(((DataAccessStatement)statement));
-        }
-      }
-      if (!_matched) {
-        throw new Exception("This should not happen (handleStatement)");
-      }
-      return _switchResult;
-    } catch (Throwable _e) {
-      throw Exceptions.sneakyThrow(_e);
-    }
+    throw new Error("Unresolved compilation problems:"
+      + "\nDataAccessStatement cannot be resolved to a type."
+      + "\nThe method createDataAccessStatement is undefined for the type BehaviorStatementGenerator"
+      + "\nUnreachable code: The case can never match. It is already handled by a previous condition.");
   }
   
   public static CharSequence createIfStatement(final IfStatement statement) {
@@ -99,38 +66,18 @@ public class BehaviorStatementGenerator {
     return _builder;
   }
   
-  public static CharSequence createDataAccessStatement(final DataAccessStatement statement) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("em.");
-    DataAccessOperation _operation = statement.getOperation();
-    String _createDBAOperation = BehaviorStatementGenerator.createDBAOperation(_operation);
-    _builder.append(_createDBAOperation, "");
-    _builder.append("(");
-    VariableDecl _variable = statement.getVariable();
-    _builder.append(_variable, "");
-    _builder.append(");");
-    _builder.newLineIfNotEmpty();
-    return _builder;
+  public static CharSequence createDataAccessStatement(final /* DataAccessStatement */Object statement) {
+    throw new Error("Unresolved compilation problems:"
+      + "\noperation cannot be resolved"
+      + "\ncreateDBAOperation cannot be resolved"
+      + "\nvariable cannot be resolved");
   }
   
-  public static String createDBAOperation(final DataAccessOperation operation) {
-    String _switchResult = null;
-    if (operation != null) {
-      switch (operation) {
-        case STORE:
-          _switchResult = "persist";
-          break;
-        case UPDATE:
-          _switchResult = "merge";
-          break;
-        case DELETE:
-          _switchResult = "remove";
-          break;
-        default:
-          break;
-      }
-    }
-    return _switchResult;
+  public static String createDBAOperation(final /* DataAccessOperation */Object operation) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field STORE is undefined for the type BehaviorStatementGenerator"
+      + "\nThe method or field UPDATE is undefined for the type BehaviorStatementGenerator"
+      + "\nThe method or field DELETE is undefined for the type BehaviorStatementGenerator");
   }
   
   public static CharSequence createAssignment(final Assignment statement) {
