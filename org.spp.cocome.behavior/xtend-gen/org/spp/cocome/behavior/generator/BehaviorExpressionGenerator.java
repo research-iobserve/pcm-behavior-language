@@ -2,11 +2,18 @@ package org.spp.cocome.behavior.generator;
 
 import com.google.common.base.Objects;
 import java.util.Arrays;
+import java.util.List;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.xtend2.lib.StringConcatenation;
+import org.eclipse.xtext.xbase.lib.Functions.Function1;
+import org.eclipse.xtext.xbase.lib.IterableExtensions;
+import org.eclipse.xtext.xbase.lib.ListExtensions;
 import org.spp.cocome.behavior.behavior.BooleanLiteral;
 import org.spp.cocome.behavior.behavior.CharLiteral;
+import org.spp.cocome.behavior.behavior.DataQuery;
 import org.spp.cocome.behavior.behavior.DeclarationTypeReference;
 import org.spp.cocome.behavior.behavior.Expression;
+import org.spp.cocome.behavior.behavior.InstantiationExpression;
 import org.spp.cocome.behavior.behavior.Literal;
 import org.spp.cocome.behavior.behavior.NumberLiteral;
 import org.spp.cocome.behavior.behavior.PropertyCall;
@@ -21,22 +28,44 @@ import org.spp.cocome.types.types.Property;
  */
 @SuppressWarnings("all")
 public class BehaviorExpressionGenerator {
-  protected static CharSequence _createExpression(final /* DataQuery */Object expression) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nquery cannot be resolved"
-      + "\ntype cannot be resolved"
-      + "\ncreateJavaTypeReference cannot be resolved");
+  protected static CharSequence _createExpression(final DataQuery expression) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("em.createQuery(\"");
+    String _query = expression.getQuery();
+    _builder.append(_query, "");
+    _builder.append("\", ");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    DeclarationTypeReference _type = expression.getType();
+    CharSequence _createJavaTypeReference = BehaviorTypeGenerator.createJavaTypeReference(_type);
+    _builder.append(_createJavaTypeReference, "\t");
+    _builder.append(").");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("getResultList()");
+    _builder.newLine();
+    return _builder;
   }
   
-  protected static CharSequence _createExpression(final /* InstantiationExpression */Object expression) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nType mismatch: cannot convert from Object to Expression"
-      + "\nThere is no context to infer the closure\'s argument types from. Consider typing the arguments or put the closures into a typed context."
-      + "\ntype cannot be resolved"
-      + "\ncreateJavaTypeReference cannot be resolved"
-      + "\nparameters cannot be resolved"
-      + "\nmap cannot be resolved"
-      + "\njoin cannot be resolved");
+  protected static CharSequence _createExpression(final InstantiationExpression expression) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("new ");
+    DeclarationTypeReference _type = expression.getType();
+    CharSequence _createJavaTypeReference = BehaviorTypeGenerator.createJavaTypeReference(_type);
+    _builder.append(_createJavaTypeReference, "");
+    _builder.append("(");
+    EList<Expression> _parameters = expression.getParameters();
+    final Function1<Expression, CharSequence> _function = new Function1<Expression, CharSequence>() {
+      public CharSequence apply(final Expression parameter) {
+        return BehaviorExpressionGenerator.createExpression(parameter);
+      }
+    };
+    List<CharSequence> _map = ListExtensions.<Expression, CharSequence>map(_parameters, _function);
+    String _join = IterableExtensions.join(_map, ", ");
+    _builder.append(_join, "");
+    _builder.append(")");
+    _builder.newLineIfNotEmpty();
+    return _builder;
   }
   
   protected static CharSequence _createExpression(final VariableCall expression) {
@@ -303,14 +332,14 @@ public class BehaviorExpressionGenerator {
       return _createExpression((NumberLiteral)expression);
     } else if (expression instanceof StringLiteral) {
       return _createExpression((StringLiteral)expression);
+    } else if (expression instanceof DataQuery) {
+      return _createExpression((DataQuery)expression);
+    } else if (expression instanceof InstantiationExpression) {
+      return _createExpression((InstantiationExpression)expression);
     } else if (expression instanceof Literal) {
       return _createExpression((Literal)expression);
     } else if (expression instanceof VariableCall) {
       return _createExpression((VariableCall)expression);
-    } else if (expression != null) {
-      return _createExpression(expression);
-    } else if (expression != null) {
-      return _createExpression(expression);
     } else if (expression != null) {
       return _createExpression(expression);
     } else {

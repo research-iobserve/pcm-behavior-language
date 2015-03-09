@@ -9,12 +9,15 @@ import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.ListExtensions;
+import org.eclipse.xtext.xbase.lib.StringExtensions;
 import org.spp.cocome.behavior.behavior.BlockStatement;
 import org.spp.cocome.behavior.behavior.ComponentImpl;
+import org.spp.cocome.behavior.behavior.ComponentKind;
 import org.spp.cocome.behavior.behavior.ConstantDecl;
 import org.spp.cocome.behavior.behavior.DeclarationTypeReference;
 import org.spp.cocome.behavior.behavior.Expression;
 import org.spp.cocome.behavior.behavior.InterfaceRealization;
+import org.spp.cocome.behavior.behavior.LifeCycleMethod;
 import org.spp.cocome.behavior.behavior.MethodImpl;
 import org.spp.cocome.behavior.behavior.VariableDecl;
 import org.spp.cocome.behavior.generator.BehaviorExpressionGenerator;
@@ -30,30 +33,117 @@ public class BehaviorStructureGenerator {
    * Hauptprozedur
    */
   public static CharSequence createComponent(final ComponentImpl com) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method kind is undefined for the type BehaviorStructureGenerator"
-      + "\nThe method kind is undefined for the type BehaviorStructureGenerator"
-      + "\nThe method postConstruct is undefined for the type BehaviorStructureGenerator"
-      + "\nThe method preDestroy is undefined for the type BehaviorStructureGenerator"
-      + "\nThe method postConstruct is undefined for the type BehaviorStructureGenerator"
-      + "\nThe method postConstruct is undefined for the type BehaviorStructureGenerator"
-      + "\nThe method preDestroy is undefined for the type BehaviorStructureGenerator"
-      + "\nThe method preDestroy is undefined for the type BehaviorStructureGenerator"
-      + "\nThe method postConstruct is undefined for the type BehaviorStructureGenerator"
-      + "\nThe method preDestroy is undefined for the type BehaviorStructureGenerator"
-      + "\n!= cannot be resolved"
-      + "\nliteral cannot be resolved"
-      + "\ntoFirstUpper cannot be resolved"
-      + "\n!= cannot be resolved"
-      + "\n|| cannot be resolved"
-      + "\n!= cannot be resolved"
-      + "\n!= cannot be resolved"
-      + "\ncreateLifeCycleMethod cannot be resolved"
-      + "\n!= cannot be resolved"
-      + "\ncreateLifeCycleMethod cannot be resolved"
-      + "\n!= cannot be resolved"
-      + "\n|| cannot be resolved"
-      + "\n!= cannot be resolved");
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("::IMPORTS::");
+    _builder.newLine();
+    CharSequence _xifexpression = null;
+    boolean _containsJPA = BehaviorStructureGenerator.containsJPA(com);
+    if (_containsJPA) {
+      _xifexpression = BehaviorStructureGenerator.createJPAImports();
+    }
+    _builder.append(_xifexpression, "");
+    _builder.append("\t");
+    _builder.newLineIfNotEmpty();
+    _builder.append("::IMPORTS END::");
+    _builder.newLine();
+    _builder.append("::ANNOTATIONS::");
+    _builder.newLine();
+    {
+      ComponentKind _kind = com.getKind();
+      boolean _notEquals = (!Objects.equal(_kind, null));
+      if (_notEquals) {
+        _builder.append("@");
+        ComponentKind _kind_1 = com.getKind();
+        String _literal = _kind_1.getLiteral();
+        String _firstUpper = StringExtensions.toFirstUpper(_literal);
+        _builder.append(_firstUpper, "");
+      }
+    }
+    _builder.newLineIfNotEmpty();
+    _builder.append("::ANNOTATIONS END::");
+    _builder.newLine();
+    _builder.append("::VARIABLES::");
+    _builder.newLine();
+    EList<EObject> _localDeclarations = com.getLocalDeclarations();
+    final Function1<EObject, CharSequence> _function = new Function1<EObject, CharSequence>() {
+      public CharSequence apply(final EObject decl) {
+        return BehaviorStructureGenerator.createDeclaration(decl);
+      }
+    };
+    List<CharSequence> _map = ListExtensions.<EObject, CharSequence>map(_localDeclarations, _function);
+    String _join = IterableExtensions.join(_map);
+    _builder.append(_join, "");
+    _builder.newLineIfNotEmpty();
+    CharSequence _xifexpression_1 = null;
+    boolean _containsJPA_1 = BehaviorStructureGenerator.containsJPA(com);
+    if (_containsJPA_1) {
+      _xifexpression_1 = BehaviorStructureGenerator.createJPASupport();
+    }
+    _builder.append(_xifexpression_1, "");
+    _builder.newLineIfNotEmpty();
+    _builder.append("::VARIABLES END::");
+    _builder.newLine();
+    {
+      boolean _or = false;
+      LifeCycleMethod _postConstruct = com.getPostConstruct();
+      boolean _notEquals_1 = (!Objects.equal(_postConstruct, null));
+      if (_notEquals_1) {
+        _or = true;
+      } else {
+        LifeCycleMethod _preDestroy = com.getPreDestroy();
+        boolean _notEquals_2 = (!Objects.equal(_preDestroy, null));
+        _or = _notEquals_2;
+      }
+      if (_or) {
+        _builder.append("::LIFECYCLE::");
+      }
+    }
+    _builder.newLineIfNotEmpty();
+    CharSequence _xifexpression_2 = null;
+    LifeCycleMethod _postConstruct_1 = com.getPostConstruct();
+    boolean _notEquals_3 = (!Objects.equal(_postConstruct_1, null));
+    if (_notEquals_3) {
+      LifeCycleMethod _postConstruct_2 = com.getPostConstruct();
+      _xifexpression_2 = BehaviorStructureGenerator.createLifeCycleMethod(_postConstruct_2, "PostConstruct", "initialize");
+    }
+    _builder.append(_xifexpression_2, "");
+    _builder.newLineIfNotEmpty();
+    CharSequence _xifexpression_3 = null;
+    LifeCycleMethod _preDestroy_1 = com.getPreDestroy();
+    boolean _notEquals_4 = (!Objects.equal(_preDestroy_1, null));
+    if (_notEquals_4) {
+      LifeCycleMethod _preDestroy_2 = com.getPreDestroy();
+      _xifexpression_3 = BehaviorStructureGenerator.createLifeCycleMethod(_preDestroy_2, "PreDestroy", "shutdown");
+    }
+    _builder.append(_xifexpression_3, "");
+    _builder.newLineIfNotEmpty();
+    {
+      boolean _or_1 = false;
+      LifeCycleMethod _postConstruct_3 = com.getPostConstruct();
+      boolean _notEquals_5 = (!Objects.equal(_postConstruct_3, null));
+      if (_notEquals_5) {
+        _or_1 = true;
+      } else {
+        LifeCycleMethod _preDestroy_3 = com.getPreDestroy();
+        boolean _notEquals_6 = (!Objects.equal(_preDestroy_3, null));
+        _or_1 = _notEquals_6;
+      }
+      if (_or_1) {
+        _builder.append("::LIFECYCLE END::");
+      }
+    }
+    _builder.newLineIfNotEmpty();
+    EList<InterfaceRealization> _interfaces = com.getInterfaces();
+    final Function1<InterfaceRealization, CharSequence> _function_1 = new Function1<InterfaceRealization, CharSequence>() {
+      public CharSequence apply(final InterfaceRealization iface) {
+        return BehaviorStructureGenerator.createInterface(iface);
+      }
+    };
+    List<CharSequence> _map_1 = ListExtensions.<InterfaceRealization, CharSequence>map(_interfaces, _function_1);
+    String _join_1 = IterableExtensions.join(_map_1);
+    _builder.append(_join_1, "");
+    _builder.newLineIfNotEmpty();
+    return _builder;
   }
   
   public static CharSequence createJPAImports() {
@@ -79,10 +169,23 @@ public class BehaviorStructureGenerator {
   /**
    * life cycle methods
    */
-  public static CharSequence createLifeCycleMethod(final /* LifeCycleMethod */Object method, final String annotation, final String name) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nbody cannot be resolved"
-      + "\nhandleBlockstatement cannot be resolved");
+  public static CharSequence createLifeCycleMethod(final LifeCycleMethod method, final String annotation, final String name) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("@");
+    _builder.append(annotation, "");
+    _builder.newLineIfNotEmpty();
+    _builder.append("public void ");
+    _builder.append(name, "");
+    _builder.append("() {");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    BlockStatement _body = method.getBody();
+    CharSequence _handleBlockstatement = BehaviorStatementGenerator.handleBlockstatement(_body);
+    _builder.append(_handleBlockstatement, "\t");
+    _builder.newLineIfNotEmpty();
+    _builder.append("}");
+    _builder.newLine();
+    return _builder;
   }
   
   /**
