@@ -28,10 +28,8 @@ import org.spp.cocome.behavior.generator.BehaviorTypeGenerator;
 public class BehaviorStatementGenerator {
   public static CharSequence handleBlockstatement(final BlockStatement bStatement) {
     EList<Statement> _statements = bStatement.getStatements();
-    final Function1<Statement, CharSequence> _function = new Function1<Statement, CharSequence>() {
-      public CharSequence apply(final Statement bs) {
-        return BehaviorStatementGenerator.handleStatement(bs);
-      }
+    final Function1<Statement, CharSequence> _function = (Statement bs) -> {
+      return BehaviorStatementGenerator.handleStatement(bs);
     };
     List<CharSequence> _map = ListExtensions.<Statement, CharSequence>map(_statements, _function);
     return IterableExtensions.join(_map);

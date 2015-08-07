@@ -26,15 +26,14 @@ import org.spp.cocome.types.types.Model;
  */
 @SuppressWarnings("all")
 public class BehaviorGenerator implements IGenerator {
+  @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
     TreeIterator<EObject> _allContents = resource.getAllContents();
     Iterator<ComponentImpl> _filter = Iterators.<ComponentImpl>filter(_allContents, ComponentImpl.class);
-    final Procedure1<ComponentImpl> _function = new Procedure1<ComponentImpl>() {
-      public void apply(final ComponentImpl component) {
-        String _createFileName = BehaviorGenerator.this.createFileName(component);
-        CharSequence _createComponent = BehaviorStructureGenerator.createComponent(component);
-        fsa.generateFile(_createFileName, _createComponent);
-      }
+    final Procedure1<ComponentImpl> _function = (ComponentImpl component) -> {
+      String _createFileName = this.createFileName(component);
+      CharSequence _createComponent = BehaviorStructureGenerator.createComponent(component);
+      fsa.generateFile(_createFileName, _createComponent);
     };
     IteratorExtensions.<ComponentImpl>forEach(_filter, _function);
   }
