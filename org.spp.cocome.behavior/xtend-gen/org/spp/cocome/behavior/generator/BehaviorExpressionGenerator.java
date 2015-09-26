@@ -35,10 +35,8 @@ public class BehaviorExpressionGenerator {
     _builder.append(_createJavaTypeReference, "");
     _builder.append("(");
     EList<Expression> _parameters = expression.getParameters();
-    final Function1<Expression, CharSequence> _function = new Function1<Expression, CharSequence>() {
-      public CharSequence apply(final Expression parameter) {
-        return BehaviorExpressionGenerator.createExpression(parameter);
-      }
+    final Function1<Expression, CharSequence> _function = (Expression parameter) -> {
+      return BehaviorExpressionGenerator.createExpression(parameter);
     };
     List<CharSequence> _map = ListExtensions.<Expression, CharSequence>map(_parameters, _function);
     String _join = IterableExtensions.join(_map, ", ");
@@ -156,72 +154,20 @@ public class BehaviorExpressionGenerator {
   protected static CharSequence _createExpression(final Expression expression) {
     CharSequence _switchResult = null;
     String _feature = expression.getFeature();
-    boolean _matched = false;
-    if (!_matched) {
-      if (Objects.equal(_feature, "&&")) {
-        _matched=true;
-      }
-      if (!_matched) {
-        if (Objects.equal(_feature, "||")) {
-          _matched=true;
-        }
-      }
-      if (!_matched) {
-        if (Objects.equal(_feature, ">")) {
-          _matched=true;
-        }
-      }
-      if (!_matched) {
-        if (Objects.equal(_feature, "<")) {
-          _matched=true;
-        }
-      }
-      if (!_matched) {
-        if (Objects.equal(_feature, ">=")) {
-          _matched=true;
-        }
-      }
-      if (!_matched) {
-        if (Objects.equal(_feature, "<=")) {
-          _matched=true;
-        }
-      }
-      if (!_matched) {
-        if (Objects.equal(_feature, "==")) {
-          _matched=true;
-        }
-      }
-      if (!_matched) {
-        if (Objects.equal(_feature, "!=")) {
-          _matched=true;
-        }
-      }
-      if (!_matched) {
-        if (Objects.equal(_feature, "+")) {
-          _matched=true;
-        }
-      }
-      if (!_matched) {
-        if (Objects.equal(_feature, "-")) {
-          _matched=true;
-        }
-      }
-      if (!_matched) {
-        if (Objects.equal(_feature, "*")) {
-          _matched=true;
-        }
-      }
-      if (!_matched) {
-        if (Objects.equal(_feature, "%")) {
-          _matched=true;
-        }
-      }
-      if (!_matched) {
-        if (Objects.equal(_feature, "/")) {
-          _matched=true;
-        }
-      }
-      if (_matched) {
+    switch (_feature) {
+      case "&&":
+      case "||":
+      case ">":
+      case "<":
+      case ">=":
+      case "<=":
+      case "==":
+      case "!=":
+      case "+":
+      case "-":
+      case "*":
+      case "%":
+      case "/":
         StringConcatenation _builder = new StringConcatenation();
         _builder.append("(");
         Expression _left = expression.getLeft();
@@ -236,11 +182,8 @@ public class BehaviorExpressionGenerator {
         _builder.append(_createExpression_1, "");
         _builder.append(")");
         _switchResult = _builder;
-      }
-    }
-    if (!_matched) {
-      if (Objects.equal(_feature, "!")) {
-        _matched=true;
+        break;
+      case "!":
         StringConcatenation _builder_1 = new StringConcatenation();
         _builder_1.append("(!(");
         Expression _operand = expression.getOperand();
@@ -248,33 +191,24 @@ public class BehaviorExpressionGenerator {
         _builder_1.append(_createExpression_2, "");
         _builder_1.append("))");
         _switchResult = _builder_1;
-      }
-    }
-    if (!_matched) {
-      if (Objects.equal(_feature, "++")) {
-        _matched=true;
+        break;
+      case "++":
         StringConcatenation _builder_2 = new StringConcatenation();
         Expression _operand_1 = expression.getOperand();
         CharSequence _createExpression_3 = BehaviorExpressionGenerator.createExpression(_operand_1);
         _builder_2.append(_createExpression_3, "");
         _builder_2.append("++");
         _switchResult = _builder_2;
-      }
-    }
-    if (!_matched) {
-      if (Objects.equal(_feature, "--")) {
-        _matched=true;
+        break;
+      case "--":
         StringConcatenation _builder_3 = new StringConcatenation();
         Expression _operand_2 = expression.getOperand();
         CharSequence _createExpression_4 = BehaviorExpressionGenerator.createExpression(_operand_2);
         _builder_3.append(_createExpression_4, "");
         _builder_3.append("--");
         _switchResult = _builder_3;
-      }
-    }
-    if (!_matched) {
-      if (Objects.equal(_feature, "instanceof")) {
-        _matched=true;
+        break;
+      case "instanceof":
         StringConcatenation _builder_4 = new StringConcatenation();
         Expression _expression = expression.getExpression();
         _builder_4.append(_expression, "");
@@ -283,11 +217,8 @@ public class BehaviorExpressionGenerator {
         CharSequence _createJavaTypeReference = BehaviorTypeGenerator.createJavaTypeReference(_type);
         _builder_4.append(_createJavaTypeReference, "");
         _switchResult = _builder_4;
-      }
-    }
-    if (!_matched) {
-      if (Objects.equal(_feature, "as")) {
-        _matched=true;
+        break;
+      case "as":
         StringConcatenation _builder_5 = new StringConcatenation();
         _builder_5.append("((");
         TypeReference _type_1 = expression.getType();
@@ -298,7 +229,7 @@ public class BehaviorExpressionGenerator {
         _builder_5.append(_target, "");
         _builder_5.append(")");
         _switchResult = _builder_5;
-      }
+        break;
     }
     return _switchResult;
   }
