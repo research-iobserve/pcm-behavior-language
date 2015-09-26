@@ -1,0 +1,24 @@
+org.spp.cocome.behavior;size of observed system;6.0
+org.spp.cocome.behavior;number of modules;17.0
+org.spp.cocome.behavior;number of nodes;64.0
+org.spp.cocome.behavior;number of edges;156.0
+org.spp.cocome.behavior;hypergraph size;373.2341333038964
+org.spp.cocome.behavior;hypergraph complexity;1041.42936150764
+org.spp.cocome.behavior;inter module coupling;781.8781518384898
+org.spp.cocome.behavior;graph cohesion;0.042074904345327964
+org.spp.cocome.behavior;size of observed system;6.0
+org.spp.cocome.behavior;number of modules;17.0
+org.spp.cocome.behavior;number of nodes;58.0
+org.spp.cocome.behavior;number of edges;134.0
+org.spp.cocome.behavior;hypergraph size;328.85506068649937
+org.spp.cocome.behavior;hypergraph complexity;873.3677569788243
+org.spp.cocome.behavior;inter module coupling;654.8314161465605
+org.spp.cocome.behavior;graph cohesion;0.04396543354533226
+org.spp.cocome.behavior;size of observed system;6.0
+org.spp.cocome.behavior;number of modules;17.0
+org.spp.cocome.behavior;number of nodes;58.0
+org.spp.cocome.behavior;number of edges;134.0
+org.spp.cocome.behavior;hypergraph size;328.85506068649937
+org.spp.cocome.behavior;hypergraph complexity;873.3677569788243
+org.spp.cocome.behavior;inter module coupling;654.8314161465606
+org.spp.cocome.behavior;graph cohesion;0.04396543354533225

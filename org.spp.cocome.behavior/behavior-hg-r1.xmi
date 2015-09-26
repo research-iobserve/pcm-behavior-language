@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="ASCII"?>
+<hypergraph:ModularHypergraph xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hypergraph="http://evaluation.se.cs.cau.de/hypergraph">
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorGenerator.doGenerate" edges="//@edges.0 //@edges.1 //@edges.2 //@edges.3 //@edges.4 //@edges.5">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorGenerator.createFileName" edges="//@edges.2 //@edges.6 //@edges.7">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorGenerator.createComponentName" edges="//@edges.7 //@edges.8">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorNameResolver.getClassName" edges="//@edges.8">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorNameResolver.getMethodName" edges="//@edges.107">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression" edges="//@edges.9 //@edges.10 //@edges.11 //@edges.12 //@edges.13 //@edges.14 //@edges.15 //@edges.16">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression" edges="//@edges.17 //@edges.18 //@edges.19 //@edges.20 //@edges.21 //@edges.22 //@edges.23">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.createProperty" edges="//@edges.22 //@edges.24 //@edges.25 //@edges.26 //@edges.27 //@edges.28 //@edges.29 //@edges.30">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression" edges="//@edges.31 //@edges.32 //@edges.33 //@edges.50">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression" edges="//@edges.34 //@edges.35 //@edges.36 //@edges.37 //@edges.48">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression" edges="//@edges.38 //@edges.39 //@edges.49">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression" edges="//@edges.40 //@edges.41 //@edges.47">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression" edges="//@edges.51">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression" edges="//@edges.42 //@edges.43 //@edges.44 //@edges.45 //@edges.46">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.createExpression" edges="//@edges.13 //@edges.21 //@edges.28 //@edges.44 //@edges.47 //@edges.48 //@edges.49 //@edges.50 //@edges.51 //@edges.68 //@edges.74 //@edges.82 //@edges.117">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorTypeGenerator._createJavaTypeReference" edges="//@edges.57">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorTypeGenerator._createJavaTypeReference" edges="//@edges.52 //@edges.53 //@edges.54 //@edges.55">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorTypeGenerator._createJavaTypeReference" edges="//@edges.56">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorTypeGenerator._createJavaTypeReference" edges="//@edges.58">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorTypeGenerator.createJavaTypeReference" edges="//@edges.11 //@edges.46 //@edges.53 //@edges.56 //@edges.57 //@edges.58 //@edges.80 //@edges.123">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.handleBlockstatement" edges="//@edges.59 //@edges.60 //@edges.61 //@edges.71 //@edges.84 //@edges.110">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.handleStatement" edges="//@edges.59 //@edges.62 //@edges.63 //@edges.64 //@edges.65">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createIfStatement" edges="//@edges.62 //@edges.66 //@edges.67 //@edges.68 //@edges.69 //@edges.70 //@edges.71 //@edges.72">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createAssignment" edges="//@edges.63 //@edges.73 //@edges.74 //@edges.75 //@edges.76 //@edges.77">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createLoopStatement" edges="//@edges.64 //@edges.78 //@edges.79 //@edges.80 //@edges.81 //@edges.82 //@edges.83 //@edges.84 //@edges.85">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createComponent" edges="//@edges.3 //@edges.86 //@edges.87 //@edges.88 //@edges.89 //@edges.90 //@edges.91 //@edges.92 //@edges.93 //@edges.94 //@edges.95">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createInterface" edges="//@edges.94 //@edges.96 //@edges.97 //@edges.98 //@edges.99 //@edges.100 //@edges.101 //@edges.102 //@edges.103">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createMethod" edges="//@edges.100 //@edges.104 //@edges.105 //@edges.106 //@edges.107 //@edges.108 //@edges.109 //@edges.110">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createDeclaration" edges="//@edges.89 //@edges.111 //@edges.112 //@edges.113">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createConstantDeclaration" edges="//@edges.112 //@edges.114 //@edges.115 //@edges.116 //@edges.117 //@edges.118">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createVariableDeclaration" edges="//@edges.111 //@edges.119 //@edges.120 //@edges.121 //@edges.122 //@edges.123 //@edges.124">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorGenerator.BehaviorGenerator">
+    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorNameResolver.BehaviorNameResolver">
+    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.BehaviorExpressionGenerator">
+    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorTypeGenerator.BehaviorTypeGenerator">
+    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.BehaviorStatementGenerator">
+    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
+  </nodes>
+  <nodes name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.BehaviorStructureGenerator">
+    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
+  </nodes>
+  <nodes name="org.eclipse.emf.ecore.resource.Resource.getAllContents" edges="//@edges.0">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="com.google.common.collect.Iterators.filter" edges="//@edges.1">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.eclipse.xtext.generator.IFileSystemAccess.generateFile" edges="//@edges.4">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.eclipse.xtext.xbase.lib.IteratorExtensions.forEach" edges="//@edges.5">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.eclipse.emf.ecore.EObject.eContainer" edges="//@edges.6">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.eclipse.xtend2.lib.StringConcatenation.StringConcatenation" edges="//@edges.9 //@edges.17 //@edges.24 //@edges.31 //@edges.34 //@edges.38 //@edges.40 //@edges.42 //@edges.52 //@edges.66 //@edges.73 //@edges.78 //@edges.86 //@edges.96 //@edges.104 //@edges.114 //@edges.119">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.eclipse.xtend2.lib.StringConcatenation.append" edges="//@edges.10 //@edges.20 //@edges.25 //@edges.32 //@edges.35 //@edges.43 //@edges.55 //@edges.67 //@edges.76 //@edges.79 //@edges.87 //@edges.97 //@edges.105 //@edges.115 //@edges.120">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.eclipse.xtend2.lib.StringConcatenation.append" edges="//@edges.12 //@edges.18 //@edges.26 //@edges.33 //@edges.36 //@edges.39 //@edges.41 //@edges.45 //@edges.54 //@edges.69 //@edges.75 //@edges.81 //@edges.92 //@edges.98 //@edges.108 //@edges.116 //@edges.122">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.eclipse.xtext.xbase.lib.ListExtensions.map" edges="//@edges.14">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.eclipse.xtext.xbase.lib.IterableExtensions.join" edges="//@edges.15">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.eclipse.xtend2.lib.StringConcatenation.newLineIfNotEmpty" edges="//@edges.16 //@edges.23 //@edges.30 //@edges.37 //@edges.70 //@edges.77 //@edges.83 //@edges.93 //@edges.99 //@edges.109 //@edges.118 //@edges.124">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="com.google.common.base.Objects.equal" edges="//@edges.19 //@edges.27 //@edges.121">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.eclipse.xtext.xbase.lib.ListExtensions.map" edges="//@edges.60">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.eclipse.xtext.xbase.lib.IterableExtensions.join" edges="//@edges.61 //@edges.91 //@edges.102">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.eclipse.xtext.xbase.lib.Exceptions.sneakyThrow" edges="//@edges.65 //@edges.113">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.eclipse.xtend2.lib.StringConcatenation.newLine" edges="//@edges.72 //@edges.85 //@edges.88 //@edges.103 //@edges.106">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.eclipse.xtext.xbase.lib.ListExtensions.map" edges="//@edges.90">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.eclipse.xtext.xbase.lib.ListExtensions.map" edges="//@edges.95">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <nodes name="org.eclipse.xtext.xbase.lib.ListExtensions.map" edges="//@edges.101">
+    <derivedFrom xsi:type="hypergraph:MethodTrace"/>
+  </nodes>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorGenerator.doGenerate::org.eclipse.emf.ecore.resource.Resource.getAllContents">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorGenerator.doGenerate::com.google.common.collect.Iterators.filter">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorGenerator.doGenerate::org.spp.cocome.behavior.generator.BehaviorGenerator.createFileName">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorGenerator.doGenerate::org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createComponent">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorGenerator.doGenerate::org.eclipse.xtext.generator.IFileSystemAccess.generateFile">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorGenerator.doGenerate::org.eclipse.xtext.xbase.lib.IteratorExtensions.forEach">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorGenerator.createFileName::org.eclipse.emf.ecore.EObject.eContainer">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorGenerator.createFileName::org.spp.cocome.behavior.generator.BehaviorGenerator.createComponentName">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorGenerator.createComponentName::org.spp.cocome.behavior.generator.BehaviorNameResolver.getClassName">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.eclipse.xtend2.lib.StringConcatenation.StringConcatenation">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.spp.cocome.behavior.generator.BehaviorTypeGenerator.createJavaTypeReference">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.createExpression">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.eclipse.xtext.xbase.lib.ListExtensions.map">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.eclipse.xtext.xbase.lib.IterableExtensions.join">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.eclipse.xtend2.lib.StringConcatenation.newLineIfNotEmpty">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.eclipse.xtend2.lib.StringConcatenation.StringConcatenation">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::com.google.common.base.Objects.equal">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.createExpression">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.createProperty">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.eclipse.xtend2.lib.StringConcatenation.newLineIfNotEmpty">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.createProperty::org.eclipse.xtend2.lib.StringConcatenation.StringConcatenation">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.createProperty::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.createProperty::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.createProperty::com.google.common.base.Objects.equal">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.createProperty::org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.createExpression">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.createProperty::org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.createProperty">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.createProperty::org.eclipse.xtend2.lib.StringConcatenation.newLineIfNotEmpty">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.eclipse.xtend2.lib.StringConcatenation.StringConcatenation">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.eclipse.xtend2.lib.StringConcatenation.StringConcatenation">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.eclipse.xtend2.lib.StringConcatenation.newLineIfNotEmpty">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.eclipse.xtend2.lib.StringConcatenation.StringConcatenation">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.eclipse.xtend2.lib.StringConcatenation.StringConcatenation">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.eclipse.xtend2.lib.StringConcatenation.StringConcatenation">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.createExpression">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression::org.spp.cocome.behavior.generator.BehaviorTypeGenerator.createJavaTypeReference">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.createExpression::org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.createExpression::org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.createExpression::org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.createExpression::org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.createExpression::org.spp.cocome.behavior.generator.BehaviorExpressionGenerator._createExpression">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorTypeGenerator._createJavaTypeReference::org.eclipse.xtend2.lib.StringConcatenation.StringConcatenation">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorTypeGenerator._createJavaTypeReference::org.spp.cocome.behavior.generator.BehaviorTypeGenerator.createJavaTypeReference">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorTypeGenerator._createJavaTypeReference::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorTypeGenerator._createJavaTypeReference::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorTypeGenerator.createJavaTypeReference::org.spp.cocome.behavior.generator.BehaviorTypeGenerator._createJavaTypeReference">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorTypeGenerator.createJavaTypeReference::org.spp.cocome.behavior.generator.BehaviorTypeGenerator._createJavaTypeReference">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorTypeGenerator.createJavaTypeReference::org.spp.cocome.behavior.generator.BehaviorTypeGenerator._createJavaTypeReference">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.handleBlockstatement::org.spp.cocome.behavior.generator.BehaviorStatementGenerator.handleStatement">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.handleBlockstatement::org.eclipse.xtext.xbase.lib.ListExtensions.map">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.handleBlockstatement::org.eclipse.xtext.xbase.lib.IterableExtensions.join">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.handleStatement::org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createIfStatement">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.handleStatement::org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createAssignment">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.handleStatement::org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createLoopStatement">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.handleStatement::org.eclipse.xtext.xbase.lib.Exceptions.sneakyThrow">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createIfStatement::org.eclipse.xtend2.lib.StringConcatenation.StringConcatenation">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createIfStatement::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createIfStatement::org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.createExpression">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createIfStatement::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createIfStatement::org.eclipse.xtend2.lib.StringConcatenation.newLineIfNotEmpty">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createIfStatement::org.spp.cocome.behavior.generator.BehaviorStatementGenerator.handleBlockstatement">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createIfStatement::org.eclipse.xtend2.lib.StringConcatenation.newLine">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createAssignment::org.eclipse.xtend2.lib.StringConcatenation.StringConcatenation">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createAssignment::org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.createExpression">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createAssignment::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createAssignment::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createAssignment::org.eclipse.xtend2.lib.StringConcatenation.newLineIfNotEmpty">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createLoopStatement::org.eclipse.xtend2.lib.StringConcatenation.StringConcatenation">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createLoopStatement::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createLoopStatement::org.spp.cocome.behavior.generator.BehaviorTypeGenerator.createJavaTypeReference">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createLoopStatement::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createLoopStatement::org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.createExpression">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createLoopStatement::org.eclipse.xtend2.lib.StringConcatenation.newLineIfNotEmpty">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createLoopStatement::org.spp.cocome.behavior.generator.BehaviorStatementGenerator.handleBlockstatement">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator.createLoopStatement::org.eclipse.xtend2.lib.StringConcatenation.newLine">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createComponent::org.eclipse.xtend2.lib.StringConcatenation.StringConcatenation">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createComponent::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createComponent::org.eclipse.xtend2.lib.StringConcatenation.newLine">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createComponent::org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createDeclaration">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createComponent::org.eclipse.xtext.xbase.lib.ListExtensions.map">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createComponent::org.eclipse.xtext.xbase.lib.IterableExtensions.join">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createComponent::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createComponent::org.eclipse.xtend2.lib.StringConcatenation.newLineIfNotEmpty">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createComponent::org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createInterface">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createComponent::org.eclipse.xtext.xbase.lib.ListExtensions.map">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createInterface::org.eclipse.xtend2.lib.StringConcatenation.StringConcatenation">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createInterface::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createInterface::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createInterface::org.eclipse.xtend2.lib.StringConcatenation.newLineIfNotEmpty">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createInterface::org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createMethod">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createInterface::org.eclipse.xtext.xbase.lib.ListExtensions.map">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createInterface::org.eclipse.xtext.xbase.lib.IterableExtensions.join">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createInterface::org.eclipse.xtend2.lib.StringConcatenation.newLine">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createMethod::org.eclipse.xtend2.lib.StringConcatenation.StringConcatenation">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createMethod::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createMethod::org.eclipse.xtend2.lib.StringConcatenation.newLine">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createMethod::org.spp.cocome.behavior.generator.BehaviorNameResolver.getMethodName">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createMethod::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createMethod::org.eclipse.xtend2.lib.StringConcatenation.newLineIfNotEmpty">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createMethod::org.spp.cocome.behavior.generator.BehaviorStatementGenerator.handleBlockstatement">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createDeclaration::org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createVariableDeclaration">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createDeclaration::org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createConstantDeclaration">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createDeclaration::org.eclipse.xtext.xbase.lib.Exceptions.sneakyThrow">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createConstantDeclaration::org.eclipse.xtend2.lib.StringConcatenation.StringConcatenation">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createConstantDeclaration::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createConstantDeclaration::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createConstantDeclaration::org.spp.cocome.behavior.generator.BehaviorExpressionGenerator.createExpression">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createConstantDeclaration::org.eclipse.xtend2.lib.StringConcatenation.newLineIfNotEmpty">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createVariableDeclaration::org.eclipse.xtend2.lib.StringConcatenation.StringConcatenation">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createVariableDeclaration::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createVariableDeclaration::com.google.common.base.Objects.equal">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createVariableDeclaration::org.eclipse.xtend2.lib.StringConcatenation.append">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createVariableDeclaration::org.spp.cocome.behavior.generator.BehaviorTypeGenerator.createJavaTypeReference">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <edges name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator.createVariableDeclaration::org.eclipse.xtend2.lib.StringConcatenation.newLineIfNotEmpty">
+    <derivedFrom xsi:type="hypergraph:CallerCalleeTrace"/>
+  </edges>
+  <modules name="org.spp.cocome.behavior.generator.BehaviorGenerator" nodes="//@nodes.0 //@nodes.1 //@nodes.2 //@nodes.31">
+    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
+  </modules>
+  <modules name="org.spp.cocome.behavior.generator.BehaviorNameResolver" nodes="//@nodes.3 //@nodes.4 //@nodes.32">
+    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
+  </modules>
+  <modules name="org.spp.cocome.behavior.generator.BehaviorExpressionGenerator" nodes="//@nodes.5 //@nodes.6 //@nodes.7 //@nodes.8 //@nodes.9 //@nodes.10 //@nodes.11 //@nodes.12 //@nodes.13 //@nodes.14 //@nodes.33">
+    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
+  </modules>
+  <modules name="org.spp.cocome.behavior.generator.BehaviorTypeGenerator" nodes="//@nodes.15 //@nodes.16 //@nodes.17 //@nodes.18 //@nodes.19 //@nodes.34">
+    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
+  </modules>
+  <modules name="org.spp.cocome.behavior.generator.BehaviorStatementGenerator" nodes="//@nodes.20 //@nodes.21 //@nodes.22 //@nodes.23 //@nodes.24 //@nodes.35">
+    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
+  </modules>
+  <modules name="org.spp.cocome.behavior.generator.BehaviorStructureGenerator" nodes="//@nodes.25 //@nodes.26 //@nodes.27 //@nodes.28 //@nodes.29 //@nodes.30 //@nodes.36">
+    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
+  </modules>
+  <modules name="org.eclipse.emf.ecore.resource.Resource" nodes="//@nodes.37" kind="FRAMEWORK">
+    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
+  </modules>
+  <modules name="com.google.common.collect.Iterators" nodes="//@nodes.38" kind="FRAMEWORK">
+    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
+  </modules>
+  <modules name="org.eclipse.xtext.generator.IFileSystemAccess" nodes="//@nodes.39" kind="FRAMEWORK">
+    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
+  </modules>
+  <modules name="org.eclipse.xtext.xbase.lib.IteratorExtensions" nodes="//@nodes.40" kind="FRAMEWORK">
+    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
+  </modules>
+  <modules name="org.eclipse.emf.ecore.EObject" nodes="//@nodes.41" kind="FRAMEWORK">
+    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
+  </modules>
+  <modules name="org.eclipse.xtend2.lib.StringConcatenation" nodes="//@nodes.42 //@nodes.43 //@nodes.44 //@nodes.47 //@nodes.52" kind="FRAMEWORK">
+    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
+  </modules>
+  <modules name="org.eclipse.xtext.xbase.lib.ListExtensions" nodes="//@nodes.45 //@nodes.49 //@nodes.53 //@nodes.54 //@nodes.55" kind="FRAMEWORK">
+    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
+  </modules>
+  <modules name="org.eclipse.xtext.xbase.lib.IterableExtensions" nodes="//@nodes.46 //@nodes.50" kind="FRAMEWORK">
+    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
+  </modules>
+  <modules name="com.google.common.base.Objects" nodes="//@nodes.48" kind="FRAMEWORK">
+    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
+  </modules>
+  <modules name="org.eclipse.xtext.xbase.lib.Exceptions" nodes="//@nodes.51" kind="FRAMEWORK">
+    <derivedFrom xsi:type="hypergraph:TypeTrace"/>
+  </modules>
+</hypergraph:ModularHypergraph>
