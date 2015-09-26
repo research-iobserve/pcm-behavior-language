@@ -32,12 +32,12 @@ import org.spp.cocome.behavior.behavior.RepositoryReference
 import org.spp.cocome.behavior.mapping.NamedElement
 import org.spp.cocome.types.types.Type
 import org.spp.cocome.behavior.mapping.MappingModel
-import de.uka.ipd.sdq.pcm.repository.Repository
-import de.uka.ipd.sdq.pcm.repository.ImplementationComponentType
+import org.palladiosimulator.pcm.repository.Repository
+import org.palladiosimulator.pcm.repository.ImplementationComponentType
 import org.spp.cocome.behavior.mapping.Component
-import de.uka.ipd.sdq.pcm.repository.Interface
+import org.palladiosimulator.pcm.repository.Interface
 import java.util.ArrayList
-import de.uka.ipd.sdq.pcm.repository.OperationInterface
+import org.palladiosimulator.pcm.repository.OperationInterface
 
 /**
  * Simulates a real resource by mapping the a PCM model to our hierarchy model.
