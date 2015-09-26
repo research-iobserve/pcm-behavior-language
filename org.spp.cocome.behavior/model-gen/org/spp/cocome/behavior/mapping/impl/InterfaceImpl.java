@@ -2,13 +2,13 @@
  */
 package org.spp.cocome.behavior.mapping.impl;
 
-import de.uka.ipd.sdq.pcm.repository.ProvidedRole;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -23,11 +23,11 @@ import org.spp.cocome.behavior.mapping.MethodDecl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.mapping.impl.InterfaceImpl#getMethods <em>Methods</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.mapping.impl.InterfaceImpl#getPcmInterface <em>Pcm Interface</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -49,7 +49,7 @@ public class InterfaceImpl extends NamedElementImpl implements Interface {
 	 * @generated
 	 * @ordered
 	 */
-	protected ProvidedRole pcmInterface;
+	protected org.palladiosimulator.pcm.repository.ProvidedRole pcmInterface;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -87,10 +87,10 @@ public class InterfaceImpl extends NamedElementImpl implements Interface {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProvidedRole getPcmInterface() {
-		if (pcmInterface != null && pcmInterface.eIsProxy()) {
+	public org.palladiosimulator.pcm.repository.ProvidedRole getPcmInterface() {
+		if (pcmInterface != null && ((EObject)pcmInterface).eIsProxy()) {
 			InternalEObject oldPcmInterface = (InternalEObject)pcmInterface;
-			pcmInterface = (ProvidedRole)eResolveProxy(oldPcmInterface);
+			pcmInterface = (org.palladiosimulator.pcm.repository.ProvidedRole)eResolveProxy(oldPcmInterface);
 			if (pcmInterface != oldPcmInterface) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MappingPackage.INTERFACE__PCM_INTERFACE, oldPcmInterface, pcmInterface));
@@ -104,7 +104,7 @@ public class InterfaceImpl extends NamedElementImpl implements Interface {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProvidedRole basicGetPcmInterface() {
+	public org.palladiosimulator.pcm.repository.ProvidedRole basicGetPcmInterface() {
 		return pcmInterface;
 	}
 
@@ -113,8 +113,8 @@ public class InterfaceImpl extends NamedElementImpl implements Interface {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPcmInterface(ProvidedRole newPcmInterface) {
-		ProvidedRole oldPcmInterface = pcmInterface;
+	public void setPcmInterface(org.palladiosimulator.pcm.repository.ProvidedRole newPcmInterface) {
+		org.palladiosimulator.pcm.repository.ProvidedRole oldPcmInterface = pcmInterface;
 		pcmInterface = newPcmInterface;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MappingPackage.INTERFACE__PCM_INTERFACE, oldPcmInterface, pcmInterface));
@@ -165,7 +165,7 @@ public class InterfaceImpl extends NamedElementImpl implements Interface {
 				getMethods().addAll((Collection<? extends MethodDecl>)newValue);
 				return;
 			case MappingPackage.INTERFACE__PCM_INTERFACE:
-				setPcmInterface((ProvidedRole)newValue);
+				setPcmInterface((org.palladiosimulator.pcm.repository.ProvidedRole)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -183,7 +183,7 @@ public class InterfaceImpl extends NamedElementImpl implements Interface {
 				getMethods().clear();
 				return;
 			case MappingPackage.INTERFACE__PCM_INTERFACE:
-				setPcmInterface((ProvidedRole)null);
+				setPcmInterface((org.palladiosimulator.pcm.repository.ProvidedRole)null);
 				return;
 		}
 		super.eUnset(featureID);

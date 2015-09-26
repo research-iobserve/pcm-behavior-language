@@ -2,9 +2,6 @@
  */
 package org.spp.cocome.behavior.mapping;
 
-import de.uka.ipd.sdq.pcm.repository.Signature;
-
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Method Decl</b></em>'.
@@ -12,10 +9,10 @@ import de.uka.ipd.sdq.pcm.repository.Signature;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.mapping.MethodDecl#getPcmMethod <em>Pcm Method</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.spp.cocome.behavior.mapping.MappingPackage#getMethodDecl()
  * @model
@@ -32,12 +29,12 @@ public interface MethodDecl extends NamedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pcm Method</em>' reference.
-	 * @see #setPcmMethod(Signature)
+	 * @see #setPcmMethod(org.palladiosimulator.pcm.repository.Signature)
 	 * @see org.spp.cocome.behavior.mapping.MappingPackage#getMethodDecl_PcmMethod()
 	 * @model required="true"
 	 * @generated
 	 */
-	Signature getPcmMethod();
+	org.palladiosimulator.pcm.repository.Signature getPcmMethod();
 
 	/**
 	 * Sets the value of the '{@link org.spp.cocome.behavior.mapping.MethodDecl#getPcmMethod <em>Pcm Method</em>}' reference.
@@ -47,5 +44,5 @@ public interface MethodDecl extends NamedElement {
 	 * @see #getPcmMethod()
 	 * @generated
 	 */
-	void setPcmMethod(Signature value);
+	void setPcmMethod(org.palladiosimulator.pcm.repository.Signature value);
 } // MethodDecl

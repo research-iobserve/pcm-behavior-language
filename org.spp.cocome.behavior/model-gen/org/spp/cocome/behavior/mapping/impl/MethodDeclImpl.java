@@ -2,10 +2,10 @@
  */
 package org.spp.cocome.behavior.mapping.impl;
 
-import de.uka.ipd.sdq.pcm.repository.Signature;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.spp.cocome.behavior.mapping.MappingPackage;
@@ -17,10 +17,10 @@ import org.spp.cocome.behavior.mapping.MethodDecl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.mapping.impl.MethodDeclImpl#getPcmMethod <em>Pcm Method</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -33,7 +33,7 @@ public class MethodDeclImpl extends NamedElementImpl implements MethodDecl {
 	 * @generated
 	 * @ordered
 	 */
-	protected Signature pcmMethod;
+	protected org.palladiosimulator.pcm.repository.Signature pcmMethod;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -59,10 +59,10 @@ public class MethodDeclImpl extends NamedElementImpl implements MethodDecl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Signature getPcmMethod() {
-		if (pcmMethod != null && pcmMethod.eIsProxy()) {
+	public org.palladiosimulator.pcm.repository.Signature getPcmMethod() {
+		if (pcmMethod != null && ((EObject)pcmMethod).eIsProxy()) {
 			InternalEObject oldPcmMethod = (InternalEObject)pcmMethod;
-			pcmMethod = (Signature)eResolveProxy(oldPcmMethod);
+			pcmMethod = (org.palladiosimulator.pcm.repository.Signature)eResolveProxy(oldPcmMethod);
 			if (pcmMethod != oldPcmMethod) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MappingPackage.METHOD_DECL__PCM_METHOD, oldPcmMethod, pcmMethod));
@@ -76,7 +76,7 @@ public class MethodDeclImpl extends NamedElementImpl implements MethodDecl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Signature basicGetPcmMethod() {
+	public org.palladiosimulator.pcm.repository.Signature basicGetPcmMethod() {
 		return pcmMethod;
 	}
 
@@ -85,8 +85,8 @@ public class MethodDeclImpl extends NamedElementImpl implements MethodDecl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPcmMethod(Signature newPcmMethod) {
-		Signature oldPcmMethod = pcmMethod;
+	public void setPcmMethod(org.palladiosimulator.pcm.repository.Signature newPcmMethod) {
+		org.palladiosimulator.pcm.repository.Signature oldPcmMethod = pcmMethod;
 		pcmMethod = newPcmMethod;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MappingPackage.METHOD_DECL__PCM_METHOD, oldPcmMethod, pcmMethod));
@@ -116,7 +116,7 @@ public class MethodDeclImpl extends NamedElementImpl implements MethodDecl {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case MappingPackage.METHOD_DECL__PCM_METHOD:
-				setPcmMethod((Signature)newValue);
+				setPcmMethod((org.palladiosimulator.pcm.repository.Signature)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -131,7 +131,7 @@ public class MethodDeclImpl extends NamedElementImpl implements MethodDecl {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case MappingPackage.METHOD_DECL__PCM_METHOD:
-				setPcmMethod((Signature)null);
+				setPcmMethod((org.palladiosimulator.pcm.repository.Signature)null);
 				return;
 		}
 		super.eUnset(featureID);

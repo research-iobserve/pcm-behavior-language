@@ -2,8 +2,6 @@
  */
 package org.spp.cocome.behavior.mapping.impl;
 
-import de.uka.ipd.sdq.pcm.PcmPackage;
-import de.uka.ipd.sdq.pcm.repository.RepositoryPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -108,7 +106,7 @@ public class MappingPackageImpl extends EPackageImpl implements MappingPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
-		PcmPackage.eINSTANCE.eClass();
+		org.palladiosimulator.pcm.PcmPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theMappingPackage.createPackageContents();
@@ -303,7 +301,7 @@ public class MappingPackageImpl extends EPackageImpl implements MappingPackage {
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		RepositoryPackage theRepositoryPackage = (RepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI);
+		org.palladiosimulator.pcm.repository.RepositoryPackage theRepositoryPackage = (org.palladiosimulator.pcm.repository.RepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(org.palladiosimulator.pcm.repository.RepositoryPackage.eNS_URI);
 
 		// Create type parameters
 
