@@ -34,10 +34,8 @@ public class BehaviorStructureGenerator {
     _builder.append("::VARIABLES::");
     _builder.newLine();
     EList<EObject> _localDeclarations = com.getLocalDeclarations();
-    final Function1<EObject, CharSequence> _function = new Function1<EObject, CharSequence>() {
-      public CharSequence apply(final EObject decl) {
-        return BehaviorStructureGenerator.createDeclaration(decl);
-      }
+    final Function1<EObject, CharSequence> _function = (EObject decl) -> {
+      return BehaviorStructureGenerator.createDeclaration(decl);
     };
     List<CharSequence> _map = ListExtensions.<EObject, CharSequence>map(_localDeclarations, _function);
     String _join = IterableExtensions.join(_map);
@@ -46,10 +44,8 @@ public class BehaviorStructureGenerator {
     _builder.append("::VARIABLES_END::");
     _builder.newLine();
     EList<InterfaceRealization> _interfaces = com.getInterfaces();
-    final Function1<InterfaceRealization, CharSequence> _function_1 = new Function1<InterfaceRealization, CharSequence>() {
-      public CharSequence apply(final InterfaceRealization iface) {
-        return BehaviorStructureGenerator.createInterface(iface);
-      }
+    final Function1<InterfaceRealization, CharSequence> _function_1 = (InterfaceRealization iface) -> {
+      return BehaviorStructureGenerator.createInterface(iface);
     };
     List<CharSequence> _map_1 = ListExtensions.<InterfaceRealization, CharSequence>map(_interfaces, _function_1);
     String _join_1 = IterableExtensions.join(_map_1);
@@ -71,10 +67,8 @@ public class BehaviorStructureGenerator {
     _builder.append("::");
     _builder.newLineIfNotEmpty();
     EList<MethodImpl> _methods = iface.getMethods();
-    final Function1<MethodImpl, CharSequence> _function = new Function1<MethodImpl, CharSequence>() {
-      public CharSequence apply(final MethodImpl m) {
-        return BehaviorStructureGenerator.createMethod(m);
-      }
+    final Function1<MethodImpl, CharSequence> _function = (MethodImpl m) -> {
+      return BehaviorStructureGenerator.createMethod(m);
     };
     List<CharSequence> _map = ListExtensions.<MethodImpl, CharSequence>map(_methods, _function);
     String _join = IterableExtensions.join(_map);

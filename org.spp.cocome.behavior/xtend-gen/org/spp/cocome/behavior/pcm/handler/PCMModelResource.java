@@ -16,13 +16,6 @@
 package org.spp.cocome.behavior.pcm.handler;
 
 import com.google.common.base.Objects;
-import de.uka.ipd.sdq.pcm.repository.ImplementationComponentType;
-import de.uka.ipd.sdq.pcm.repository.Interface;
-import de.uka.ipd.sdq.pcm.repository.OperationInterface;
-import de.uka.ipd.sdq.pcm.repository.OperationSignature;
-import de.uka.ipd.sdq.pcm.repository.ProvidedRole;
-import de.uka.ipd.sdq.pcm.repository.Repository;
-import de.uka.ipd.sdq.pcm.repository.RepositoryComponent;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -37,6 +30,13 @@ import org.eclipse.emf.ecore.resource.impl.ResourceImpl;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
+import org.palladiosimulator.pcm.repository.ImplementationComponentType;
+import org.palladiosimulator.pcm.repository.Interface;
+import org.palladiosimulator.pcm.repository.OperationInterface;
+import org.palladiosimulator.pcm.repository.OperationSignature;
+import org.palladiosimulator.pcm.repository.ProvidedRole;
+import org.palladiosimulator.pcm.repository.Repository;
+import org.palladiosimulator.pcm.repository.RepositoryComponent;
 import org.spp.cocome.behavior.behavior.RepositoryReference;
 import org.spp.cocome.behavior.mapping.Component;
 import org.spp.cocome.behavior.mapping.MappingFactory;
@@ -82,6 +82,7 @@ public class PCMModelResource extends ResourceImpl {
    * 
    * @return the EObject identified by the uriFragment or null if no such object exists.
    */
+  @Override
   public EObject getEObject(final String uriFragment) {
     EList<EObject> _contents = this.getContents();
     String _plus = ("this.getContents " + _contents);
@@ -113,6 +114,7 @@ public class PCMModelResource extends ResourceImpl {
    * 
    * @return returns the uriFragment for the given object.
    */
+  @Override
   public String getURIFragment(final EObject eObject) {
     if ((eObject instanceof NamedElement)) {
       return ((NamedElement) eObject).getName();
@@ -124,6 +126,7 @@ public class PCMModelResource extends ResourceImpl {
   /**
    * load the resource iff it is not already loaded.
    */
+  @Override
   public void load(final Map<?, ?> options) throws IOException {
     if ((!this.isLoaded)) {
       this.doLoad(null, null);
@@ -133,6 +136,7 @@ public class PCMModelResource extends ResourceImpl {
   /**
    * Saving this resource is not allowed, as it is a virtual resource.
    */
+  @Override
   public void save(final Map<?, ?> options) throws IOException {
     throw new UnsupportedOperationException();
   }
@@ -148,6 +152,7 @@ public class PCMModelResource extends ResourceImpl {
    * 
    * @throws IOException
    */
+  @Override
   public void doLoad(final InputStream inputStream, final Map<?, ?> options) throws IOException {
     URI _uRI = this.getURI();
     boolean _notEquals = (!Objects.equal(_uRI, null));
@@ -265,19 +270,17 @@ public class PCMModelResource extends ResourceImpl {
         String _entityName = entity.getEntityName();
         iface.setName(_entityName);
         iface.setPcmInterface(entity);
-        final Function1<Interface, Boolean> _function = new Function1<Interface, Boolean>() {
-          public Boolean apply(final Interface it) {
-            boolean _and = false;
-            String _entityName = it.getEntityName();
-            String _name = iface.getName();
-            boolean _equals = _entityName.equals(_name);
-            if (!_equals) {
-              _and = false;
-            } else {
-              _and = (it instanceof OperationInterface);
-            }
-            return Boolean.valueOf(_and);
+        final Function1<Interface, Boolean> _function = (Interface it) -> {
+          boolean _and = false;
+          String _entityName_1 = it.getEntityName();
+          String _name = iface.getName();
+          boolean _equals = _entityName_1.equals(_name);
+          if (!_equals) {
+            _and = false;
+          } else {
+            _and = (it instanceof OperationInterface);
           }
+          return Boolean.valueOf(_and);
         };
         Iterable<Interface> _filter = IterableExtensions.<Interface>filter(pcmInterfaces, _function);
         for (final Interface operationInterface : _filter) {

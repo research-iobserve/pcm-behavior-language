@@ -10,7 +10,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
         eType="#//Interface" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="pcmComponent" lowerBound="1"
-        eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//repository/ImplementationComponentType"/>
+        eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/ImplementationComponentType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NamedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -20,10 +20,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="methods" upperBound="-1"
         eType="#//MethodDecl" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="pcmInterface" lowerBound="1"
-        eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//repository/ProvidedRole"/>
+        eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/ProvidedRole"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MethodDecl" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="pcmMethod" lowerBound="1"
-        eType="ecore:EClass platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore#//repository/Signature"/>
+        eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/Signature"/>
   </eClassifiers>
 </ecore:EPackage>
