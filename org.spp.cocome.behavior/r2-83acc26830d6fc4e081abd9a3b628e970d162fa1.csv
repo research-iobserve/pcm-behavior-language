@@ -1,0 +1,28 @@
+org.spp.cocome.behavior;size of observed system;6.0
+org.spp.cocome.behavior;lines of code (LOC);650.0
+org.spp.cocome.behavior;cyclomatic complexity bucket 1;19.0
+org.spp.cocome.behavior;cyclomatic complexity bucket 2;4.0
+org.spp.cocome.behavior;cyclomatic complexity bucket 3;2.0
+org.spp.cocome.behavior;cyclomatic complexity bucket 4;0.0
+org.spp.cocome.behavior;cyclomatic complexity bucket 5;1.0
+org.spp.cocome.behavior;cyclomatic complexity bucket 6;0.0
+org.spp.cocome.behavior;cyclomatic complexity bucket 7;1.0
+org.spp.cocome.behavior;cyclomatic complexity bucket 8;0.0
+org.spp.cocome.behavior;cyclomatic complexity bucket 9;2.0
+org.spp.cocome.behavior;cyclomatic complexity bucket 10;0.0
+org.spp.cocome.behavior;cyclomatic complexity bucket 11;0.0
+org.spp.cocome.behavior;cyclomatic complexity bucket 12;0.0
+org.spp.cocome.behavior;cyclomatic complexity bucket 13;1.0
+org.spp.cocome.behavior;cyclomatic complexity bucket 14;0.0
+org.spp.cocome.behavior;cyclomatic complexity bucket 15;0.0
+org.spp.cocome.behavior;cyclomatic complexity bucket 16;0.0
+org.spp.cocome.behavior;cyclomatic complexity bucket 17;0.0
+org.spp.cocome.behavior;cyclomatic complexity bucket 18;0.0
+org.spp.cocome.behavior;cyclomatic complexity bucket 19;1.0
+org.spp.cocome.behavior;number of modules;19.0
+org.spp.cocome.behavior;number of nodes;59.0
+org.spp.cocome.behavior;number of edges;131.0
+org.spp.cocome.behavior;hypergraph size;336.19275579937005
+org.spp.cocome.behavior;hypergraph complexity;835.6504764701815
+org.spp.cocome.behavior;inter module coupling;620.4928766759463
+org.spp.cocome.behavior;graph cohesion;0.04048897018936649
