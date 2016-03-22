@@ -8,11 +8,10 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
 import org.spp.cocome.behavior.behavior.ComponentImpl
-import org.spp.cocome.types.types.Model
-
 
 import static extension org.spp.cocome.behavior.generator.BehaviorStructureGenerator.*
 import static extension org.spp.cocome.behavior.generator.BehaviorNameResolver.*
+import org.spp.cocome.behavior.behavior.BehaviorModel
 
 /**
  * Generates code from your model files on save.
@@ -28,7 +27,7 @@ class BehaviorGenerator implements IGenerator {
 	}
 		
 	private def createFileName(ComponentImpl com) {
-		(com.eContainer as Model).name.replace('.',File::separator) + 
+		(com.eContainer as BehaviorModel).name.replace('.',File::separator) + 
 		File::separator + com.createComponentName + '.frag'
 	}
 	

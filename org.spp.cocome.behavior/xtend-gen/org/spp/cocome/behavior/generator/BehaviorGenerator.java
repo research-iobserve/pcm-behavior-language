@@ -13,11 +13,11 @@ import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.generator.IGenerator;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
+import org.spp.cocome.behavior.behavior.BehaviorModel;
 import org.spp.cocome.behavior.behavior.ComponentImpl;
 import org.spp.cocome.behavior.generator.BehaviorNameResolver;
 import org.spp.cocome.behavior.generator.BehaviorStructureGenerator;
 import org.spp.cocome.behavior.mapping.Component;
-import org.spp.cocome.types.types.Model;
 
 /**
  * Generates code from your model files on save.
@@ -40,7 +40,7 @@ public class BehaviorGenerator implements IGenerator {
   
   private String createFileName(final ComponentImpl com) {
     EObject _eContainer = com.eContainer();
-    String _name = ((Model) _eContainer).getName();
+    String _name = ((BehaviorModel) _eContainer).getName();
     String _replace = _name.replace(".", File.separator);
     String _plus = (_replace + 
       File.separator);
