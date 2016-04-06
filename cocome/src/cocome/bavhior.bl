@@ -1,0 +1,44 @@
+package cocome
+
+// Import DTL data type definitions
+import data.MyClass
+
+// Refer to a repository to use. The path 
+// must include the project name and the directory
+// where the PCM component repository is located. 
+repository "cocome/model/cocome.repository"
+
+// Now you can start with the implementation of components.
+// 
+// First, specify the complete name with all dots of the
+// component you intend to implement.
+realize TradingSystem.Inventory.Data.Enterprise {
+	// Second, you can specify component state.
+	// The state be values, which can be initialized once and
+	// variables. Prefix your delcaration with val or var accordingly.
+	val int a
+	val MyClass my
+	val MyClass[] array
+
+	// Third, choose an interface. This can be repeated for all
+	// provided interfaces. A PCM component usually has multiple
+	// provided interfaces.
+	iface EnterpriseQueryIf
+	    // Fourth, define an operation.
+	    // Each interface comprises a set of operations.
+	    // Select one by name and implement it.
+		operation queryEnterpriseById {
+			a = 5 - a
+			my.name = "Brian"
+			array[a] = my
+			array[] = my
+			for (val boolean b : array) {
+				
+			}
+			if ( a > 2 ) {
+				
+			} else {
+				
+			}
+		}		
+}
