@@ -159,7 +159,7 @@ public class PCMModelResource extends ResourceImpl {
 				this.resultModel = this.mappingFactory.createMappingModel
 				val List<Interface> pcmInterfaces = findAllInterfaceDeclarations(source)
 				determineComponents(source, pcmInterfaces)
-				// contents must be called via its getter otherwise xtend will used the variable which may
+				// contents must be called via its getter otherwise xtend will use the variable which may
 				// result in an null pointer result
 				this.getContents().add(this.resultModel)
 			}

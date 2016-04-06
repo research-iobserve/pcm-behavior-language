@@ -1,0 +1,63 @@
+Behavior Language
+=================
+
+= Overall Idea =
+
+The PCM does not support state and behavior for component type
+declaration. Regarding to Steffen Becker, the general idea of PCM is to
+have a state less model. While this is a reasonable concept for a
+performance prediction model, it is not sufficient to implement an
+application. Therefore, we supplemented the PCM repository metamodel
+with a DSL to specify state and behavior for PCM component types
+declared in a PCM repository.
+
+
+= Solution =
+
+The general design for this DSL comprises an PCM integration mechanism
+for the component types, an supplemental DSL for data types, a
+generator for Java code fragments representing the behavior
+specification, and the usual editor tooling of Xtext languages.
+
+
+> Mapping Model
+
+PCM uses elementName instead of name for named elements. The PCM name
+is redundant and most other tools do not expect that elementName is the
+attribute name of the name of an element. While it is not an official
+standard, it is commonly accepted that name is the name of an element.
+
+Anyway, the PCM comes with elementName and the linking and grammar
+generator of Xtext use name. Therefore, the PCM cannot be used directly
+inside an Xtext grammar. As a solution, we use a mapping model.
+
+The mapping model is located in 'model/PCMMappingModel.ecore'. It
+relates to PCM entities and provides them with an Xtext compatible
+naming scheme. Therefore, it can be seen as a trace model. 
+
+
+> PCM Integration
+
+The PCM repository model handler is located in package
+
+org.spp.cocome.behavior.pcm.handler
+
+The actual mapping of PCM elements to elements of a hidden mapping
+model is implemented in 'PCMModelResource.xtend'.
+
+
+= Note =
+
+- The DSL is in a prototypical stage. Many features are missing and
+  must be added in the near future. 
+
+- The DSL uses ideas from our type systems for Xtext language approach.
+  http://www.oiloftrop.de/code-research/introducing-type-systems-in-xtext-languages/
+
+
+= Missing Features =
+
+- Provide operation signature information to the programmer in form of
+  parameters and result values.
+- Integrate SEFF declarations.
+
