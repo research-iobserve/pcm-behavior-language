@@ -2,4 +2,6 @@
 **/*.class
 **/bin/**
 **/*.xtendbin
+**/src-gen/*/**
+**/xtend-gen/*/**
 
