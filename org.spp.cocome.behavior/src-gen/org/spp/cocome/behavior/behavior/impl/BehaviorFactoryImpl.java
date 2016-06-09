@@ -80,10 +80,14 @@ public class BehaviorFactoryImpl extends EFactoryImpl implements BehaviorFactory
       case BehaviorPackage.ASSIGNMENT: return createAssignment();
       case BehaviorPackage.LOOP_STATEMENT: return createLoopStatement();
       case BehaviorPackage.DATA_ACCESS_STATEMENT: return createDataAccessStatement();
+      case BehaviorPackage.RETURN_STATEMENT: return createReturnStatement();
       case BehaviorPackage.VARIABLE_CALL: return createVariableCall();
       case BehaviorPackage.PROPERTY_CALL: return createPropertyCall();
       case BehaviorPackage.EXPRESSION: return createExpression();
       case BehaviorPackage.DATA_QUERY: return createDataQuery();
+      case BehaviorPackage.QUERY_EXPRESSION: return createQueryExpression();
+      case BehaviorPackage.QUERY_ELEMENT: return createQueryElement();
+      case BehaviorPackage.TYPED_VALUE_REFERENCE: return createTypedValueReference();
       case BehaviorPackage.INSTANTIATION_EXPRESSION: return createInstantiationExpression();
       case BehaviorPackage.DECLARATION_TYPE_REFERENCE: return createDeclarationTypeReference();
       case BehaviorPackage.TYPE_REFERENCE: return createTypeReference();
@@ -307,6 +311,17 @@ public class BehaviorFactoryImpl extends EFactoryImpl implements BehaviorFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public ReturnStatement createReturnStatement()
+  {
+    ReturnStatementImpl returnStatement = new ReturnStatementImpl();
+    return returnStatement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public VariableCall createVariableCall()
   {
     VariableCallImpl variableCall = new VariableCallImpl();
@@ -344,6 +359,39 @@ public class BehaviorFactoryImpl extends EFactoryImpl implements BehaviorFactory
   {
     DataQueryImpl dataQuery = new DataQueryImpl();
     return dataQuery;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public QueryExpression createQueryExpression()
+  {
+    QueryExpressionImpl queryExpression = new QueryExpressionImpl();
+    return queryExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public QueryElement createQueryElement()
+  {
+    QueryElementImpl queryElement = new QueryElementImpl();
+    return queryElement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TypedValueReference createTypedValueReference()
+  {
+    TypedValueReferenceImpl typedValueReference = new TypedValueReferenceImpl();
+    return typedValueReference;
   }
 
   /**

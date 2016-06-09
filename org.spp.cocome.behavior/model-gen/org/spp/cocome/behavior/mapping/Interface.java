@@ -3,6 +3,7 @@
 package org.spp.cocome.behavior.mapping;
 
 import org.eclipse.emf.common.util.EList;
+import org.palladiosimulator.pcm.repository.ProvidedRole;
 
 
 /**
@@ -49,12 +50,12 @@ public interface Interface extends NamedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pcm Interface</em>' reference.
-	 * @see #setPcmInterface(org.palladiosimulator.pcm.repository.ProvidedRole)
+	 * @see #setPcmInterface(ProvidedRole)
 	 * @see org.spp.cocome.behavior.mapping.MappingPackage#getInterface_PcmInterface()
 	 * @model required="true"
 	 * @generated
 	 */
-	org.palladiosimulator.pcm.repository.ProvidedRole getPcmInterface();
+	ProvidedRole getPcmInterface();
 
 	/**
 	 * Sets the value of the '{@link org.spp.cocome.behavior.mapping.Interface#getPcmInterface <em>Pcm Interface</em>}' reference.
@@ -64,5 +65,5 @@ public interface Interface extends NamedElement {
 	 * @see #getPcmInterface()
 	 * @generated
 	 */
-	void setPcmInterface(org.palladiosimulator.pcm.repository.ProvidedRole value);
+	void setPcmInterface(ProvidedRole value);
 } // Interface

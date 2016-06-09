@@ -11,10 +11,10 @@ import org.spp.cocome.types.types.NamedType;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.TypeReference#getReference <em>Reference</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.spp.cocome.behavior.behavior.BehaviorPackage#getTypeReference()
  * @model

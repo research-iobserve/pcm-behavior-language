@@ -9,11 +9,12 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.spp.cocome.behavior.behavior.BehaviorPackage;
 import org.spp.cocome.behavior.behavior.DeclarationTypeReference;
 import org.spp.cocome.behavior.behavior.VariableDecl;
+
+import org.spp.cocome.behavior.mapping.impl.TypedValueImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,16 +22,15 @@ import org.spp.cocome.behavior.behavior.VariableDecl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.VariableDeclImpl#getModifier <em>Modifier</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.VariableDeclImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.spp.cocome.behavior.behavior.impl.VariableDeclImpl#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
-public class VariableDeclImpl extends MinimalEObjectImpl.Container implements VariableDecl
+public class VariableDeclImpl extends TypedValueImpl implements VariableDecl
 {
   /**
    * The default value of the '{@link #getModifier() <em>Modifier</em>}' attribute.
@@ -61,26 +61,6 @@ public class VariableDeclImpl extends MinimalEObjectImpl.Container implements Va
    * @ordered
    */
   protected DeclarationTypeReference type;
-
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -179,29 +159,6 @@ public class VariableDeclImpl extends MinimalEObjectImpl.Container implements Va
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BehaviorPackage.VARIABLE_DECL__NAME, oldName, name));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -227,8 +184,6 @@ public class VariableDeclImpl extends MinimalEObjectImpl.Container implements Va
         return getModifier();
       case BehaviorPackage.VARIABLE_DECL__TYPE:
         return getType();
-      case BehaviorPackage.VARIABLE_DECL__NAME:
-        return getName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -248,9 +203,6 @@ public class VariableDeclImpl extends MinimalEObjectImpl.Container implements Va
         return;
       case BehaviorPackage.VARIABLE_DECL__TYPE:
         setType((DeclarationTypeReference)newValue);
-        return;
-      case BehaviorPackage.VARIABLE_DECL__NAME:
-        setName((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -272,9 +224,6 @@ public class VariableDeclImpl extends MinimalEObjectImpl.Container implements Va
       case BehaviorPackage.VARIABLE_DECL__TYPE:
         setType((DeclarationTypeReference)null);
         return;
-      case BehaviorPackage.VARIABLE_DECL__NAME:
-        setName(NAME_EDEFAULT);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -293,8 +242,6 @@ public class VariableDeclImpl extends MinimalEObjectImpl.Container implements Va
         return MODIFIER_EDEFAULT == null ? modifier != null : !MODIFIER_EDEFAULT.equals(modifier);
       case BehaviorPackage.VARIABLE_DECL__TYPE:
         return type != null;
-      case BehaviorPackage.VARIABLE_DECL__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
   }
@@ -312,8 +259,6 @@ public class VariableDeclImpl extends MinimalEObjectImpl.Container implements Va
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (modifier: ");
     result.append(modifier);
-    result.append(", name: ");
-    result.append(name);
     result.append(')');
     return result.toString();
   }

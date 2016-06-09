@@ -1,0 +1,17 @@
+package cocome
+
+// Import DTL data type definitions
+import data.TradingEnterprise
+
+// Refer to a repository to use. The path 
+// must include the project name and the directory
+// where the PCM component repository is located. 
+repository "cocome/model/cocome.repository"
+
+realize stateless TradingSystem.Inventory.Data.Enterprise {
+	iface EnterpriseQueryIf	
+	    operation queryEnterpriseById {
+	    	return query TradingEnterprise 
+	    		"SELECT * FROM TradingEnterprise WHERE id=" + enterpriseId
+	    }
+}

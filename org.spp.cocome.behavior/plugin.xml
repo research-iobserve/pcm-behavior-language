@@ -3,22 +3,20 @@
 
 <plugin>
 
-  <extension point="org.eclipse.emf.ecore.generated_package">
+ <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
-       uri = "http://www.spp.org/cocome/behavior/Behavior" 
+       uri = "http://www.spp.cocome.org/behavior/Behavior" 
        class = "org.spp.cocome.behavior.behavior.BehaviorPackage"
        genModel = "model/generated/Behavior.genmodel" /> 
 	
   </extension>
-
-
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated PCMMappingModel -->
       <package
             uri="http://behavior.cocome.spp.org/behavior/mapping"
             class="org.spp.cocome.behavior.mapping.MappingPackage"
-            genModel="mx/PCMMappingModel.genmodel"/>
+            genModel="model/PCMMappingModel.genmodel"/>
    </extension>
 
 </plugin>

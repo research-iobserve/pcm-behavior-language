@@ -17,6 +17,7 @@ import org.spp.cocome.behavior.behavior.InstantiationExpression;
 import org.spp.cocome.behavior.behavior.Literal;
 import org.spp.cocome.behavior.behavior.NumberLiteral;
 import org.spp.cocome.behavior.behavior.PropertyCall;
+import org.spp.cocome.behavior.behavior.QueryExpression;
 import org.spp.cocome.behavior.behavior.StringLiteral;
 import org.spp.cocome.behavior.behavior.VariableCall;
 import org.spp.cocome.behavior.behavior.VariableDecl;
@@ -31,7 +32,7 @@ public class BehaviorExpressionGenerator {
   protected static CharSequence _createExpression(final DataQuery expression) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("em.createQuery(\"");
-    String _query = expression.getQuery();
+    QueryExpression _query = expression.getQuery();
     _builder.append(_query, "");
     _builder.append("\", ");
     _builder.newLineIfNotEmpty();

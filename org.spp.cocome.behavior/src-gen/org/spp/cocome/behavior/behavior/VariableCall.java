@@ -10,12 +10,12 @@ package org.spp.cocome.behavior.behavior;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.VariableCall#getVariable <em>Variable</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.VariableCall#getIndex <em>Index</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.VariableCall#getSubProperty <em>Sub Property</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.spp.cocome.behavior.behavior.BehaviorPackage#getVariableCall()
  * @model

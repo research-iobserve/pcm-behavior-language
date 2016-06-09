@@ -7,8 +7,43 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EcorePackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import org.palladiosimulator.pcm.core.CorePackage;
+
+import org.palladiosimulator.pcm.core.composition.CompositionPackage;
+
+import org.palladiosimulator.pcm.core.entity.EntityPackage;
+
+import org.palladiosimulator.pcm.parameter.ParameterPackage;
+
+import org.palladiosimulator.pcm.protocol.ProtocolPackage;
+
+import org.palladiosimulator.pcm.qosannotations.QosannotationsPackage;
+
+import org.palladiosimulator.pcm.qosannotations.qos_performance.QosPerformancePackage;
+
+import org.palladiosimulator.pcm.qosannotations.qos_reliability.QosReliabilityPackage;
+
+import org.palladiosimulator.pcm.reliability.ReliabilityPackage;
+
+import org.palladiosimulator.pcm.repository.RepositoryPackage;
+
+import org.palladiosimulator.pcm.resourceenvironment.ResourceenvironmentPackage;
+
+import org.palladiosimulator.pcm.resourcetype.ResourcetypePackage;
+
+import org.palladiosimulator.pcm.seff.SeffPackage;
+
+import org.palladiosimulator.pcm.seff.seff_performance.SeffPerformancePackage;
+
+import org.palladiosimulator.pcm.seff.seff_reliability.SeffReliabilityPackage;
+
+import org.palladiosimulator.pcm.system.SystemPackage;
+
+import org.palladiosimulator.pcm.usagemodel.UsagemodelPackage;
 
 import org.spp.cocome.behavior.behavior.Assignment;
 import org.spp.cocome.behavior.behavior.BehaviorFactory;
@@ -37,10 +72,14 @@ import org.spp.cocome.behavior.behavior.MapType;
 import org.spp.cocome.behavior.behavior.MethodImpl;
 import org.spp.cocome.behavior.behavior.NumberLiteral;
 import org.spp.cocome.behavior.behavior.PropertyCall;
+import org.spp.cocome.behavior.behavior.QueryElement;
+import org.spp.cocome.behavior.behavior.QueryExpression;
 import org.spp.cocome.behavior.behavior.RepositoryReference;
+import org.spp.cocome.behavior.behavior.ReturnStatement;
 import org.spp.cocome.behavior.behavior.Statement;
 import org.spp.cocome.behavior.behavior.StringLiteral;
 import org.spp.cocome.behavior.behavior.TypeReference;
+import org.spp.cocome.behavior.behavior.TypedValueReference;
 import org.spp.cocome.behavior.behavior.VariableCall;
 import org.spp.cocome.behavior.behavior.VariableDecl;
 
@@ -166,6 +205,13 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass returnStatementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass variableCallEClass = null;
 
   /**
@@ -188,6 +234,27 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
    * @generated
    */
   private EClass dataQueryEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass queryExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass queryElementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass typedValueReferenceEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -324,6 +391,23 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     // Initialize simple dependencies
     MappingPackage.eINSTANCE.eClass();
     TypesPackage.eINSTANCE.eClass();
+    RepositoryPackage.eINSTANCE.eClass();
+    EntityPackage.eINSTANCE.eClass();
+    CorePackage.eINSTANCE.eClass();
+    ReliabilityPackage.eINSTANCE.eClass();
+    SeffPackage.eINSTANCE.eClass();
+    ParameterPackage.eINSTANCE.eClass();
+    ResourcetypePackage.eINSTANCE.eClass();
+    ProtocolPackage.eINSTANCE.eClass();
+    CompositionPackage.eINSTANCE.eClass();
+    UsagemodelPackage.eINSTANCE.eClass();
+    SeffPerformancePackage.eINSTANCE.eClass();
+    QosPerformancePackage.eINSTANCE.eClass();
+    ResourceenvironmentPackage.eINSTANCE.eClass();
+    QosReliabilityPackage.eINSTANCE.eClass();
+    SeffReliabilityPackage.eINSTANCE.eClass();
+    QosannotationsPackage.eINSTANCE.eClass();
+    SystemPackage.eINSTANCE.eClass();
 
     // Create package meta-data objects
     theBehaviorPackage.createPackageContents();
@@ -548,16 +632,6 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
   public EReference getVariableDecl_Type()
   {
     return (EReference)variableDeclEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getVariableDecl_Name()
-  {
-    return (EAttribute)variableDeclEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -825,6 +899,26 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getReturnStatement()
+  {
+    return returnStatementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getReturnStatement_Expression()
+  {
+    return (EReference)returnStatementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getVariableCall()
   {
     return variableCallEClass;
@@ -995,9 +1089,69 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getDataQuery_Query()
+  public EReference getDataQuery_Query()
   {
-    return (EAttribute)dataQueryEClass.getEStructuralFeatures().get(0);
+    return (EReference)dataQueryEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getQueryExpression()
+  {
+    return queryExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getQueryExpression_Left()
+  {
+    return (EReference)queryExpressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getQueryExpression_Right()
+  {
+    return (EReference)queryExpressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getQueryElement()
+  {
+    return queryElementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTypedValueReference()
+  {
+    return typedValueReferenceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTypedValueReference_TypedValue()
+  {
+    return (EReference)typedValueReferenceEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1276,7 +1430,6 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     variableDeclEClass = createEClass(VARIABLE_DECL);
     createEAttribute(variableDeclEClass, VARIABLE_DECL__MODIFIER);
     createEReference(variableDeclEClass, VARIABLE_DECL__TYPE);
-    createEAttribute(variableDeclEClass, VARIABLE_DECL__NAME);
 
     constantDeclEClass = createEClass(CONSTANT_DECL);
     createEAttribute(constantDeclEClass, CONSTANT_DECL__NAME);
@@ -1313,6 +1466,9 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     createEAttribute(dataAccessStatementEClass, DATA_ACCESS_STATEMENT__OPERATION);
     createEReference(dataAccessStatementEClass, DATA_ACCESS_STATEMENT__VARIABLE);
 
+    returnStatementEClass = createEClass(RETURN_STATEMENT);
+    createEReference(returnStatementEClass, RETURN_STATEMENT__EXPRESSION);
+
     variableCallEClass = createEClass(VARIABLE_CALL);
     createEReference(variableCallEClass, VARIABLE_CALL__VARIABLE);
     createEReference(variableCallEClass, VARIABLE_CALL__INDEX);
@@ -1333,7 +1489,16 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     createEReference(expressionEClass, EXPRESSION__TARGET);
 
     dataQueryEClass = createEClass(DATA_QUERY);
-    createEAttribute(dataQueryEClass, DATA_QUERY__QUERY);
+    createEReference(dataQueryEClass, DATA_QUERY__QUERY);
+
+    queryExpressionEClass = createEClass(QUERY_EXPRESSION);
+    createEReference(queryExpressionEClass, QUERY_EXPRESSION__LEFT);
+    createEReference(queryExpressionEClass, QUERY_EXPRESSION__RIGHT);
+
+    queryElementEClass = createEClass(QUERY_ELEMENT);
+
+    typedValueReferenceEClass = createEClass(TYPED_VALUE_REFERENCE);
+    createEReference(typedValueReferenceEClass, TYPED_VALUE_REFERENCE__TYPED_VALUE);
 
     instantiationExpressionEClass = createEClass(INSTANTIATION_EXPRESSION);
     createEReference(instantiationExpressionEClass, INSTANTIATION_EXPRESSION__PARAMETERS);
@@ -1395,6 +1560,7 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     setNsURI(eNS_URI);
 
     // Obtain other dependent packages
+    EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
     MappingPackage theMappingPackage = (MappingPackage)EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI);
     TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
 
@@ -1403,17 +1569,21 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    variableDeclEClass.getESuperTypes().add(theMappingPackage.getTypedValue());
     ifStatementEClass.getESuperTypes().add(this.getStatement());
     assignmentEClass.getESuperTypes().add(this.getStatement());
     loopStatementEClass.getESuperTypes().add(this.getStatement());
     dataAccessStatementEClass.getESuperTypes().add(this.getStatement());
+    returnStatementEClass.getESuperTypes().add(this.getStatement());
     variableCallEClass.getESuperTypes().add(this.getExpression());
     dataQueryEClass.getESuperTypes().add(this.getExpression());
+    typedValueReferenceEClass.getESuperTypes().add(this.getQueryElement());
     instantiationExpressionEClass.getESuperTypes().add(this.getExpression());
     typeReferenceEClass.getESuperTypes().add(this.getDeclarationTypeReference());
     collectionTypeEClass.getESuperTypes().add(this.getDeclarationTypeReference());
     mapTypeEClass.getESuperTypes().add(this.getDeclarationTypeReference());
     literalEClass.getESuperTypes().add(this.getExpression());
+    stringLiteralEClass.getESuperTypes().add(this.getQueryElement());
     stringLiteralEClass.getESuperTypes().add(this.getLiteral());
     charLiteralEClass.getESuperTypes().add(this.getLiteral());
     numberLiteralEClass.getESuperTypes().add(this.getLiteral());
@@ -1421,21 +1591,21 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
 
     // Initialize classes and features; add operations and parameters
     initEClass(behaviorModelEClass, BehaviorModel.class, "BehaviorModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getBehaviorModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, BehaviorModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getBehaviorModel_Name(), theEcorePackage.getEString(), "name", null, 0, 1, BehaviorModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getBehaviorModel_Imports(), this.getImport(), null, "imports", null, 0, -1, BehaviorModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getBehaviorModel_Repositories(), this.getRepositoryReference(), null, "repositories", null, 0, -1, BehaviorModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getBehaviorModel_ComponentImpl(), this.getComponentImpl(), null, "componentImpl", null, 0, 1, BehaviorModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(repositoryReferenceEClass, RepositoryReference.class, "RepositoryReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getRepositoryReference_Reference(), ecorePackage.getEString(), "reference", null, 0, 1, RepositoryReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRepositoryReference_Reference(), theEcorePackage.getEString(), "reference", null, 0, 1, RepositoryReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(importEClass, Import.class, "Import", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getImport_ImportedNamespace(), ecorePackage.getEString(), "importedNamespace", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getImport_ImportedNamespace(), theEcorePackage.getEString(), "importedNamespace", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(componentImplEClass, ComponentImpl.class, "ComponentImpl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getComponentImpl_Kind(), this.getComponentKind(), "kind", null, 0, 1, ComponentImpl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getComponentImpl_RefComponent(), theMappingPackage.getComponent(), null, "refComponent", null, 0, 1, ComponentImpl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getComponentImpl_LocalDeclarations(), ecorePackage.getEObject(), null, "localDeclarations", null, 0, -1, ComponentImpl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getComponentImpl_LocalDeclarations(), theEcorePackage.getEObject(), null, "localDeclarations", null, 0, -1, ComponentImpl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getComponentImpl_PostConstruct(), this.getLifeCycleMethod(), null, "postConstruct", null, 0, 1, ComponentImpl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getComponentImpl_PreDestroy(), this.getLifeCycleMethod(), null, "preDestroy", null, 0, 1, ComponentImpl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getComponentImpl_Interfaces(), this.getInterfaceRealization(), null, "interfaces", null, 0, -1, ComponentImpl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1444,12 +1614,11 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     initEReference(getLifeCycleMethod_Body(), this.getBlockStatement(), null, "body", null, 0, 1, LifeCycleMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(variableDeclEClass, VariableDecl.class, "VariableDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getVariableDecl_Modifier(), ecorePackage.getEString(), "modifier", null, 0, 1, VariableDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getVariableDecl_Modifier(), theEcorePackage.getEString(), "modifier", null, 0, 1, VariableDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getVariableDecl_Type(), this.getDeclarationTypeReference(), null, "type", null, 0, 1, VariableDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getVariableDecl_Name(), ecorePackage.getEString(), "name", null, 0, 1, VariableDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(constantDeclEClass, ConstantDecl.class, "ConstantDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getConstantDecl_Name(), ecorePackage.getEString(), "name", null, 0, 1, ConstantDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getConstantDecl_Name(), theEcorePackage.getEString(), "name", null, 0, 1, ConstantDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getConstantDecl_Value(), this.getExpression(), null, "value", null, 0, 1, ConstantDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(interfaceRealizationEClass, InterfaceRealization.class, "InterfaceRealization", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1483,6 +1652,9 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     initEAttribute(getDataAccessStatement_Operation(), this.getDataAccessOperation(), "operation", null, 0, 1, DataAccessStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDataAccessStatement_Variable(), this.getVariableDecl(), null, "variable", null, 0, 1, DataAccessStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(returnStatementEClass, ReturnStatement.class, "ReturnStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getReturnStatement_Expression(), this.getExpression(), null, "expression", null, 0, 1, ReturnStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(variableCallEClass, VariableCall.class, "VariableCall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getVariableCall_Variable(), this.getVariableDecl(), null, "variable", null, 0, 1, VariableCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getVariableCall_Index(), this.getExpression(), null, "index", null, 0, 1, VariableCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1495,7 +1667,7 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
 
     initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getExpression_Left(), this.getExpression(), null, "left", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExpression_Feature(), ecorePackage.getEString(), "feature", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getExpression_Feature(), theEcorePackage.getEString(), "feature", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getExpression_Right(), this.getExpression(), null, "right", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getExpression_Expression(), this.getExpression(), null, "expression", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getExpression_Type(), this.getDeclarationTypeReference(), null, "type", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1503,7 +1675,16 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     initEReference(getExpression_Target(), this.getExpression(), null, "target", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(dataQueryEClass, DataQuery.class, "DataQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDataQuery_Query(), ecorePackage.getEString(), "query", null, 0, 1, DataQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDataQuery_Query(), this.getQueryExpression(), null, "query", null, 0, 1, DataQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(queryExpressionEClass, QueryExpression.class, "QueryExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getQueryExpression_Left(), this.getQueryElement(), null, "left", null, 0, 1, QueryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getQueryExpression_Right(), this.getQueryExpression(), null, "right", null, 0, 1, QueryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(queryElementEClass, QueryElement.class, "QueryElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(typedValueReferenceEClass, TypedValueReference.class, "TypedValueReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTypedValueReference_TypedValue(), theMappingPackage.getTypedValue(), null, "typedValue", null, 0, 1, TypedValueReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(instantiationExpressionEClass, InstantiationExpression.class, "InstantiationExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getInstantiationExpression_Parameters(), this.getExpression(), null, "parameters", null, 0, -1, InstantiationExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1515,7 +1696,7 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
 
     initEClass(collectionTypeEClass, CollectionType.class, "CollectionType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getCollectionType_Reference(), this.getTypeReference(), null, "reference", null, 0, 1, CollectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCollectionType_Size(), ecorePackage.getEInt(), "size", null, 0, 1, CollectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCollectionType_Size(), theEcorePackage.getEInt(), "size", null, 0, 1, CollectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(mapTypeEClass, MapType.class, "MapType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getMapType_Reference(), this.getTypeReference(), null, "reference", null, 0, 1, MapType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1524,16 +1705,16 @@ public class BehaviorPackageImpl extends EPackageImpl implements BehaviorPackage
     initEClass(literalEClass, Literal.class, "Literal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(stringLiteralEClass, StringLiteral.class, "StringLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getStringLiteral_Value(), ecorePackage.getEString(), "value", null, 0, 1, StringLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getStringLiteral_Value(), theEcorePackage.getEString(), "value", null, 0, 1, StringLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(charLiteralEClass, CharLiteral.class, "CharLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getCharLiteral_Value(), ecorePackage.getEString(), "value", null, 0, 1, CharLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCharLiteral_Value(), theEcorePackage.getEString(), "value", null, 0, 1, CharLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(numberLiteralEClass, NumberLiteral.class, "NumberLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getNumberLiteral_Value(), ecorePackage.getEString(), "value", null, 0, 1, NumberLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getNumberLiteral_Value(), theEcorePackage.getEString(), "value", null, 0, 1, NumberLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(booleanLiteralEClass, BooleanLiteral.class, "BooleanLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getBooleanLiteral_Value(), ecorePackage.getEBoolean(), "value", null, 0, 1, BooleanLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getBooleanLiteral_Value(), theEcorePackage.getEBoolean(), "value", null, 0, 1, BooleanLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(componentKindEEnum, ComponentKind.class, "ComponentKind");

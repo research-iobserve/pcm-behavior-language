@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Consumer;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -34,6 +35,7 @@ import org.palladiosimulator.pcm.repository.ImplementationComponentType;
 import org.palladiosimulator.pcm.repository.Interface;
 import org.palladiosimulator.pcm.repository.OperationInterface;
 import org.palladiosimulator.pcm.repository.OperationSignature;
+import org.palladiosimulator.pcm.repository.Parameter;
 import org.palladiosimulator.pcm.repository.ProvidedRole;
 import org.palladiosimulator.pcm.repository.Repository;
 import org.palladiosimulator.pcm.repository.RepositoryComponent;
@@ -300,9 +302,23 @@ public class PCMModelResource extends ResourceImpl {
         String _entityName = signature.getEntityName();
         method.setName(_entityName);
         method.setPcmMethod(signature);
+        EList<Parameter> _parameters__OperationSignature = signature.getParameters__OperationSignature();
+        final Consumer<Parameter> _function = (Parameter it) -> {
+          EList<org.spp.cocome.behavior.mapping.Parameter> _parameters = method.getParameters();
+          this.mapParameter(_parameters, it);
+        };
+        _parameters__OperationSignature.forEach(_function);
         EList<MethodDecl> _methods = iface.getMethods();
         _methods.add(method);
       }
     }
+  }
+  
+  private void mapParameter(final EList<org.spp.cocome.behavior.mapping.Parameter> parameters, final Parameter parameter) {
+    final org.spp.cocome.behavior.mapping.Parameter result = this.mappingFactory.createParameter();
+    String _parameterName = parameter.getParameterName();
+    result.setName(_parameterName);
+    result.setPcmParameter(parameter);
+    parameters.add(result);
   }
 }

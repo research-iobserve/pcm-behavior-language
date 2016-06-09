@@ -269,13 +269,22 @@ public interface MappingPackage extends EPackage {
 	int METHOD_DECL__PCM_METHOD = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METHOD_DECL__PARAMETERS = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Method Decl</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int METHOD_DECL_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int METHOD_DECL_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Method Decl</em>' class.
@@ -285,6 +294,90 @@ public interface MappingPackage extends EPackage {
 	 * @ordered
 	 */
 	int METHOD_DECL_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link org.spp.cocome.behavior.mapping.impl.TypedValueImpl <em>Typed Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.spp.cocome.behavior.mapping.impl.TypedValueImpl
+	 * @see org.spp.cocome.behavior.mapping.impl.MappingPackageImpl#getTypedValue()
+	 * @generated
+	 */
+	int TYPED_VALUE = 6;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_VALUE__NAME = NAMED_ELEMENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Typed Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_VALUE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Typed Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPED_VALUE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.spp.cocome.behavior.mapping.impl.ParameterImpl <em>Parameter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.spp.cocome.behavior.mapping.impl.ParameterImpl
+	 * @see org.spp.cocome.behavior.mapping.impl.MappingPackageImpl#getParameter()
+	 * @generated
+	 */
+	int PARAMETER = 5;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__NAME = TYPED_VALUE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Pcm Parameter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__PCM_PARAMETER = TYPED_VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Parameter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_FEATURE_COUNT = TYPED_VALUE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Parameter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_OPERATION_COUNT = TYPED_VALUE_OPERATION_COUNT + 0;
 
 
 	/**
@@ -415,6 +508,48 @@ public interface MappingPackage extends EPackage {
 	EReference getMethodDecl_PcmMethod();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link org.spp.cocome.behavior.mapping.MethodDecl#getParameters <em>Parameters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parameters</em>'.
+	 * @see org.spp.cocome.behavior.mapping.MethodDecl#getParameters()
+	 * @see #getMethodDecl()
+	 * @generated
+	 */
+	EReference getMethodDecl_Parameters();
+
+	/**
+	 * Returns the meta object for class '{@link org.spp.cocome.behavior.mapping.Parameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Parameter</em>'.
+	 * @see org.spp.cocome.behavior.mapping.Parameter
+	 * @generated
+	 */
+	EClass getParameter();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.spp.cocome.behavior.mapping.Parameter#getPcmParameter <em>Pcm Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Pcm Parameter</em>'.
+	 * @see org.spp.cocome.behavior.mapping.Parameter#getPcmParameter()
+	 * @see #getParameter()
+	 * @generated
+	 */
+	EReference getParameter_PcmParameter();
+
+	/**
+	 * Returns the meta object for class '{@link org.spp.cocome.behavior.mapping.TypedValue <em>Typed Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Typed Value</em>'.
+	 * @see org.spp.cocome.behavior.mapping.TypedValue
+	 * @generated
+	 */
+	EClass getTypedValue();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -542,6 +677,42 @@ public interface MappingPackage extends EPackage {
 		 * @generated
 		 */
 		EReference METHOD_DECL__PCM_METHOD = eINSTANCE.getMethodDecl_PcmMethod();
+
+		/**
+		 * The meta object literal for the '<em><b>Parameters</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference METHOD_DECL__PARAMETERS = eINSTANCE.getMethodDecl_Parameters();
+
+		/**
+		 * The meta object literal for the '{@link org.spp.cocome.behavior.mapping.impl.ParameterImpl <em>Parameter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.spp.cocome.behavior.mapping.impl.ParameterImpl
+		 * @see org.spp.cocome.behavior.mapping.impl.MappingPackageImpl#getParameter()
+		 * @generated
+		 */
+		EClass PARAMETER = eINSTANCE.getParameter();
+
+		/**
+		 * The meta object literal for the '<em><b>Pcm Parameter</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PARAMETER__PCM_PARAMETER = eINSTANCE.getParameter_PcmParameter();
+
+		/**
+		 * The meta object literal for the '{@link org.spp.cocome.behavior.mapping.impl.TypedValueImpl <em>Typed Value</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.spp.cocome.behavior.mapping.impl.TypedValueImpl
+		 * @see org.spp.cocome.behavior.mapping.impl.MappingPackageImpl#getTypedValue()
+		 * @generated
+		 */
+		EClass TYPED_VALUE = eINSTANCE.getTypedValue();
 
 	}
 

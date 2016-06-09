@@ -158,6 +158,15 @@ public interface BehaviorFactory extends EFactory
   DataAccessStatement createDataAccessStatement();
 
   /**
+   * Returns a new object of class '<em>Return Statement</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Return Statement</em>'.
+   * @generated
+   */
+  ReturnStatement createReturnStatement();
+
+  /**
    * Returns a new object of class '<em>Variable Call</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -192,6 +201,33 @@ public interface BehaviorFactory extends EFactory
    * @generated
    */
   DataQuery createDataQuery();
+
+  /**
+   * Returns a new object of class '<em>Query Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Query Expression</em>'.
+   * @generated
+   */
+  QueryExpression createQueryExpression();
+
+  /**
+   * Returns a new object of class '<em>Query Element</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Query Element</em>'.
+   * @generated
+   */
+  QueryElement createQueryElement();
+
+  /**
+   * Returns a new object of class '<em>Typed Value Reference</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Typed Value Reference</em>'.
+   * @generated
+   */
+  TypedValueReference createTypedValueReference();
 
   /**
    * Returns a new object of class '<em>Instantiation Expression</em>'.

@@ -1,6 +1,52 @@
 package data
 
-entity MyClass {
+entity TradingEnterprise {
+	long id
 	string name
+	Store[] xstores
+	ProductSupplier[] productSuppliers
+}
+
+entity ProductSupplier {
+	long id
+	string name
+	Product[] offers
+}
+
+entity Product {
+	long id
+	int barcode
+	currency purchasePrice
+	string name
+	StockItem isStockedAs
+}
+
+entity Store {
+ 	long id
+	string name
+	string location
+	StockItem[] owns
+	ProductOrder[] places
+}
+
+entity ProductOrder {
+	long id
+	date deliveryDate
+	date orderingDate
+	OrderEntry[] orderEntries
+}
+
+entity OrderEntry {
+	long id
+	int amount
+	Product refersTo
+}
+
+entity StockItem {
+	long id
+	currency price 
+	int amount
+	int minStock
+	int maxStock 	
 }
 

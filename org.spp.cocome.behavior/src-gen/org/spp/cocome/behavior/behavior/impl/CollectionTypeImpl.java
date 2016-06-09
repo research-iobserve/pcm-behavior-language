@@ -20,11 +20,11 @@ import org.spp.cocome.behavior.behavior.TypeReference;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.CollectionTypeImpl#getReference <em>Reference</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.CollectionTypeImpl#getSize <em>Size</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

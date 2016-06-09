@@ -23,12 +23,12 @@ import org.spp.cocome.types.types.Property;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.PropertyCallImpl#getProperty <em>Property</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.PropertyCallImpl#getIndex <em>Index</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.PropertyCallImpl#getSubProperty <em>Sub Property</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

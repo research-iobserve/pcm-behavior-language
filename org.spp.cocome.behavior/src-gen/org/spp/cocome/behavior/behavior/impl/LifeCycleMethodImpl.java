@@ -21,10 +21,10 @@ import org.spp.cocome.behavior.behavior.LifeCycleMethod;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.LifeCycleMethodImpl#getBody <em>Body</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

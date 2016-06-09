@@ -7,12 +7,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.palladiosimulator.pcm.repository.ImplementationComponentType;
 import org.spp.cocome.behavior.mapping.Component;
 import org.spp.cocome.behavior.mapping.Interface;
 import org.spp.cocome.behavior.mapping.MappingPackage;
@@ -49,7 +49,7 @@ public class ComponentImpl extends NamedElementImpl implements Component {
 	 * @generated
 	 * @ordered
 	 */
-	protected org.palladiosimulator.pcm.repository.ImplementationComponentType pcmComponent;
+	protected ImplementationComponentType pcmComponent;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -87,10 +87,10 @@ public class ComponentImpl extends NamedElementImpl implements Component {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public org.palladiosimulator.pcm.repository.ImplementationComponentType getPcmComponent() {
+	public ImplementationComponentType getPcmComponent() {
 		if (pcmComponent != null && ((EObject)pcmComponent).eIsProxy()) {
 			InternalEObject oldPcmComponent = (InternalEObject)pcmComponent;
-			pcmComponent = (org.palladiosimulator.pcm.repository.ImplementationComponentType)eResolveProxy(oldPcmComponent);
+			pcmComponent = (ImplementationComponentType)eResolveProxy(oldPcmComponent);
 			if (pcmComponent != oldPcmComponent) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MappingPackage.COMPONENT__PCM_COMPONENT, oldPcmComponent, pcmComponent));
@@ -104,7 +104,7 @@ public class ComponentImpl extends NamedElementImpl implements Component {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public org.palladiosimulator.pcm.repository.ImplementationComponentType basicGetPcmComponent() {
+	public ImplementationComponentType basicGetPcmComponent() {
 		return pcmComponent;
 	}
 
@@ -113,8 +113,8 @@ public class ComponentImpl extends NamedElementImpl implements Component {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPcmComponent(org.palladiosimulator.pcm.repository.ImplementationComponentType newPcmComponent) {
-		org.palladiosimulator.pcm.repository.ImplementationComponentType oldPcmComponent = pcmComponent;
+	public void setPcmComponent(ImplementationComponentType newPcmComponent) {
+		ImplementationComponentType oldPcmComponent = pcmComponent;
 		pcmComponent = newPcmComponent;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MappingPackage.COMPONENT__PCM_COMPONENT, oldPcmComponent, pcmComponent));
@@ -165,7 +165,7 @@ public class ComponentImpl extends NamedElementImpl implements Component {
 				getInterfaces().addAll((Collection<? extends Interface>)newValue);
 				return;
 			case MappingPackage.COMPONENT__PCM_COMPONENT:
-				setPcmComponent((org.palladiosimulator.pcm.repository.ImplementationComponentType)newValue);
+				setPcmComponent((ImplementationComponentType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -183,7 +183,7 @@ public class ComponentImpl extends NamedElementImpl implements Component {
 				getInterfaces().clear();
 				return;
 			case MappingPackage.COMPONENT__PCM_COMPONENT:
-				setPcmComponent((org.palladiosimulator.pcm.repository.ImplementationComponentType)null);
+				setPcmComponent((ImplementationComponentType)null);
 				return;
 		}
 		super.eUnset(featureID);

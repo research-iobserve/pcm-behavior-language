@@ -13,11 +13,11 @@ import org.spp.cocome.behavior.mapping.MethodDecl;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.MethodImpl#getRefMethod <em>Ref Method</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.MethodImpl#getBody <em>Body</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.spp.cocome.behavior.behavior.BehaviorPackage#getMethodImpl()
  * @model

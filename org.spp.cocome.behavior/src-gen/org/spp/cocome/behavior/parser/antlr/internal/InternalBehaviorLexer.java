@@ -40,6 +40,7 @@ public class InternalBehaviorLexer extends Lexer {
     public static final int RULE_INT=6;
     public static final int T__29=29;
     public static final int T__22=22;
+    public static final int T__66=66;
     public static final int RULE_ML_COMMENT=8;
     public static final int T__23=23;
     public static final int T__24=24;
@@ -49,6 +50,7 @@ public class InternalBehaviorLexer extends Lexer {
     public static final int T__20=20;
     public static final int T__64=64;
     public static final int T__21=21;
+    public static final int T__65=65;
     public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=9;
     public static final int T__37=37;
@@ -86,15 +88,15 @@ public class InternalBehaviorLexer extends Lexer {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g"; }
+    public String getGrammarFileName() { return "InternalBehavior.g"; }
 
     // $ANTLR start "T__12"
     public final void mT__12() throws RecognitionException {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:11:7: ( 'package' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:11:9: 'package'
+            // InternalBehavior.g:11:7: ( 'package' )
+            // InternalBehavior.g:11:9: 'package'
             {
             match("package"); 
 
@@ -114,8 +116,8 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:12:7: ( 'repository' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:12:9: 'repository'
+            // InternalBehavior.g:12:7: ( 'repository' )
+            // InternalBehavior.g:12:9: 'repository'
             {
             match("repository"); 
 
@@ -135,8 +137,8 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:13:7: ( 'import' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:13:9: 'import'
+            // InternalBehavior.g:13:7: ( 'import' )
+            // InternalBehavior.g:13:9: 'import'
             {
             match("import"); 
 
@@ -156,8 +158,8 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:14:7: ( 'realize' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:14:9: 'realize'
+            // InternalBehavior.g:14:7: ( 'realize' )
+            // InternalBehavior.g:14:9: 'realize'
             {
             match("realize"); 
 
@@ -177,8 +179,8 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:15:7: ( '{' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:15:9: '{'
+            // InternalBehavior.g:15:7: ( '{' )
+            // InternalBehavior.g:15:9: '{'
             {
             match('{'); 
 
@@ -197,8 +199,8 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:16:7: ( 'post-construct' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:16:9: 'post-construct'
+            // InternalBehavior.g:16:7: ( 'post-construct' )
+            // InternalBehavior.g:16:9: 'post-construct'
             {
             match("post-construct"); 
 
@@ -218,8 +220,8 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:17:7: ( 'pre-destroy' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:17:9: 'pre-destroy'
+            // InternalBehavior.g:17:7: ( 'pre-destroy' )
+            // InternalBehavior.g:17:9: 'pre-destroy'
             {
             match("pre-destroy"); 
 
@@ -239,8 +241,8 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:18:7: ( '}' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:18:9: '}'
+            // InternalBehavior.g:18:7: ( '}' )
+            // InternalBehavior.g:18:9: '}'
             {
             match('}'); 
 
@@ -259,8 +261,8 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:19:7: ( 'action' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:19:9: 'action'
+            // InternalBehavior.g:19:7: ( 'action' )
+            // InternalBehavior.g:19:9: 'action'
             {
             match("action"); 
 
@@ -280,8 +282,8 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:20:7: ( 'var' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:20:9: 'var'
+            // InternalBehavior.g:20:7: ( 'var' )
+            // InternalBehavior.g:20:9: 'var'
             {
             match("var"); 
 
@@ -301,8 +303,8 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:21:7: ( 'val' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:21:9: 'val'
+            // InternalBehavior.g:21:7: ( 'val' )
+            // InternalBehavior.g:21:9: 'val'
             {
             match("val"); 
 
@@ -322,8 +324,8 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:22:7: ( 'const' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:22:9: 'const'
+            // InternalBehavior.g:22:7: ( 'const' )
+            // InternalBehavior.g:22:9: 'const'
             {
             match("const"); 
 
@@ -343,8 +345,8 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:23:7: ( '=' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:23:9: '='
+            // InternalBehavior.g:23:7: ( '=' )
+            // InternalBehavior.g:23:9: '='
             {
             match('='); 
 
@@ -363,8 +365,8 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:24:7: ( 'iface' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:24:9: 'iface'
+            // InternalBehavior.g:24:7: ( 'iface' )
+            // InternalBehavior.g:24:9: 'iface'
             {
             match("iface"); 
 
@@ -384,8 +386,8 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:25:7: ( 'operation' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:25:9: 'operation'
+            // InternalBehavior.g:25:7: ( 'operation' )
+            // InternalBehavior.g:25:9: 'operation'
             {
             match("operation"); 
 
@@ -405,8 +407,8 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:26:7: ( 'if' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:26:9: 'if'
+            // InternalBehavior.g:26:7: ( 'if' )
+            // InternalBehavior.g:26:9: 'if'
             {
             match("if"); 
 
@@ -426,8 +428,8 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:27:7: ( '(' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:27:9: '('
+            // InternalBehavior.g:27:7: ( '(' )
+            // InternalBehavior.g:27:9: '('
             {
             match('('); 
 
@@ -446,8 +448,8 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:28:7: ( ')' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:28:9: ')'
+            // InternalBehavior.g:28:7: ( ')' )
+            // InternalBehavior.g:28:9: ')'
             {
             match(')'); 
 
@@ -466,8 +468,8 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:29:7: ( 'else' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:29:9: 'else'
+            // InternalBehavior.g:29:7: ( 'else' )
+            // InternalBehavior.g:29:9: 'else'
             {
             match("else"); 
 
@@ -487,8 +489,8 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:30:7: ( 'for' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:30:9: 'for'
+            // InternalBehavior.g:30:7: ( 'for' )
+            // InternalBehavior.g:30:9: 'for'
             {
             match("for"); 
 
@@ -508,8 +510,8 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:31:7: ( ':' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:31:9: ':'
+            // InternalBehavior.g:31:7: ( ':' )
+            // InternalBehavior.g:31:9: ':'
             {
             match(':'); 
 
@@ -528,10 +530,11 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:32:7: ( '[' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:32:9: '['
+            // InternalBehavior.g:32:7: ( 'return' )
+            // InternalBehavior.g:32:9: 'return'
             {
-            match('['); 
+            match("return"); 
+
 
             }
 
@@ -548,10 +551,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:33:7: ( ']' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:33:9: ']'
+            // InternalBehavior.g:33:7: ( '[' )
+            // InternalBehavior.g:33:9: '['
             {
-            match(']'); 
+            match('['); 
 
             }
 
@@ -568,10 +571,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:34:7: ( '.' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:34:9: '.'
+            // InternalBehavior.g:34:7: ( ']' )
+            // InternalBehavior.g:34:9: ']'
             {
-            match('.'); 
+            match(']'); 
 
             }
 
@@ -588,11 +591,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:35:7: ( '||' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:35:9: '||'
+            // InternalBehavior.g:35:7: ( '.' )
+            // InternalBehavior.g:35:9: '.'
             {
-            match("||"); 
-
+            match('.'); 
 
             }
 
@@ -609,10 +611,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:36:7: ( '&&' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:36:9: '&&'
+            // InternalBehavior.g:36:7: ( '||' )
+            // InternalBehavior.g:36:9: '||'
             {
-            match("&&"); 
+            match("||"); 
 
 
             }
@@ -630,10 +632,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:37:7: ( '==' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:37:9: '=='
+            // InternalBehavior.g:37:7: ( '&&' )
+            // InternalBehavior.g:37:9: '&&'
             {
-            match("=="); 
+            match("&&"); 
 
 
             }
@@ -651,10 +653,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:38:7: ( '!=' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:38:9: '!='
+            // InternalBehavior.g:38:7: ( '==' )
+            // InternalBehavior.g:38:9: '=='
             {
-            match("!="); 
+            match("=="); 
 
 
             }
@@ -672,10 +674,11 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:39:7: ( '>' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:39:9: '>'
+            // InternalBehavior.g:39:7: ( '!=' )
+            // InternalBehavior.g:39:9: '!='
             {
-            match('>'); 
+            match("!="); 
+
 
             }
 
@@ -692,10 +695,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:40:7: ( '<' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:40:9: '<'
+            // InternalBehavior.g:40:7: ( '>' )
+            // InternalBehavior.g:40:9: '>'
             {
-            match('<'); 
+            match('>'); 
 
             }
 
@@ -712,11 +715,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:41:7: ( '>=' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:41:9: '>='
+            // InternalBehavior.g:41:7: ( '<' )
+            // InternalBehavior.g:41:9: '<'
             {
-            match(">="); 
-
+            match('<'); 
 
             }
 
@@ -733,10 +735,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:42:7: ( '<=' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:42:9: '<='
+            // InternalBehavior.g:42:7: ( '>=' )
+            // InternalBehavior.g:42:9: '>='
             {
-            match("<="); 
+            match(">="); 
 
 
             }
@@ -754,10 +756,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:43:7: ( 'instanceof' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:43:9: 'instanceof'
+            // InternalBehavior.g:43:7: ( '<=' )
+            // InternalBehavior.g:43:9: '<='
             {
-            match("instanceof"); 
+            match("<="); 
 
 
             }
@@ -775,10 +777,11 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:44:7: ( '+' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:44:9: '+'
+            // InternalBehavior.g:44:7: ( 'instanceof' )
+            // InternalBehavior.g:44:9: 'instanceof'
             {
-            match('+'); 
+            match("instanceof"); 
+
 
             }
 
@@ -795,10 +798,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:45:7: ( '-' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:45:9: '-'
+            // InternalBehavior.g:45:7: ( '+' )
+            // InternalBehavior.g:45:9: '+'
             {
-            match('-'); 
+            match('+'); 
 
             }
 
@@ -815,10 +818,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:46:7: ( '*' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:46:9: '*'
+            // InternalBehavior.g:46:7: ( '-' )
+            // InternalBehavior.g:46:9: '-'
             {
-            match('*'); 
+            match('-'); 
 
             }
 
@@ -835,10 +838,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:47:7: ( '/' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:47:9: '/'
+            // InternalBehavior.g:47:7: ( '*' )
+            // InternalBehavior.g:47:9: '*'
             {
-            match('/'); 
+            match('*'); 
 
             }
 
@@ -855,10 +858,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:48:7: ( '%' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:48:9: '%'
+            // InternalBehavior.g:48:7: ( '/' )
+            // InternalBehavior.g:48:9: '/'
             {
-            match('%'); 
+            match('/'); 
 
             }
 
@@ -875,11 +878,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:49:7: ( '**' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:49:9: '**'
+            // InternalBehavior.g:49:7: ( '%' )
+            // InternalBehavior.g:49:9: '%'
             {
-            match("**"); 
-
+            match('%'); 
 
             }
 
@@ -896,10 +898,11 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:50:7: ( '!' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:50:9: '!'
+            // InternalBehavior.g:50:7: ( '**' )
+            // InternalBehavior.g:50:9: '**'
             {
-            match('!'); 
+            match("**"); 
+
 
             }
 
@@ -916,11 +919,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:51:7: ( 'as' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:51:9: 'as'
+            // InternalBehavior.g:51:7: ( '!' )
+            // InternalBehavior.g:51:9: '!'
             {
-            match("as"); 
-
+            match('!'); 
 
             }
 
@@ -937,10 +939,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:52:7: ( '++' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:52:9: '++'
+            // InternalBehavior.g:52:7: ( 'as' )
+            // InternalBehavior.g:52:9: 'as'
             {
-            match("++"); 
+            match("as"); 
 
 
             }
@@ -958,10 +960,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:53:7: ( '--' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:53:9: '--'
+            // InternalBehavior.g:53:7: ( '++' )
+            // InternalBehavior.g:53:9: '++'
             {
-            match("--"); 
+            match("++"); 
 
 
             }
@@ -979,10 +981,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__55;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:54:7: ( 'query' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:54:9: 'query'
+            // InternalBehavior.g:54:7: ( '--' )
+            // InternalBehavior.g:54:9: '--'
             {
-            match("query"); 
+            match("--"); 
 
 
             }
@@ -1000,10 +1002,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__56;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:55:7: ( 'new' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:55:9: 'new'
+            // InternalBehavior.g:55:7: ( 'query' )
+            // InternalBehavior.g:55:9: 'query'
             {
-            match("new"); 
+            match("query"); 
 
 
             }
@@ -1021,11 +1023,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__57;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:56:7: ( 'true' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:56:9: 'true'
+            // InternalBehavior.g:56:7: ( ',' )
+            // InternalBehavior.g:56:9: ','
             {
-            match("true"); 
-
+            match(','); 
 
             }
 
@@ -1042,10 +1043,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__58;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:57:7: ( 'false' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:57:9: 'false'
+            // InternalBehavior.g:57:7: ( 'new' )
+            // InternalBehavior.g:57:9: 'new'
             {
-            match("false"); 
+            match("new"); 
 
 
             }
@@ -1063,10 +1064,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__59;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:58:7: ( 'stateless' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:58:9: 'stateless'
+            // InternalBehavior.g:58:7: ( 'true' )
+            // InternalBehavior.g:58:9: 'true'
             {
-            match("stateless"); 
+            match("true"); 
 
 
             }
@@ -1084,10 +1085,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__60;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:59:7: ( 'stateful' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:59:9: 'stateful'
+            // InternalBehavior.g:59:7: ( 'false' )
+            // InternalBehavior.g:59:9: 'false'
             {
-            match("stateful"); 
+            match("false"); 
 
 
             }
@@ -1105,10 +1106,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__61;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:60:7: ( 'singleton' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:60:9: 'singleton'
+            // InternalBehavior.g:60:7: ( 'stateless' )
+            // InternalBehavior.g:60:9: 'stateless'
             {
-            match("singleton"); 
+            match("stateless"); 
 
 
             }
@@ -1126,10 +1127,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__62;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:61:7: ( 'store' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:61:9: 'store'
+            // InternalBehavior.g:61:7: ( 'stateful' )
+            // InternalBehavior.g:61:9: 'stateful'
             {
-            match("store"); 
+            match("stateful"); 
 
 
             }
@@ -1147,10 +1148,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__63;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:62:7: ( 'update' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:62:9: 'update'
+            // InternalBehavior.g:62:7: ( 'singleton' )
+            // InternalBehavior.g:62:9: 'singleton'
             {
-            match("update"); 
+            match("singleton"); 
 
 
             }
@@ -1168,10 +1169,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = T__64;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:63:7: ( 'delete' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:63:9: 'delete'
+            // InternalBehavior.g:63:7: ( 'store' )
+            // InternalBehavior.g:63:9: 'store'
             {
-            match("delete"); 
+            match("store"); 
 
 
             }
@@ -1184,16 +1185,58 @@ public class InternalBehaviorLexer extends Lexer {
     }
     // $ANTLR end "T__64"
 
+    // $ANTLR start "T__65"
+    public final void mT__65() throws RecognitionException {
+        try {
+            int _type = T__65;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalBehavior.g:64:7: ( 'update' )
+            // InternalBehavior.g:64:9: 'update'
+            {
+            match("update"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__65"
+
+    // $ANTLR start "T__66"
+    public final void mT__66() throws RecognitionException {
+        try {
+            int _type = T__66;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalBehavior.g:65:7: ( 'delete' )
+            // InternalBehavior.g:65:9: 'delete'
+            {
+            match("delete"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__66"
+
     // $ANTLR start "RULE_CHARACTER"
     public final void mRULE_CHARACTER() throws RecognitionException {
         try {
             int _type = RULE_CHARACTER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2983:16: ( '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) ) '\\'' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2983:18: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) ) '\\''
+            // InternalBehavior.g:3173:16: ( '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) ) '\\'' )
+            // InternalBehavior.g:3173:18: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) ) '\\''
             {
             match('\''); 
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2983:23: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )
+            // InternalBehavior.g:3173:23: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -1211,7 +1254,7 @@ public class InternalBehaviorLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2983:24: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    // InternalBehavior.g:3173:24: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     {
                     match('\\'); 
                     if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -1227,7 +1270,7 @@ public class InternalBehaviorLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2983:69: ~ ( ( '\\\\' | '\\'' ) )
+                    // InternalBehavior.g:3173:69: ~ ( ( '\\\\' | '\\'' ) )
                     {
                     if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                         input.consume();
@@ -1261,10 +1304,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2985:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2985:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalBehavior.g:3175:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalBehavior.g:3175:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2985:11: ( '^' )?
+            // InternalBehavior.g:3175:11: ( '^' )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -1273,7 +1316,7 @@ public class InternalBehaviorLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2985:11: '^'
+                    // InternalBehavior.g:3175:11: '^'
                     {
                     match('^'); 
 
@@ -1291,7 +1334,7 @@ public class InternalBehaviorLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2985:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalBehavior.g:3175:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop3:
             do {
                 int alt3=2;
@@ -1304,7 +1347,7 @@ public class InternalBehaviorLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:
+            	    // InternalBehavior.g:
             	    {
             	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
@@ -1340,10 +1383,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2987:10: ( ( '0' .. '9' )+ )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2987:12: ( '0' .. '9' )+
+            // InternalBehavior.g:3177:10: ( ( '0' .. '9' )+ )
+            // InternalBehavior.g:3177:12: ( '0' .. '9' )+
             {
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2987:12: ( '0' .. '9' )+
+            // InternalBehavior.g:3177:12: ( '0' .. '9' )+
             int cnt4=0;
             loop4:
             do {
@@ -1357,7 +1400,7 @@ public class InternalBehaviorLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2987:13: '0' .. '9'
+            	    // InternalBehavior.g:3177:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1389,10 +1432,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2989:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2989:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalBehavior.g:3179:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalBehavior.g:3179:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2989:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalBehavior.g:3179:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1410,10 +1453,10 @@ public class InternalBehaviorLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2989:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalBehavior.g:3179:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2989:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalBehavior.g:3179:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -1429,7 +1472,7 @@ public class InternalBehaviorLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2989:21: '\\\\' .
+                    	    // InternalBehavior.g:3179:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1437,7 +1480,7 @@ public class InternalBehaviorLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2989:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalBehavior.g:3179:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1462,10 +1505,10 @@ public class InternalBehaviorLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2989:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalBehavior.g:3179:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2989:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalBehavior.g:3179:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop6:
                     do {
                         int alt6=3;
@@ -1481,7 +1524,7 @@ public class InternalBehaviorLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2989:54: '\\\\' .
+                    	    // InternalBehavior.g:3179:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1489,7 +1532,7 @@ public class InternalBehaviorLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2989:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalBehavior.g:3179:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1532,12 +1575,12 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2991:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2991:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalBehavior.g:3181:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalBehavior.g:3181:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2991:24: ( options {greedy=false; } : . )*
+            // InternalBehavior.g:3181:24: ( options {greedy=false; } : . )*
             loop8:
             do {
                 int alt8=2;
@@ -1562,7 +1605,7 @@ public class InternalBehaviorLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2991:52: .
+            	    // InternalBehavior.g:3181:52: .
             	    {
             	    matchAny(); 
 
@@ -1592,12 +1635,12 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2993:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2993:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalBehavior.g:3183:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalBehavior.g:3183:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2993:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalBehavior.g:3183:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop9:
             do {
                 int alt9=2;
@@ -1610,7 +1653,7 @@ public class InternalBehaviorLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2993:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalBehavior.g:3183:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1630,7 +1673,7 @@ public class InternalBehaviorLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2993:40: ( ( '\\r' )? '\\n' )?
+            // InternalBehavior.g:3183:40: ( ( '\\r' )? '\\n' )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1639,9 +1682,9 @@ public class InternalBehaviorLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2993:41: ( '\\r' )? '\\n'
+                    // InternalBehavior.g:3183:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2993:41: ( '\\r' )?
+                    // InternalBehavior.g:3183:41: ( '\\r' )?
                     int alt10=2;
                     int LA10_0 = input.LA(1);
 
@@ -1650,7 +1693,7 @@ public class InternalBehaviorLexer extends Lexer {
                     }
                     switch (alt10) {
                         case 1 :
-                            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2993:41: '\\r'
+                            // InternalBehavior.g:3183:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1682,10 +1725,10 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2995:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2995:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalBehavior.g:3185:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalBehavior.g:3185:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2995:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalBehavior.g:3185:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt12=0;
             loop12:
             do {
@@ -1699,7 +1742,7 @@ public class InternalBehaviorLexer extends Lexer {
 
                 switch (alt12) {
             	case 1 :
-            	    // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:
+            	    // InternalBehavior.g:
             	    {
             	    if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
             	        input.consume();
@@ -1739,8 +1782,8 @@ public class InternalBehaviorLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2997:16: ( . )
-            // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:2997:18: .
+            // InternalBehavior.g:3187:16: ( . )
+            // InternalBehavior.g:3187:18: .
             {
             matchAny(); 
 
@@ -1755,432 +1798,446 @@ public class InternalBehaviorLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | RULE_CHARACTER | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt13=61;
+        // InternalBehavior.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | RULE_CHARACTER | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt13=63;
         alt13 = dfa13.predict(input);
         switch (alt13) {
             case 1 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:10: T__12
+                // InternalBehavior.g:1:10: T__12
                 {
                 mT__12(); 
 
                 }
                 break;
             case 2 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:16: T__13
+                // InternalBehavior.g:1:16: T__13
                 {
                 mT__13(); 
 
                 }
                 break;
             case 3 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:22: T__14
+                // InternalBehavior.g:1:22: T__14
                 {
                 mT__14(); 
 
                 }
                 break;
             case 4 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:28: T__15
+                // InternalBehavior.g:1:28: T__15
                 {
                 mT__15(); 
 
                 }
                 break;
             case 5 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:34: T__16
+                // InternalBehavior.g:1:34: T__16
                 {
                 mT__16(); 
 
                 }
                 break;
             case 6 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:40: T__17
+                // InternalBehavior.g:1:40: T__17
                 {
                 mT__17(); 
 
                 }
                 break;
             case 7 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:46: T__18
+                // InternalBehavior.g:1:46: T__18
                 {
                 mT__18(); 
 
                 }
                 break;
             case 8 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:52: T__19
+                // InternalBehavior.g:1:52: T__19
                 {
                 mT__19(); 
 
                 }
                 break;
             case 9 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:58: T__20
+                // InternalBehavior.g:1:58: T__20
                 {
                 mT__20(); 
 
                 }
                 break;
             case 10 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:64: T__21
+                // InternalBehavior.g:1:64: T__21
                 {
                 mT__21(); 
 
                 }
                 break;
             case 11 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:70: T__22
+                // InternalBehavior.g:1:70: T__22
                 {
                 mT__22(); 
 
                 }
                 break;
             case 12 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:76: T__23
+                // InternalBehavior.g:1:76: T__23
                 {
                 mT__23(); 
 
                 }
                 break;
             case 13 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:82: T__24
+                // InternalBehavior.g:1:82: T__24
                 {
                 mT__24(); 
 
                 }
                 break;
             case 14 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:88: T__25
+                // InternalBehavior.g:1:88: T__25
                 {
                 mT__25(); 
 
                 }
                 break;
             case 15 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:94: T__26
+                // InternalBehavior.g:1:94: T__26
                 {
                 mT__26(); 
 
                 }
                 break;
             case 16 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:100: T__27
+                // InternalBehavior.g:1:100: T__27
                 {
                 mT__27(); 
 
                 }
                 break;
             case 17 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:106: T__28
+                // InternalBehavior.g:1:106: T__28
                 {
                 mT__28(); 
 
                 }
                 break;
             case 18 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:112: T__29
+                // InternalBehavior.g:1:112: T__29
                 {
                 mT__29(); 
 
                 }
                 break;
             case 19 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:118: T__30
+                // InternalBehavior.g:1:118: T__30
                 {
                 mT__30(); 
 
                 }
                 break;
             case 20 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:124: T__31
+                // InternalBehavior.g:1:124: T__31
                 {
                 mT__31(); 
 
                 }
                 break;
             case 21 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:130: T__32
+                // InternalBehavior.g:1:130: T__32
                 {
                 mT__32(); 
 
                 }
                 break;
             case 22 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:136: T__33
+                // InternalBehavior.g:1:136: T__33
                 {
                 mT__33(); 
 
                 }
                 break;
             case 23 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:142: T__34
+                // InternalBehavior.g:1:142: T__34
                 {
                 mT__34(); 
 
                 }
                 break;
             case 24 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:148: T__35
+                // InternalBehavior.g:1:148: T__35
                 {
                 mT__35(); 
 
                 }
                 break;
             case 25 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:154: T__36
+                // InternalBehavior.g:1:154: T__36
                 {
                 mT__36(); 
 
                 }
                 break;
             case 26 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:160: T__37
+                // InternalBehavior.g:1:160: T__37
                 {
                 mT__37(); 
 
                 }
                 break;
             case 27 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:166: T__38
+                // InternalBehavior.g:1:166: T__38
                 {
                 mT__38(); 
 
                 }
                 break;
             case 28 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:172: T__39
+                // InternalBehavior.g:1:172: T__39
                 {
                 mT__39(); 
 
                 }
                 break;
             case 29 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:178: T__40
+                // InternalBehavior.g:1:178: T__40
                 {
                 mT__40(); 
 
                 }
                 break;
             case 30 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:184: T__41
+                // InternalBehavior.g:1:184: T__41
                 {
                 mT__41(); 
 
                 }
                 break;
             case 31 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:190: T__42
+                // InternalBehavior.g:1:190: T__42
                 {
                 mT__42(); 
 
                 }
                 break;
             case 32 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:196: T__43
+                // InternalBehavior.g:1:196: T__43
                 {
                 mT__43(); 
 
                 }
                 break;
             case 33 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:202: T__44
+                // InternalBehavior.g:1:202: T__44
                 {
                 mT__44(); 
 
                 }
                 break;
             case 34 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:208: T__45
+                // InternalBehavior.g:1:208: T__45
                 {
                 mT__45(); 
 
                 }
                 break;
             case 35 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:214: T__46
+                // InternalBehavior.g:1:214: T__46
                 {
                 mT__46(); 
 
                 }
                 break;
             case 36 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:220: T__47
+                // InternalBehavior.g:1:220: T__47
                 {
                 mT__47(); 
 
                 }
                 break;
             case 37 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:226: T__48
+                // InternalBehavior.g:1:226: T__48
                 {
                 mT__48(); 
 
                 }
                 break;
             case 38 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:232: T__49
+                // InternalBehavior.g:1:232: T__49
                 {
                 mT__49(); 
 
                 }
                 break;
             case 39 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:238: T__50
+                // InternalBehavior.g:1:238: T__50
                 {
                 mT__50(); 
 
                 }
                 break;
             case 40 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:244: T__51
+                // InternalBehavior.g:1:244: T__51
                 {
                 mT__51(); 
 
                 }
                 break;
             case 41 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:250: T__52
+                // InternalBehavior.g:1:250: T__52
                 {
                 mT__52(); 
 
                 }
                 break;
             case 42 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:256: T__53
+                // InternalBehavior.g:1:256: T__53
                 {
                 mT__53(); 
 
                 }
                 break;
             case 43 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:262: T__54
+                // InternalBehavior.g:1:262: T__54
                 {
                 mT__54(); 
 
                 }
                 break;
             case 44 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:268: T__55
+                // InternalBehavior.g:1:268: T__55
                 {
                 mT__55(); 
 
                 }
                 break;
             case 45 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:274: T__56
+                // InternalBehavior.g:1:274: T__56
                 {
                 mT__56(); 
 
                 }
                 break;
             case 46 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:280: T__57
+                // InternalBehavior.g:1:280: T__57
                 {
                 mT__57(); 
 
                 }
                 break;
             case 47 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:286: T__58
+                // InternalBehavior.g:1:286: T__58
                 {
                 mT__58(); 
 
                 }
                 break;
             case 48 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:292: T__59
+                // InternalBehavior.g:1:292: T__59
                 {
                 mT__59(); 
 
                 }
                 break;
             case 49 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:298: T__60
+                // InternalBehavior.g:1:298: T__60
                 {
                 mT__60(); 
 
                 }
                 break;
             case 50 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:304: T__61
+                // InternalBehavior.g:1:304: T__61
                 {
                 mT__61(); 
 
                 }
                 break;
             case 51 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:310: T__62
+                // InternalBehavior.g:1:310: T__62
                 {
                 mT__62(); 
 
                 }
                 break;
             case 52 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:316: T__63
+                // InternalBehavior.g:1:316: T__63
                 {
                 mT__63(); 
 
                 }
                 break;
             case 53 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:322: T__64
+                // InternalBehavior.g:1:322: T__64
                 {
                 mT__64(); 
 
                 }
                 break;
             case 54 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:328: RULE_CHARACTER
+                // InternalBehavior.g:1:328: T__65
+                {
+                mT__65(); 
+
+                }
+                break;
+            case 55 :
+                // InternalBehavior.g:1:334: T__66
+                {
+                mT__66(); 
+
+                }
+                break;
+            case 56 :
+                // InternalBehavior.g:1:340: RULE_CHARACTER
                 {
                 mRULE_CHARACTER(); 
 
                 }
                 break;
-            case 55 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:343: RULE_ID
+            case 57 :
+                // InternalBehavior.g:1:355: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 56 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:351: RULE_INT
+            case 58 :
+                // InternalBehavior.g:1:363: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 57 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:360: RULE_STRING
+            case 59 :
+                // InternalBehavior.g:1:372: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 58 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:372: RULE_ML_COMMENT
+            case 60 :
+                // InternalBehavior.g:1:384: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 59 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:388: RULE_SL_COMMENT
+            case 61 :
+                // InternalBehavior.g:1:400: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 60 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:404: RULE_WS
+            case 62 :
+                // InternalBehavior.g:1:416: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 61 :
-                // ../org.spp.cocome.behavior/src-gen/org/spp/cocome/behavior/parser/antlr/internal/InternalBehavior.g:1:412: RULE_ANY_OTHER
+            case 63 :
+                // InternalBehavior.g:1:424: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -2194,233 +2251,240 @@ public class InternalBehaviorLexer extends Lexer {
 
     protected DFA13 dfa13 = new DFA13(this);
     static final String DFA13_eotS =
-        "\1\uffff\3\55\2\uffff\3\55\1\71\1\55\2\uffff\2\55\4\uffff\2\51\1\107\1\111\1\113\1\115\1\117\1\121\1\124\1\uffff\6\55\2\51\2\uffff\1\51\2\uffff\3\55\1\uffff\2\55\1\151\1\55\2\uffff\1\55\1\154\2\55\2\uffff\1\55\2\uffff\3\55\26\uffff\7\55\5\uffff\7\55\1\uffff\2\55\1\uffff\1\u0087\1\u0088\3\55\1\u008c\2\55\1\u008f\6\55\2\uffff\2\55\1\uffff\6\55\2\uffff\2\55\1\u00a1\1\uffff\2\55\1\uffff\1\u00a4\5\55\1\uffff\1\55\1\uffff\3\55\1\u00ae\2\55\1\u00b1\1\55\1\uffff\1\u00b3\1\u00b4\1\uffff\1\55\1\u00b7\6\55\1\u00be\1\uffff\1\55\1\u00c0\1\uffff\1\55\2\uffff\2\55\1\uffff\1\55\1\u00c5\1\u00c6\1\u00c7\1\55\1\u00c9\1\uffff\1\55\1\uffff\4\55\3\uffff\1\55\1\uffff\3\55\1\u00d3\3\55\1\u00d7\1\u00d8\1\uffff\1\u00d9\1\u00da\1\u00db\5\uffff";
+        "\1\uffff\3\56\2\uffff\3\56\1\72\1\56\2\uffff\2\56\4\uffff\2\52\1\110\1\112\1\114\1\116\1\120\1\122\1\125\1\uffff\1\56\1\uffff\5\56\2\52\2\uffff\1\52\2\uffff\3\56\1\uffff\2\56\1\154\1\56\2\uffff\1\56\1\157\2\56\2\uffff\1\56\2\uffff\3\56\26\uffff\1\56\1\uffff\6\56\5\uffff\10\56\1\uffff\2\56\1\uffff\1\u008b\1\u008c\3\56\1\u0090\2\56\1\u0093\6\56\2\uffff\2\56\1\uffff\7\56\2\uffff\2\56\1\u00a6\1\uffff\2\56\1\uffff\1\u00a9\5\56\1\uffff\1\56\1\uffff\4\56\1\u00b4\2\56\1\u00b7\1\56\1\uffff\1\u00b9\1\u00ba\1\uffff\1\56\1\u00bd\6\56\1\u00c4\1\u00c5\1\uffff\1\56\1\u00c7\1\uffff\1\56\2\uffff\2\56\1\uffff\1\56\1\u00cc\1\u00cd\1\u00ce\1\56\1\u00d0\2\uffff\1\56\1\uffff\4\56\3\uffff\1\56\1\uffff\3\56\1\u00da\3\56\1\u00de\1\u00df\1\uffff\1\u00e0\1\u00e1\1\u00e2\5\uffff";
     static final String DFA13_eofS =
-        "\u00dc\uffff";
+        "\u00e3\uffff";
     static final String DFA13_minS =
-        "\1\0\1\141\1\145\1\146\2\uffff\1\143\1\141\1\157\1\75\1\160\2\uffff\1\154\1\141\4\uffff\1\174\1\46\3\75\1\53\1\55\2\52\1\uffff\1\165\1\145\1\162\1\151\1\160\1\145\1\0\1\101\2\uffff\1\0\2\uffff\1\143\1\163\1\145\1\uffff\1\141\1\160\1\60\1\163\2\uffff\1\164\1\60\1\154\1\156\2\uffff\1\145\2\uffff\1\163\1\162\1\154\26\uffff\1\145\1\167\1\165\1\141\1\156\1\144\1\154\2\0\3\uffff\1\153\1\164\1\55\1\157\1\154\1\157\1\143\1\uffff\1\164\1\151\1\uffff\2\60\1\163\1\162\1\145\1\60\1\163\1\162\1\60\1\145\1\164\1\162\1\147\1\141\1\145\1\0\1\uffff\1\141\1\55\1\uffff\1\163\1\151\1\162\1\145\1\141\1\157\2\uffff\1\164\1\141\1\60\1\uffff\1\145\1\171\1\uffff\1\60\2\145\1\154\2\164\1\uffff\1\147\1\uffff\1\151\1\172\1\164\1\60\2\156\1\60\1\164\1\uffff\2\60\1\uffff\1\146\1\60\4\145\1\164\1\145\1\60\1\uffff\1\143\1\60\1\uffff\1\151\2\uffff\1\145\1\165\1\uffff\1\164\3\60\1\157\1\60\1\uffff\1\145\1\uffff\1\157\1\163\1\154\1\157\3\uffff\1\162\1\uffff\1\157\1\156\1\163\1\60\1\156\1\171\1\146\2\60\1\uffff\3\60\5\uffff";
+        "\1\0\1\141\1\145\1\146\2\uffff\1\143\1\141\1\157\1\75\1\160\2\uffff\1\154\1\141\4\uffff\1\174\1\46\3\75\1\53\1\55\2\52\1\uffff\1\165\1\uffff\1\145\1\162\1\151\1\160\1\145\1\0\1\101\2\uffff\1\0\2\uffff\1\143\1\163\1\145\1\uffff\1\141\1\160\1\60\1\163\2\uffff\1\164\1\60\1\154\1\156\2\uffff\1\145\2\uffff\1\163\1\162\1\154\26\uffff\1\145\1\uffff\1\167\1\165\1\141\1\156\1\144\1\154\2\0\3\uffff\1\153\1\164\1\55\1\157\1\154\1\165\1\157\1\143\1\uffff\1\164\1\151\1\uffff\2\60\1\163\1\162\1\145\1\60\1\163\1\162\1\60\1\145\1\164\1\162\1\147\1\141\1\145\1\0\1\uffff\1\141\1\55\1\uffff\1\163\1\151\2\162\1\145\1\141\1\157\2\uffff\1\164\1\141\1\60\1\uffff\1\145\1\171\1\uffff\1\60\2\145\1\154\2\164\1\uffff\1\147\1\uffff\1\151\1\172\1\156\1\164\1\60\2\156\1\60\1\164\1\uffff\2\60\1\uffff\1\146\1\60\4\145\1\164\1\145\2\60\1\uffff\1\143\1\60\1\uffff\1\151\2\uffff\1\145\1\165\1\uffff\1\164\3\60\1\157\1\60\2\uffff\1\145\1\uffff\1\157\1\163\1\154\1\157\3\uffff\1\162\1\uffff\1\157\1\156\1\163\1\60\1\156\1\171\1\146\2\60\1\uffff\3\60\5\uffff";
     static final String DFA13_maxS =
-        "\1\uffff\1\162\1\145\1\156\2\uffff\1\163\1\141\1\157\1\75\1\160\2\uffff\1\154\1\157\4\uffff\1\174\1\46\3\75\1\53\1\55\1\52\1\57\1\uffff\1\165\1\145\1\162\1\164\1\160\1\145\1\uffff\1\172\2\uffff\1\uffff\2\uffff\1\143\1\163\1\145\1\uffff\2\160\1\172\1\163\2\uffff\1\164\1\172\1\162\1\156\2\uffff\1\145\2\uffff\1\163\1\162\1\154\26\uffff\1\145\1\167\1\165\1\157\1\156\1\144\1\154\2\uffff\3\uffff\1\153\1\164\1\55\1\157\1\154\1\157\1\143\1\uffff\1\164\1\151\1\uffff\2\172\1\163\1\162\1\145\1\172\1\163\1\162\1\172\1\145\1\164\1\162\1\147\1\141\1\145\1\uffff\1\uffff\1\141\1\55\1\uffff\1\163\1\151\1\162\1\145\1\141\1\157\2\uffff\1\164\1\141\1\172\1\uffff\1\145\1\171\1\uffff\1\172\2\145\1\154\2\164\1\uffff\1\147\1\uffff\1\151\1\172\1\164\1\172\2\156\1\172\1\164\1\uffff\2\172\1\uffff\1\154\1\172\4\145\1\164\1\145\1\172\1\uffff\1\143\1\172\1\uffff\1\151\2\uffff\1\145\1\165\1\uffff\1\164\3\172\1\157\1\172\1\uffff\1\145\1\uffff\1\157\1\163\1\154\1\157\3\uffff\1\162\1\uffff\1\157\1\156\1\163\1\172\1\156\1\171\1\146\2\172\1\uffff\3\172\5\uffff";
+        "\1\uffff\1\162\1\145\1\156\2\uffff\1\163\1\141\1\157\1\75\1\160\2\uffff\1\154\1\157\4\uffff\1\174\1\46\3\75\1\53\1\55\1\52\1\57\1\uffff\1\165\1\uffff\1\145\1\162\1\164\1\160\1\145\1\uffff\1\172\2\uffff\1\uffff\2\uffff\1\143\1\163\1\145\1\uffff\1\164\1\160\1\172\1\163\2\uffff\1\164\1\172\1\162\1\156\2\uffff\1\145\2\uffff\1\163\1\162\1\154\26\uffff\1\145\1\uffff\1\167\1\165\1\157\1\156\1\144\1\154\2\uffff\3\uffff\1\153\1\164\1\55\1\157\1\154\1\165\1\157\1\143\1\uffff\1\164\1\151\1\uffff\2\172\1\163\1\162\1\145\1\172\1\163\1\162\1\172\1\145\1\164\1\162\1\147\1\141\1\145\1\uffff\1\uffff\1\141\1\55\1\uffff\1\163\1\151\2\162\1\145\1\141\1\157\2\uffff\1\164\1\141\1\172\1\uffff\1\145\1\171\1\uffff\1\172\2\145\1\154\2\164\1\uffff\1\147\1\uffff\1\151\1\172\1\156\1\164\1\172\2\156\1\172\1\164\1\uffff\2\172\1\uffff\1\154\1\172\4\145\1\164\1\145\2\172\1\uffff\1\143\1\172\1\uffff\1\151\2\uffff\1\145\1\165\1\uffff\1\164\3\172\1\157\1\172\2\uffff\1\145\1\uffff\1\157\1\163\1\154\1\157\3\uffff\1\162\1\uffff\1\157\1\156\1\163\1\172\1\156\1\171\1\146\2\172\1\uffff\3\172\5\uffff";
     static final String DFA13_acceptS =
-        "\4\uffff\1\5\1\10\5\uffff\1\21\1\22\2\uffff\1\25\1\26\1\27\1\30\11\uffff\1\46\10\uffff\1\67\1\70\1\uffff\1\74\1\75\3\uffff\1\67\4\uffff\1\5\1\10\4\uffff\1\33\1\15\1\uffff\1\21\1\22\3\uffff\1\25\1\26\1\27\1\30\1\31\1\32\1\34\1\50\1\37\1\35\1\40\1\36\1\52\1\42\1\53\1\43\1\47\1\44\1\72\1\73\1\45\1\46\11\uffff\1\71\1\70\1\74\7\uffff\1\20\2\uffff\1\51\20\uffff\1\66\2\uffff\1\7\6\uffff\1\12\1\13\3\uffff\1\24\2\uffff\1\55\6\uffff\1\66\1\uffff\1\6\10\uffff\1\23\2\uffff\1\56\11\uffff\1\16\2\uffff\1\14\1\uffff\1\57\1\54\2\uffff\1\63\6\uffff\1\3\1\uffff\1\11\4\uffff\1\64\1\65\1\1\1\uffff\1\4\11\uffff\1\61\3\uffff\1\17\1\60\1\62\1\2\1\41";
+        "\4\uffff\1\5\1\10\5\uffff\1\21\1\22\2\uffff\1\25\1\27\1\30\1\31\11\uffff\1\47\1\uffff\1\56\7\uffff\1\71\1\72\1\uffff\1\76\1\77\3\uffff\1\71\4\uffff\1\5\1\10\4\uffff\1\34\1\15\1\uffff\1\21\1\22\3\uffff\1\25\1\27\1\30\1\31\1\32\1\33\1\35\1\51\1\40\1\36\1\41\1\37\1\53\1\43\1\54\1\44\1\50\1\45\1\74\1\75\1\46\1\47\1\uffff\1\56\10\uffff\1\73\1\72\1\76\10\uffff\1\20\2\uffff\1\52\20\uffff\1\70\2\uffff\1\7\7\uffff\1\12\1\13\3\uffff\1\24\2\uffff\1\57\6\uffff\1\70\1\uffff\1\6\11\uffff\1\23\2\uffff\1\60\12\uffff\1\16\2\uffff\1\14\1\uffff\1\61\1\55\2\uffff\1\65\6\uffff\1\26\1\3\1\uffff\1\11\4\uffff\1\66\1\67\1\1\1\uffff\1\4\11\uffff\1\63\3\uffff\1\17\1\62\1\64\1\2\1\42";
     static final String DFA13_specialS =
-        "\1\5\42\uffff\1\2\3\uffff\1\1\65\uffff\1\0\1\4\35\uffff\1\3\137\uffff}>";
+        "\1\1\43\uffff\1\5\3\uffff\1\2\66\uffff\1\0\1\4\36\uffff\1\3\143\uffff}>";
     static final String[] DFA13_transitionS = {
-            "\11\51\2\50\2\51\1\50\22\51\1\50\1\25\1\47\2\51\1\34\1\24\1\43\1\13\1\14\1\32\1\30\1\51\1\31\1\22\1\33\12\46\1\17\1\51\1\27\1\11\1\26\2\51\32\45\1\20\1\51\1\21\1\44\1\45\1\51\1\6\1\45\1\10\1\42\1\15\1\16\2\45\1\3\4\45\1\36\1\12\1\1\1\35\1\2\1\40\1\37\1\41\1\7\4\45\1\4\1\23\1\5\uff82\51",
-            "\1\52\15\uffff\1\53\2\uffff\1\54",
-            "\1\56",
-            "\1\60\6\uffff\1\57\1\61",
+            "\11\52\2\51\2\52\1\51\22\52\1\51\1\25\1\50\2\52\1\34\1\24\1\44\1\13\1\14\1\32\1\30\1\36\1\31\1\22\1\33\12\47\1\17\1\52\1\27\1\11\1\26\2\52\32\46\1\20\1\52\1\21\1\45\1\46\1\52\1\6\1\46\1\10\1\43\1\15\1\16\2\46\1\3\4\46\1\37\1\12\1\1\1\35\1\2\1\41\1\40\1\42\1\7\4\46\1\4\1\23\1\5\uff82\52",
+            "\1\53\15\uffff\1\54\2\uffff\1\55",
+            "\1\57",
+            "\1\61\6\uffff\1\60\1\62",
             "",
             "",
-            "\1\64\17\uffff\1\65",
-            "\1\66",
+            "\1\65\17\uffff\1\66",
             "\1\67",
             "\1\70",
-            "\1\72",
+            "\1\71",
+            "\1\73",
             "",
             "",
-            "\1\75",
-            "\1\77\15\uffff\1\76",
+            "\1\76",
+            "\1\100\15\uffff\1\77",
             "",
             "",
             "",
             "",
-            "\1\104",
             "\1\105",
             "\1\106",
-            "\1\110",
-            "\1\112",
-            "\1\114",
-            "\1\116",
-            "\1\120",
-            "\1\122\4\uffff\1\123",
+            "\1\107",
+            "\1\111",
+            "\1\113",
+            "\1\115",
+            "\1\117",
+            "\1\121",
+            "\1\123\4\uffff\1\124",
             "",
-            "\1\126",
             "\1\127",
-            "\1\130",
-            "\1\132\12\uffff\1\131",
-            "\1\133",
-            "\1\134",
-            "\47\136\1\137\64\136\1\135\uffa3\136",
-            "\32\55\4\uffff\1\55\1\uffff\32\55",
+            "",
+            "\1\131",
+            "\1\132",
+            "\1\134\12\uffff\1\133",
+            "\1\135",
+            "\1\136",
+            "\47\140\1\141\64\140\1\137\uffa3\140",
+            "\32\56\4\uffff\1\56\1\uffff\32\56",
             "",
             "",
-            "\0\137",
+            "\0\141",
             "",
             "",
-            "\1\142",
-            "\1\143",
             "\1\144",
+            "\1\145",
+            "\1\146",
             "",
-            "\1\146\16\uffff\1\145",
-            "\1\147",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\1\150\31\55",
+            "\1\150\16\uffff\1\147\3\uffff\1\151",
             "\1\152",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\1\153\31\56",
+            "\1\155",
             "",
             "",
-            "\1\153",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
-            "\1\156\5\uffff\1\155",
-            "\1\157",
-            "",
-            "",
-            "\1\160",
-            "",
-            "",
-            "\1\161",
+            "\1\156",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\1\161\5\uffff\1\160",
             "\1\162",
+            "",
+            "",
             "\1\163",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
             "",
             "",
             "\1\164",
             "\1\165",
             "\1\166",
-            "\1\167\15\uffff\1\170",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\167",
+            "",
+            "\1\170",
             "\1\171",
-            "\1\172",
-            "\1\173",
-            "\42\137\1\174\4\137\1\174\64\137\1\174\5\137\1\174\3\137\1\174\7\137\1\174\3\137\1\174\1\137\2\174\uff8a\137",
-            "\47\137\1\175\uffd8\137",
-            "",
-            "",
-            "",
+            "\1\172\15\uffff\1\173",
+            "\1\174",
+            "\1\175",
             "\1\176",
-            "\1\177",
-            "\1\u0080",
+            "\42\141\1\177\4\141\1\177\64\141\1\177\5\141\1\177\3\141\1\177\7\141\1\177\3\141\1\177\1\141\2\177\uff8a\141",
+            "\47\141\1\u0080\uffd8\141",
+            "",
+            "",
+            "",
             "\1\u0081",
             "\1\u0082",
             "\1\u0083",
             "\1\u0084",
-            "",
             "\1\u0085",
             "\1\u0086",
+            "\1\u0087",
+            "\1\u0088",
             "",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
             "\1\u0089",
             "\1\u008a",
-            "\1\u008b",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
+            "",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
             "\1\u008d",
             "\1\u008e",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
-            "\1\u0090",
+            "\1\u008f",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
             "\1\u0091",
             "\1\u0092",
-            "\1\u0093",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
             "\1\u0094",
             "\1\u0095",
-            "\47\137\1\175\uffd8\137",
-            "",
+            "\1\u0096",
             "\1\u0097",
             "\1\u0098",
-            "",
             "\1\u0099",
-            "\1\u009a",
+            "\47\141\1\u0080\uffd8\141",
+            "",
             "\1\u009b",
             "\1\u009c",
+            "",
             "\1\u009d",
             "\1\u009e",
-            "",
-            "",
             "\1\u009f",
             "\1\u00a0",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
-            "",
+            "\1\u00a1",
             "\1\u00a2",
             "\1\u00a3",
             "",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
+            "",
+            "\1\u00a4",
             "\1\u00a5",
-            "\1\u00a6",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "",
             "\1\u00a7",
             "\1\u00a8",
-            "\1\u00a9",
             "",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
             "\1\u00aa",
-            "",
             "\1\u00ab",
             "\1\u00ac",
             "\1\u00ad",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
+            "\1\u00ae",
+            "",
             "\1\u00af",
+            "",
             "\1\u00b0",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
+            "\1\u00b1",
             "\1\u00b2",
-            "",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
-            "",
-            "\1\u00b6\5\uffff\1\u00b5",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
+            "\1\u00b3",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\1\u00b5",
+            "\1\u00b6",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
             "\1\u00b8",
-            "\1\u00b9",
-            "\1\u00ba",
-            "\1\u00bb",
-            "\1\u00bc",
-            "\1\u00bd",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
             "",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "",
+            "\1\u00bc\5\uffff\1\u00bb",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\1\u00be",
             "\1\u00bf",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
-            "",
+            "\1\u00c0",
             "\1\u00c1",
-            "",
-            "",
             "\1\u00c2",
             "\1\u00c3",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
             "",
-            "\1\u00c4",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
+            "\1\u00c6",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "",
             "\1\u00c8",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
             "",
+            "",
+            "\1\u00c9",
             "\1\u00ca",
             "",
             "\1\u00cb",
-            "\1\u00cc",
-            "\1\u00cd",
-            "\1\u00ce",
-            "",
-            "",
-            "",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
             "\1\u00cf",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
             "",
-            "\1\u00d0",
+            "",
             "\1\u00d1",
+            "",
             "\1\u00d2",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
+            "\1\u00d3",
             "\1\u00d4",
             "\1\u00d5",
-            "\1\u00d6",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
             "",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
-            "\12\55\7\uffff\32\55\4\uffff\1\55\1\uffff\32\55",
+            "",
+            "",
+            "\1\u00d6",
+            "",
+            "\1\u00d7",
+            "\1\u00d8",
+            "\1\u00d9",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\1\u00db",
+            "\1\u00dc",
+            "\1\u00dd",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
+            "\12\56\7\uffff\32\56\4\uffff\1\56\1\uffff\32\56",
             "",
             "",
             "",
@@ -2458,67 +2522,23 @@ public class InternalBehaviorLexer extends Lexer {
             this.transition = DFA13_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | RULE_CHARACTER | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | RULE_CHARACTER | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA13_93 = input.LA(1);
+                        int LA13_95 = input.LA(1);
 
                         s = -1;
-                        if ( (LA13_93=='\"'||LA13_93=='\''||LA13_93=='\\'||LA13_93=='b'||LA13_93=='f'||LA13_93=='n'||LA13_93=='r'||(LA13_93>='t' && LA13_93<='u')) ) {s = 124;}
+                        if ( (LA13_95=='\"'||LA13_95=='\''||LA13_95=='\\'||LA13_95=='b'||LA13_95=='f'||LA13_95=='n'||LA13_95=='r'||(LA13_95>='t' && LA13_95<='u')) ) {s = 127;}
 
-                        else if ( ((LA13_93>='\u0000' && LA13_93<='!')||(LA13_93>='#' && LA13_93<='&')||(LA13_93>='(' && LA13_93<='[')||(LA13_93>=']' && LA13_93<='a')||(LA13_93>='c' && LA13_93<='e')||(LA13_93>='g' && LA13_93<='m')||(LA13_93>='o' && LA13_93<='q')||LA13_93=='s'||(LA13_93>='v' && LA13_93<='\uFFFF')) ) {s = 95;}
+                        else if ( ((LA13_95>='\u0000' && LA13_95<='!')||(LA13_95>='#' && LA13_95<='&')||(LA13_95>='(' && LA13_95<='[')||(LA13_95>=']' && LA13_95<='a')||(LA13_95>='c' && LA13_95<='e')||(LA13_95>='g' && LA13_95<='m')||(LA13_95>='o' && LA13_95<='q')||LA13_95=='s'||(LA13_95>='v' && LA13_95<='\uFFFF')) ) {s = 97;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA13_39 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA13_39>='\u0000' && LA13_39<='\uFFFF')) ) {s = 95;}
-
-                        else s = 41;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA13_35 = input.LA(1);
-
-                        s = -1;
-                        if ( (LA13_35=='\\') ) {s = 93;}
-
-                        else if ( ((LA13_35>='\u0000' && LA13_35<='&')||(LA13_35>='(' && LA13_35<='[')||(LA13_35>=']' && LA13_35<='\uFFFF')) ) {s = 94;}
-
-                        else if ( (LA13_35=='\'') ) {s = 95;}
-
-                        else s = 41;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 3 : 
-                        int LA13_124 = input.LA(1);
-
-                        s = -1;
-                        if ( (LA13_124=='\'') ) {s = 125;}
-
-                        else if ( ((LA13_124>='\u0000' && LA13_124<='&')||(LA13_124>='(' && LA13_124<='\uFFFF')) ) {s = 95;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 4 : 
-                        int LA13_94 = input.LA(1);
-
-                        s = -1;
-                        if ( (LA13_94=='\'') ) {s = 125;}
-
-                        else if ( ((LA13_94>='\u0000' && LA13_94<='&')||(LA13_94>='(' && LA13_94<='\uFFFF')) ) {s = 95;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 5 : 
                         int LA13_0 = input.LA(1);
 
                         s = -1;
@@ -2580,29 +2600,75 @@ public class InternalBehaviorLexer extends Lexer {
 
                         else if ( (LA13_0=='q') ) {s = 29;}
 
-                        else if ( (LA13_0=='n') ) {s = 30;}
+                        else if ( (LA13_0==',') ) {s = 30;}
 
-                        else if ( (LA13_0=='t') ) {s = 31;}
+                        else if ( (LA13_0=='n') ) {s = 31;}
 
-                        else if ( (LA13_0=='s') ) {s = 32;}
+                        else if ( (LA13_0=='t') ) {s = 32;}
 
-                        else if ( (LA13_0=='u') ) {s = 33;}
+                        else if ( (LA13_0=='s') ) {s = 33;}
 
-                        else if ( (LA13_0=='d') ) {s = 34;}
+                        else if ( (LA13_0=='u') ) {s = 34;}
 
-                        else if ( (LA13_0=='\'') ) {s = 35;}
+                        else if ( (LA13_0=='d') ) {s = 35;}
 
-                        else if ( (LA13_0=='^') ) {s = 36;}
+                        else if ( (LA13_0=='\'') ) {s = 36;}
 
-                        else if ( ((LA13_0>='A' && LA13_0<='Z')||LA13_0=='_'||LA13_0=='b'||(LA13_0>='g' && LA13_0<='h')||(LA13_0>='j' && LA13_0<='m')||(LA13_0>='w' && LA13_0<='z')) ) {s = 37;}
+                        else if ( (LA13_0=='^') ) {s = 37;}
 
-                        else if ( ((LA13_0>='0' && LA13_0<='9')) ) {s = 38;}
+                        else if ( ((LA13_0>='A' && LA13_0<='Z')||LA13_0=='_'||LA13_0=='b'||(LA13_0>='g' && LA13_0<='h')||(LA13_0>='j' && LA13_0<='m')||(LA13_0>='w' && LA13_0<='z')) ) {s = 38;}
 
-                        else if ( (LA13_0=='\"') ) {s = 39;}
+                        else if ( ((LA13_0>='0' && LA13_0<='9')) ) {s = 39;}
 
-                        else if ( ((LA13_0>='\t' && LA13_0<='\n')||LA13_0=='\r'||LA13_0==' ') ) {s = 40;}
+                        else if ( (LA13_0=='\"') ) {s = 40;}
 
-                        else if ( ((LA13_0>='\u0000' && LA13_0<='\b')||(LA13_0>='\u000B' && LA13_0<='\f')||(LA13_0>='\u000E' && LA13_0<='\u001F')||(LA13_0>='#' && LA13_0<='$')||LA13_0==','||LA13_0==';'||(LA13_0>='?' && LA13_0<='@')||LA13_0=='\\'||LA13_0=='`'||(LA13_0>='~' && LA13_0<='\uFFFF')) ) {s = 41;}
+                        else if ( ((LA13_0>='\t' && LA13_0<='\n')||LA13_0=='\r'||LA13_0==' ') ) {s = 41;}
+
+                        else if ( ((LA13_0>='\u0000' && LA13_0<='\b')||(LA13_0>='\u000B' && LA13_0<='\f')||(LA13_0>='\u000E' && LA13_0<='\u001F')||(LA13_0>='#' && LA13_0<='$')||LA13_0==';'||(LA13_0>='?' && LA13_0<='@')||LA13_0=='\\'||LA13_0=='`'||(LA13_0>='~' && LA13_0<='\uFFFF')) ) {s = 42;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA13_40 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA13_40>='\u0000' && LA13_40<='\uFFFF')) ) {s = 97;}
+
+                        else s = 42;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 3 : 
+                        int LA13_127 = input.LA(1);
+
+                        s = -1;
+                        if ( (LA13_127=='\'') ) {s = 128;}
+
+                        else if ( ((LA13_127>='\u0000' && LA13_127<='&')||(LA13_127>='(' && LA13_127<='\uFFFF')) ) {s = 97;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 4 : 
+                        int LA13_96 = input.LA(1);
+
+                        s = -1;
+                        if ( (LA13_96=='\'') ) {s = 128;}
+
+                        else if ( ((LA13_96>='\u0000' && LA13_96<='&')||(LA13_96>='(' && LA13_96<='\uFFFF')) ) {s = 97;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 5 : 
+                        int LA13_36 = input.LA(1);
+
+                        s = -1;
+                        if ( (LA13_36=='\\') ) {s = 95;}
+
+                        else if ( ((LA13_36>='\u0000' && LA13_36<='&')||(LA13_36>='(' && LA13_36<='[')||(LA13_36>=']' && LA13_36<='\uFFFF')) ) {s = 96;}
+
+                        else if ( (LA13_36=='\'') ) {s = 97;}
+
+                        else s = 42;
 
                         if ( s>=0 ) return s;
                         break;

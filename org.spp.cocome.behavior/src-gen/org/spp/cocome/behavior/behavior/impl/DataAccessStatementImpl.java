@@ -20,11 +20,11 @@ import org.spp.cocome.behavior.behavior.VariableDecl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.DataAccessStatementImpl#getOperation <em>Operation</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.DataAccessStatementImpl#getVariable <em>Variable</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

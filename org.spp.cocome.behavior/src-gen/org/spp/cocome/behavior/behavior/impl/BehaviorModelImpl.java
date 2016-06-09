@@ -30,13 +30,13 @@ import org.spp.cocome.behavior.behavior.RepositoryReference;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.BehaviorModelImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.BehaviorModelImpl#getImports <em>Imports</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.BehaviorModelImpl#getRepositories <em>Repositories</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.BehaviorModelImpl#getComponentImpl <em>Component Impl</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

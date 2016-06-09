@@ -1,6 +1,6 @@
 grammar org.spp.cocome.behavior.Behavior with org.eclipse.xtext.common.Terminals
 
-generate behavior "http://www.spp.org/cocome/behavior/Behavior"
+generate behavior "http://www.spp.cocome.org/behavior/Behavior"
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 import "http://www.spp.org/cocome/types/Types" as types
@@ -37,7 +37,11 @@ enum ComponentKind:
 	STATEFUL = 'stateful' |
 	SINGLETON = 'singleton'
 ;
- 
+
+TypedValue returns mapping::TypedValue:
+	VariableDecl
+;
+
 VariableDecl: modifier=('var'|'val') type=DeclarationTypeReference name=ID ;
 
 ConstantDecl: 'const' name=ID '=' value=Expression ;
@@ -46,7 +50,7 @@ InterfaceRealization: 'iface' refInterface=[mapping::Interface|QualifiedName] me
 
 MethodImpl: 'operation' refMethod=[mapping::MethodDecl|QualifiedName] body=BlockStatement ;
 
-Statement: IfStatement | Assignment | LoopStatement | DataAccessStatement;
+Statement: IfStatement | Assignment | LoopStatement | DataAccessStatement | ReturnStatement;
 
 IfStatement: 'if' '(' expr=Expression ')' ifStatement=BlockStatement 
         ('else' elseStatement=BlockStatement )?         
@@ -64,6 +68,10 @@ enum DataAccessOperation:
 	STORE = 'store' |
 	UPDATE = 'update' |
 	DELETE = 'delete'
+;
+
+ReturnStatement:
+	'return' expression=Expression 
 ;
 
 VariableCall: variable=[VariableDecl] ('[' (index=Expression)? ']')? ('.' subProperty=PropertyCall)? ;
@@ -117,7 +125,20 @@ PrimaryExpression returns Expression:
 	Literal
 ;
 
-DataQuery: 'query' type=DeclarationTypeReference query=STRING ;
+DataQuery: 'query' type=DeclarationTypeReference query=QueryExpression ;
+
+QueryExpression:
+	left=QueryElement (',' right=QueryExpression)?
+;
+
+QueryElement:
+	StringLiteral |
+	TypedValueReference
+;
+
+TypedValueReference:
+	typedValue=[mapping::TypedValue]
+;
 
 InstantiationExpression:
 	'new' type=TypeReference '(' parameters+=Expression ')'

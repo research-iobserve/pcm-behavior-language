@@ -61,6 +61,8 @@ public class MappingFactoryImpl extends EFactoryImpl implements MappingFactory {
 			case MappingPackage.NAMED_ELEMENT: return createNamedElement();
 			case MappingPackage.INTERFACE: return createInterface();
 			case MappingPackage.METHOD_DECL: return createMethodDecl();
+			case MappingPackage.PARAMETER: return createParameter();
+			case MappingPackage.TYPED_VALUE: return createTypedValue();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -114,6 +116,26 @@ public class MappingFactoryImpl extends EFactoryImpl implements MappingFactory {
 	public MethodDecl createMethodDecl() {
 		MethodDeclImpl methodDecl = new MethodDeclImpl();
 		return methodDecl;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Parameter createParameter() {
+		ParameterImpl parameter = new ParameterImpl();
+		return parameter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TypedValue createTypedValue() {
+		TypedValueImpl typedValue = new TypedValueImpl();
+		return typedValue;
 	}
 
 	/**

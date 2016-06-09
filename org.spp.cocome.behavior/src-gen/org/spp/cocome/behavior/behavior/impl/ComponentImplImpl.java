@@ -33,6 +33,7 @@ import org.spp.cocome.behavior.mapping.Component;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.ComponentImplImpl#getKind <em>Kind</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.ComponentImplImpl#getRefComponent <em>Ref Component</em>}</li>
@@ -41,7 +42,6 @@ import org.spp.cocome.behavior.mapping.Component;
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.ComponentImplImpl#getPreDestroy <em>Pre Destroy</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.ComponentImplImpl#getInterfaces <em>Interfaces</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

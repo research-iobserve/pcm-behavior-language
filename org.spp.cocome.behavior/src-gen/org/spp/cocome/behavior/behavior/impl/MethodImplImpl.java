@@ -23,11 +23,11 @@ import org.spp.cocome.behavior.mapping.MethodDecl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.MethodImplImpl#getRefMethod <em>Ref Method</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.MethodImplImpl#getBody <em>Body</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

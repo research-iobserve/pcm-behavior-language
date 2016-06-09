@@ -18,10 +18,10 @@ import org.spp.cocome.behavior.behavior.RepositoryReference;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.RepositoryReferenceImpl#getReference <em>Reference</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

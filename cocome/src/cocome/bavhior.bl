@@ -1,7 +1,7 @@
 package cocome
 
 // Import DTL data type definitions
-import data.MyClass
+import data.Product
 
 // Refer to a repository to use. The path 
 // must include the project name and the directory
@@ -17,8 +17,8 @@ realize TradingSystem.Inventory.Data.Enterprise {
 	// The state be values, which can be initialized once and
 	// variables. Prefix your delcaration with val or var accordingly.
 	val int a
-	val MyClass my
-	val MyClass[] array
+	val Product my
+	val Product[] array
 
 	// Third, choose an interface. This can be repeated for all
 	// provided interfaces. A PCM component usually has multiple

@@ -8,6 +8,8 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
+import org.spp.cocome.behavior.mapping.MappingPackage;
+
 /**
  * <!-- begin-user-doc -->
  * The <b>Package</b> for the model.
@@ -39,7 +41,7 @@ public interface BehaviorPackage extends EPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  String eNS_URI = "http://www.spp.org/cocome/behavior/Behavior";
+  String eNS_URI = "http://www.spp.cocome.org/behavior/Behavior";
 
   /**
    * The package namespace name.
@@ -280,13 +282,22 @@ public interface BehaviorPackage extends EPackage
   int VARIABLE_DECL = 5;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE_DECL__NAME = MappingPackage.TYPED_VALUE__NAME;
+
+  /**
    * The feature id for the '<em><b>Modifier</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int VARIABLE_DECL__MODIFIER = 0;
+  int VARIABLE_DECL__MODIFIER = MappingPackage.TYPED_VALUE_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -295,16 +306,7 @@ public interface BehaviorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VARIABLE_DECL__TYPE = 1;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VARIABLE_DECL__NAME = 2;
+  int VARIABLE_DECL__TYPE = MappingPackage.TYPED_VALUE_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Variable Decl</em>' class.
@@ -313,7 +315,7 @@ public interface BehaviorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VARIABLE_DECL_FEATURE_COUNT = 3;
+  int VARIABLE_DECL_FEATURE_COUNT = MappingPackage.TYPED_VALUE_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.spp.cocome.behavior.behavior.impl.ConstantDeclImpl <em>Constant Decl</em>}' class.
@@ -640,6 +642,34 @@ public interface BehaviorPackage extends EPackage
   int DATA_ACCESS_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
 
   /**
+   * The meta object id for the '{@link org.spp.cocome.behavior.behavior.impl.ReturnStatementImpl <em>Return Statement</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.spp.cocome.behavior.behavior.impl.ReturnStatementImpl
+   * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getReturnStatement()
+   * @generated
+   */
+  int RETURN_STATEMENT = 15;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RETURN_STATEMENT__EXPRESSION = STATEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Return Statement</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RETURN_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link org.spp.cocome.behavior.behavior.impl.ExpressionImpl <em>Expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -647,7 +677,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 17;
+  int EXPRESSION = 18;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -729,7 +759,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getVariableCall()
    * @generated
    */
-  int VARIABLE_CALL = 15;
+  int VARIABLE_CALL = 16;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -838,7 +868,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getPropertyCall()
    * @generated
    */
-  int PROPERTY_CALL = 16;
+  int PROPERTY_CALL = 17;
 
   /**
    * The feature id for the '<em><b>Property</b></em>' reference.
@@ -884,7 +914,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getDataQuery()
    * @generated
    */
-  int DATA_QUERY = 18;
+  int DATA_QUERY = 19;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -950,7 +980,7 @@ public interface BehaviorPackage extends EPackage
   int DATA_QUERY__TARGET = EXPRESSION__TARGET;
 
   /**
-   * The feature id for the '<em><b>Query</b></em>' attribute.
+   * The feature id for the '<em><b>Query</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -968,6 +998,90 @@ public interface BehaviorPackage extends EPackage
   int DATA_QUERY_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
+   * The meta object id for the '{@link org.spp.cocome.behavior.behavior.impl.QueryExpressionImpl <em>Query Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.spp.cocome.behavior.behavior.impl.QueryExpressionImpl
+   * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getQueryExpression()
+   * @generated
+   */
+  int QUERY_EXPRESSION = 20;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUERY_EXPRESSION__LEFT = 0;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUERY_EXPRESSION__RIGHT = 1;
+
+  /**
+   * The number of structural features of the '<em>Query Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUERY_EXPRESSION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.spp.cocome.behavior.behavior.impl.QueryElementImpl <em>Query Element</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.spp.cocome.behavior.behavior.impl.QueryElementImpl
+   * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getQueryElement()
+   * @generated
+   */
+  int QUERY_ELEMENT = 21;
+
+  /**
+   * The number of structural features of the '<em>Query Element</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUERY_ELEMENT_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.spp.cocome.behavior.behavior.impl.TypedValueReferenceImpl <em>Typed Value Reference</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.spp.cocome.behavior.behavior.impl.TypedValueReferenceImpl
+   * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getTypedValueReference()
+   * @generated
+   */
+  int TYPED_VALUE_REFERENCE = 22;
+
+  /**
+   * The feature id for the '<em><b>Typed Value</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPED_VALUE_REFERENCE__TYPED_VALUE = QUERY_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Typed Value Reference</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPED_VALUE_REFERENCE_FEATURE_COUNT = QUERY_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link org.spp.cocome.behavior.behavior.impl.InstantiationExpressionImpl <em>Instantiation Expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -975,7 +1089,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getInstantiationExpression()
    * @generated
    */
-  int INSTANTIATION_EXPRESSION = 19;
+  int INSTANTIATION_EXPRESSION = 23;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1066,7 +1180,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getDeclarationTypeReference()
    * @generated
    */
-  int DECLARATION_TYPE_REFERENCE = 20;
+  int DECLARATION_TYPE_REFERENCE = 24;
 
   /**
    * The number of structural features of the '<em>Declaration Type Reference</em>' class.
@@ -1085,7 +1199,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getTypeReference()
    * @generated
    */
-  int TYPE_REFERENCE = 21;
+  int TYPE_REFERENCE = 25;
 
   /**
    * The feature id for the '<em><b>Reference</b></em>' reference.
@@ -1113,7 +1227,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getCollectionType()
    * @generated
    */
-  int COLLECTION_TYPE = 22;
+  int COLLECTION_TYPE = 26;
 
   /**
    * The feature id for the '<em><b>Reference</b></em>' containment reference.
@@ -1150,7 +1264,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getMapType()
    * @generated
    */
-  int MAP_TYPE = 23;
+  int MAP_TYPE = 27;
 
   /**
    * The feature id for the '<em><b>Reference</b></em>' containment reference.
@@ -1187,7 +1301,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getLiteral()
    * @generated
    */
-  int LITERAL = 24;
+  int LITERAL = 28;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1269,7 +1383,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getStringLiteral()
    * @generated
    */
-  int STRING_LITERAL = 25;
+  int STRING_LITERAL = 29;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1278,7 +1392,7 @@ public interface BehaviorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STRING_LITERAL__LEFT = LITERAL__LEFT;
+  int STRING_LITERAL__LEFT = QUERY_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Feature</b></em>' attribute.
@@ -1287,7 +1401,7 @@ public interface BehaviorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STRING_LITERAL__FEATURE = LITERAL__FEATURE;
+  int STRING_LITERAL__FEATURE = QUERY_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -1296,7 +1410,7 @@ public interface BehaviorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STRING_LITERAL__RIGHT = LITERAL__RIGHT;
+  int STRING_LITERAL__RIGHT = QUERY_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1305,7 +1419,7 @@ public interface BehaviorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STRING_LITERAL__EXPRESSION = LITERAL__EXPRESSION;
+  int STRING_LITERAL__EXPRESSION = QUERY_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -1314,7 +1428,7 @@ public interface BehaviorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STRING_LITERAL__TYPE = LITERAL__TYPE;
+  int STRING_LITERAL__TYPE = QUERY_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Operand</b></em>' containment reference.
@@ -1323,7 +1437,7 @@ public interface BehaviorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STRING_LITERAL__OPERAND = LITERAL__OPERAND;
+  int STRING_LITERAL__OPERAND = QUERY_ELEMENT_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Target</b></em>' containment reference.
@@ -1332,7 +1446,7 @@ public interface BehaviorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STRING_LITERAL__TARGET = LITERAL__TARGET;
+  int STRING_LITERAL__TARGET = QUERY_ELEMENT_FEATURE_COUNT + 6;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1341,7 +1455,7 @@ public interface BehaviorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STRING_LITERAL__VALUE = LITERAL_FEATURE_COUNT + 0;
+  int STRING_LITERAL__VALUE = QUERY_ELEMENT_FEATURE_COUNT + 7;
 
   /**
    * The number of structural features of the '<em>String Literal</em>' class.
@@ -1350,7 +1464,7 @@ public interface BehaviorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STRING_LITERAL_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 1;
+  int STRING_LITERAL_FEATURE_COUNT = QUERY_ELEMENT_FEATURE_COUNT + 8;
 
   /**
    * The meta object id for the '{@link org.spp.cocome.behavior.behavior.impl.CharLiteralImpl <em>Char Literal</em>}' class.
@@ -1360,7 +1474,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getCharLiteral()
    * @generated
    */
-  int CHAR_LITERAL = 26;
+  int CHAR_LITERAL = 30;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1451,7 +1565,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getNumberLiteral()
    * @generated
    */
-  int NUMBER_LITERAL = 27;
+  int NUMBER_LITERAL = 31;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1542,7 +1656,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getBooleanLiteral()
    * @generated
    */
-  int BOOLEAN_LITERAL = 28;
+  int BOOLEAN_LITERAL = 32;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1633,7 +1747,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getComponentKind()
    * @generated
    */
-  int COMPONENT_KIND = 29;
+  int COMPONENT_KIND = 33;
 
   /**
    * The meta object id for the '{@link org.spp.cocome.behavior.behavior.DataAccessOperation <em>Data Access Operation</em>}' enum.
@@ -1643,7 +1757,7 @@ public interface BehaviorPackage extends EPackage
    * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getDataAccessOperation()
    * @generated
    */
-  int DATA_ACCESS_OPERATION = 30;
+  int DATA_ACCESS_OPERATION = 34;
 
 
   /**
@@ -1870,17 +1984,6 @@ public interface BehaviorPackage extends EPackage
    * @generated
    */
   EReference getVariableDecl_Type();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.spp.cocome.behavior.behavior.VariableDecl#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.spp.cocome.behavior.behavior.VariableDecl#getName()
-   * @see #getVariableDecl()
-   * @generated
-   */
-  EAttribute getVariableDecl_Name();
 
   /**
    * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.ConstantDecl <em>Constant Decl</em>}'.
@@ -2160,6 +2263,27 @@ public interface BehaviorPackage extends EPackage
   EReference getDataAccessStatement_Variable();
 
   /**
+   * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.ReturnStatement <em>Return Statement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Return Statement</em>'.
+   * @see org.spp.cocome.behavior.behavior.ReturnStatement
+   * @generated
+   */
+  EClass getReturnStatement();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.spp.cocome.behavior.behavior.ReturnStatement#getExpression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expression</em>'.
+   * @see org.spp.cocome.behavior.behavior.ReturnStatement#getExpression()
+   * @see #getReturnStatement()
+   * @generated
+   */
+  EReference getReturnStatement_Expression();
+
+  /**
    * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.VariableCall <em>Variable Call</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2343,15 +2467,78 @@ public interface BehaviorPackage extends EPackage
   EClass getDataQuery();
 
   /**
-   * Returns the meta object for the attribute '{@link org.spp.cocome.behavior.behavior.DataQuery#getQuery <em>Query</em>}'.
+   * Returns the meta object for the containment reference '{@link org.spp.cocome.behavior.behavior.DataQuery#getQuery <em>Query</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Query</em>'.
+   * @return the meta object for the containment reference '<em>Query</em>'.
    * @see org.spp.cocome.behavior.behavior.DataQuery#getQuery()
    * @see #getDataQuery()
    * @generated
    */
-  EAttribute getDataQuery_Query();
+  EReference getDataQuery_Query();
+
+  /**
+   * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.QueryExpression <em>Query Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Query Expression</em>'.
+   * @see org.spp.cocome.behavior.behavior.QueryExpression
+   * @generated
+   */
+  EClass getQueryExpression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.spp.cocome.behavior.behavior.QueryExpression#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.spp.cocome.behavior.behavior.QueryExpression#getLeft()
+   * @see #getQueryExpression()
+   * @generated
+   */
+  EReference getQueryExpression_Left();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.spp.cocome.behavior.behavior.QueryExpression#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.spp.cocome.behavior.behavior.QueryExpression#getRight()
+   * @see #getQueryExpression()
+   * @generated
+   */
+  EReference getQueryExpression_Right();
+
+  /**
+   * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.QueryElement <em>Query Element</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Query Element</em>'.
+   * @see org.spp.cocome.behavior.behavior.QueryElement
+   * @generated
+   */
+  EClass getQueryElement();
+
+  /**
+   * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.TypedValueReference <em>Typed Value Reference</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Typed Value Reference</em>'.
+   * @see org.spp.cocome.behavior.behavior.TypedValueReference
+   * @generated
+   */
+  EClass getTypedValueReference();
+
+  /**
+   * Returns the meta object for the reference '{@link org.spp.cocome.behavior.behavior.TypedValueReference#getTypedValue <em>Typed Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Typed Value</em>'.
+   * @see org.spp.cocome.behavior.behavior.TypedValueReference#getTypedValue()
+   * @see #getTypedValueReference()
+   * @generated
+   */
+  EReference getTypedValueReference_TypedValue();
 
   /**
    * Returns the meta object for class '{@link org.spp.cocome.behavior.behavior.InstantiationExpression <em>Instantiation Expression</em>}'.
@@ -2787,14 +2974,6 @@ public interface BehaviorPackage extends EPackage
     EReference VARIABLE_DECL__TYPE = eINSTANCE.getVariableDecl_Type();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute VARIABLE_DECL__NAME = eINSTANCE.getVariableDecl_Name();
-
-    /**
      * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.ConstantDeclImpl <em>Constant Decl</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3021,6 +3200,24 @@ public interface BehaviorPackage extends EPackage
     EReference DATA_ACCESS_STATEMENT__VARIABLE = eINSTANCE.getDataAccessStatement_Variable();
 
     /**
+     * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.ReturnStatementImpl <em>Return Statement</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.spp.cocome.behavior.behavior.impl.ReturnStatementImpl
+     * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getReturnStatement()
+     * @generated
+     */
+    EClass RETURN_STATEMENT = eINSTANCE.getReturnStatement();
+
+    /**
+     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference RETURN_STATEMENT__EXPRESSION = eINSTANCE.getReturnStatement_Expression();
+
+    /**
      * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.VariableCallImpl <em>Variable Call</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3165,12 +3362,66 @@ public interface BehaviorPackage extends EPackage
     EClass DATA_QUERY = eINSTANCE.getDataQuery();
 
     /**
-     * The meta object literal for the '<em><b>Query</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Query</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute DATA_QUERY__QUERY = eINSTANCE.getDataQuery_Query();
+    EReference DATA_QUERY__QUERY = eINSTANCE.getDataQuery_Query();
+
+    /**
+     * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.QueryExpressionImpl <em>Query Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.spp.cocome.behavior.behavior.impl.QueryExpressionImpl
+     * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getQueryExpression()
+     * @generated
+     */
+    EClass QUERY_EXPRESSION = eINSTANCE.getQueryExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference QUERY_EXPRESSION__LEFT = eINSTANCE.getQueryExpression_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference QUERY_EXPRESSION__RIGHT = eINSTANCE.getQueryExpression_Right();
+
+    /**
+     * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.QueryElementImpl <em>Query Element</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.spp.cocome.behavior.behavior.impl.QueryElementImpl
+     * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getQueryElement()
+     * @generated
+     */
+    EClass QUERY_ELEMENT = eINSTANCE.getQueryElement();
+
+    /**
+     * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.TypedValueReferenceImpl <em>Typed Value Reference</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.spp.cocome.behavior.behavior.impl.TypedValueReferenceImpl
+     * @see org.spp.cocome.behavior.behavior.impl.BehaviorPackageImpl#getTypedValueReference()
+     * @generated
+     */
+    EClass TYPED_VALUE_REFERENCE = eINSTANCE.getTypedValueReference();
+
+    /**
+     * The meta object literal for the '<em><b>Typed Value</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TYPED_VALUE_REFERENCE__TYPED_VALUE = eINSTANCE.getTypedValueReference_TypedValue();
 
     /**
      * The meta object literal for the '{@link org.spp.cocome.behavior.behavior.impl.InstantiationExpressionImpl <em>Instantiation Expression</em>}' class.

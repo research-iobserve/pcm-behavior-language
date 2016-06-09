@@ -21,11 +21,11 @@ import org.spp.cocome.behavior.behavior.VariableCall;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.AssignmentImpl#getVariable <em>Variable</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.AssignmentImpl#getExpression <em>Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

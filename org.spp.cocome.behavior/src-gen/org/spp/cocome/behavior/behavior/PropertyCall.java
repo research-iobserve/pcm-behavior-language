@@ -13,12 +13,12 @@ import org.spp.cocome.types.types.Property;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.PropertyCall#getProperty <em>Property</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.PropertyCall#getIndex <em>Index</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.PropertyCall#getSubProperty <em>Sub Property</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.spp.cocome.behavior.behavior.BehaviorPackage#getPropertyCall()
  * @model

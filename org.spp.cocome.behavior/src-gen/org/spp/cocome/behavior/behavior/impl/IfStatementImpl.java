@@ -21,12 +21,12 @@ import org.spp.cocome.behavior.behavior.IfStatement;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.IfStatementImpl#getExpr <em>Expr</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.IfStatementImpl#getIfStatement <em>If Statement</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.IfStatementImpl#getElseStatement <em>Else Statement</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

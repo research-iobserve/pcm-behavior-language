@@ -26,10 +26,10 @@ import org.spp.cocome.behavior.behavior.Statement;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.BlockStatementImpl#getStatements <em>Statements</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

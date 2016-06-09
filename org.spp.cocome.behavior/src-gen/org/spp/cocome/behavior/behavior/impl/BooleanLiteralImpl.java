@@ -17,10 +17,10 @@ import org.spp.cocome.behavior.behavior.BooleanLiteral;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.BooleanLiteralImpl#isValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

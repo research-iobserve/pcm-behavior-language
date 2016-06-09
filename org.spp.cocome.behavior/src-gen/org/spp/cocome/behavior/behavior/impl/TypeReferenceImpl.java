@@ -20,10 +20,10 @@ import org.spp.cocome.types.types.NamedType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.TypeReferenceImpl#getReference <em>Reference</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

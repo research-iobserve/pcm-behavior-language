@@ -15,6 +15,7 @@ import org.spp.cocome.behavior.mapping.Component;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.ComponentImpl#getKind <em>Kind</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.ComponentImpl#getRefComponent <em>Ref Component</em>}</li>
@@ -23,7 +24,6 @@ import org.spp.cocome.behavior.mapping.Component;
  *   <li>{@link org.spp.cocome.behavior.behavior.ComponentImpl#getPreDestroy <em>Pre Destroy</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.ComponentImpl#getInterfaces <em>Interfaces</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.spp.cocome.behavior.behavior.BehaviorPackage#getComponentImpl()
  * @model

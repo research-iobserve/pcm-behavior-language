@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.ConstantDecl#getName <em>Name</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.ConstantDecl#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.spp.cocome.behavior.behavior.BehaviorPackage#getConstantDecl()
  * @model

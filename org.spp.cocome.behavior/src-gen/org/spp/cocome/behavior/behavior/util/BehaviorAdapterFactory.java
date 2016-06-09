@@ -11,6 +11,9 @@ import org.eclipse.emf.ecore.EObject;
 
 import org.spp.cocome.behavior.behavior.*;
 
+import org.spp.cocome.behavior.mapping.NamedElement;
+import org.spp.cocome.behavior.mapping.TypedValue;
+
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
@@ -150,6 +153,11 @@ public class BehaviorAdapterFactory extends AdapterFactoryImpl
         return createDataAccessStatementAdapter();
       }
       @Override
+      public Adapter caseReturnStatement(ReturnStatement object)
+      {
+        return createReturnStatementAdapter();
+      }
+      @Override
       public Adapter caseVariableCall(VariableCall object)
       {
         return createVariableCallAdapter();
@@ -168,6 +176,21 @@ public class BehaviorAdapterFactory extends AdapterFactoryImpl
       public Adapter caseDataQuery(DataQuery object)
       {
         return createDataQueryAdapter();
+      }
+      @Override
+      public Adapter caseQueryExpression(QueryExpression object)
+      {
+        return createQueryExpressionAdapter();
+      }
+      @Override
+      public Adapter caseQueryElement(QueryElement object)
+      {
+        return createQueryElementAdapter();
+      }
+      @Override
+      public Adapter caseTypedValueReference(TypedValueReference object)
+      {
+        return createTypedValueReferenceAdapter();
       }
       @Override
       public Adapter caseInstantiationExpression(InstantiationExpression object)
@@ -218,6 +241,16 @@ public class BehaviorAdapterFactory extends AdapterFactoryImpl
       public Adapter caseBooleanLiteral(BooleanLiteral object)
       {
         return createBooleanLiteralAdapter();
+      }
+      @Override
+      public Adapter caseNamedElement(NamedElement object)
+      {
+        return createNamedElementAdapter();
+      }
+      @Override
+      public Adapter caseTypedValue(TypedValue object)
+      {
+        return createTypedValueAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -467,6 +500,21 @@ public class BehaviorAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.spp.cocome.behavior.behavior.ReturnStatement <em>Return Statement</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.spp.cocome.behavior.behavior.ReturnStatement
+   * @generated
+   */
+  public Adapter createReturnStatementAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.spp.cocome.behavior.behavior.VariableCall <em>Variable Call</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -522,6 +570,51 @@ public class BehaviorAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDataQueryAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.spp.cocome.behavior.behavior.QueryExpression <em>Query Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.spp.cocome.behavior.behavior.QueryExpression
+   * @generated
+   */
+  public Adapter createQueryExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.spp.cocome.behavior.behavior.QueryElement <em>Query Element</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.spp.cocome.behavior.behavior.QueryElement
+   * @generated
+   */
+  public Adapter createQueryElementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.spp.cocome.behavior.behavior.TypedValueReference <em>Typed Value Reference</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.spp.cocome.behavior.behavior.TypedValueReference
+   * @generated
+   */
+  public Adapter createTypedValueReferenceAdapter()
   {
     return null;
   }
@@ -672,6 +765,36 @@ public class BehaviorAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createBooleanLiteralAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.spp.cocome.behavior.mapping.NamedElement <em>Named Element</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.spp.cocome.behavior.mapping.NamedElement
+   * @generated
+   */
+  public Adapter createNamedElementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.spp.cocome.behavior.mapping.TypedValue <em>Typed Value</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.spp.cocome.behavior.mapping.TypedValue
+   * @generated
+   */
+  public Adapter createTypedValueAdapter()
   {
     return null;
   }

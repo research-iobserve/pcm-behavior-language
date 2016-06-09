@@ -10,11 +10,11 @@ package org.spp.cocome.behavior.behavior;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.DataAccessStatement#getOperation <em>Operation</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.DataAccessStatement#getVariable <em>Variable</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.spp.cocome.behavior.behavior.BehaviorPackage#getDataAccessStatement()
  * @model

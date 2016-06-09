@@ -3,6 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.spp.cocome.behavior/model-gen" modelPluginID="org.spp.cocome.behavior"
     modelName="PCMMappingModel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    usedGenPackages="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm ../../de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction ../../de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex ../../de.uka.ipd.sdq.units/model/Units.genmodel#//units"
     operationReflection="true" importOrganizing="true">
   <foreignModel>PCMMappingModel.ecore</foreignModel>
   <genPackages prefix="Mapping" basePackage="org.spp.cocome.behavior" disposableProviderFactory="true"
@@ -12,13 +13,26 @@
     </genClasses>
     <genClasses ecoreClass="PCMMappingModel.ecore#//Component">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PCMMappingModel.ecore#//Component/interfaces"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PCMMappingModel.ecore#//Component/pcmComponent"/>
     </genClasses>
     <genClasses ecoreClass="PCMMappingModel.ecore#//NamedElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PCMMappingModel.ecore#//NamedElement/name"/>
     </genClasses>
     <genClasses ecoreClass="PCMMappingModel.ecore#//Interface">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PCMMappingModel.ecore#//Interface/methods"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PCMMappingModel.ecore#//Interface/pcmInterface"/>
     </genClasses>
-    <genClasses ecoreClass="PCMMappingModel.ecore#//MethodDecl"/>
+    <genClasses ecoreClass="PCMMappingModel.ecore#//MethodDecl">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PCMMappingModel.ecore#//MethodDecl/pcmMethod"/>
+    </genClasses>
+    <genClasses ecoreClass="PCMMappingModel.ecore#//Parameter">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PCMMappingModel.ecore#//Parameter/pcmParameter"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Identifier" resource="XML" disposableProviderFactory="true"
+      ecorePackage="identifier.ecore#/">
+    <genClasses image="false" ecoreClass="identifier.ecore#//Identifier">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute identifier.ecore#//Identifier/id"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

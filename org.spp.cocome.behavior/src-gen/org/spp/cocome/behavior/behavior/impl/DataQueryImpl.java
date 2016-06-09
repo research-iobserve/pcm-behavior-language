@@ -3,13 +3,16 @@
 package org.spp.cocome.behavior.behavior.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.spp.cocome.behavior.behavior.BehaviorPackage;
 import org.spp.cocome.behavior.behavior.DataQuery;
+import org.spp.cocome.behavior.behavior.QueryExpression;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,34 +20,24 @@ import org.spp.cocome.behavior.behavior.DataQuery;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.DataQueryImpl#getQuery <em>Query</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public class DataQueryImpl extends ExpressionImpl implements DataQuery
 {
   /**
-   * The default value of the '{@link #getQuery() <em>Query</em>}' attribute.
+   * The cached value of the '{@link #getQuery() <em>Query</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getQuery()
    * @generated
    * @ordered
    */
-  protected static final String QUERY_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getQuery() <em>Query</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getQuery()
-   * @generated
-   * @ordered
-   */
-  protected String query = QUERY_EDEFAULT;
+  protected QueryExpression query;
 
   /**
    * <!-- begin-user-doc -->
@@ -72,7 +65,7 @@ public class DataQueryImpl extends ExpressionImpl implements DataQuery
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getQuery()
+  public QueryExpression getQuery()
   {
     return query;
   }
@@ -82,12 +75,53 @@ public class DataQueryImpl extends ExpressionImpl implements DataQuery
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setQuery(String newQuery)
+  public NotificationChain basicSetQuery(QueryExpression newQuery, NotificationChain msgs)
   {
-    String oldQuery = query;
+    QueryExpression oldQuery = query;
     query = newQuery;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BehaviorPackage.DATA_QUERY__QUERY, oldQuery, query));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BehaviorPackage.DATA_QUERY__QUERY, oldQuery, newQuery);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setQuery(QueryExpression newQuery)
+  {
+    if (newQuery != query)
+    {
+      NotificationChain msgs = null;
+      if (query != null)
+        msgs = ((InternalEObject)query).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BehaviorPackage.DATA_QUERY__QUERY, null, msgs);
+      if (newQuery != null)
+        msgs = ((InternalEObject)newQuery).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BehaviorPackage.DATA_QUERY__QUERY, null, msgs);
+      msgs = basicSetQuery(newQuery, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BehaviorPackage.DATA_QUERY__QUERY, newQuery, newQuery));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case BehaviorPackage.DATA_QUERY__QUERY:
+        return basicSetQuery(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -117,7 +151,7 @@ public class DataQueryImpl extends ExpressionImpl implements DataQuery
     switch (featureID)
     {
       case BehaviorPackage.DATA_QUERY__QUERY:
-        setQuery((String)newValue);
+        setQuery((QueryExpression)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,7 +168,7 @@ public class DataQueryImpl extends ExpressionImpl implements DataQuery
     switch (featureID)
     {
       case BehaviorPackage.DATA_QUERY__QUERY:
-        setQuery(QUERY_EDEFAULT);
+        setQuery((QueryExpression)null);
         return;
     }
     super.eUnset(featureID);
@@ -151,26 +185,9 @@ public class DataQueryImpl extends ExpressionImpl implements DataQuery
     switch (featureID)
     {
       case BehaviorPackage.DATA_QUERY__QUERY:
-        return QUERY_EDEFAULT == null ? query != null : !QUERY_EDEFAULT.equals(query);
+        return query != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (query: ");
-    result.append(query);
-    result.append(')');
-    return result.toString();
   }
 
 } //DataQueryImpl

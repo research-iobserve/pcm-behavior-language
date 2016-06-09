@@ -67,6 +67,24 @@ public interface MappingFactory extends EFactory {
 	MethodDecl createMethodDecl();
 
 	/**
+	 * Returns a new object of class '<em>Parameter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Parameter</em>'.
+	 * @generated
+	 */
+	Parameter createParameter();
+
+	/**
+	 * Returns a new object of class '<em>Typed Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Typed Value</em>'.
+	 * @generated
+	 */
+	TypedValue createTypedValue();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

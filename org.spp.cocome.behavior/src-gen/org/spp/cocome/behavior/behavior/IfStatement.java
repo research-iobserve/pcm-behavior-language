@@ -10,12 +10,12 @@ package org.spp.cocome.behavior.behavior;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.IfStatement#getExpr <em>Expr</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.IfStatement#getIfStatement <em>If Statement</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.IfStatement#getElseStatement <em>Else Statement</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.spp.cocome.behavior.behavior.BehaviorPackage#getIfStatement()
  * @model

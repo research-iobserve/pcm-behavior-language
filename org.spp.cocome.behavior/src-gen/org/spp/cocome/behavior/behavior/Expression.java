@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.Expression#getLeft <em>Left</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.Expression#getFeature <em>Feature</em>}</li>
@@ -20,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.spp.cocome.behavior.behavior.Expression#getOperand <em>Operand</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.Expression#getTarget <em>Target</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.spp.cocome.behavior.behavior.BehaviorPackage#getExpression()
  * @model

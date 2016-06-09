@@ -18,10 +18,10 @@ import org.spp.cocome.behavior.behavior.Import;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.ImportImpl#getImportedNamespace <em>Imported Namespace</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

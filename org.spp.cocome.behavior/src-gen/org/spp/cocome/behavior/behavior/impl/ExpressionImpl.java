@@ -21,6 +21,7 @@ import org.spp.cocome.behavior.behavior.Expression;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.ExpressionImpl#getLeft <em>Left</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.ExpressionImpl#getFeature <em>Feature</em>}</li>
@@ -30,7 +31,6 @@ import org.spp.cocome.behavior.behavior.Expression;
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.ExpressionImpl#getOperand <em>Operand</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.ExpressionImpl#getTarget <em>Target</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

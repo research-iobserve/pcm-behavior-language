@@ -10,12 +10,12 @@ package org.spp.cocome.behavior.behavior;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.LoopStatement#getVariable <em>Variable</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.LoopStatement#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.LoopStatement#getStatement <em>Statement</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.spp.cocome.behavior.behavior.BehaviorPackage#getLoopStatement()
  * @model

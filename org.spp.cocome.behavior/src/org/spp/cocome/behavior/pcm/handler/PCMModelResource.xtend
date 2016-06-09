@@ -38,6 +38,7 @@ import org.spp.cocome.behavior.mapping.Component
 import org.palladiosimulator.pcm.repository.Interface
 import java.util.ArrayList
 import org.palladiosimulator.pcm.repository.OperationInterface
+import org.spp.cocome.behavior.mapping.Parameter
 
 /**
  * Simulates a real resource by mapping the a PCM model to our hierarchy model.
@@ -232,11 +233,23 @@ public class PCMModelResource extends ResourceImpl {
 		for (signature : operationInterface.signatures__OperationInterface) {
 			val method = this.mappingFactory.createMethodDecl
 			method.name = signature.entityName
-			method.pcmMethod = signature
+			method.pcmMethod  = signature
+			
+			signature.parameters__OperationSignature.forEach[
+				method.parameters.mapParameter(it)
+			]
+			
 			iface.methods.add(method)
 		}
 	}
-
 	
+	private def void mapParameter(EList<Parameter> parameters, org.palladiosimulator.pcm.repository.Parameter parameter) {
+		val result = this.mappingFactory.createParameter
+		result.name = parameter.parameterName
+		result.pcmParameter = parameter
+		
+		parameters.add(result) 	
+	}
+
 
 }

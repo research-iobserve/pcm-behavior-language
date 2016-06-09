@@ -20,11 +20,11 @@ import org.spp.cocome.behavior.behavior.TypeReference;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.MapTypeImpl#getReference <em>Reference</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.MapTypeImpl#getKeyType <em>Key Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

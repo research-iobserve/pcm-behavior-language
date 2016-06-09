@@ -21,11 +21,11 @@ import org.spp.cocome.behavior.behavior.Expression;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.ConstantDeclImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.ConstantDeclImpl#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -30,11 +30,11 @@ import org.spp.cocome.behavior.mapping.Interface;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.InterfaceRealizationImpl#getRefInterface <em>Ref Interface</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.InterfaceRealizationImpl#getMethods <em>Methods</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

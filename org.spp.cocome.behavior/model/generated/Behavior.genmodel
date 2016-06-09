@@ -3,8 +3,8 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.spp.cocome.behavior/src-gen" editDirectory="/org.spp.cocome.behavior.edit/src"
     editorDirectory="/org.spp.cocome.behavior.editor/src" modelPluginID="org.spp.cocome.behavior"
     forceOverwrite="true" modelName="Behavior" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    complianceLevel="5.0" copyrightFields="false" editPluginID="org.spp.cocome.behavior.edit"
-    editorPluginID="org.spp.cocome.behavior.editor" runtimeVersion="2.10" usedGenPackages="../PCMMappingModel.genmodel#//mapping platform:/resource/org.spp.cocome.types/src-gen/org/spp/cocome/types/Types.genmodel#//types">
+    complianceLevel="6.0" copyrightFields="false" editPluginID="org.spp.cocome.behavior.edit"
+    editorPluginID="org.spp.cocome.behavior.editor" runtimeVersion="2.11" usedGenPackages="platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../PCMMappingModel.genmodel#//mapping platform:/resource/org.spp.cocome.types/src-gen/org/spp/cocome/types/Types.genmodel#//types">
   <genPackages prefix="Behavior" basePackage="org.spp.cocome.behavior" disposableProviderFactory="true"
       fileExtensions="bl" ecorePackage="Behavior.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Behavior.ecore#//ComponentKind">
@@ -43,7 +43,6 @@
     <genClasses ecoreClass="Behavior.ecore#//VariableDecl">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Behavior.ecore#//VariableDecl/modifier"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//VariableDecl/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Behavior.ecore#//VariableDecl/name"/>
     </genClasses>
     <genClasses ecoreClass="Behavior.ecore#//ConstantDecl">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Behavior.ecore#//ConstantDecl/name"/>
@@ -79,6 +78,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Behavior.ecore#//DataAccessStatement/operation"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Behavior.ecore#//DataAccessStatement/variable"/>
     </genClasses>
+    <genClasses ecoreClass="Behavior.ecore#//ReturnStatement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//ReturnStatement/expression"/>
+    </genClasses>
     <genClasses ecoreClass="Behavior.ecore#//VariableCall">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Behavior.ecore#//VariableCall/variable"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//VariableCall/index"/>
@@ -99,7 +101,15 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//Expression/target"/>
     </genClasses>
     <genClasses ecoreClass="Behavior.ecore#//DataQuery">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Behavior.ecore#//DataQuery/query"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//DataQuery/query"/>
+    </genClasses>
+    <genClasses ecoreClass="Behavior.ecore#//QueryExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//QueryExpression/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//QueryExpression/right"/>
+    </genClasses>
+    <genClasses ecoreClass="Behavior.ecore#//QueryElement"/>
+    <genClasses ecoreClass="Behavior.ecore#//TypedValueReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Behavior.ecore#//TypedValueReference/typedValue"/>
     </genClasses>
     <genClasses ecoreClass="Behavior.ecore#//InstantiationExpression">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Behavior.ecore#//InstantiationExpression/parameters"/>

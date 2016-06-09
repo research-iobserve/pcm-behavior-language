@@ -9,6 +9,9 @@ import org.eclipse.emf.ecore.util.Switch;
 
 import org.spp.cocome.behavior.behavior.*;
 
+import org.spp.cocome.behavior.mapping.NamedElement;
+import org.spp.cocome.behavior.mapping.TypedValue;
+
 /**
  * <!-- begin-user-doc -->
  * The <b>Switch</b> for the model's inheritance hierarchy.
@@ -50,7 +53,7 @@ public class BehaviorSwitch<T> extends Switch<T>
    * Checks whether this is a switch for the given package.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @parameter ePackage the package in question.
+   * @param ePackage the package in question.
    * @return whether this is a switch for the given package.
    * @generated
    */
@@ -111,6 +114,8 @@ public class BehaviorSwitch<T> extends Switch<T>
       {
         VariableDecl variableDecl = (VariableDecl)theEObject;
         T result = caseVariableDecl(variableDecl);
+        if (result == null) result = caseTypedValue(variableDecl);
+        if (result == null) result = caseNamedElement(variableDecl);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -181,6 +186,14 @@ public class BehaviorSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case BehaviorPackage.RETURN_STATEMENT:
+      {
+        ReturnStatement returnStatement = (ReturnStatement)theEObject;
+        T result = caseReturnStatement(returnStatement);
+        if (result == null) result = caseStatement(returnStatement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case BehaviorPackage.VARIABLE_CALL:
       {
         VariableCall variableCall = (VariableCall)theEObject;
@@ -208,6 +221,28 @@ public class BehaviorSwitch<T> extends Switch<T>
         DataQuery dataQuery = (DataQuery)theEObject;
         T result = caseDataQuery(dataQuery);
         if (result == null) result = caseExpression(dataQuery);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BehaviorPackage.QUERY_EXPRESSION:
+      {
+        QueryExpression queryExpression = (QueryExpression)theEObject;
+        T result = caseQueryExpression(queryExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BehaviorPackage.QUERY_ELEMENT:
+      {
+        QueryElement queryElement = (QueryElement)theEObject;
+        T result = caseQueryElement(queryElement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BehaviorPackage.TYPED_VALUE_REFERENCE:
+      {
+        TypedValueReference typedValueReference = (TypedValueReference)theEObject;
+        T result = caseTypedValueReference(typedValueReference);
+        if (result == null) result = caseQueryElement(typedValueReference);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -262,6 +297,7 @@ public class BehaviorSwitch<T> extends Switch<T>
       {
         StringLiteral stringLiteral = (StringLiteral)theEObject;
         T result = caseStringLiteral(stringLiteral);
+        if (result == null) result = caseQueryElement(stringLiteral);
         if (result == null) result = caseLiteral(stringLiteral);
         if (result == null) result = caseExpression(stringLiteral);
         if (result == null) result = defaultCase(theEObject);
@@ -539,6 +575,22 @@ public class BehaviorSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Return Statement</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Return Statement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseReturnStatement(ReturnStatement object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Variable Call</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -598,6 +650,54 @@ public class BehaviorSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDataQuery(DataQuery object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Query Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Query Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseQueryExpression(QueryExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Query Element</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Query Element</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseQueryElement(QueryElement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Typed Value Reference</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Typed Value Reference</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTypedValueReference(TypedValueReference object)
   {
     return null;
   }
@@ -758,6 +858,38 @@ public class BehaviorSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseBooleanLiteral(BooleanLiteral object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Named Element</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Named Element</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNamedElement(NamedElement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Typed Value</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Typed Value</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTypedValue(TypedValue object)
   {
     return null;
   }

@@ -10,16 +10,16 @@ package org.spp.cocome.behavior.behavior;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.StringLiteral#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see org.spp.cocome.behavior.behavior.BehaviorPackage#getStringLiteral()
  * @model
  * @generated
  */
-public interface StringLiteral extends Literal
+public interface StringLiteral extends QueryElement, Literal
 {
   /**
    * Returns the value of the '<em><b>Value</b></em>' attribute.

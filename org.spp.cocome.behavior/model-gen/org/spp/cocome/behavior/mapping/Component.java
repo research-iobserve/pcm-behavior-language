@@ -3,6 +3,7 @@
 package org.spp.cocome.behavior.mapping;
 
 import org.eclipse.emf.common.util.EList;
+import org.palladiosimulator.pcm.repository.ImplementationComponentType;
 
 
 /**
@@ -49,12 +50,12 @@ public interface Component extends NamedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pcm Component</em>' reference.
-	 * @see #setPcmComponent(org.palladiosimulator.pcm.repository.ImplementationComponentType)
+	 * @see #setPcmComponent(ImplementationComponentType)
 	 * @see org.spp.cocome.behavior.mapping.MappingPackage#getComponent_PcmComponent()
 	 * @model required="true"
 	 * @generated
 	 */
-	org.palladiosimulator.pcm.repository.ImplementationComponentType getPcmComponent();
+	ImplementationComponentType getPcmComponent();
 
 	/**
 	 * Sets the value of the '{@link org.spp.cocome.behavior.mapping.Component#getPcmComponent <em>Pcm Component</em>}' reference.
@@ -64,5 +65,5 @@ public interface Component extends NamedElement {
 	 * @see #getPcmComponent()
 	 * @generated
 	 */
-	void setPcmComponent(org.palladiosimulator.pcm.repository.ImplementationComponentType value);
+	void setPcmComponent(ImplementationComponentType value);
 } // Component

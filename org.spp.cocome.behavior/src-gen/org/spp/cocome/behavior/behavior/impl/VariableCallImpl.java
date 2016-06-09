@@ -22,12 +22,12 @@ import org.spp.cocome.behavior.behavior.VariableDecl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.VariableCallImpl#getVariable <em>Variable</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.VariableCallImpl#getIndex <em>Index</em>}</li>
  *   <li>{@link org.spp.cocome.behavior.behavior.impl.VariableCallImpl#getSubProperty <em>Sub Property</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
